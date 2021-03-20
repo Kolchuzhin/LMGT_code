@@ -1,6 +1,8 @@
-# LMGT_code / LMGT software tools for MEMS design:
-
 https://www.tu-chemnitz.de/etit/microsys/
+
+https://de.wikipedia.org/wiki/Jan_Mehner
+
+# LMGT_code / LMGT software tools for MEMS design:
 
 
 ## 1. ROM Tool
