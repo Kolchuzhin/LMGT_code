@@ -1,0 +1,433 @@
+.MCAD 303010000 1 74 167 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 0.979167 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 12 63 0
+Cg a38.875000,58.000000,112
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b \fs24 Transient Bewegungsanalyse
+ nach Newmark\par                }{\i \b0 
+\fs24 newmark.mcd - Abschnitt 5.9.3}}
+}
+.TXT 7 -8 161 0
+Cg a9.500000,70.125000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Eingabedaten:}}
+}
+.EQN 3 1 64 0
+{0:M}NAME:1
+.EQN 0 7 65 0
+{0:K}NAME:40
+.EQN 0 10 69 0
+{0:\x}NAME:0.1
+.TXT 0 14 67 0
+Cg a27.125000,51.000000,38
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Masse; Federkonstante; Dämpfungsmaß}}
+}
+.EQN 3 -31 83 0
+{0:anz_per}NAME:10
+.EQN 0 17 85 0
+{0:anz_st}NAME:20
+.TXT 0 14 86 0
+Cg a36.625000,38.000000,58
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Anzahl der Perioden; Anzahl der
+ Stützstellen je Periode}}
+}
+.TXT 3 0 103 0
+Cg a22.625000,38.000000,66
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Amplitudenverringerungsfaktor\par 
+amplitude decay factor  in ANSYS}}
+}
+.EQN 1 -31 102 0
+{0:\g}NAME:0.005
+.EQN 4 0 95 0
+{0:u_0}NAME:0
+.EQN 0 8 96 0
+{0:v_0}NAME:0
+.EQN 0 9 97 0
+{0:a_0}NAME:0
+.TXT 0 14 98 0
+Cg a35.500000,38.000000,67
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Anfangswerte für Auslenkung, Geschwindigkeit
+ und Beschleunigung}}
+}
+.EQN 4 -31 104 0
+{0:F}NAME({0:t}NAME):10*(1-({0:e}NAME)^(-2*{0:t}NAME))
+.TXT 1 31 108 0
+Cg a8.500000,38.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Lastfunktion}}
+}
+.EQN 4 -31 70 0
+{0:f}NAME:(1)/(2*{0:\p}NAME)*\(({0:K}NAME)/({0:M}NAME))
+.EQN 0 17 71 0
+{0:f}NAME={0}?_n_u_l_l_
+.TXT 0 14 75 0
+Cg a9.500000,38.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Eigenfrequenz}}
+}
+.EQN 5 -31 73 0
+{0:T}NAME:(1)/({0:f}NAME)
+.EQN 0 17 74 0
+{0:T}NAME={0}?_n_u_l_l_
+.TXT 0 14 78 0
+Cg a9.625000,38.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Periodendauer}}
+}
+.EQN 4 -31 79 0
+{0:D}NAME:2*{0:\x}NAME*\({0:K}NAME*{0:M}NAME)
+.EQN 0 17 80 0
+{0:D}NAME={0}?_n_u_l_l_
+.TXT 0 14 81 0
+Cg a14.375000,38.000000,21
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Dämpfungskonstante}}
+}
+.EQN 4 -31 88 0
+{0:time_e}NAME:{0:anz_per}NAME*{0:T}NAME
+.EQN 0 17 89 0
+{0:time_e}NAME={0}?_n_u_l_l_
+.TXT 0 14 91 0
+Cg a13.375000,38.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Endzeit der Analyse}}
+}
+.EQN 4 -31 92 0
+{0:dt}NAME:({0:T}NAME)/({0:anz_st}NAME)
+.EQN 0 17 93 0
+{0:dt}NAME={0}?_n_u_l_l_
+.TXT 0 14 94 0
+Cg a7.875000,38.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Schrittweite}}
+}
+.EQN 4 -31 99 0
+{0:i}NAME:0,1;{0:anz_per}NAME*{0:anz_st}NAME
+.TXT 0 31 101 0
+Cg a8.250000,38.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Laufvariable}}
+}
+.TXT 4 -33 114 0
+Cg a9.375000,69.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Lastfunktion:}}
+}
+.TXT 0 35 116 0
+Cg a14.125000,36.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Newmarkparameter:}}
+}
+.EQN 2 -35 111 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:F}NAME({0:i}NAME*{0:dt}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:i}NAME*{0:dt}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 22 15 0 3 
+.EQN 3 34 117 0
+{0:\a}NAME:(1)/(4)*((1+{0:\g}NAME))^(2)
+.EQN 0 13 118 0
+{0:\a}NAME={0}?_n_u_l_l_
+.EQN 4 -13 119 0
+{0:\d}NAME:(1)/(2)+{0:\g}NAME
+.EQN 0 13 120 0
+{0:\d}NAME={0}?_n_u_l_l_
+.EQN 5 -13 121 0
+{0:a0}NAME:(1)/({0:\a}NAME*({0:dt}NAME)^(2))
+.EQN 0 9 123 0
+{0:a1}NAME:({0:\d}NAME)/({0:\a}NAME*{0:dt}NAME)
+.EQN 0 10 124 0
+{0:a2}NAME:(1)/({0:\a}NAME*{0:dt}NAME)
+.EQN 0 10 125 0
+{0:a3}NAME:(1)/(2*{0:\a}NAME)-1
+.EQN 6 -29 126 0
+{0:a4}NAME:({0:\d}NAME)/({0:\a}NAME)-1
+.EQN 0 9 127 0
+{0:a5}NAME:({0:dt}NAME)/(2)*(({0:\d}NAME)/({0:\a}NAME)-2)
+.EQN 0 10 128 0
+{0:a6}NAME:{0:dt}NAME*(1-{0:\d}NAME)
+.EQN 0 10 129 0
+{0:a7}NAME:{0:\d}NAME*{0:dt}NAME
+.TXT 5 -64 130 0
+Cg a10.000000,72.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Anfangswerte:}}
+}
+.EQN 3 24 132 0
+({3,1}ö({0:acel}NAME)[(0)ö({0:vel}NAME)[(0)ö({0:u}NAME)[(0)):({3,1}ö{0:a_0}NAMEö{0:v_0}NAMEö{0:u_0}NAME)
+.TXT 5 -24 136 0
+Cg a15.625000,72.000000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Integrationsvorschrift:}}
+}
+.EQN 9 -1 138 0
+({3,1}ö({0:acel}NAME)[({0:i}NAME+1)ö({0:vel}NAME)[({0:i}NAME+1)ö({0:u}NAME)[({0:i}NAME+1)):({3,1}ö{0:a0}NAME*(({0:F}NAME(({0:i}NAME+1)*{0:dt}NAME)+{0:M}NAME*({0:a0}NAME*({0:u}NAME)[({0:i}NAME)+{0:a2}NAME*({0:vel}NAME)[({0:i}NAME)+{0:a3}NAME*({0:acel}NAME)
+[({0:i}NAME))+{0:D}NAME*({0:a1}NAME*({0:u}NAME)[({0:i}NAME)+{0:a4}NAME*({0:vel}NAME)[({0:i}NAME)+{0:a5}NAME*({0:acel}NAME)[({0:i}NAME)))/({0:a0}NAME*{0:M}NAME+{0:a1}NAME*{0:D}NAME+{0:K}NAME)-({0:u}NAME)[({0:i}NAME))-{0:a2}NAME*({0:vel}NAME)[({0:i}NAME)-
+{0:a3}NAME*({0:acel}NAME)[({0:i}NAME)ö({0:vel}NAME)[({0:i}NAME)+{0:a6}NAME*({0:acel}NAME)[({0:i}NAME)+{0:a7}NAME*({0:a0}NAME*(({0:F}NAME(({0:i}NAME+1)*{0:dt}NAME)+{0:M}NAME*({0:a0}NAME*({0:u}NAME)[({0:i}NAME)+{0:a2}NAME*({0:vel}NAME)[({0:i}NAME)+
+{0:a3}NAME*({0:acel}NAME)[({0:i}NAME))+{0:D}NAME*({0:a1}NAME*({0:u}NAME)[({0:i}NAME)+{0:a4}NAME*({0:vel}NAME)[({0:i}NAME)+{0:a5}NAME*({0:acel}NAME)[({0:i}NAME)))/({0:a0}NAME*{0:M}NAME+{0:a1}NAME*{0:D}NAME+{0:K}NAME)-({0:u}NAME)[({0:i}NAME))-{0:a2}NAME*(
+{0:vel}NAME)[({0:i}NAME)-{0:a3}NAME*({0:acel}NAME)[({0:i}NAME))ö({0:F}NAME(({0:i}NAME+1)*{0:dt}NAME)+{0:M}NAME*({0:a0}NAME*({0:u}NAME)[({0:i}NAME)+{0:a2}NAME*({0:vel}NAME)[({0:i}NAME)+{0:a3}NAME*({0:acel}NAME)[({0:i}NAME))+{0:D}NAME*({0:a1}NAME*({0:u}NAME
+)[({0:i}NAME)+{0:a4}NAME*({0:vel}NAME)[({0:i}NAME)+{0:a5}NAME*({0:acel}NAME)[({0:i}NAME)))/({0:a0}NAME*{0:M}NAME+{0:a1}NAME*{0:D}NAME+{0:K}NAME))
+.TXT 11 1 148 0
+Cg a15.875000,72.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Bewegungsfunktionen:}}
+}
+.EQN 1 0 143 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:u}NAME)[({0:i}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:i}NAME*{0:dt}NAME
+0 1 1 1 8 0 1 
+0 1 1 1 8 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 61 15 0 3 
+.EQN 20 -1 144 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:vel}NAME)[({0:i}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:i}NAME*{0:dt}NAME
+0 1 1 1 8 0 1 
+0 1 1 1 6 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 61 15 0 3 
+.EQN 20 1 145 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:acel}NAME)[({0:i}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:i}NAME*{0:dt}NAME
+0 1 1 1 8 0 1 
+0 1 1 1 8 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 61 15 0 3 
+.TXT 24 2 156 0
+Cg a21.250000,70.000000,35
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Analytische Vergleichslösung:}}
+}
+.EQN 4 0 149 0
+{0:w}NAME:\((({0:K}NAME)/({0:M}NAME)))
+.EQN 0 12 152 0
+{0:t}NAME:0.01,0.02;{0:time_e}NAME
+.EQN 0 14 151 0
+{0:y}NAME({0:t}NAME):(0&{0:t}NAME`({0:F}NAME({0:x}NAME))/({0:M}NAME*{0:w}NAME)*({0:e}NAME)^(-{0:\x}NAME*{0:w}NAME*({0:t}NAME-{0:x}NAME))*{0:sin}NAME({0:w}NAME*({0:t}NAME-{0:x}NAME))&{0:x}NAME)
+.EQN 4 -27 153 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:y}NAME({0:t}NAME),({0:u}NAME)[({0:i}NAME)@&0&(_n_u_l_l_&_n_u_l_l_)&{0:t}NAME,{0:i}NAME*{0:dt}NAME
+0 1 1 1 10 0 1 
+0 1 1 1 6 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 60 23 0 3 

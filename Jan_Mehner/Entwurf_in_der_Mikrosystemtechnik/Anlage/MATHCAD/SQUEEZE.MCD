@@ -1,0 +1,486 @@
+.MCAD 303010000 1 74 137 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 0.979167 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 3 3 42 0
+Cg a63.375000,64.000000,168
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\fs24 \b \f0 Squeezed Film Dämpfung
+ von Rechteckplatten bei harmonischer Erregung\par 
+                                  }{\b0 
+\i \f0 \fs24 squeeze.mcd - Abschnitt 7.1.3}}
+}
+.TXT 6 1 43 0
+Cg a9.500000,70.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b \f0 Eingabedaten:}}
+}
+.EQN 3 1 46 0
+{0:PL_K}NAME:0.00178
+.TXT 0 20 50 0
+Cg a17.125000,49.000000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Plattenlänge (kleine Seite)}}
+}
+.EQN 3 -20 47 0
+{0:PL_G}NAME:0.003
+.TXT 0 20 51 0
+Cg a17.250000,49.000000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Plattenbreite (große Seite)}}
+}
+.EQN 3 -20 52 0
+{0:K}NAME:180
+.TXT 0 20 53 0
+Cg a10.250000,49.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Federsteifigkeit}}
+}
+.EQN 3 -20 54 0
+{0:M}NAME:4.9*(10)^(-6)
+.TXT 0 20 55 0
+Cg a11.125000,49.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Masse der Platte}}
+}
+.EQN 3 -20 56 0
+{0:ABS}NAME:4*(10)^(-6)
+.TXT 0 20 57 0
+Cg a9.500000,49.000000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Luftspaltdicke}}
+}
+.EQN 3 -20 60 0
+{0:DR}NAME:3000
+.TXT 0 20 61 0
+Cg a6.500000,49.000000,12
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Luftdruck}}
+}
+.EQN 3 -20 62 0
+{0:F_O}NAME:10000
+.TXT 0 20 63 0
+Cg a21.000000,49.000000,33
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Frequenzbereich (obere Grenze)}}
+}
+.EQN 3 -20 97 0
+{0:ACEL}NAME:0.5*9.81
+.TXT 0 20 98 0
+Cg a10.875000,49.000000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Beschleunigung}}
+}
+.TXT 5 -21 64 0
+Cg a12.000000,70.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Berechnungsteil:}}
+}
+.EQN 4 1 67 0
+{0:\W}NAME({0:f}NAME):2*{0:\p}NAME*{0:f}NAME
+.TXT 1 48 68 0
+Cg a9.250000,49.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Kreisfrequenz}}
+}
+.EQN 4 -48 69 0
+{0:\h_eff}NAME:(18.3*(10)^(-6))/(1+9.638*(((100000)/({0:DR}NAME)*(66*(10)^(-9))/({0:ABS}NAME)))^(1.159))
+.EQN 0 28 73 0
+{0:\h_eff}NAME={0}?_n_u_l_l_
+.TXT 0 20 74 0
+Cg a12.750000,21.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {effektive Viskosität}}
+}
+.TXT 10 0 79 0
+Cg a9.000000,21.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Squeeze-Zahl}}
+}
+.EQN 2 -48 75 0
+{0:\s}NAME({0:f}NAME):(12*{0:\h_eff}NAME*({0:PL_K}NAME)^(2)*{0:\W}NAME({0:f}NAME))/({0:DR}NAME*({0:ABS}NAME)^(2))
+.EQN 9 0 76 0
+{0:f_c}NAME:({0:\p}NAME*{0:DR}NAME*({0:ABS}NAME)^(2))/(24*{0:\h_eff}NAME)*((1)/(({0:PL_K}NAME)^(2))+(1)/(({0:PL_G}NAME)^(2)))
+.EQN 1 28 77 0
+{0:f_c}NAME={0}?_n_u_l_l_
+.TXT 0 20 80 0
+Cg a11.625000,21.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Cut-Off-Frequenz}}
+}
+.TXT 6 -50 82 0
+Cg a29.000000,38.750000,50
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b R}{\b eibungsbedingter Dämpfungskoeffizient:}}
+}
+.EQN 6 2 81 0
+{0:D}NAME({0:f}NAME):(64*{0:\s}NAME({0:f}NAME)*{0:DR}NAME*{0:PL_K}NAME*{0:PL_G}NAME)/(({0:\p}NAME)^(6)*{0:ABS}NAME*{0:\W}NAME({0:f}NAME))*((1,3,{0:m}NAME,((1,3,{0:n}NAME,((({0:m}NAME*2-1))^(2)+(({0:n}NAME*2-1))^(2)*((({0:PL_K}NAME)/({0:PL_G}NAME)))^(2))/(
+(({0:m}NAME*2-1))^(2)*(({0:n}NAME*2-1))^(2)*((((({0:m}NAME*2-1))^(2)+(({0:n}NAME*2-1))^(2)*((({0:PL_K}NAME)/({0:PL_G}NAME)))^(2)))^(2)+(({0:\s}NAME({0:f}NAME))^(2))/(({0:\p}NAME)^(4))))){64})){64})
+.TXT 8 -2 88 0
+Cg a26.875000,39.375000,48
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b K}{\b ompressionsbedinge Federsteifigkeit:}}
+}
+.EQN 6 2 87 0
+{0:KS}NAME({0:f}NAME):(64*({0:\s}NAME({0:f}NAME))^(2)*{0:DR}NAME*{0:PL_K}NAME*{0:PL_G}NAME)/(({0:\p}NAME)^(8)*{0:ABS}NAME)*((1,3,{0:m}NAME,((1,3,{0:n}NAME,(1)/((({0:m}NAME*2-1))^(2)*(({0:n}NAME*2-1))^(2)*((((({0:m}NAME*2-1))^(2)+(({0:n}NAME*2-1))^(2)*(((
+{0:PL_K}NAME)/({0:PL_G}NAME)))^(2)))^(2)+(({0:\s}NAME({0:f}NAME))^(2))/(({0:\p}NAME)^(4))))){64})){64})
+.EQN 16 0 90 0
+{0:K_GES}NAME({0:f}NAME):{0:K}NAME+{0:KS}NAME({0:f}NAME)
+.TXT 2 49 132 0
+Cg a11.375000,21.125000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Gesamtsteifigkeit}}
+}
+.EQN 3 -49 89 0
+{0:\z}NAME({0:f}NAME):({0:D}NAME({0:f}NAME))/(2*\({0:K_GES}NAME({0:f}NAME)*{0:M}NAME))
+.EQN 1 19 91 0
+{0:\z}NAME(1000)={0}?_n_u_l_l_
+.TXT 1 30 92 0
+Cg a10.500000,21.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Dämpfungsmaß}}
+}
+.TXT 4 0 96 0
+Cg a2.875000,21.000000,7
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Last}}
+}
+.EQN 1 -49 93 0
+{0:F}NAME:{0:ACEL}NAME*{0:M}NAME
+.EQN 0 19 94 0
+{0:F}NAME={0}?_n_u_l_l_
+.TXT 7 30 102 0
+Cg a12.500000,20.000000,46
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {dynamische \par Steifigkeitsmatrix\par 
+Lastvektor}}
+}
+.EQN 1 -49 99 0
+{0:S_SYS}NAME({0:f}NAME):({2,2}ö{0:K_GES}NAME({0:f}NAME)-({0:\W}NAME({0:f}NAME))^(2)*{0:M}NAMEö-{0:\W}NAME({0:f}NAME)*{0:D}NAME({0:f}NAME)ö{0:\W}NAME({0:f}NAME)*{0:D}NAME({0:f}NAME)ö{0:K_GES}NAME({0:f}NAME)-({0:\W}NAME({0:f}NAME))^(2)*{0:M}NAME)
+.EQN 0 38 18 0
+{0:LAST}NAME:({2,1}ö0ö{0:F}NAME)
+.EQN 9 -38 103 0
+{0:VER}NAME({0:f}NAME):({0:S_SYS}NAME({0:f}NAME))^(-1)*{0:LAST}NAME
+.TXT 0 49 104 0
+Cg a14.250000,20.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Verschiebungsvektor}}
+}
+.EQN 6 -49 21 0
+{0:AMPL}NAME({0:f}NAME):\(((({0:VER}NAME({0:f}NAME))[(0)))^(2)+((({0:VER}NAME({0:f}NAME))[(1)))^(2))
+.TXT 0 49 106 0
+Cg a7.000000,20.000000,12
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Amplitude}}
+}
+.EQN 6 -49 37 0
+{0:PHI}NAME({0:f}NAME):{0:if}NAME(({0:VER}NAME({0:f}NAME))[(0)<0,{0:atan}NAME((({0:VER}NAME({0:f}NAME))[(1))/(({0:VER}NAME({0:f}NAME))[(0)))-{0:\p}NAME,{0:atan}NAME((({0:VER}NAME({0:f}NAME))[(1))/(({0:VER}NAME({0:f}NAME))[(0))))*(360)/(2*{0:\p}NAME)
+.TXT 0 49 107 0
+Cg a9.125000,20.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Phasenwinkel}}
+}
+.EQN 6 -49 109 0
+{0:f}NAME:10,({0:F_O}NAME)/(100);{0:F_O}NAME
+.TXT 6 0 110 0
+Cg a20.500000,69.000000,33
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Amplituden- und Phasengang:}}
+}
+.EQN 2 -1 22 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:AMPL}NAME({0:f}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:f}NAME
+1 0 1 1 0 0 1 
+1 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.EQN 0 36 38 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:PHI}NAME({0:f}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:f}NAME
+1 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.TXT 24 -35 111 0
+Cg a35.500000,69.000000,52
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Dämpfungsmaß, Dämpfungskraft
+ und Squeezekraft:}}
+}
+.EQN 1 -4 112 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:\z}NAME({0:f}NAME)@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:f}NAME
+1 0 1 1 0 0 1 
+1 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.EQN 3 44 113 0
+{0:F_D}NAME({0:f}NAME):{0:\W}NAME({0:f}NAME)*{0:D}NAME({0:f}NAME)*({2,1}ö({0:VER}NAME({0:f}NAME))[(0)ö-(({0:VER}NAME({0:f}NAME))[(1)))
+.EQN 6 0 116 0
+{0:FD_AMPL}NAME({0:f}NAME):\(((({0:F_D}NAME({0:f}NAME))[(0)))^(2)+((({0:F_D}NAME({0:f}NAME))[(1)))^(2))
+.EQN 5 0 121 0
+{0:F_S}NAME({0:f}NAME):{0:KS}NAME({0:f}NAME)*{0:VER}NAME({0:f}NAME)
+.EQN 4 0 122 0
+{0:FS_AMPL}NAME({0:f}NAME):\(((({0:F_S}NAME({0:f}NAME))[(0)))^(2)+((({0:F_S}NAME({0:f}NAME))[(1)))^(2))
+.EQN 8 -44 118 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&({0:FD_AMPL}NAME({0:f}NAME))/({0:AMPL}NAME({0:f}NAME))@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:f}NAME
+1 0 1 1 0 0 1 
+1 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.EQN 0 37 123 0
+_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&({0:FS_AMPL}NAME({0:f}NAME))/({0:AMPL}NAME({0:f}NAME))@_n_u_l_l_&_n_u_l_l_&(_n_u_l_l_&_n_u_l_l_)&{0:f}NAME
+1 0 1 1 0 0 1 
+1 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 

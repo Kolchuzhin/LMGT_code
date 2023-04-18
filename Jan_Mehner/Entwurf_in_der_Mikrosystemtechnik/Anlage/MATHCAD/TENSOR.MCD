@@ -1,0 +1,445 @@
+.MCAD 303010000 1 119 513 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 1 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=14 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 1
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.000000 -2.572917 1.200000 1.200000 1
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 3 13 198 0
+Cg a59.625000,68.000000,169
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs24 Transformation der elastischen
+ Konstanten für orthotrope Werkstoffe}{\fs24 
+\par                             }{\i \fs24 
+     }{\i \fs24 tensor.mcd - Beispiel 5.2}}
+}
+.TXT 9 -12 199 0
+Cg a24.500000,68.000000,58
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs20 Elastische Konstanten 
+von Silizium}{\b \fs20 :}}
+}
+.EQN 4 4 25 0
+{0:s11}NAME:7.691*(10)^(-12)
+.EQN 0 12 26 0
+{0:s12}NAME:-2.142*(10)^(-12)
+.EQN 0 13 27 0
+{0:s44}NAME:12.57*(10)^(-12)
+.TXT 0 23 483 0
+Cg a22.000000,32.625000,39
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Eingabedaten laut Literatur}{ [5.17]}}
+}
+.TXT 5 -52 429 0
+Cg a23.125000,68.000000,45
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs20 Matrix der elastische 
+Konstanten:}}
+}
+.EQN 10 3 16 0
+{0:S}NAME:({6,6}ö{0:s44}NAMEö0ö0ö0ö0ö0ö0ö{0:s44}NAMEö0ö0ö0ö0ö0ö0ö{0:s44}NAMEö0ö0ö0ö0ö0ö0ö{0:s11}NAMEö{0:s12}NAMEö{0:s12}NAMEö0ö0ö0ö{0:s12}NAMEö{0:s11}NAMEö{0:s12}NAMEö0ö0ö0ö{0:s12}NAMEö{0:s12}NAMEö{0:s11}NAME)
+.EQN 0 20 29 0
+{0:S}NAME={0}?_n_u_l_l_
+.TXT 12 -23 430 0
+Cg a12.250000,68.000000,28
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs20 Hooksche Matrix:}}
+}
+.EQN 4 3 62 0
+{0:C}NAME:({0:S}NAME)^(-1)
+.EQN 3 0 431 0
+{0:C11}NAME:({0:C}NAME)[(1,1)
+.EQN 1 20 63 0
+{0:C}NAME={0}?_n_u_l_l_
+.EQN 3 -20 432 0
+{0:C12}NAME:({0:C}NAME)[(1,2)
+.EQN 4 0 433 0
+{0:C44}NAME:({0:C}NAME)[(4,4)
+.EQN 7 0 434 0
+{0:C11}NAME={0}?_n_u_l_l_
+.EQN 0 15 435 0
+{0:C12}NAME={0}?_n_u_l_l_
+.EQN 0 15 436 0
+{0:C44}NAME={0}?_n_u_l_l_
+.TXT 4 -33 437 0
+Cg a37.500000,68.000000,62
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs20 Transformation in das 
+Berechnungskoodinatensystem:}}
+}
+.TXT 3 0 438 0
+Cg a57.875000,68.000000,89
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs20 Berechnung der Richtungskosinusse
+ zwischen den Achsen der Koordinatensysteme:}}
+}
+.TXT 3 54 439 0
+Cg a29.875000,68.000000,67
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Drehung um die indizierten Achsen
+ in Grad\par Eingabe am Dateiende!}}
+}
+.EQN 1 -52 260 0
+{0:rot.z}NAME={0}?{0:deg}NAME
+.EQN 0 15 261 0
+{0:rot.x}NAME={0}?{0:deg}NAME
+.EQN 0 17 262 0
+{0:rot.y}NAME={0}?{0:deg}NAME
+.EQN 7 -32 400 0
+{0:MROT_Z}NAME:({3,3}ö1ö0ö0ö0ö{0:cos}NAME({0:rot.z}NAME)ö{0:sin}NAME({0:rot.z}NAME)ö0ö-{0:sin}NAME({0:rot.z}NAME)ö{0:cos}NAME({0:rot.z}NAME))
+.EQN 0 25 401 0
+{0:MROT_X}NAME:({3,3}ö{0:cos}NAME({0:rot.x}NAME)ö{0:sin}NAME({0:rot.x}NAME)ö0ö-{0:sin}NAME({0:rot.x}NAME)ö{0:cos}NAME({0:rot.x}NAME)ö0ö0ö0ö1)
+.EQN 0 26 402 0
+{0:MROT_Y}NAME:({3,3}ö{0:cos}NAME({0:rot.y}NAME)ö0ö{0:sin}NAME({0:rot.y}NAME)ö0ö1ö0ö-{0:sin}NAME({0:rot.y}NAME)ö0ö{0:cos}NAME({0:rot.y}NAME))
+.EQN 7 -51 404 0
+{0:MRK}NAME:(({0:MROT_Y}NAME*{0:MROT_X}NAME*{0:MROT_Z}NAME)){51}
+.EQN 5 27 274 0
+{0:a11}NAME:({0:MRK}NAME)[(1,1)
+.EQN 0 10 275 0
+{0:a12}NAME:({0:MRK}NAME)[(1,2)
+.EQN 0 10 276 0
+{0:a13}NAME:({0:MRK}NAME)[(1,3)
+.EQN 2 -47 403 0
+{0:MRK}NAME={0}?_n_u_l_l_
+.EQN 1 27 277 0
+{0:a21}NAME:({0:MRK}NAME)[(2,1)
+.EQN 0 10 278 0
+{0:a22}NAME:({0:MRK}NAME)[(2,2)
+.EQN 0 10 279 0
+{0:a23}NAME:({0:MRK}NAME)[(2,3)
+.EQN 3 -20 280 0
+{0:a31}NAME:({0:MRK}NAME)[(3,1)
+.EQN 0 10 281 0
+{0:a32}NAME:({0:MRK}NAME)[(3,2)
+.EQN 0 10 282 0
+{0:a33}NAME:({0:MRK}NAME)[(3,3)
+.TXT 9 -48 440 0
+Cg a28.000000,68.000000,60
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs20 Berechnung der Transformations}{\b 
+\fs20 matrix:}}
+}
+.EQN 9 0 47 0
+{0:A}NAME:({6,6}ö{0:a11}NAME*{0:a22}NAME+{0:a21}NAME*{0:a12}NAMEö{0:a31}NAME*{0:a12}NAME+{0:a11}NAME*{0:a32}NAMEö{0:a21}NAME*{0:a32}NAME+{0:a31}NAME*{0:a22}NAMEö2*{0:a31}NAME*{0:a32}NAMEö2*{0:a21}NAME*{0:a22}NAMEö2*{0:a11}NAME*{0:a12}NAMEö{0:a13}NAME*
+{0:a21}NAME+{0:a23}NAME*{0:a11}NAMEö{0:a33}NAME*{0:a11}NAME+{0:a13}NAME*{0:a31}NAMEö{0:a23}NAME*{0:a31}NAME+{0:a33}NAME*{0:a21}NAMEö2*{0:a33}NAME*{0:a31}NAMEö2*{0:a23}NAME*{0:a21}NAMEö2*{0:a13}NAME*{0:a11}NAMEö{0:a12}NAME*{0:a23}NAME+{0:a22}NAME*
+{0:a13}NAMEö{0:a32}NAME*{0:a13}NAME+{0:a12}NAME*{0:a33}NAMEö{0:a22}NAME*{0:a33}NAME+{0:a32}NAME*{0:a23}NAMEö2*{0:a32}NAME*{0:a33}NAMEö2*{0:a22}NAME*{0:a23}NAMEö2*{0:a12}NAME*{0:a13}NAMEö{0:a13}NAME*{0:a23}NAMEö{0:a33}NAME*{0:a13}NAMEö{0:a23}NAME*
+{0:a33}NAMEö{0:a33}NAME*{0:a33}NAMEö{0:a23}NAME*{0:a23}NAMEö{0:a13}NAME*{0:a13}NAMEö{0:a12}NAME*{0:a22}NAMEö{0:a32}NAME*{0:a12}NAMEö{0:a22}NAME*{0:a32}NAMEö{0:a32}NAME*{0:a32}NAMEö{0:a22}NAME*{0:a22}NAMEö{0:a12}NAME*{0:a12}NAMEö{0:a11}NAME*{0:a21}NAMEö
+{0:a31}NAME*{0:a11}NAMEö{0:a21}NAME*{0:a31}NAMEö{0:a31}NAME*{0:a31}NAMEö{0:a21}NAME*{0:a21}NAMEö{0:a11}NAME*{0:a11}NAME)
+.EQN 15 0 48 0
+{0:A}NAME={0}?_n_u_l_l_
+.TXT 10 0 441 0
+Cg a41.875000,68.000000,70
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs20 Transformation der S-Matrix
+ in das neue Koordinatensystem:}}
+}
+.EQN 9 1 160 0
+{0:SNEU}NAME:({0:A}NAME){51}*{0:S}NAME*{0:A}NAME
+.EQN 1 15 66 0
+{0:SNEU}NAME={0}?_n_u_l_l_
+.EQN 15 -16 422 0
+{0:CNEU}NAME:({0:SNEU}NAME)^(-1)
+.EQN 4 16 313 0
+{0:CNEU}NAME={0}?_n_u_l_l_
+.TXT 12 -16 442 0
+Cg a41.625000,68.000000,68
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs20 Berechnung der E-Moduli,
+ Schubmoduli und Poisson-Zahlen:}}
+}
+.TXT 0 45 477 0
+Cg a10.250000,68.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs20 Ergebnisdaten:}}
+}
+.TXT 2 0 478 0
+Cg a39.500000,68.000000,167
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Die technischen Konstanten E-Moduli,
+ Poisson-Zahlen\par und Schubmoduli gelten
+ nur  wenn s14, s15, s16, s24, s25,\par 
+s26, s34, s35, s36, s45, s46, s56 Nullelemente
+ sind.}}
+}
+.EQN 1 -44 443 0
+{0:EX}NAME:(1)/(({0:SNEU}NAME)[(1,1))
+.EQN 0 10 449 0
+{0:GXY}NAME:(1)/(({0:SNEU}NAME)[(6,6))
+.EQN 4 12 455 0
+{0:NUYX}NAME:-((({0:SNEU}NAME)[(2,1))/(({0:SNEU}NAME)[(1,1)))
+.EQN 2 -22 445 0
+{0:EY}NAME:(1)/(({0:SNEU}NAME)[(2,2))
+.EQN 0 10 451 0
+{0:GXZ}NAME:(1)/(({0:SNEU}NAME)[(5,5))
+.EQN 0 34 465 0
+{0:EX}NAME={0}?_n_u_l_l_
+.EQN 0 9 468 0
+{0:GXY}NAME={0}?_n_u_l_l_
+.EQN 1 13 471 0
+{0:NUYX}NAME={0}?_n_u_l_l_
+.EQN 2 -22 466 0
+{0:EY}NAME={0}?_n_u_l_l_
+.EQN 0 9 469 0
+{0:GXZ}NAME={0}?_n_u_l_l_
+.EQN 1 -31 459 0
+{0:NUZX}NAME:-((({0:SNEU}NAME)[(3,1))/(({0:SNEU}NAME)[(1,1)))
+.EQN 0 44 472 0
+{0:NUZX}NAME={0}?_n_u_l_l_
+.EQN 2 -66 447 0
+{0:EZ}NAME:(1)/(({0:SNEU}NAME)[(3,3))
+.EQN 0 10 453 0
+{0:GYZ}NAME:(1)/(({0:SNEU}NAME)[(4,4))
+.EQN 0 34 467 0
+{0:EZ}NAME={0}?_n_u_l_l_
+.EQN 0 9 470 0
+{0:GYZ}NAME={0}?_n_u_l_l_
+.EQN 6 -53 423 0
+{0:EX_VER}NAME:(({0:s11}NAME-2*({0:s11}NAME-{0:s12}NAME-0.5*{0:s44}NAME)*(({0:a11}NAME)^(2)*({0:a21}NAME)^(2)+({0:a21}NAME)^(2)*({0:a31}NAME)^(2)+({0:a31}NAME)^(2)*({0:a11}NAME)^(2))))^(-1)
+.EQN 0 66 484 0
+{0:EX_VER}NAME={0}?_n_u_l_l_
+.TXT 4 -67 475 0
+Cg a31.750000,68.000000,68
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \ul G}{\b \fs20 \ul ewünschte
+ Rotation des Koordinatensystems:}}
+}
+.TXT 1 38 476 0
+Cg a38.250000,68.000000,117
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Eingabedaten:  rotz=45 --> [110]-Richtung;\par 
+                            rotz=45  und
+  roty=35.3 --> [111]-Richtung}}
+}
+.EQN 2 -37 257 0
+{0:rot.z}NAME~45*{0:deg}NAME
+.EQN 0 9 259 0
+{0:rot.x}NAME~0*{0:deg}NAME
+.EQN 0 9 258 0
+{0:rot.y}NAME~0*{0:deg}NAME
+.TXT 4 -20 497 0
+Cg a55.250000,116.000000,85
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b In der Waferebene von (100)-Siliziumwafer
+ gilt folgende vereinfachte Beziehung:}}
+}
+.EQN 4 1 499 0
+{0:PHI}NAME:0,({0:\p}NAME)/(180);2*{0:\p}NAME
+.EQN 0 15 500 0
+{0:a11}NAME({0:PHI}NAME):{0:cos}NAME({0:PHI}NAME)
+.EQN 0 18 501 0
+{0:a21}NAME({0:PHI}NAME):{0:sin}NAME({0:PHI}NAME)
+.EQN 5 -33 487 0
+{0:S11_VER}NAME({0:PHI}NAME):(({0:a11}NAME({0:PHI}NAME))^({0}4)+({0:a21}NAME({0:PHI}NAME))^(4))*{0:s11}NAME+({0:a11}NAME({0:PHI}NAME))^(2)*({0:a21}NAME({0:PHI}NAME))^(2)*(2*{0:s12}NAME+{0:s44}NAME)
+.EQN 3 0 490 0
+{0:S12_VER}NAME({0:PHI}NAME):({0:a11}NAME({0:PHI}NAME))^(2)*({0:a21}NAME({0:PHI}NAME))^(2)*(2*{0:s11}NAME-{0:s44}NAME)+(({0:a11}NAME({0:PHI}NAME))^(4)+({0:a21}NAME({0:PHI}NAME))^(4))*{0:s12}NAME
+.EQN 3 0 493 0
+{0:S66_VER}NAME({0:PHI}NAME):8*({0:a11}NAME({0:PHI}NAME))^(2)*({0:a21}NAME({0:PHI}NAME))^(2)*({0:s11}NAME-{0:s12}NAME)+((({0:a11}NAME({0:PHI}NAME))^(2)-({0:a21}NAME({0:PHI}NAME))^(2)))^(2)*{0:s44}NAME
+.EQN 5 0 502 0
+{0:E_VER}NAME({0:PHI}NAME):(1)/({0:S11_VER}NAME({0:PHI}NAME))
+.EQN 0 22 503 0
+{0:NUYX_VER}NAME({0:PHI}NAME):(-{0:S12_VER}NAME({0:PHI}NAME))/({0:S11_VER}NAME({0:PHI}NAME))
+.EQN 0 24 504 0
+{0:GXY_VER}NAME({0:PHI}NAME):(1)/({0:S66_VER}NAME({0:PHI}NAME))
+.EQN 4 -46 508 0
+{0:E_VER}NAME({0:PHI}NAME):{0:E_VER}NAME({0:PHI}NAME)*(10)^(-9)
+.EQN 0 46 509 0
+{0:GXY_VER}NAME({0:PHI}NAME):{0:GXY_VER}NAME({0:PHI}NAME)*(10)^(-9)
+.TXT 4 -46 511 0
+Cg a17.250000,117.000000,31
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Elastizitätsmodul in GPa:}}
+}
+.TXT 0 36 512 0
+Cg a9.500000,117.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Poisson-Zahl:}}
+}
+.EQN 2 -36 505 0
+200&0&(_n_u_l_l_&_n_u_l_l_)&{0:E_VER}NAME({0:PHI}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:PHI}NAME
+0 1 1 1 4 0 1 
+0 1 1 0 24 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 24 24 22 3 
+.EQN 0 37 506 0
+0.4&0&(_n_u_l_l_&_n_u_l_l_)&{0:NUYX_VER}NAME({0:PHI}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:PHI}NAME
+0 1 1 1 4 0 1 
+0 1 1 0 24 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 25 25 20 3 
+.TXT 38 -38 513 0
+Cg a16.875000,118.000000,33
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Schub}{\b modul Gxy in GPa:}}
+}
+.EQN 2 1 507 0
+80&0&(_n_u_l_l_&_n_u_l_l_)&{0:GXY_VER}NAME({0:PHI}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:PHI}NAME
+0 1 1 1 4 0 1 
+0 1 1 0 24 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 24 24 17 3 

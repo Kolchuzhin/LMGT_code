@@ -1,0 +1,1248 @@
+.MCAD 303010000 1 74 402 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=100 pr=6 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 0.979167 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 4 13 150 0
+Cg a45.375000,103.125000,138
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs24 \f0 Analyse der Wechselwirkungen
+ von Arraystrukturen\par                
+             }{\i \b0 \f0 \fs24 array.mcd
+ - Abschnitt 4.4}}
+}
+.TXT 7 -10 151 0
+Cg a9.500000,112.125000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Eingabedaten:}}
+}
+.EQN 4 2 153 0
+{0:c_zelle}NAME:1
+.TXT 0 10 157 0
+Cg a17.500000,93.125000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Federkonstante Einzelzelle}}
+}
+.EQN 1 19 220 0
+{Microsoft_Windows 0 68098}
+{60}
+)T1z*6&k&M!A&K#j!!!#!!!!$7!!!%,|4]:Z3k/o(s-+1X523k4U*3!!!!!!!!!!!%#I!!#5D8&+<R$!G=!!!!!!!!!!!!!!!!!!!!!_!!)1LFIz!!1A!!!!!!!!!!!!!!#e!!!"!!!!!!!!!!!1!!#cLVLV!!!!!0IpLVIq!!!!!!!!!0LVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLV
+LVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLV
+LVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVG,
+LVLULVLV!Q!!!!+u!!!&!!!!"#!!!!4'!!!)!!!!"S!!!!<7!!!,!!!!#%!!!!DG!!!/!!!!#U!!!"!!!!!2!!!!$'!!!")1!!!5!!!!$W!!!"1A!!!8!!!!%)!!!"9Q!!!;!!!!%Y!!!"Aa!!!>!!!!&+!!!"Iq!!!A!!!!&[!!!#&K!!!D!!!!'-!!!#.[!!!G!!!!']!!!#6k!!!J!!!!(/!!!#>{!!!M!!!!(_!!!#G-!!!P!!!!)1!!
+!$#e!!!S!!!!)a!!!$+u!!!V!!!!*3!!!$4'!!!Y!!!!*c!!!$<7!!!\!!!!+5!!!$DG!!!_!!!!+e!!!%!!!!!b!!!!,7!!!%)1!!!e!!!!,g!!!%1A!!!h!!!!-9!!!%9Q!!!k!!!!-i!!!%Aa!!!n!!!!.;!!!%Iq!!!q!!!!.k!!!&&K!!!t!!!!/=!!!&.[!!!w!!!!/m!!!&6k!!!z!!!!0?!!!&>{!!!}!!!!0o!!!&G-!!""!!!!
+1A!!!'#e!!"%!!!!1q!!!'+u!!"(!!!!2C!!!'4'!!"+!!!!2s!!!'<7!!".!!!!3E!!!'DG!!"1!!!!3u!!!(!!!!#cLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLVLV.{"2!'Iq4g!A!%.[3e"7!(&K5Y!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!"1A!q#dLVLVLVLVLG#e!!"C)D+|1D8}#}-r!!#%={4}!!!!!!!!!!!!!!!!!)Do&j(MA!&ILVLV!!!!!!!!!!!e!'.[4W",!'4'3e"(!(&K,W"2!')1!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!%)!#!@LVLVLVLVLVLVLVLG!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&K
+!!"_F[!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!LVLVLVLVLVLVLVLV!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!#dLVLVLVLVLVLVLVIq!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!e,l)z--Gr/!,f,G!!!q!"#G)<"c0&!-)=7e1AE*I{!m!!I/&S!y/n!!#e!1!%Aa#PEI#o7]!.!i&M"##~!%7K!1"a6c<7"W7K!1"a6[!!&C)1!PLV;5!"!1-y!/@K!12i!!-y!/@@!y"O6s>|7=!X
+!1!Z:!L+L,-OLJJo2'KL*}9P+j*!CYH67x>;K$)e4<=??i!!!""R%i!!5P4'!.25!!"h6[!!#=G-"S>{!10!"#&L!)+t!Q$;!I)1!A.`7M!M6k1(%Y!!?11A!/4B!!#8-Y!!264'!.){!!"(*C!!?11A!/4B!!"t,w!!2s*V!$4(!$;'In.X/F4&+jBg.T4a=hJR)zHg:?EyA%"S>wFY1p9.+u!!#n$#!!">59!!K&Aa!/'d!!!.91!%"K!'
+!I.[!Q#z!i)1!1-A!!$;7=!"Cm+t!G9V7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+h-W:|.(9\BC>C1G)EJ+G!!!!""T%i!!5`4'!(1b!!"$6+!!#=G-!a8/"#'r!!)2$W2f!!#i8/!+5y&K!)1>LVJ|";)1*C#e*l(~E8E=:bJR0e,f:f>#LJK5,a#h>N(M+u8JC}2kDDJS!!!1)bG-!(=P!!#X'=!!+\Iq!!Ew!!+}6k1C7]!$!2.c7=!"!i6k
+"qDJ!!!4L&LV2s:v!$4(!$;'In.X/F4&+jBg.T4a=hJR?f?z=[0+Au!);QEo8;L6+u!!#f70!!"=59!!4)<7!$HN!!!.91!%"K!'!I.[!Q#z"k)1!1-A!!>3!Q!!$FDFLM9\7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+i'm"a%aCQ)q"LA.7u8~G!!!!""X']!!5p4'!&1p!!!_6[!!#=G-!a8/"#'r!!)2$WC(!!#i8/!+IA)1!"+qLVJ|#=)1
+*C#e*l(~E8E=:bJR0e,f:f>#LJIw2>.t-y;[+u8JC}2kDDJS!!!1$9Aa!(=P!!#8)a!!+\Iq!!Ew!!+}6k1C7]!$!2.i7=!"!i6k"qDJ!!!4L&LV2sK8!$4(!$;'In.X/F4&+jBg.T4a=hJR=]:T/*JZC)!);QEo8;L6+u!!#n!Q!!"=59!!.^6k!$HN!!!.91!%"K!'!I.[!Q#z#m)1!1-A!!>h!Q!!$FDFLM9b7=!4!1!Z:!L+L,-OLJJo
+2'KL*}9P+g,o(oEt4O3O+u8JC}2kDDJS!!!1#8.[!(=P!!#2+5!!+\Iq!!Ew!!+}6k1C7]!$!2.m7=!"!i6k"qDJ!!!4L&LV2t*V!$4(!$;'In.X/F4&+jBg.T4a=hJR@!5c?1&DCi!);QEo8;L6+u!!#t)j!!"=59!!-]#e!$HN!!!.91!%"K!'!I.[!Q#z$O)1!1-A!!>3!Q!!$FDFLM9f7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+kAm-'>O
+*OJS"LA.7u8~G!!!!""3+U!!5p4'!$!g!!!_6[!!#=G-!a8/"#'r!!)2$X2f!!#i8/!+IA)1!"+qLVJ|%!)1*C#e*l(~E8E=:bJR0e,f:f>#LJK<K<6|)|A1+u8JC}2kDDJS!!!1IE&K!(=P!!"p-Y!!+\Iq!!Ew!!+}6k1C7]!$!2.s7=!"!i6k"qDJ!!!4L&LV2t:v!$4(!$;'In.X/F4&+jBg.T4a=hJREw>I>RFeD[!);QEo8;L6+u!!
+#k<~!!"=59!!(3Iq!$HN!!!.91!%"K!'!I.[!Q#z%Q)1!1-A!!>h!Q!!$FDFLM9l7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+h6H'1>BKR'-"LA.7u8~G!!!!"#L-i!!?d6k!.25!!!_6[!!#=G-!a8/"#'r!!)2$XC(!!#i8/!+7=)1!,)-LVJ|&#)1*C#e*l(~E8E=:bJR0e,f:f>#LJL?05A>(r+I+u8JC}2kDDJS!!!1Cz!!!$-6!!#;.{!!
++\Iq!!Ew!!+}6k1C7]!$!2.y7=!"!i6k"c6l!!#]LFLV2tK8!$4(!$;'In.X/F4&+jBg.T4a=hJR)zHg:?EyA%#Y+`#p*@IN+u!!#n$#!!"<59!!E>&K!(:j!!!.91!%"K!'!I.[!Q#z&S)1!1-A!!'j%a1A!G9r7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+s#$)qAwJ_?]JVI""v3cF_!!!"#M*C!!056k!/7D!!"<59!!#=G-!a8/"#'r!!)2
+$Y'p!!#i8o!(0^9PLO##'%)1*C#e*l(~E8E=:bJR0e,f:f>#LJJf.G?k2[3?Ap3x)x$a2N-y!!!1Dz)1!"E>!!"W+%!!/c6k!!Ew!!+}6k1C7]!$!7<[7=!%!q>{!)9Q0OA"'}!!"vIq!*Dr!!!,+e!!>}4'!0<s!!"`(?!!KXAa!,!H!!!?+%!!;g>{!"Gh!!"s']!!,*9Q!*Dr!!!b*c!!>}4'!$!X!!"`(?!!)44'!,!H!!!u*#!!6]0"
+!$4(!$;'In.X/F4&+jBg.T4a=hJR/1I<.A5O@k#[JF-*0E39Aa!!#r)d!!"2.k!!:6>{!"E>!!!.91!%"K!'!I.[!Q$2'U)1!A._7M!D!l!H!!!u*#!!;g>{!&,L!!"s']!!5L)1!-$0!!";)a!!2u5L!$4(!$;'In.X/F4&+jBg.T4a=hJRG8JG#&3yCY!9/2B-JHA5+u!!#s7D!!"X,g!!HR4'!(!r!!!.91!%"K!'!I.[!Q#z'u)1!1-E
+!!1CKdLV4y:v!$4(!$;'In.X/F4&+jBg.T4a=hJR"P<74T9yB'"{;7)e.B;e+u!!#j&o!!#J,'!!>O<7!*)v!!!.91!%#e!'!I.[!y&Q!A#e7I!$!29{7=!"!9Aa"iG@!!#A!1!!2u@B!$4(!$;'In.X/F4&+jBg.T4a=hJR4m#C@$KuD["{;7)e.B;e+u!!#e$N!!!5*S!!!54'!//>!!!.91!%"K!'!I.[!Q#z(W)1!1-E!!41KtLV6vGZ
+7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+j*!CYH67x>;K$)e4<=??i!!!"!u,G!!F=+u!"2.!!!5*S!!#=G-!a8/"#'r!!)23'HR!!&P"{>{0O@&)A!!=K1A!(7@!!"j'M!!8QIq!-?A!!";)a!!CW+u!)<f!!"}&k!!5L)1!,<Y!!"M)!!!F]!!!(7@!!#B&K!!8QIq!!$&!!";)a!!!2Iq!)<f!!#U%i!!6]K8!$4(!$;'In.X/F4&+jBg.T4a
+=hJR/1I<.A5O@k#[JF-*0E39Aa!!#j,Z!!!N&[!!$k>{!.?A!!!.91!%"K!'!I.[!Q$2)9)1!A._7M!D!i<f!!#U%i!!5L)1!0!=!!"M)!!!$H>{!'4X!!!5%Y!!2v%,!$4(!$;'In.X/F4&+jBg.T4a=hJR4m#C@$KuD[";D/"9<`3E+u!!#e$N!!"~$W!!!54'!#Dh!!!.91!%"K!'!I.[!Q#z)Y)1!1-E!!:*KdLVAa!0&.*V!#&L!$;'
+In.X/F4&+jBg.T4a=hJR-L&|G';'J'"_BaJ:,p#'$[!!!""=%9#e(a9Q!$4Y!1"$)A!!#=G-"C>{!10!"#&L7M!'!=!!#Q,K7=!*"#%i!!I+";'Q7M!"!9.[!1Ex!!)2715M!(Af+u#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!aF{#e!'Iu!!#6!1!!?M+u!,.\!!#M
+!a!!8o#e!!DL!!"'!1!!)A.[!$1B!!!f!q!!!a#e!%.`!!#/7=!&,g.[!*2f!!/(!q!!3=)1""9U!!!_7=!&Bs+u!#82!!0$!a!!'u)1!t!%!!!I7=!&Fk)1!%%,!!0;!Q!!4O)1!w9T!!"e7=!&*3)1!.El!(J/!Q!!&K#e!"Ad!!!t!1!!%i)1!(DH!!!K!Q!!<'#e!%.^!!#%!1!!1A)1!.!"!!">!Q!!DG#e!*9T!!#5!1!!=Y)1!->|
+!!"v!Q!!B##e!,DJ!!"|!1!!BS)1!+Ab!!#.!Q!!;U#e!-9T!!"G!1!!C5)1!(+v!!#'!Q!!3%#e.;"v!Q!!1q#e!+>~!!"!!1!!;U)1!&Ab!!"I!Q!!0/#e!(!$!!!s!1!!1!)1!%+v!!!t!Q!!*C#e!%4*!!!F!1!!,')1!!G.!!!b!Q!!HW)1!u#h!!#.7=!&.K)1!,*V!!/h!Q!!:+)1!z!$!!"G7=!&Aq)1!)-<!!1@!Q!!7U)1!tDK
+!!"V7=!&4w+u!,'p!!0C!a!!D_)1!~+y!!#_7=!wI!+u!#G.!!#P!a!!/-#e!/?!!!"7!1!!Fk+u!*&L!!#+!a!!=I#e!,._!!"~!1!!:C+u!-Ir!!"*!a!!D7#e!'4+!!#D!1!!3u+u!.Ir!!"2!a!!6t83!!#f7]!"#=Iq!A%%7M"=!qDH#f!"#f!"#f!"#f"C#:&O!!!R"#!!.{+u!$#k!!#]!1!!)A1A!06l!!!R"#!!K5#e!$#k!!#]
+!1!!!Q1A!06l!!!$"#!!K5#e!!)7!!!s!a!!!Q1A!&&O!!!$"#!!.{+u!!)7!!!s!a!!)A1A!&&O!!!R"#!!7.*W!!#f7]!"#=Iq!Q%*J{+u6[/4!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16n4T"#!!:3+u!#DM!!"W!a!!'m1A!$.`!!!I"#!!*#.[!#6q!!!V!q!!0_+u!$.`!!!}
+!a!!*#.[!&Ae!!!V!q!!0_+u!#!@!q!!0_+u!#!&!!!}!a!!&K.[!,6p!!!s!Q!!@?.[!(Je!Q!!@?.[!&&N!!!+!q!!.{)1!!<<!!!s!Q!!H/+u!&&N!!#3!a!!/=)1!-)5!!!z!Q!!@?+u!&DJ!!"q!a!!2S)1!+4+!!"6!Q!!;e+u!)4*!!"Z!a!!;u)1!*1E!!"}!Q!!:S+u!,<:!!"B!a!!@_)1!(Iu!!"}!Q!!6[+u6["}!Q!!6{+u
+!#>~!!"D!a!!(?)1!)#i!!!L!Q!!*C1A!#>~!!!X"#!!(?)1!$4-!!!L!Q!!*C1A!$It!!!X"#!!+e)1!$4-!!!`!Q!!Ey+u!!G2!!#>!a!!#E.[!.9U!!!/!q!!:c.[!!G2!!"Z!q!!#E.[!,Iv!!!/!q!!F+/U!!!,!q!!HO.[!!+z!!#[!q!!L7+u!!#k!!#W!a!!"S1A!/#i!!!0"#!!E9+u!"+{!!#!!a!!%)1A!*+y!!!9"#!!:3+u
+!#DM!!"W!a!!(_1A!*+y!!"E@w+u!1%.!!#r9A!$!9(-7M!("#%+:S'n=Q+u!1%.!!#r9A!$!9%37M"B!s>|#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C(K&Q!!#U!Q!!B#1A!$DK!!#:"#!!5Y+u!0<=!!"h!a!!&K4'!.#i!!!m"3!!H?+u!)!(!!#L!a!!<G4'!/4+!!#%"3!!F[+u!.9X!!#0!a!!J:Ix
+!!"{!a!!"36k!*4+!!!9"C!!3%+u!"6s!!"-!a!!(/6k!(1E!!!K"C!!5)+u!##m!!"m!a!!"c6k!.<;!!#I"3!!!a.[!,G4!!!P!q!!9A4'!%.`!!!v"3!!,g.[!"1H!!!f!q!!G=1A!#?"!!"w"#!!KU+u!)6q!!#0!a!!6b&Q!!"K!a!!4G1A!$4+!!"5"#!!F[)1!)9W!!"\!Q!!?}1A!'4*!!#I"#!!)q)1!"DN!!!=!Q!!1Q4'!"Ad
+!!"_"3!!%i)1!-Ah!!!Q!Q!!J34'!&1D!!!8"C!!6;)1!#<?!!"s!Q!!(/6k!0!$!!!K"C!!Iq)1!-&Q!!#U!Q!,!-&Q!!#U!Q!!6y=]!!#f7]!"#=Iq!Q%)C}+u6[.q!2!1!2!1!2!1!2!1!2!1!2!1!2!16l3G"#!!D7)1!-&Q!!#4!Q!!?M4'!-It!!"v"3!!D7)1!,#l!!"q!Q!!>K4'!*1D!!"j"3!!8?)1!*G4!!"6!Q!!9A4'!')4
+!!"?"3!!/m)1!'<>!!!l!Q!!/]4'!%.^!!!c"3!!,g)j!!!C"3!!,g)1!!4.!!!q!Q!!IA1A!'9T!!#:"#!!6{)1!-4-!!"g!Q!!B#1A!-It!!#'"#!!D7)1$7#'"#!!D7)1!-&Q!!#4!Q!!7.*W!!#f7]!"#=Iq!Q%*J{+u6[/4!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16n4H"S!!
+#%&K!##n!!!-!A!!&[9Q!,Iu!!!B"S!!AQ+u!##n!!#E!a!!&{9Q!0._!!!I"S!!LG+u!#DP!!!+!q!!)q9Q!"'l!q!!+U9Q!"6p!!!h"S!!%y.[!&<@!!!A!q!!4w9Q!#!&!!"8"S!!&K.[!(.d!!!V!q!!4w9Q!$.`!!"8"S!!*#.[!(1I!!!V!q!!5)6k!$.`!!"9"C!!*#.[!(1I!!!A!q!!5)6k!#!&!!"Q"C!!&K.[!*Iy!!!>!q!!
+=I6k!"1Z!q!!>{6k!")6!!"y"C!!#%.[!,Ai7="B!q!!Aa6k!0._!!#("C!!Fk+u!-)9!!#$!a!!B36k!,Iu!!#("C!!G}&K!-)9!!#J!A!!B36k!+>}!!#'"C!!7}&K!,Iy!!"=!A!!A!6k!'DI!!"{"C!!2#&K!,&S!!""!A!!>K6k!&<9!!"g"C!!/m&K!*?%!!!x!A!!9q6k!&H&!A!!7]6k!&>}!!"9"C!!1Q&K!(1I!!"$!A!!3U6k
+!%Ac!!"0"C!!-y&K!'DO!!!m!A!!"39Q!!Ac!!!("S!!#%&K!!40!!!-!A!!&[9Q!!Ac!!!B"S!!#%&K!)&^7M!"!9.[!1Ex!!)27,2g!(Iv*C#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!X1q<7!!Ac!!"&"c!!#%&K!');!!#$!a!!1q<7!,Iu!!"&"c!!G-+u!'.e!!#Z!a!!3%<7
+!0Iu!!"2"c!!"c.[!(1K!!!36[.[!)!+!!!9!q!!8?<7!"DL!!"_"c!!&K.[!,41!!!A!q!!@/<7!#!&!!"z"c!!*#.[!,41!!!V!q!!@/<7!$.`!!"{"S!!*#.[!,6t!!!V!q!!@?9Q!$.`!!"{"S!!&K.[!,6t!!!A!q!!DG9Q!#!&!!#F"S!!%y.[!/9Z!!!7%9.[!0&T!!!4!q!!K59Q!!Af!!#c"[)16[.[!!&U!!#Z!a!!!q<7!.G1
+!!!&"c!!AQ+u!!.e!!#$!a!!!q<7!/.]!!!&"c!!G}&K!!.e!!"n!A!!!a<7!)4)!!!""c!!5i&K!0G6!!"0!A!!KU9Q!'+w!!#Y"S!!11&K!/Iz!!!{!A!!H/9Q!&4)!!#B"S!!/m&K!.+~!!!B/m&K!-40!!!|!A!!@?9Q!'#g!!"{"S!!1Q&K!+Iz!!!m+E&K!+Iz!!!m!A!!>k9Q!%Ac!!!j"c!!#%&K!%9[!!!-!A!!-I<7!!Ac!!"&
+"c!!#%&K!');!!!-!A!!78@C!!#f7]!"#=Iq!Q%+;}+u"31B761C7'5M!!#f7]!"#=Iq!Q%*8W+u6[/(!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16m?e"s!!Iq)1!%6v!!!^!a!!0O>{!(9U!!"C"s!!=)+u!+1L!!#6!a!!Dg>{!/4+!!!'#%!!H?+u!#43!!#L!a!!,wAa!.DK!!""#%!!CU+u!(8.#%!!
+@?+u!)DS!!"Z!a!!;uAa!'<;!!"a#%!!3%+u!,!-!!"9!a!!>{Aa!(1E!!"j#%!!=y+u!*!-!!#?!a!!3%Aa!!+z!!!e#%!!)!.[!".g!!!f!q!!F;>{!%.`!!"_"s!!,g.[!'42!!!L!q!!*s>{!0<;!!!/"s!!CU+u!(LO"c!!8/+u!06u!!!X!a!!K5<7!.DJ!!!0"s!!;%)1!$Al!!"*!Q!!3%>{!$+x!!"f"s!!%i)1!/42!!!=!Q!!
+&kAa!"Ad!!!s#%!!)1)1!(6w!!!w!Q!!;eAa!(DJ!!"s#%!!>{)1!,!-!!#U!Q!!>{Aa!0!$!!!i"s!!Iq)1"s!i"s!!Iq)1!)#O7M!"!9.[!1Ex!!)26wEm!(Iv$g#u#e#u#e#u#e#u#e#u#e#u#e#u#m!7-9>{!-It!!!i"s!!D7)1!$9]!!#4!Q!!*cAa!-It!!!X#%!!>[)1!$)=!!"Y!Q!!(_Aa!)9T!!!E#%!!4W)1!".g!!"&!Q!!
+!AAa!&4*!!#U"s!!-i)1!.Al!!!f!Q!!C%>{!%.^.K!!=Y>{!%.^!!"P"s!!.[)1!()<!!",!Q!!0O>{!)#h!!!n"s!!<w)1!%6v!!#4!Q!!-9>{!-It!!!i"s!!D7)1!%6v!!#4!Q!!Aa!45<0"!$4(!$;'In.X/F4&+jBg.T4a=hJR@JE~;vKrIE!q:%HUL5%@+u!!#tFx!!!&"c!!JC9R!$9c!!!.91!)"s!"!y&Q!A%-!!1BAa!4%|2f
+!!?#!=!!$8)8Aa!'@w+u!1%.!!#r9A!&!=!!",C)!(6p6v>|#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!j!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1
+!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16s"~Ai)1!yAd!!#J7=!&23)1!0@B!(Jb!Q!!!A#e!%9T!!!4!1!!+%)1!#1B!!!Q!Q!!*c#e!#6n!!!m!1!!&K)1!'!"!!!=!Q!!4W#e!"Ad!!"V!1!!%i)1!+Ir!!!F!Q!!Bs#e!$9T!!#C!1!!-y)1!/G.!!"+!Q!!Js#e!)Ad!!!>!A!!0o)1!$Is!!!a!Q!!0/&K6[!R!Q!!
+4g&K!#)4!!"S!A!!%i)1!+Ac!!!=!Q!!C%&K!"Ad!!#E!A!!&{)1!0.]!!!R!Q!!"s)1!%!$!!!=!Q!!/m)1!#6n!!":!Q!!)A)1!)DJ!!!V!Q!!>{)1!$.^!!#C!Q!!*#)1!.G0!!!V!Q!!AQ+u!$.^!!#$!a!!*#*R!!#E!a!!*S)1!01E!!!]!Q!!!1.[!%!$!!!+!q!!-))1!"#j!!!r!Q!!$g.[!&Ad!!!=!q!!3E)1!#!&!!"E!Q!!
+&K.[!)&N!!!A!q!!7-)1!$.`!!"E!Q!!*#.[!)&N!!!V!q!!7=&K!$.`!!"F!A!!*#.[!))3!!!V!q!!7DIs!!!A!q!!7=&K!#!&!!"F!A!!&K.[!)G/!!!A!q!!91&K!#!&!!"g!A!!&K.[!,.]!!!<!q!!B#&K!")6!!#/!A!!#5.[!.#g!!!$!q!!E9&K!01E!!#;!A!!Iq+u!.4)!!#B!a!!EY&K!,Iu!!#<!A!!AQ+u!.4)!!#C!Q!!
+6h4)!!#C!Q!!EY&K!,.^!!#7!A!!:S)1!-6m!!"H!Q!!@O&K!'Ad!!"d!A!!1Q)1!)#g!!"$!Q!!3E&K!'#h!!!y!A!!23)1!%)3!!"3!Q!!)!&K!(<:!!!8!A!!9!)1!0<8!!"k!Q!!KU#e!+6n!!#^!1!!>[)1!09R!!"q!Q"B!09R!!"q!Q!!Ke#e!-1D!!#`!1!!Bc)1!0>|!!#+!Q!!Ke#e!,Iu!!#`!1!!AQ+u!0>|!!#G!a!!L'#e
+!06o!!!"!A!!!1.[!!+w!!!+!q!!#%&K!"#j!!!8!A!!$g.[!#)3!!!=!q!!)q&K!#!&!!!p!A!!&K.[!%Is!!!A!xIq!%Is!!!V!q!!.K&K!$.`!!!p!A!!*#.[!%9R!!!V!q!!-I#e!$.`!!!j!1!!*#.[!%9R!!!A!q!!-I#e!#!&!!"(!1!!&K.[!(9R!!!=!q!!7=#e!".`!!"R!1!!#E.[!*1B!!!&!q!!;5#e!04+!!"_!1!!J#+u
+!*DH!!#C(?+u!*DH!!#$!a!!;e#e!,Iu!!"`!1!!Fk)1!*DH!!#C!Q!!;e#e!,.^!!!b:c#e!*1D!!"M!1!!7M)1!(<8!!".!Q!!1q#e!&G0!!!e!1!!1!)1!$!"!!"!!Q!!%i#e!'+x!!!)!1!!3u)1!/82!!/}!Q!!D_)1!z)4!!#%7=!&=Y)1!-"F!!0G!Q!!Ai)1!|Iu!!#%7=!&AQ+u!-"F!!1"!a!!B+)1""4+!!#,7=!&!1.[!-@B
+!!.g!q!!Do)1!r)6!!#@7=!&%).[!/0"!!.x!q!!K-)1(a!&!!!4!1!!&K.[!")2!!!A!q!!$7#e!$.`!!!4!1!!*#.[!")2!!!V!q!!$/)1!t.`!!!37=!&*#.[!"'p!!/2!q!!$/)1!s!&!!!37=!&&K.[!#@B!!.{!q!!+-)1!rDL!!!e7=!&%).[!%El!!.n!q!!/E)1!q?"!!!{7M!%!q!!19)1""._!!"$7=!&Fk+u!'%,!!0^!a!!
+1Y)1!|Iu!!"$7=!&K5)1!'%,!!19!Q!!1Y)1!|It!!"#7=!&;5)1!&El!!0(!Q!!07)1!xDJ!!!w7=!&4g)1!&"F!!/m!Q!!-a)1!w>~!!!c7=!&2s)1!$:v!!/f!Q!!(w)1!w9T!!!B7=!&35)1!"'p!!/n!Q!!$/)1!x#h!!!+7=!&0_)1!!=\!!/Y!Q!!"k)1!vAd!!"j7=!&%i)1!+5L!!.w!Q!!=Q)1!rAd!!#%7=!&%i)1!-"F!!.w
+!Q!!Ai)1!rAd!!#%7=!&8o)1!-"F!!2o!Q!!6t83!!#f7]!"#=Iq!A%%7M"=!qDH#f!"#f!"#f!"#f"C#B1F!!!R"#!!EI.[!$#k!!"?!Q!!)A1A!(Ad!!!R"#!!6+)1!$#k!!"?!Q!!!Q1A!(Ad!!!$"#!!6+)1!!)7!!#;!q!!!Q1A!.1F!!!$"#!!EI.[!!)7!!#;!q!!)A1A!.1F!!!R"#!!7.*W!!#f7]!"#=Iq!Q%*J{+u6[/4!2!1
+!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16n5z"3!!:3+u!,#l!!"W!a!!>;4'!$.`!!"o"3!!*#.[!+Ah!!!V!q!!G-.[!$.`!!#E!q!!*#.[!/!&!!!V!q!!G-.[!#"B!q!!G-.[!#!&!!#E!q!!&K.[!$Ah!!!s!Q!!+54'!&&N!!!]"3!!.{)1!)G3!!!s!Q!!911A!&&N!!"-"#!!.{)1
+!&&Q!!!u!Q!!-)1A!&9T!!!]"#!!0o)1!$&Q!!"*!Q!!(?1A!()4!!!B"#!!7})1!"?#!!"a!Q!!%I1A!#0Y!Q!!%I1A!,<:!!!$"#!!@_)1!!)7!!"}!Q!!!Q1A!,<:!!!&6[1A!#>~!!!&"#!!(?)1!!.a!!!L!Q!!@o4'!#>~!!"~"3!!(?)1!,?$!!!L!Q!!@o4'!$It!!"~"3!!+e)1!,?$!!!`!Q!!0o1A!!G2!!!~"#!!#E.[!&DM
+!!!/!q!!%Y4'!!G2!!!<"3!!#E.[!%)8!!!/!q!!1!4'!!?"!!!s3E4'!!+z!!"="3!!L7+u!).b!!#W!a!!9!4'!/#i!!"V"3!!E9+u!*6r!!#!!a!!;U4'!*+y!!"_"3!!:3+u!,#l!!"W!a!!?-4'!*+y!!"E@w+u!1%.!!#r9A!$!9(-7M!("#%+:S'n=Q+u!1%.!!#r9A!$!9%37M"B!s>|#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"
+#f!"#f!"#f!"#f!"#f!"#f"C(C1I!!#U!Q!!,w6k!$DK!!!z"C!!5Y+u!(G5!!"h!a!!<w6k!.#i!!#5"C!!H?+u!!+~!!#L!a!!'=9Q!/4+!!!e"S!!F[+u!&DP!!#0!a!!50Iz!!"{!a!!8_9Q!*4+!!"_"S!!3%+u!*Aj!!"-!a!!>[9Q!(1E!!"q"S!!5)+u!+.d!!"m!a!!919Q!.<;!!"+"S!!!a.[!%&T!!!P!q!!$79Q!%.`!!#>
+"C!!,g.[!*<?!!!f!q!!236k!#?"!!!Y"C!!KU+u!!Ai!!#0!a!!6j1H!!"K!a!!Js4'!$4+!!#["3!!F[)1!!DO!!"\!Q!!*s6k!'4*!!"+"C!!)q)1!+#m!!!=!Q!!G}6k!"Ad!!!A"S!!%i)1!&!*!!!Q!Q!!5)9Q!&1D!!"^"S!!6;)1!+G6!!"s!Q!!>[9Q!0!$!!"q"S!!Iq)1!%1I!!#U!Q!,!%1I!!#U!Q!!6y=]!!#f7]!"#=Iq
+!Q%)C}+u11.q!2!1!2!1!2!1!2!1!2!1!2!1!2!16l2)"C!!D7)1!%1I!!#4!Q!!*C9Q!-It!!!X"S!!D7)1!$.d!!"q!Q!!)A9Q!*1D!!!L"S!!8?)1!#&T!!"6!Q!!$79Q!')47=","S!!/m)1!/G5!!!l!Q!!F+6k!%.^!!#+"C!!,g)1!+1I!!!f!Q!!8_6k!&!$!!"4"C!!2s)1!&9Y!!"D!Q!!-i6k!++x!!!g"C!!D7)1!%1I!!#4
+!Q!!,w6k!-It!!!g"C!!D7)1!)&^7M!"!9.[!1Ex!!)27,2g!&#j*C#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!X=)<7!!Ac!!"h"c!!#%&K!+.e!!#$!a"B!+.e!!#$!a!!=)<7!/!%!!"j"c!!Jc+u!+Ak!!#d!a!!?-<7!!<<!!"{"c!!$'.[!-&U!!!9!q!!CU<7!"DL!!#C"c!!
+&K.[!09[!!!A!q!!KE<7!#!&!!#^"c!!*#.[!09[!!!V!q!!KE<7!$.`!!#_"S!!*#.[!0<@!!!V!u+u!0<@!!!V!q!!KU9Q!#!&!!#_"S!!&K.[!"&U!!!A!q!!&{<7!"DL!!!L"c!!%9.[!$,!!!!4!q!!*s<7!!Af!!!a"k)16[.[!%,!!!#Z!a!!-)<7!.G1!!!h"c!!AQ+u!%41!!#$!a!!-)<7!/.]!!!h"c!!G}&K!%41!!"n!A!!
+,w<7!)4)!!!d"c!!5i&K!%!+!!"0!A!!+5<7!'+w!!!W"c!!11&K!$#o!!!{!A!!'m<7!&4)!!!@"c!!/m&K!"1K!!"!/m&K!!9[!!!|!A!!KU9Q!'#g!!#_"S!!1Q&K!0#n!!!m!A!!J#9Q!%Ac!!#V"S!!-y&K!)?'!!!-!A!!8_<7!!Ac!!"N"c!!#%&K!+.e!!!-!A!!=)<7!!Ac!!"E$?+u!1%.!!#r9A!$!9&A7M"B!t4(#f!"#f!"
+#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C*Q42!!!-!A!!H?>{!!Ac!!#L"s!!AQ+u!/42!!#$!a!!H?>{!/!%!!#N"s!!Jc+u!/G8!!#d!a!!JC>{!!<<!!#_"s!!$.Iv!!!%#%!!%).[!!DS!!!>!q!!&KAa!#!&!!!\#%!!&K.[!$?)!!!A!q!!+%Aa!$.`!!!\#%!!*#.[!$?)!!!V!q!!+5>{
+!$.`!!!]"s!!*#.[!$Al!!!V!q!!+5>{!#!&!!!]"s!!&K.[!&,"!!!A!q!!23>{!"DL!!"0"s!!$h9V!!"9"s!!$7.[!(Al!!!-!q!!7-@B!(Iv!!"I"s!!Jc+u!)9\!!#C!a!!8?>{!,Iu!!"L"s!!AQ+u!)9\!!#J!A!!8?>{!/.]!!"L"s!!>+&K!)6v!!"J!A!!7]>{!(<9!!"E"s!!3U&K!(G8!!"'!A!!5I>{!&Is!!"6"s!!0?&K
+!'<B!!!x!A!!1Q>{!&4)!!!y"s!!1&4)!!!l"s!!0O&K!$Al!!"$!A!!+5>{!'#g!!!T"s!!-y&K!$)<!!!m!A!!)a>{!%Ac!!#2"s!!#%&K!-DR!!!-!A!!Cu>{!!Ac!!#L"s!!#%&K!/42!!!-!A!!78@C!!#f7]!"#=Iq!Q%+;}+u"31B761C7'5M!!#f7]!"#=Iq!Q%*8W)16[!&(?#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u
+#e#u#e#u#e#u#e#u#m!LCeAa!0!$!!#1#%!!+E+u!.I}!!"<!a!!!aDG!+._!!!K#5!!DW+u!&1N!!#L!a!!8ODG!/4+!!"n#5!!H?+u!-<D!!#B!a!!G]DG!-?!!!"BKuDG!,6o!!!2#E!!:c+u!#&Y!!"-!a!!&kG-!'<;!!!U#E!!5)+u!$,%!!"9!a!!(?G-!+<;!!!5#E!!F++u!/G:!!!%!q!!C%DG!#Iv!!"\#5!!,g.[!&I~!!!f
+!q!!&KDG!%.`!!#P#%!!(?.[!,G9!!#_!a!!9qAa!-?!!(Iq6+Aa!)6o!!"?#%!!*C+u!(Am!!#B!Q!!:#Aa!*9T!!#%#%!!2S)1!/G9!!!U!Q!!']DG!"Ad!!".#5!!%i)1!+1N!!!=!Q!!EIDG!$!$!!#a#5!!/])1!##s!!"@!Q!!)qG-!,!$!!!U#E!!Iq)1!$,%!!#U!Q!!CeAa!0!$#%!!CeAa!0!$!!"CHw+u!1%.!!#r9A!$!9#2
+7M"B!r1B#f!"#f!"#f!"#f!"#f!"#f!"#f"C$sAm!!#4!Q!!CeAa!-It!!#"#5!!D7)1!,DT!!#4!Q!!@oDG!+G0!!"z#5!!:S)1!,#r!!"L!Q!!=YDG!()4!!"\#5!!1q)1!)1N!!!x!Q!!4gDG!%>~!!"##5!!,g)1!%An!!!f!UAa!#An!!!f!Q!!#uDG!&!$!!#\#%!!2s)1!.I}!!"D!Q!!DWAa!++x!!#1#%!!D7)1!-Am!!#4!Q!!
+CeAa!-It!!#1#%!!D7)1!':*7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+rCVJ%"#*^/=C3C9?b!"F?!!!"!Y$W!!27Iq!$7"!!!&3E!!#=G-!a8/"#'r!!)2$Z82!!#i8o!(8>&JLO"S*k)1*C#e*l(~E8E=:bJR0e,f:f>#LJJf.G?k2[3?Ap3x)x$a2N-y!!!1JD#e!'*"!!!3%)!!7r.[!!Ew!!,'!!1C7]!%7-1C!9+u!Q$;*{)1!A.`7M!P
+6k0&$g!!8B.[!#J+!!"2)Q!!<H9Q!):(!!!P%)!!GP)1!)4=!!"L*#!!Aa!&1T@B!$4(!$;'In.X/F4&+jBg.T4a=hJR"H9K9DL1@#!q?-Ai=j(c+u!!#s<M!!"d/=!!*dDG!*7g!!!.91!)"s!"!y&Q!A%-!!1BAa!&"6C(!#Iv6sG.#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#lJ#!2!1!2!1!2!1!2!1
+!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16s"QF+#e!)9T!!#?!1!!8?)1!)!#!!"C!a!!6k&K6["C!a!!>K&K!-._!!#5!A!!Iq+u!/1C!!!"!q!!Ku&K!"+z!!!9!Q!!%y.[!$<:!!!A!q!!*s)1!#!&!!![!Q!!*#.[!$<:!!!V
+!q!!*s)1!$.`!!#T!1!!*#.[!/Ir!!!V!q!!Ia#e!$.`!!#T!1!!&K.[!/Ir!!!A!q!!!q'l!!!A!q!!$g&K!"DL!!!A!A!!%9.[!#6m!!!6!q!!(o&K!"#j!!!U!A!!"c.[!$9S!!!$!q!!+%&K!0Ae!!!\!A!!Jc+u!$>}!!#P!a!!*s&K!/)5!!!W!A!!F++u!$)3!!#9!a!!(/&K!-)5!!!8!A!!=Y+u!"4)!!"k!a!!:$6l!!#H!Q!!
+:##e!/)4!!"V!1!!G])1!0*V!!0P!a!!JK)1!|#i!!#G7=!&Bc+u!.82!!0t!a!!EA)1!~Ae!!#67=!&Gm+u!-K8!!1,!a!!D?)1"")5!!#47M!%!q!!EA)1!q<<!!#D7=!&$'.[!/82!!.u!q!!K})1(`Iv!!!:!1!!&K.[!"9R!!!A!q!!%9#e!$.`!!!:!1!!*#.[!"9R!!!V!q!!"K)1!t.`!!!)7=!&*#.[!!82!!/2!q!!"K)1!s!&
+!!!)7=!&&K.[!"@B!!.x!q!!(W)1!r<<!!![7=!&$G.[!&%,!!.e!q!!2[)1""DK!!"@7=!&I1+u!*'p!!0z!a!!>3)1!}#i!!#*7=!&<7+u!-0"!"F+!a!!5Y#e!,<:!!"<!1!!@_)1!(9R!!"}!Q!!Gu)1!~>}!!#I7=!&F;&K!,@B!!0=!A!!:k)1!x4)!!">7=!&2#&K!&HR!!/N!A!!+=)1!u4)!!!87=!&,w&K!"5L!!/C!A!!%!)1
+!t#g!!!87=!&)A&K!"5L!(JD!A!!6+#e!$#g!!"?!1!!)A&K!(Ab!!!R!A!!6+#e!%1C!!"?!1!!,w&K!&G.!!!h!A!!-I#e!%Ac!!!_!1!!/M&K!$)2!!!~!A!!(_#e!'6m!!!N!1!!4G&K!#DH!!"C!A!!*3#e!*.]!!!j!1!!>{&K!%9R!!"s!A!!AA#e47"$!Q!!AA#e!'#h!!##!1!!1Q)1!%4)!!"v!A!!-)&K!,)3!!!x!A!!;u&K
+!'!#!!"S!A!!2#&K!)6m!!"*!A!!6{&K!'<9!!"<!A!!3%&K!(#g!!"-!A!!2s&K!'4)!!"%!A!!1q&K!&Ac!!!~!A!!6`+w!!!w!A!!.;&K!%Ac!!!m!A!!,W&K!%6m!!!S!A!!,w&K!"4)!!!g!A!!$w&K!%1C!!!8!A!!)A&K!"4)!!!R!A!!$w&K!$#g!!!I!Q!!)A&K!#6n!!!R!A!!'m)1!$#g!!!I!Q!!,w&K!#6n!!!g!A!!$')1
+!%4)!!!"!Q!y!%>}!!#X!A!!.[&K!.Is!!!y!A!!Cu&K!'+w!!"~!A!!4W&K!+<9!!"E!A!!9q&K!*DI!!"6!A!!Bc&K!()3!!#+!A!!F+#e!)9T!!#?!1!!8?)1!)"N+M)1*C#e*l(~E8E=:bJR0e,f:f>#LJJf.G?k2[3?Ap3x)x$a2N-y!!!1/#>{!(8&!!!Q<G!!=0Iq!!Ew!!9\!!#j7-1C!1"FLG)2)tHR!!&P!y+u(W!&Ci)1!,$M
+!!#1,G!!D{<7!"/\!!#8-Y!!$\Iq!,$M!!#1,G!!?11A!':27=!X!1!Z:!L+L,-OLJJo2'KL*}9P+lC"6T#/E6<w>C1G)EJ+G!!!!"!t35!!5`4'!."2!!"$6+!!#=G-!a8/"#'r!!)2$["F!!#i8/!+,w&K!)1>LVJ|,/)1*C#e*l(~E8E=:bJR0e,f:f>#LJKa%n"8'/+P+u8JC}2kDDJS!!!19'Aa!(=P!!!n4g!!+\Iq!!Ew!!+}6k1C
+7]!$!2/?7=!"!i6k"qDJ!!!4L&LV2w*V!$4(!$;'In.X/F4&+jBg.T4a=hJR!!K[#{GoFO!);QEo8;L6+u!!#e=J!!"=59!!CL6k!$HN!!!.91!%"K!'!I.[!Q#z,_)1!1-A!!>h!Q!!$FDFLM:87=!X!1!Z:!L+L,-OLJJo2'KL*}9P+q"NI;.06(E)"LA.7u8~G!!!!"#T4w!!5p4'!%5F!!!_6[!!#=G-!a8/"#'r!!)2$[2f!!#i8/!+
+@?)1!"+qLVJ|-1)1*C#e*l(~E8E=:bJR0e,f:f>#LJJ'6O'.&DA?+u8JC}2kDDJS!!!13L<7!(=P!!!N7-!!+\Iq!!Ew!!+}6k1C7]!$!2/E7=!"!i6k"qDJ!!!4L&LV2w:v!$4(!$;'In.X/F4&+jBg.T4a=hJR3L"[Fa8iG!!);QEo8;L6+u!!#s=W!!"=59!!>#1A!$HN!!!.91!%"K!'!I.[!Q#z-a)1!1-A!!>h!Q!!$FDFLM:>7=!?
+!1!Z:!L+L,-OLJJo2'KL*}9P+jB4K(C~3S!a"LA.%A2kDDJS!!!12[)1!(=P!!!H8_!!+\Iq!!Ew!!+}6k1C7]!$!2/I7=!"!i6k"qDJ!!!4L&LV2wEl!$4(!$;'In.X/F4&+jBg.T4a=hJR7O<Y"zImG1!);QEo8;L6+u!!#s-@!!"=59!!=!Iq!$HN!!!.91!%"K!'!I.[!Q#z.C)1!1-A!!>h!Q!!$FDFLM:B7=!X!1!Z:!L+L,-OLJJo
+2'KL*}9P+s'UB`,H;3$G"LA.7u8~G!!!!"#/8o!!5p4'!#%=!!!_6[!!#=G-!a8/"#'r!!)2$\"F!!#i8/!+@?)1!"+qLVJ|.s)1*C#e*l(~E8E=:bJR0e,f:f>#LJI{1p"eEK93+u8JC}2kDDJS!!!1-2#e!(=P!!!(;%!!+\Iq!!Ew!!+}6k1C7]!$!2/O7=!"!i6k"qDJ!!!4L&LV2x*V!$4(!$;'In.X/F4&+jBg.T4a=hJR+:?84>@w
+GQ!);QEo8;L6+u!!#q-N!!"=59!!7VDG!$HN!!!.91!%"K!'!I.[!Q#z/E)1!1-A!!>h!Q!!$FDFLM:H7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+n((AD<f/[)q"LA.7u8~G!!!!""l;5!!?d6k!$"d!!!_6[!!#=G-!a8/"#'r!!)2$\2f!!#i8/!+.;)1!,)-LVJ|/u)1*C#e*l(~E8E=:bJR0e,f:f>#LJKq:!9YE7.>+u8JC}2kDDJS!!!1
+'fIq!$-6!!!Q<G!!+\Iq!!Ew!!+}6k1C7]!$!2/U7=!"!i6k"c6l!!#]LFLV2x:v!$4(!$;'In.X/F4&+jBg.T4a=hJR62Eg9]>OF/#Y+`#p*@IN+u!!#j*>!!"<59!!)K#e!(:j!!!.91!%"K!'!I.[!Q#z0G)1!1-A!!'6%a1A!G:N7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+pGB,(E+C3!aJVI""v3cF_!!!"!c7m!!056k!%'s!!"<59!!
+#=G-!a8/"#'r!!)2$\C(!!#i8o!(0^9PLO##0w)1*C#e*l(~E8E=:bJR0e,f:f>#LJJf.G?k2[3?Ap3x)x$a2N-y!!!1(g&K!"E>!!#R8?!!/c6k!!Ew!!+}6k1C7]!$!7=77=!#!q@J!!&V4<:D!!!,+e!!.0)1!!?\!!"#.K!!KXAa!%E<!!#_+5!!1EIq!"Gh!!!n/-!!&.>{!'!p!!!b*c!!.0)1!%$@!!"#.K!!)44'!%E<!!!Q*C!!
+1EIq!&,L!!"B19)1*C#e*l(~E8E=:bJR0e,f:f>#LJJf.G?k2[3?Ap3x)x$a2N-y!!!1(g&K!'Jd!!#R8?!!%~.[!!Ew!!+}6k1C7]!$!3?}7=!#!q-=!#)51EIq!&,L!!!n/-!!/@.[!'!p!!";)a!!4<#e!(7@!!",1Y)1*C#e*l(~E8E=:bJR0e,f:f>#LJKs$[$$,C91+v7`0a>n0\,W!!!1,?1A!*/B!!!c7m!!4,#e!!Ew!!+}6k1C
+7]!$!2/_7=!"!iAa"#)+LVK*1y)1*C#e*l(~E8E=:bJR0e,f:f>#LJKQ*Y9>H)>W,"8I&~,e5f!a!!!1>B&K!//>!!!(;%!!:'.[!!Ew!!,'!!1C7]!&7-1C!1"FAa)2%?-<!!#f8o!+3f)1!.Ab!!",2;)1*C#e*l(~E8E=:bJR0e,f:f>#LJK9<CE{$"#B,"8I&~,e5f!a!!!1Ah1A!",O!!#%5)!!H##e!!Ew!!+}6k1C7]!$!2/c7=!"
+!iAa"3>vLVK5AG5L!$4(!$;'In.X/F4&+jBg.T4a=hJR/1I<.A5O@k#[JF-*0E39Aa!!#o@1!!#@'-!!3<<7!",O!!!.91!%"K!'!I.[!Q$q2k)1!A.f8_!|"|2,!!"j'M!!4K>{!+4M!!"H-)!!CW+u!('8!!#0'-!!7a4'!,<Y!!"5-i!!@a&K!)/D!!#B&K!!4K>{!.Dg!!"H-)!!!2Iq!('8!!!"&;!!7a4'!0!=!!"B2{)1*C#e*l(~
+E8E=:bJR0e,f:f>#LJJf.G?k2[3?Ap3x)x$a2N-y!!!1>2&K!#Dh!!".5i!!F=+u!!Ew!!+}6k1C7]!$!3@)7=!#!q-=!#)57a4'!0!=!!"5-i!!IrAa!)/D!!!5%Y!!:W9Q!",2!!",3=)1*C#e*l(~E8E=:bJR0e,f:f>#LJK9<CE{$"#B+|8}6r3':_!a!!!1Ah1A!,?2!!#%5)!!(a#e!!Ew!!+}6k1C7]!$!2/i7=!"!iAa"&6eLVJ|
+3])1)1#e*l(~E8E=:bJR0e,f:f>#LJIy$q*H3OAC,"8I&~,e5f!a!!!10X.[!",O!!!|:C4'!//>!!!.91!%"K!'!I.[!Q#z3m)1!1-E!!41KtLV6vH>7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+j*!CYH67x>;K$)e4<=??i!!!""q9a!!F=+u!("\!!!5*S!!#=G-!a8/"#'r!!)23,"F!!&P"{>{0O?40/!!=K1A!#7h!!"j'M!!*x4'!-?A
+!!!I0O!!CW+u!$=0!!"}&k!!'r>{!,<Y!!![/m!!F]!!!#7h!!#B&K!!*x4'!!$&!!!I0O!!!2Iq!$=0!!#U%i!!6b%,!$4(!$;'In.X/F4&+jBg.T4a=hJR/1I<.A5O@k#[JF-*0E39Aa!!#oH`!!!N&[!!409Q!.?A!!!.91!%"K!'!I.[!Q$24O)1!A._7M!D!d=0!!#U%i!!'r>{!0!=!!![/m!!$H>{!"5"!!!5%Y!!2z*V!$4(!$;'
+In.X/F4&+jBg.T4a=hJR"D3(4}CPGQ";D/"9<`3E+u!!#j@T!!"~$W!!0X.[!#Dh!!!.91!%"K!'!I.[!Q#z4o)1!1-E!!1xKdLV4~0"!$4(!$;'In.X/F4&+jBg.T4a=hJRJ+'V"H(dDK#I8$4y);I$+u!!#j/@!!"q$7!!)h9Q!&Ax!!!.91!%#e!'!I.[!y&Q!A#e7I!$!2:i7=!"!9Aa"w9l!!#A!1!!6s@67=!X!1!Z:!L+L,-OLJJo
+2'KL*}9P+j*!CYH67x>;K$)e4<=??i!!!"!d@O!!#\4'!)>j!!#:6K!!#=G-"S>{!10!"#&L!)+t!Q$;5Q)1!A.`7M!M6k/D35!!6/1A!%54!!"--Y!!B[1A!'=#!!#*7m!!6/1A!%54!!"?,w!!2z:v!$4(!$;'In.X/F4&+jBg.T4a=hJR/JLQH8&sHC"'=5F5Jq+S+u!!#i0X!!!159!!B.DG!*">!!!.91!%"K!'!I.[!Q#z5q)1!1-A
+!!<}!A!!@nG,LM:n7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+sCS1~;T.Y4g1C>,B8@tG!!!!""A@_!!#|4'!$I3!!#:6K!!#=G-!a8/"#'r!!)2$^C(!!#i8/!+IA)1!"+qLVJ|6C)1*C#e*l(~E8E=:bJR0e,f:f>#LJJ]IA3(4eD.+{!K?9*.?zJS!!!12.Iq!"$~!!!EBs!!E@G-!!Ew!!+}6k1C7]!$!2/{7=!"!i6k"qDJ!!!4L&LV2zK8
+!$4(!$;'In.X/F4&+jBg.T4a=hJR571r488+HS"#(:%l0Z0~+u!!#s%l!!!259!!<S>{!./{!!!.91!%"K!'!I.[!Q#z6s)1!1-A!!>h!Q!!$FDFLM:t7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+n>Z0bKr##:31C>,B8@tG!!!!""!C%!!#|4'!"IA!!#:6K!!#=G-!a8/"#'r!!)2$_'p!!#i8/!+IA)1!"+qLVJ|7E)1*C#e*l(~E8E=:bJR
+0e,f:f>#LJLM%y!*4A9:+{!K?9*.?zJS!!!1,cDG!"$~!!"^E)!!E@G-!!Ew!!+}6k1C7]!$!20#7=!"!i6k"n6n!!!4L&LV2{0"!$4(!$;'In.X/F4&+jBg.T4a=hJR&l4REZ/5Hs"#(:%l0Z0~+u!!#q%z!!!259!!7*9Q!./{!!!.91!%"K!'!I.[!Q#z7u)1!1-A!!>h!Q!!$FDFLM:z7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+iG=/g0Y
+C#<w1C>,B8@tG!!!!"!_EI!!#|4'!0IN!!#:6K!!#=G-!a8/"#'r!!)2$_82!!#i8/!+IA)1!"+qLVJ|8G)1*C#e*l(~E8E=:bJR0e,f:f>#LJK3"[$z166V+{!K?9*.?zJS!!!1@|<7!"$~!!">GM!!E@G-!!Ew!!+}6k1C7]!$!20)7=!"!i6k"qDJ!!!4L&LV2{@B!$4(!$;'In.X/F4&+jBg.T4a=hJR=y(;,'.BI%"#(:%l0Z0~+u!!
+#h90!!!259!!KC1A!./{!!!.91!%"K!'!I.[!Q#z8w)1!1-A!!>h!Q!!$FDFLM;"7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+tGm.K@w7KBC1C>,B8@tG!!!!"!?Gm!!#|4'!(1,!!#:6K!!#=G-!a8/"#'r!!)2$_HR!!#i8/!+@?)1!"+qLVJ|9I)1*C#e*l(~E8E=:bJR0e,f:f>#LJJ=*z>T0`+b+{!K?9*.?zJS!!!1;S6k!%B{!!!BIa!!
+E@G-!!Ew!!+}6k1C7]!$!20/7=!"!i6k"gG0!!"uL&LV2|%,!##f!$;'In.X/F4&+jBg.T4a=hJR/`*x=I%LIE"#(:%l0Z.qG!!!!"!9IA!!C\Aa!#&:!!#:6K!!#=G-!a8/"#'r!!)2$`'p!!#i8/!+"C#e!09OLVJ|:+)1*C#e*l(~E8E=:bJR0e,f:f>#LJJgG,>a9s98+z#3:76tBPE)!!!1,r9Q!"":!!!CIa!!#l4'!!Ew!!+}6k1C
+7]!$!2037=!"!i6k!E9l7m!#2|0"!$4(!$;'In.X/F4&+jBg.T4a=hJR/h4#@uK;Hs!qD0,_"_.8+u!!#h+I!!"J2S!!)n+u!"":!!!.91!%"K!'!I.[!Q#z:[)1!1-E!!4MKDLV6vHf7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+j*!CYH67x>;K$)e4<=??i!!!""JDG!!-n+u!%6C!!"G2S!!#=G-!a8/"#'r!!)23.82!!&P"{>{0OAM5I!!
+<JG-!0Ec!!"d+U!!#l4'!-/9!!#b5i!!BVAa!"":!!#N*s!!L.<7!/:-!!!159!!El6k!0Ec!!#=*S!!#l4'!0?S!!#b5i!!Kh1A!"":!!#O)q!!6d:v!$4(!$;'In.X/F4&+jBg.T4a=hJR/1I<.A5O@k#[JF-*0E39Aa!!#m6;!!"a.[!!-66k!%?q!!!.91!%"K!'!I.[!Q$2;=)1!A._7M!D!b":!!#O)q!!L.<7!/<k!!!159!!#H)1
+!/B{!!!/)a!!2|@B!$4(!$;'In.X/F4&+jBg.T4a=hJR/h4#@uK;Hs#E49*w;'6?+u!!#h+I!!!M,g!!)n+u!*G}!!!.91!%"K!'!I.[!Q#z;])1!1-E!!1xKdLV5"El!$4(!$;'In.X/F4&+jBg.T4a=hJR$'(w9[J3HS"C@]>(JW.++u!!#e0`!!!5,'!!1_4'!-'1!!!.91!%#e!'!I.[!y&Q!A#e7I!$!2;37=!"!9Aa"iG@!!#A!1!!
+2|K8!$4(!$;'In.X/F4&+jBg.T4a=hJREp!C2f2yHS"C@]>(JW.++u!!#p(S!!"o*C!!?I+u!",X!!!.91!%"K!'!I.[!Q#z<?)1!1-E!!4fKtLV6vHp7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+j*!CYH67x>;K$)e4<=??i!!!"!&Aq!!4I+u!-0g!!"n*C!!#=G-!a8/"#'r!!)23/'p!!+z"s!!8?!|"t$x!!"5'M!!&r)1!(&q!!!V3u!!
+1S+u!#'`!!"$'-!!*)Iq!).}!!!C4W!!7_&K!$/l!!"k&K!!&r)1!+7-!!!V3u!!:dG-!#'`!!"Z&+!!*)Iq!,?9!!"B<o)1*C#e*l(~E8E=:bJR0e,f:f>#LJJf.G?k2[3?Ap3x)x$a2N-y!!!1!}#e!&?=!!#*C%!!4I+u!!Ew!!+}6k1C7]!$!3@c7=!#!q-=!#)5*)Iq!,?9!!!C4W!!@pAa!$/l!!"m%I!!#|#e!+<Q!!",=1)1*C#e
+*l(~E8E=:bJR0e,f:f>#LJL/4)'U*<3m,&<B#[>j(k!a!!!1?I+u!/<K!!"uBC!!0a!!!!Ew!!+}6k1C7]!$!20E7=!"!iAa"&6eLVJ|=Q)1*C#e*l(~E8E=:bJR0e,f:f>#LJL%Kr1P=p3q+}"|HyG!,d!a!!!1?{)1!+B:!!"xG]!!$K#e!!Ew!!+}6k1C7]!$!20G7=!"!iAa"6LRLVK5AK:v!$4(!$;'In.X/F4&+jBg.T4a=hJR/1I<
+.A5O@k#[JF-*0E39Aa!!#e6K!!"5'-!!1_4'!+?T!!!.91!%"K!'!I.[!Q$q>#)1!A.f8_!|#!5I!!"5'M!!<o&K!(&q!!#O6K!!1S+u!+*U!!"$'-!!HvG-!).}!!"f7-!!7_&K!/=W!!"k&K!!<o&K!+7-!!#O6K!!:dG-!+*U!!"Z&+!!HvG-!,?9!!"B>3)1*C#e*l(~E8E=:bJR0e,f:f>#LJJf.G?k2[3?Ap3x)x$a2N-y!!!1"A!!
+!&?=!!"$H?!!4I+u!!Ew!!+}6k1C7]!$!3@k7=!#!q-=!#)5HvG-!,?9!!"f7-!!@pAa!/=W!!"m%I!!B{!!!+<Q!!"8>S)1*C#e*l(~E8E=:bJR0e,f:f>#LJJS=O8MH"1#+z#*H#/z,r)q!!!1>t#e!%.n!!!EBs!!8P1A!!Ew!!,'!!1C7]!&7-1C!1"FAa)2%CHR!!#f8o!+$H>{!+4(!!",>s)1*C#e*l(~E8E=:bJR0e,f:f>#LJLU
++yI|@G+a+|8}6r3':_!a!!!1&9+u!&&`!!!?Gm!!(a#e!!Ew!!+}6k1C7]!$!20O7=!"!iAa"3)+LVK58j%,!#+v!$;'In.X/F4&+jBg.T4a=hJR/1I<.A5O@k#[JF-*0E39Aa!4!"!'"C#e5P4'!%BA!1"h6[!!#=G-"S>{!10!"#&L!)+t!Q$;?E)1!A.`7M!M6k/):#!!?11A!#C8!!#8-Y!!>%G-!.){!!"m>[!!?11A!#C8!!"t,w!!
+2~*V!$4(!$;'In.X/F4&+jBg.T4a=hJR'u/P+[K5Iu"o7m1r.L90+u!!#e4/!1"<59!!7MAb!'%%!!!.91!%"K!'!I.[!Q#z?e)1!1-A!!<}!A!!7lG,LM;J7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+mG<,Z0,;D!a"LA.7u8~G!!!!""l"S#e5p4'!'9b!1!_6[!!#=G-!a8/"#'r!!)2$b2f!!#i8/!+IA)1!"+qLVJ|@7)1*C#e*l(~E8E=
+:bJR0e,f:f>#LJJ78t;11?)!+u8JC}2kDDJS!!!1'MG.!(=P!!#K$W#e+\Iq!!Ew!!+}6k1C7]!$!20W7=!"!i6k"qDJ!!!4L&LV2~:v!$4(!$;'In.X/F4&+jBg.T4a=hJR@_7|!T&uJ'!);QEo8;L6+u!!#o)C!1"=59!!1r<8!$HN!!!.91!%"K!'!I.[!Q#z@g)1!1-A!!>h!Q!!$FDFLM;P7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+iC*
+7S<;4V$G"LA.7u8~G!!!!"!A$w#e5p4'!/!?!1!_6[!!#=G-!a8/"#'r!!)2$bC(!!#i8/!+IA)1!"+qLVJ|A9)1*C#e*l(~E8E=:bJR0e,f:f>#LJK/'2221-#V+u8JC}2kDDJS!!!1"$Ab!(=P!!!~&{#e+\Iq!!Ew!!+}6k1C7]!$!20]7=!"!i6k"n6n!!!4L&LV2~K8!$4(!$;'In.X/F4&+jBg.T4a=hJR#o$r@"!)J7!);QEo8;L6
++u!!#m)Q!1"=59!!,I6l!$HN!!!.91!%"K!'!I.[!Q#zAi)1!1-A!!>h!Q!!$FDFLM;V7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+o4D6|DJ.j'-"LA.7u8~G!!!!"!!'=#e5p4'!-!M!1!_6[!!#=G-!a8/"#'r!!)2$c'p!!#i8/!+IA)1!"+qLVJ|B;)1*C#e*l(~E8E=:bJR0e,f:f>#LJJK;>2gEB6]+u8JC}2kDDJS!!!16=9R!(=P!!!^
+)A#e+\Iq!!Ew!!)96k1B!I.[!Q#zBK)1!1-A!!>h!Q!!$FDFLM;Z7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+qJ)>I@fG,'-"LA.7u8~G!!!!"#_(_#e5p4'!,?R!1!_6[!!#=G-!a8/"#'r!!)2$c2f!!#i8/!+IA)1!"+qLVJ|B{)1*C#e*l(~E8E=:bJR0e,f:f>#LJLT?tF[!3Id+u8JC}2kDDJS!!!1G0&L!(=P!!!Y*s#e+\Iq!!Ew!!+}
+6k1C7]!$!20g7=!"!i6k"n6n!!!4L&LV3!:v!$4(!$;'In.X/F4&+jBg.T4a=hJR:&("*P-.JG!);QEo8;L6+u!!#jD~!1"w5I!!G`DH!$HN!!!.91!%"K!'!I.[!Q#zCM)1!1-A!!='!Q!!?LDFLM;`7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+g;D=bHuA@)q"LA.7u8~G!!!!"#?+%#e)xDG!/,T!1!_6[!!#=G-!a8/"#'r!!)2$cC(!!#i
+8/!+"C#e!09OLVJ|C})1*C#e*l(~E8E=:bJR0e,f:f>#LJJ;7b)o3}#U,&,U?-?SFxE)!!!1"36l!(:j!!#J+E#e5`4'!!Ew!!+}6k1C7]!$!20m7=!"!i6k!E9l7m!#3!K8!$4(!$;'In.X/F4&+jBg.T4a=hJR=@#9=^DvJ7#Y+`#p*@IN+u!!#t1c!1!z2c!!Ju&L!(:j!!!.91!%"K!'!I.[!Q#zDO)1!1-E!!5$KDLV6vIB7=!X!1!Z
+:!L+L,-OLJJo2'KL*}9P+j*!CYH67x>;K$)e4<=??i!!!"!i&;#e%~.[!+$-!1!w2c!!#=G-!a8/"#'r!!)232'p!!&P"{>{0OA2<7!!"vIq!+F-!!!,+e!!J\G-!0<s!!"p<W!!KXAa!0-W!!!?+%!!>U&K!"Gh!!#Y;u!!#89Q!+F-!!!.*c!!J\G-!$!X!!"p<W!!)44'!0-W!!!u*#!!6h*V!$4(!$;'In.X/F4&+jBg.T4a=hJR/1I<
+.A5O@k#[JF-*0E39Aa!!#i7,!1"2.k!!<I1B!"E>!!!.91!%"K!'!I.[!Q$2E1)1!A._7M!D!p-W!!!u*#!!>U&K!&,L!!#Y;u!!5L)1!.%I!!";)a!!3"0"!#&L!$;'In.X/F4&+jBg.T4a=hJR=@#9=^DvJ7!9/2B-JHA5$[!!!"#[&k#e:G.[!01c!1"3.k!!#=G-!a8/"#'r!!)2$d2f!!#i8o!'!P>zLN0v7=!X!1!Z:!L+L,-OLJJo
+2'KL*}9P+m)G-b*PL&!a@H<Z)uHHDK!!!"#-#U#eH##e!#,M!1"V,g!!#=G-!b!!"#'r!!0!"#&L!)+5!Q#~Eq)1!1%5!!=G$7!!FK#e!';n7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+s:@HNGm*R$G@H<Z)uHHDK!!!""7$7#e$J6k!(,*!1#J,'!!#=G-!a8/"#'r!!)2$d=\!!#i8o!("rA`LO##FC)1*C#e*l(~E8E=:bJR0e,f:f>#LJJf
+.G?k2[3?Ap3x)x$a2N-y!!!1C%Ir!.?A!!"K$w#e$J6k!!Ew!!+}6k1C7]!$!7>W7=!#!q@J!&?(J|6k!+4M!!!(;E!!=K1A!"=p!!#0'-!!"<>{!-?A!!!;:c!!@a&K!!5d!!"}&k!!%R4'!.Dg!!!(;E!!F]!!!"=p!!!"&;!!"<>{!!$&!!!;:c!!IrAa!(L47=!X!1!Z:!L+L,-OLJJo2'KL*}9P+j*!CYH67x>;K$)e4<=??i!!!"#-
+#U#e(a#e!)7$!1#@'-!!#=G-!a8/"#'r!!)2(LHR!!&P!i+u&{,1:c!!IrAa!!5d!!#U%i!!%R4'!",2!!#[:s!!$H>{!';t7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+s:@HNGm*R$G5UHO53(%Ae!!!""7$7#e.|.[!(,*!1!N&[!!#=G-!a8/"#'r!!)2$e"F!!#i8o!'!P>zLN1"7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+e=f;X7/!?BCGu4~
+.~"q?Q!!!"!*G-!!>\)1!/4<!1!}$w!!#=G-!b!!"#'r!!0!"#&L!)+5!Q#~GU)1!1%5!!E2%Y!!FK#e!-!!${AD7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+p*?*{<j?L$G)s.u5*E5CI!!!"!X%Y#e8b9Q!-?Q!1#=+u!!#=G-"C>{!10!"#&L7M!'!=!!$v&/7=!,"#%i!"3l"/!!".@C!!#f7]!"#=Iq!q%i!!3!7M!N!y"~!2!1!2!1!2!1
+!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16[#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#z#f!"#f!"#f!"#f!"#f!"#f"C6vA!7=!&8o)1
+!/0"!!/b!Q!!Km)16_It!!!#!1!!-I)1!")2!!!\!Q!!'M#e!$!$!!!Z!1!!'m)1!%Ab!!!A!Q!!1A#e!"Ad!!"6!1!!%i)1!*)2!!!=!Q!!>k#e!#.^!!#,!1!!*c)1!.G.!!!m!Q!!IQ#e!'6n!!#[!1!!8o)1!"DI!!!~!Q!!+e&K!%!$!!!z!A"B!$#h!!"7!A!!&{)1!*!#!!!=!Q!!>;&K!"Ad!!#-!A!!%i)1!/!#!!!D!Q!!Jc&K
+!$#h!!!,!Q!!+u)1!"Ad!!!x!Q!!'m)1!(4*!!!R!Q!!9!)1!$.^!!"s!Q!!*#)1!.G0!!!V!Q!!Fk)1!$.^!!#$!a!!*#)1!,Iu!!!V!XIq!/!%!!!Y!Q!!Js+u!$Ad!!!"!q!!+u)1!!<<!!!h!Q!!#u.[!&#h!!!7!q!!0_)1!"Af!!"/!Q!!&K.[!)&N!!!A!q!!7-)1!#!&!!"E!Q!!*#.[!)&N!!!V!q!!7-)1!$.`!!"F!A!!*#.[
+!))3!!!V!q!!7=&K!$.`!!"F6[&K!#!&!!"F!A!!&K.[!))3!!!A!q!!91&K!#!&!!"Q!A!!&K.[!++w!!!A!q!!?m&K!"?"!!#'!A!!$7.[!-<9!!!.!q!!DW&K!!)6!!#:!A!!Js+u!.1C!!#U!a!!EY&K!.DK!!#<!A!!AQ+u!.4)!!#$!a!!EY&K!.G0!!"BEY&K!.G0!!#<!A!!?m)1!.&M!!"Y!Q!!C%&K!).^!!"|!A!!3E)1!+#g
+!!"$!Q!!6{&K!'#h!!"/!A!!1Q)1!&6m!!"(!Q!!,G&K!(!$!!!P!A!!5i)1!"4)!!"P!Q!!KU#e!+6n!!#_!1!!=Y)1!09R!!"q!Q!!KE#e!+G0!(IqKE#e!+G0!!#`!1!!Bc)1!0>|!!#+!Q!!Ke#e!-1D!!#`!1!!AQ+u!0>|!!#$!a!!Ke#e!/&O!!#b!1!!K5+u!!#g!!!"!q!!!a&K!!<<!!!-!A!!#u.[!"4)!!!7!q!!&{&K!"Af
+!!!U!A!!&K.[!%Is!!!A!q!!.K&K!#!&11!!.K&K!$.`!!!p!A!!*#.[!%Is!!!V!q!!-I#e!$.`!!!j!1!!*#.[!%9R!!!V!q!!-I#e!#!&!!!j!1!!&K.[!'.\!!!A!q!!5Y#e!"Af!!"F!1!!$W.[!)Ir!!!/6[.[!*1B!!!&!q!!;5#e!04+!!"_!1!!J#+u!*DH!!#C!a!!;e#e!,Iu!!"`!1!!AQ+u!*DH!!#C!Q!!;e#e!.G0!!"`
+!1!!?m)1!*4(!!"Y!Q!!8O#e!)+x!!"=!1!!35)1!')2!!"!!Q!!,W#e!&G0!!!Q!1!!1!)1!"Ab!!!.2#)1!!6l!!"2!Q!!HW)1!y!$!!#67=!&:#)1!-"F!!0G!Q!!Ai)1!{6n!!#%7=!&AQ+u!-"F!!0^!a!!Ai)1"!#i!!#'7=!&K%+u!-5L!!.\!q!!C])1!qAf!!#77=!&$7.[!.@B!!.s!q!!H')1!rDL!!#\7=!N&K.[!")2!!!A
+!q!!$7#e!#!&!!!4!1!!*#.[!")2!!!V!q!!$7#e!$.`!!!37=!&*#.[!"'p!!/2!q!!$/)1!t.`!!!37=!&&K.[!"'p!!.{!q!!(G)1!s!&!!!\7=!&%y.[!%-<!!.s!q!!.3)1!r)6!!!u7=!&"s.[!&=]!!+z!!""7=!&Jc+u!'%,!!0}!a!!1Y)1!|Iu!!"$7=!&AQ+u!'%,!!19!Q!!1Y)1""6n!!"$7=!&AQ)1!'"F!!09!Q!!0w)1
+!y9T!!!z7=!&6;)1!&2f!!/q!Q!!.c)1!x!$!!!k7=!&35)1!%'p!!/f!Q!!*k)1!w9T!!!O7=!&2s)1!#%,!!/h!Q!!$/)1!x#h!!!37=!&47)1!!=\!!/Y!Q!!"k)1!vAd!!!+7=!&0_)1!+5L!!.w!Q!!=Q)1!rAd!!"j7=!&%i)1!-"F!!.w!Q!!Ai)1!rAd!!#%7=!&%i)1!-"F!!0+!Q!!Ai)1"+Ad!!"C:{+u!1%.!!#r9A!#!8C)
+!(<<#5#u#e#u#e#u#e#u#m!.EI.[!$#k!!#;!q!!)A1A!(Ad!!!R"#!!6+)1!$#k!!"?!Q!!)A1A!(Ad!!!$"#!!6+)1!!)7!!"?!Q!!!Q1A!.1F!!!$"#!!EI.[!!)7!!#;!q!!!Q1A!.1F!!!R"#!!EI.[!$#k!!"F=a+u!1%.!!#r9A!$!9*^7M"B!w+v#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"
+#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C2&DN!!!=!Q!!+E4'!"Ad!!!^"3!!Cu)1!&:0"3!!Cu)1!$DN!!#2!Q!!(/4'!-DJ!!!K"3!!Cu)1!"Ah!!"X!Q!!"c4'!(!$!!#Y"#!!0_)1!.Ag!!!i!Q!!Aa1A!$G0!!"a"#!!+U)1!))7!!!_!Q!!3lIw!!!f!Q!!0o1A!&)4!!!n"#!!
+1Q)1!%.a!!"3!Q!!,g1A!)#h!!!f"#!!:S)1!%?#!!"l!Q!!/m1A!,6n!!"%"#!!Bs)1!(?#!!#<!Q!!<'1A!/9T!!"b"#!!H_)1!0#k!!!3!a!!J#1A!"&O!!!_"3!!*C+u!'.b!!",!a!!6a.b!!"h!a!!234'!.._!!!t"3!!Ku+u!#Ix!!!:!q!!"s4'!$4,!!#H"#!!,g.[!,4-!!!f!q!!:c1A!%.`!!"5"#!!+e.[!%<=!!!T!q!!
++E1A!$!&!!!S"#!!(o.[!#?#!!!O!q!!&k1A!#G2!!!<"#!!)Q.[!"1G!!!^!q"B!"1G!!!^!q!!!a1A!$DL!!!%"#!!+E.[!!+{!!!^!q!!!a1A!)#i!!!%"#!!6{+u!!+{!!"D!a!!$g1A!)#i!!!7"#!!6{+u!##k!!"z!a!!*31A!.G1!!!t"#!!KE+u!(#k!!!5!q!!:#1A!#&P!!"{"#!!&k.[!.&Q!!!C!xIq!/6q!!!;!q!!K51A
+!!?"!!!*"3!!Ku+u!"#l!!#N!a!!#u4'!.+y!!!2"3!!@O+u!!4.!!"f!a!!Jc1A!*&O!!#G"#!!6k+u!,G3!!"-!a!!7}1A!%G1!!!q"#!!)a+u!#?#!!!<!a!!%Y1A!!._!!!+"#!!Ia)1!!&Q!!#96[)1!!&Q!!"v!Q!!!A1A!)6n!!!2"#!!2#)1!#G3!!!h!Q!!-i1A!#<:!!"4"#!!%i)1!+!'!!!=!Q!!?]1A!"Ad!!#1"#!!&[)1
+!/9W!!!J!Q!!L'1A!#It!!!+"3!!)Q)1!"#l!!!S!Q!!$w4'!$&N!!!<"3!!)A)1!"Ix!!!W(_)1!#&R!!!L!Q!!'M4'!#.^!!!K"3!!%i)1!#<>!!!=!Q!!+E4'!"Ad!!!^"3!!%i)1!)'l7M!"!9.[!1Ex!!)273'q!(Iv,G#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u
+#e#u#m!d-96k!)!#!!!i"C!!6k&K!%6s!!!L!Q!!-96k!#>~!!!i"C!!(?)1!-#m!!!L!Q!!Aq6k!#>~!!#&6[6k!#>~!!#&"C!!.{)1!-#m!!!s!Q!!Aq6k!&&N!!!i"C!!/-)1!%6s!!!t!Q!!-96k!&)4!!!i"C!!<w+u!%6s!!"g!a!!-96k!-1E!!!n"C!!F[+u!&1I!!#N!a!!1Q6k!0._!!"/"C!!KU+u!(?%!!#_!a!!8/6k!0<;
+!!!Q:C6k!04+!!"d"C!!Ia+u!+Ai!!#L!a!!?]6k!.?!!!"~"C!!Ce+u!,?%!!#1!a!!6h#m!!#1!a!!DW6k!-Ae!!#*"C!!J#+u!,#m!!!.!q!!;56k!##j!!"D"C!!)a.[!'4/!!!_!q!!.;6k!$G2!!!]"C!!+U.[!#?%!!!Z!q!!%Y6k!#G2!!!+"C!!'-.[!0G4!!!7!q!!Jc4'!!.`!!#R"3!!J3+u!/<>!!#;!a"B!/<>!!"t!a!!
+Ho4'!,#i!!#O"3!!.{)1!/<>!!!s!Q!!Ho4'!&&N!!"Z"3!!.{)1!*4.!!!s!Q!!:c4'!&&N!!"Z"3!!+e)1!*4.!!!`!Q!!>;4'!$4*!!#&"3!!'})1!.4.!!!6!Q!!IA4'!!&N!!!""C!!Ho&K!"#m!!#4!D+u!"?%!!#&!A!!']6k!+1C!!!X"C!!6k&K!$4/!!"C!A!!-96k!)!#!!!i"C!!6k&K!)(J7M!"!9.[!1Ex!!)276HS!!4-
+!9(%!I%P7M!"!9.[!1Ex!!)27%=]!(Iv(?#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!L-I9Q!0!$!!!j"S!!+E+u!&Aj!!"<!a!!6{9Q!+._!!"j"S!!DW+u!.):!!#L!a!!"3<7!/4+!!!I"c!!H?+u!%41!!#B!a!!1A<7!-?!!!"<6[<7!,6o!!"Q"c!!:c+u!*I{!!"-!a!!<'<7!'<;!!"t"c!!5)+u
+!,#o!!"9!a!!=Y<7!+<;!!"T"c!!F++u!'?'!!!%!q!!,g<7!#Iv!!!7"c!!,g.[!.Aj!!!f!q!!;e9Q!%.`!!"+"S!!(?.[!$?&!!#_!a!!#U9Q!-?!!!"BKE6k!)6o!!#^"C!!*C+u!09Y!!#B!Q!!#e9Q!*9T!!!^"S!!2S)1!'?&!!!U!Q!!<w9Q!"Ad!!#M"S!!%i)1!#);!!!=!Q!!/-<7!$!$!!"<"c!!/])1!*G7!!"@!Q!!?-<7
+!,!$!!"t"c!!Iq)1!,#o!!#U!Q!!-I9Q!0!$!!>{-I9Q!0!$!!"CHw+u!1%.!!#r9A!$!9#27M"B!r1B#f!"#f!"#f!"#f!"#f!"#f!"#f"C$k9Z!!#4!Q!!-I9Q!-It!!!["c!!D7)1!$<A!!#4!Q!!*S<7!+G0!!!U"c!!:S)1!#G7!!"L!Q!!'=<7!()4!!!7"c!!1q)1!!);!!!x!Q!!J#9Q!%>~!!#B"S!!,g)1!-9Z!!!f!UG-!+9Z
+!!!f!Q!!919Q!&!$!!"7"S!!2s)1!&Aj!!"D!Q!!.;9Q!++x!!!j"S!!D7)1!%9Z!!#4!Q!!-I9Q!-It!!!j"S!!D7)1!-!!"-%-!!#f7]!"#=+u8_!&!=!!"+'q!!?#!=!!"*6nAa!%$O+u!1%.!!#r9A!$!9+l7M"B!x!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"
+#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C4.I|!!"9!a!!11>{!(Jz!a!!-)>{!&!%!!!W"s!!*#+u!#,"!!!:!a!!%i>{!0<:!!!="s!!Ey)1!"Al!!"h!Q!!)1>{!(9T!!!x"s!!/=)1!(DR!!!P!Q!!>k>{!"Ad!!#Q"s!!%i)1!"Am!!!=!Q!!-)Aa!#6n!!"/#%!!+u)1!'Am!!!a!Q!!F+Aa
+6[!a!Q!!F+Aa!%!$!!#O#%!!+u)1!0,#!!!a!Q!!JsAa!%#h!!#]#%!!,7)1!0?)!!!e!Q!!KuAa!%1D!!#c#%!!-I)1!0I}!!!q!Q!!LGAa!&9T!!#d#%!!1a)1!0G9!!",!Q!!L'Aa!'G0!!#a#%!!3u)1!0<C!!"4!Q!!JsC$!!"5!Q!!JSAa!()4!!#O#%!!4W)1!.<C!!"6!Q!!F+Aa!()4!!"Z#%!!4W)1!*43!!"6!Q!!>;Aa!)G0
+!!"y#%!!?-)1!,1M!!#A!Q!!?}Aa!!Ae!!"f#%!!*3+u!(G9!!!z!a!!0/Aa!(<;!!!I#%!!8o+u!/9\!!"O!a!!DNI|!!"O!a!!?}>{!)6o!!"^"s!!6k+u!)<B!!"R!a!!6[>{!*?!!!"<"s!!=I+u!(,"!!"t!a!!4'>{!,<;!!"3"s!!B3+u!(!,!!#-!a!!4g>{!-Iu!!"<"s!!E9+u!(I|!!#@!a!!8o>{!/!%!!"b"s!!GM+u!+9\
+!!#H!a!!)])<!!#J!a!!IQ>{!/4+!!!]#%!!HO+u!'G9!!#P!a!!7]Aa!/Iu!!"l#%!!JC+u!-.g7=",!q!!F+Aa!"1F!!#T#%!!(?.[!0<C!!!g!q!!KUAa!'1F!!#_#%!!9a.[!/1M!!"{!q!!A1Aa!.Iv!!"F#%!!$W1A!$.g!!!R"#!!EY>{!$#k!!"P"s!!)A1A!&!,!!!B"#!!%y>{!0Iv7="B"s!!IA.[!0&U!!#>!q!!J3<7!-.`
+!!#W"c!!A!.[!0.e!!"u!q!!K5<7!+9V!!#d"c!!;E.[!!Al!!"J!q!!&[>{!'Iv!!!D"s!!35.[!$1L!!!w!q!!0?>{!$!&!!!g"s!!'-.[!$6v!!!;!q!!)1>{!"#j!!!I"s!!"3.[!#/!"s!!L'+u!#,"!!#V!a!!'->{!/)5!!!K"s!!E)+u!$.f!!#&*#+u!$I|!!"s!a!!/}>{!*1E!!"B"s!!5)+u!(I|!!"9!a!!6[>{!(1E!!"B
+"s!!5)+u!)$'7M!"!9.[!1Ex!!)26{*W!(Iv%i#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!=GM>{!$6n!!#+"s!!*S)1!+I|!!!e!Q!!;E>{!&<:!!"L"s!!4')1!(I|!!"U!Q!!6[>{!-!$!!"B"s!!Ku)1!)Al!!!K!a!!=9>{!%?!!!"|"s!!1q+u!.&V!!"3!a!!/l!,!!"3!a!!#5Aa!(!%!!!F#%!!23+u!$43!!!p!a!!-YAa
+!$<;!!!t#%!!%9+u!&)=!!#O!Q!!/-Aa!+It!!!g#%!!6[)1!#Am!!!~!Q!!%9Aa!%.^7=!J#%!!*S)1!/&V!!!Y!Q!!GM>{!$6n!!#G"s!!*S)1!/&V!!!Y!Q!!6~@C!!#f7]!"#=Iq!Q%*&3+u6[.z!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16lK."s!!*#.[!'6v!!!k!q!!0?>{!&?"!!!s"s!!35.[!%9\!!"@!q!!,W>{
+!)Af!!!e"s!!;5.[!%,"!!"n!q!!.;>{!,Af!!"'"s!!CE.[!)?(!!#F!q!!B#>{!/Eh!q!!"SAa!/DL!!!m#%!!IA.[!(I}!!#F!q!!<'Aa!-6p!!#$#%!!>{.[!.!-!!"Y!q!!DGAa!(Af!!#5#%!!2c.[!-1M!!!{!q!!?MAa!&&P!!"b#%!!-Y.[!(6w!!!e!q!!+UAa!%)6!!#N"s!!+u.[!+42!!!]!q!!5Y>{!"B8!q!!5Y>{!$.`
+!!"<"s!!*#.[!(9\!!!V!q!!!m!!)x.\H')1*C#e*l(~E8E=:bJR0e,f:f>#LJJ#%0G5/j=o,%'")zI4)m,W!!!1JS.[!)J>!!!*+e!!!d)1!!Ew!!6v!!#j7-1C!9+u!1#iAa!U%Y&17=!#"##iAa!U#u)?7BEm!!#f7]!"#=Iq!Q%,+}+u"31B7@6m6}"G!!#f7]!"#=Iq!Q%*!Y+u&K.w!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1
+6lC?7=!&:s#e!+82!!07!1!!?e)1!zDH!!#$7=!&=I#e!-:v!!0P!1!!D/)1!|G.!!#37=!&Ce#e!-HR!!0z!1!!C=)1"!4(!!#$7=!&J##e!,-<!!1<!1!!=a)1!q#g!!"]7=!&!1&K!)@B!!.\!A!!6S)1"">|!!"87=!&J##e!'=\!!1(!1!!2;)1!~>|!!"(7=!(Ce#e!'.[!!1AAA#e!'=\!!0P!1!!4o)1!{4(!!"A7=!&;e#e!)@B
+!!07!1!!;=)1!z6l!!"]7=!&:s#e!*=\!!07!1!!;=)1",6l!!"E$?+u!1%.!!#r9A!$!9&A7M!\!t4(#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C*O-<!!0.!A!!BK)1!yIs!!#)7=!&#%+u!--<!!.g!a!!BK)1!s<;!!#+7=!&+E+u!-@B!!/E!a!!D?)1!v#i!!#:7=!&/}+u!.HR
+!!/Z!a!!H7)1!w&O!!#[7=!N2#+u!!Ab!!"'!a!!#%#e!'+y!!!-!1!!59+u!!Ab!!":!a!!#%#e!(4+!!!H7=!&59+u!#5L!!/t!a!!'e)1!x4+!!!H7=!&2#+u!#5L!!/a!a!!+])1!w+y!!!n7=!&1a+u!&0"!!/[!a!!0w)1!v6o!!"&7=!&.{+u!'5L!!/E!a!!3M)1!tDK!!"27=!&'}+u!'K8!!.g!a!!3})1!qAe!!"27=!&/M)1
+!'K8!!/R!Q!!3})1!s)4!!"17=!&!A)1!'=\!!13!A!!2[)1"!4)!!"'7=!&G-&K!&K8!!0{!A!!07)1!~4)!!!s7=!&E9&K!%=\!!0t!A!!+})1!~.]!!!U7=!&EY&K!#5L!!0|!A!!'e)1!~DI!!!@7=!&CE&K!"K8!!0i!A!!&C)1!}<9!!"q7=!&9A&K!+HR!!0.!A!!>c)1!yIs!!#)7=!&9A&K!--<!!2r!A!!7JHS!!#f7]!"#=Iq
+!Q%,Ay+u6[/g!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16q<^"C!!G-#e!#4/!!#E!1!!']8.!!#X!A!!']6k!0)3!!!H"C!!JC&K!+1I!!#X!A!!=96k!0)3!!#)"C!!JC&K!.9Y!!#R!A!!
+H?6k!/!#!!#Z"C!!Dw&K!0G5!!"}!A!!!A9Q!*)3!!!#"S!!:#&K!".d!!"V!A!!$W9Q!*)3!!!6"S!!:#&K!".d!!"D!Q!!$^Iz!!"D!Q!!$W9Q!)#h!!!#"S!!6{)1!!&T!!"D!Q!!!A9Q!'.^!!#c"C!!.k)1!06s!!!e!Q!!J#6k!$6n!!#M"C!!(o)1!.?%!!!I!Q!!DG6k!##h!!##"C!!&+)1!+1I!!!?!Q!!=96k!"G0!!!H"C!!
+&+)1!#4/!!!?!Q!!"%4/!!!?!XIq!#4/!!#`!Q!!']6k!0>~!!!H"C!!&++u!#<?!!!X!a!!(o6k!%#i!!!S"C!!-Y+u!$6s!!!r!a!!,W6k!&4+!!!t"C!!1A+u!')9!!"'!a!!4W6k!'+y!!"6"C!!2#+u!)Ai!!"'!a!!8o6k!'+y!!"O"C!!2#+u!)Ai!!":6[+u!)Ai!!":!a!!8o6k!(4+!!"""3!!59+u!&Ix!!":!a!!114'!(4+
+!!"""3!!2#+u!&Ix!!"'!a!!114'!'+y!!"<"3!!2#+u!(9X!!"'!a!!:C4'!'+y!!"n"3!!0_+u!,4.!!!l!a!!Aa4'!%!%!!#)"3!!'M+u!-+|!!"BKe)1!-+|!!#`!Q!!BC4'!$1C!!#)"3!!*3&K!-+|!!!4!A!!B#4'!0<8!!##"3!!Iq#e!,9X!!#L!1!!?M4'!/!"!!"k"3!!Ey#e!*<>!!#6!1!!8O4'!-DH!!"<"3!!Cu#e!(9X
+!!#2!1!!114'!-DH!!"""3!!Cu#e!&Ix!(IqCu#e!&Ix!!"}!1!!114'!,<8!!"""3!!@_#e!'6t!!"}!1!!2c9Q!,<8!!"+"S!!@_#e!'Iz!!!u!A!!3u9Q!&+w!!"2"S!!/=&K!&DP!!!u!A!!0o9Q!&+w!!!v"S!!)a&K!%<@!!!<!A!!+U9Q!!>}!!!S"S!!Ku#e!#):+u!!J##e!"&T!!#O!1!!!19Q!/)2!!#K"C!!G-#e!-&S!!#E
+!1!!B#6k!/!"!!!H"C!!G-#e!#4/!!#E!1!!7?%-!!#f7]!"#=Iq!Q%,!i+u6[/R!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16p/B"c!!9A&K!%.e!!"R!A!!,g<7!0<9!!!f"c!!KU&K!'Ak!!"v!A"B!*,!!!"R!A!!AA<7!)Is
+!!#6"c!!9A&K!/!+!!"X!A!!IA<7!+!#!!#^"c!!>;&K!0I{!!"}!A!!LG<7!-9S!!#d"c!!EI&K!0?'!!#G!A!!J#<7!/>}!!#N"c!!Jc&K!.G7!!#^!A!!Dg<7!09S!!#+"c!!KE&K!,9[!!#X!HIq!+9[!!#L!A!!;E<7!.Ac!!"S"c!!E9&K!)9[!!#:!A!!7-<7!..]!!"?"c!!Ei&K!(.e!!#E!A!!2C<7!/G/!!!w"c!!!q)1!%.e
+!!!G!Q!!,g<7!#1D!!!f"c!!"C+u!%.e!!!)!a!!,g<7!#)5!!!i"c!!*C+u!%G7!!!e'M+u!&);!!!n!a!!0O<7!&._!!"*"c!!0O+u!(#o!!"$!a!!7-<76["'!a!!:c<7!'+y!!"Z"c!!2#+u!*41!!":!a!!:c<7!(4+!!"Z"c!!59+u!+.d!!":!a!!=)9Q!(4+!!"h"S!!59+u!+.d!!"'!a!!=)9Q!'+y!!##"S!!2#+u!.!*!!"#
+!a!!F;9Q!&6o!!#I"S!!/-+u!/9Z!!!l!a!!IA:r!!!_!a!!IQ9Q!$9U!!#T"S!!'m+u!/Iz!!!-!a!!Ia9Q!!Ae!!#T"S!!/M)1!/Iz!!!v!Q!!Ia9Q!"G0!!#S"S!!L'&K!/Aj!!#X!A!!Ho9Q!/6m!!#K"S!!G=&K!.Iz!!#A!A!!Ey9Q!.4)!!#7"S!!E9&K!-9Z!!#:!A!!AW#n!!#:!A!!?M9Q!.4)!!"h"S!!F[&K!+.d!!#B!A!!
+<79Q!-<9!!"c"S!!CE&K!+!*!!#/!A!!)!<7!)Is!!!P"c!!9A&K!#I{!!"R!A!!,g<7!)Is!!!f"c!!9A&K!)(J7M!"!9.[!1Ex!!)276HS!!4-!9(%!I%P7M!"!9.[!1Ex!!)27%=]!(Iv(?#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!L2c>{!&!$!!"+"s!!:S)1!(9\!!#2!Q!!;5>{!0.^!!#""s!!
+%i+u!/1L!!!Q!a!!$GAa!$!%!!!T#%!!)1+u!%G9!!!I!a!!2CAa!"4+!!"?6[Aa!!1E!!"R#%!!HO)1!*I}!!#$!Q!!<'Aa!,It!!"r#%!!CE)1!+I}!!#/!Q!!=IAa!09T!!"U#%!!'=+u!'I}!!!l!a!!.+Aa!(&O!!!C#%!!7m+u!/DR!!"I!a!!?]>{!)1E!!"G"s!!3u+u!&?(!!!c!a!!)a>{!"4+!!"B&;>{!.>~!!!@"s!!9a)1
+!"I|!!!`!Q!!)q>{!!#h!!!~"s!!Dw&K!)1L!!"i!A!!@_>{!)Is!!#^"s!!9A&K!#DS!!"R!A!!0?Aa!+#g!!"?#%!!BC&K!*G9!!#L!A!!>kAa!"1D!!"r#%!!.[)1!+I}!!!q!Q!!2c>{!&!$!!>{2c>{!&!$!!"CHw+u!1%.!!#r9A!$!9#27M"*!r1B#f!"#f!"#f!"#f!"#f!"#f!"#f"C$m6v!!!S!Q!!2c>{!$&N!!!d#%!!)Q)1
+!%)=!!!S!Q!!,'Aa!"+x!!!^#%!!LG&K!$6w!!#X!A!!)1Aa!.Is!!!C#%!!DG&K!"#q!!#*!I)1,gAa!,<9!!#S"s!!?]&K!.Al!!"w!A!!AQ>{!,+w!!"i"s!!AQ&K!)I|!!#:!A!!5Y>{!/>}!!"/"s!!"s)1!'6v!!!S!RAa!'6v!!!S!Q!!2c>{!$&N!!"+"s!!)Q)1!)*07M!"!9.[!1Ex!!)27A"G!!4-!9)i!I$'7M!"!9.[!1Ex
+!!)26{*W!(Iv%i#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!=23DG!*6l!!"6#5!!:s#e!(I~!!"`!1!!8ODG!+4(!!"W#5!!?-#e!*9^!!##!1!!;%DG!-Ab!!"\#5!!F;#e!*,$!!#L!1!!8ODG!0#f!!"B#5!!Ke#e!()>!!!"!A!!6a.h!!!"!A!!/]DG!!#g!!!j#5!!Ke#e!%!.!!#V!1!!*#DG!/4(!!!Q#5!!F;#e!$!.!!#1
+!1!!)1DG!,G.!!!V#5!!?-#e!$I~!!"j!1!!-IDG!*DH!!!w#5!!:s#e!'.h!!"[!1!!23DG!*6l!!"(#5!!:s#e!'.h!!"[!1!$!)&^7M!"!9.[!1Ex!!)27,2g!(Iv*C#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!X9ADG!)Is!!"R#5!!9A&K!)I~!!!-!a!!9ADG!!Ae!!"R#5!!
+(/+u!*#r!!!^!a!!:SDG!%6o!!"]#5!!.k+u!+!.!!!y6[+u!+9^!!!~!a!!?-DG!'&O!!#&#5!!2#+u!.44!!"'!a!!EYDG!'+y!!#<#5!!59+u!.44!!":!a!!EYDG!(4+!!#W#%!!59+u!0&W!!":!a!!J3Aa!(4+!!#W#%!!2#+u!0&W!!"'!a!!"SDG!'+y!!!9#5!!1a+u!#!.!!"B1!+u!#6x!!!y!a!!(oDG!&&O!!!S#5!!-9+u
+!$44!!!^!a!!*sDG!#9U!!![#5!!#%+u!$<D!!!-!a!!*sDG!&.^!!![#5!!/M)1!$<D!!!D!Q!!*cDG!!&N!!!V#5!!J3&K!$&X!!#L!A!!)!DG!/!#!!!K#5!!FK&K!#,$!(9QEY&K!"DT!!#:!A!!$WDG!..]!!!,#5!!E9&K!0I}!!#<!A!!J3Aa!.DI!!#W#%!!F[&K!/<C!!#/!A!!HoAa!-<9!!#O#%!!CE&K!(9^!!"R!A!!5YDG
+!)Is!!"<#5!!9A&K!)I~!!"R!A!!9ADG!)Is!!#%!!-;7M!"!9.[!1Ex!!.\Aa!%1y+u1A/y!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!8J##e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m"?;UG-!*6l!!"_
+#E!!:s#e!*Ao!!#W!A!!;UG-!0&M!!#'#E!!C5&K!/#s!!"p!A!!K%G-!+#g!!!.#U!!:S&K!#)@!!"R!A!!+%Iq!)Is!!!v#U!!9A&K!'Ap!!"Z!A!!6bJ"!!"i!A!!9qIq!,+w!!"d#U!!Ce&K!+?,!!#P!A!!?-Iq!!&N!!"w#U!!(/)1!,,&!!"(!Q!!?]Iq!'.^!!"w#U!!#%+u!,,&!!!-!a!!?]Iq!#<;!!"y#U!!+U+u!,Ap!!!k
+!a!!AQIq!&&O!!#*#U!!/}+u!-DV!!!~!a"B!..j!!"%!a!!GmIq!'+y!!#_#U!!2#+u!0<F!!"'!a!!KUIq!(4+!!#_#U!!59+u!0<F!!":!a!!$'Iq!(4+!!!3#U!!59+u!"&Z!!":!a!!$'Iq!'+y!!!3#U!!2#+u!"&Z!!"'!a!!%yIq!'+y!!!>#U!!2#+u!$)@!!"'!hIq!%&Z!!"$!a!!-yIq!&?!!!!u#U!!/-+u!&9`!!!k!a!!
+1!Iq!$DK!!""#U!!*C+u!&J"!!!H!a!!11Iq!!Ae!!""#U!!#%+u!&J"!!"'!Q!!11Iq!'+x!!""#U!!)1)1!&?,!!!/!Q!!/]Iq!0Is!!!r#U!!Ia&K!%6z!!#G6[&K!$DV!!#?!A!!)AIq!.&M!!!D#U!!D'&K!"&Z!!#3!A!!!AIq!-G/!!#U#E!!Dg&K!.G;!!#A!A!!CeG-!/+w!!"x#E!!Js&K!*Ao!!!3!Q!!;UG-!"&N!!"_#E!!
+#%+u!*Ao!!!-!a!!;UG-!#Ae!!"a#E!!+u+u!+#s!!"B-I+u!+.i!!!q!a!!>;G-!&1E!!"x#E!!0_+u!,J!!!"$!a!!DGG-!'+y!!#M#E!!2#+u!/6y!!"'!a!!HOG-!(4+!!#M#E!!59+u!/6y!!":!a!!L7DG!(4+!!#c#5!!59+u!0G:!!":!a!!L7DG!'+y!!#c#5!!2#+u!")?!(Iq2#+u!#)?!!"$!a!!)1G-!&?!!!!W#E!!/m+u
+!$Ao!!!q!a!!+uG-!%4+!!!e#E!!+E+u!%1O!!!K!a!!,wG-!!Ae!!!g#E!!#%+u!%1O!!"#!A!!,wG-!'!#!!!g#E!!(/&K!%.i!!!*!A!!,7G-!0Ab!!!a#E!!J##e!$Ao6[!!HO#e!$1O!!#I!1!!)AG-!.Ir!!!K#E!!F[#e!##s!!#B!1!!%IG-!.DH!!!/#E!!G-#e!0G:!!#J!1!!L7DG!/.\!!#\#5!!Dg#e!044!!#7!1!!K%DG
+!.&L!!"H#E!!:s#e!).i!!"[!1!!7]G-!*6l!!"_#E!!:s#e!*Ai#E!!:s#e!)&L@w+u!1%.!!#r9A!$!9(-7M!("#%+:S'n=Q+u!1%.!!#r9A!$!9%37M"B!s>|#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C(EG=!!!q!Q!!3f!!!*1D!!"B#e!!Cu)1!+!1!!#Z!Q!!B4!!!"Ae!!#Q#e!!)1+u!"<H!!!Q
+!a!!*d#e!$!%!!!u#u!!'m+u!'Ar!!!8!a!!74J$!!!'!a!!:D#e!/6n!!"h#u!!AQ)1!+.l!!#$!Q!!?n#e!-<:!!"x#u!!CE)1!+DX!!#^!Q!!:t#e!#._!!"8#u!!-i+u!&)B!!"5!a!!'n#e!)1E!!#X#e!!7m+u!,<G!!"I!a!!8P!!!'Iu!!"$#e!!,7+u!$9a!!!8!a!!6].k!!#@!Q!!'>!!!*#h!!!F#e!!+e)1!$<G!!!"!Q!!
+1r!!!.)3!!"O#e!!=9&K!-!1!!"R!A!!LH!!!)Is!!!T#u!!9A&K!'!2!!"d!A!!7.#e!-+w!!"g#u!!H?&K!,.l!!!7!Q!!?n#e!&!$!!"x#u!!.[)1!'G=!!!q!Q!,!'G=!!!q!Q!!6y=]!!#f7]!"#=Iq!Q%)C}+u6[.q!2!1!2!1!2!1!2!1!2!1!2!1!2!16l2Q#e!!)Q)1!'G=!!!S!Q!!-J#e!$&N!!!j#u!!)Q)1!%48!!!5!Q!!
+,H#e!0Is!!!_#u!!JC&K!$1R!!#D!A!!'n#e!.!#!!!8#u!!BS&K!!1R!!"}!A!!JT!!!,+w!!#G#e!!?]'9!!#*#e!!?]&K!+Aq!!#$!A!!:D!!!..]!!"B#e!!I!&K!(&[!!!,!Q!!3f!!!$&N!!"1#e!!)Q)1!'G=!!!S!Q!!3f!!!$&N!!"F0w+u!1%.!!#r9A!$!9)q7M!("#%,*S'n&S+u!1%.!!#r9A!$!9#h7M"B!rAb#f!"#f!"
+#f!"#f!"#f!"#f!"#f!"#f!"#f"C%o?/!!"[!1!!5Z&K!*6l!!"H$'!!;e#e!*!3!!"j!1!!;6&K!,#f!!"b$'!!AA#e!*J%!!#1!1!!<(&K!.>|!!"]$'!!H?#e!*!3!!#V!1!!7^&K!0>|!!"<$'!!!1&K!(=D$'!!!1&K!&As!!!"!A!!.L&K!0>|!!!g$'!!J##e!$?/!!#L!1!!*4&K!.>|!!!W$'!!Ce#e!$1S!!##!1!!+&&K!,#f
+!!!f$'!!=I#e!%J%!!"`!1!!0`&K!*6l!!".$'!!:s#e!'?/!!"[!1!!36&K!*6l!!".$'6k!*6l!!"E$?+u!1%.!!#r9A!$!9&A7M"B!t4(#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C*L.m!!"R!A!!:D&K!)Is!!"X$'!!#%+u!*.m!!!-!a!!:D&K!#<;!!"Z$'!!+E+u!*As!!!i
+!a!!<8&K!&#i!!"i$'!!0&Iu!!"r$'!!0o+u!,49!!"%!a!!Bt&K!'+y!!#B$'!!2#+u!.DY!!"'!a!!F\&K!(4+!!#B$'!!59+u!.DY!!":!a!!K6#e!(4+!!#]#u!!59+u!06|!!":!a!!K6#e!'+y!!#]#u!!2#+u!!J%!!"'!a!!&,&K!'&O!!!G$'!!6`G1!!!O$'!!/}+u!$,)!!!s!a!!*T&K!%6o!!!^$'!!+E+u!%!3!!!J!a!!
++v&K!!Ae!!!a$'!!#%+u!%!3!!!v!Q!!+v&K!&.^!!!a$'!!&{)1!$J%!!!#!Q!!+&&K!0&M!!!Y$'!!H?&K!$.m!!#E!A!!)2&K!.Ac!!!K$'":!.4)!!!D$'!!E9&K!"?/!!#:!A!!#v&K!..]!!!&$'!!EY&K!06|!!#B!A!!K6#e!.DI!!#U#u!!CE&K!0!2!!#/!A!!Ir#e!-<9!!"B$'!!9A&K!(J%!!"R!A!!6\&K!)Is!!"X$'!!
+9A&K!*.m!!"R!A!!74K9!!#f7]!"#=Iq!Q%+1i+u6[/@!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16o*t$7!!!A&K!+#x!!!#!A!!<H)1!*DI!!"d$7!!;e&K!+#x!!"`!A!!#V+u!*DI!!!0$G!!;e&K!!K4$G!!;e&K!!J'!!#%!A!!#V+u!-!#!!!0$G!!Aa&K
+!+#x!!#&!A!!<H)1!-#g!!"d$7!!Aq&K!+#x!!#Y!Q!!<H)1!0+x!!"d$7!!$7+u!+.n!!!I!a!!>\)1!$&O!!"z$7!!+E+u!-&^!!!c!a!!D8)1!%&O!!#@$7!!,7+u!%3l$7!!+e+u!0#x!!!Y!a!!Kv)1!$!%!!!$$G!!'M+u!!<K!!!9!a!!"d+u!"6o!!!?$G!!%)+u!"GA!!!9!a!!$(+u!$<;7=",$G!!/-+u!/?0!!"(!a!!E:)1
+!(1E!!#"$7!!6k+u!+1T!!"C!a!!:T)1!)!%!!"I$7!!5y+u!(6~!!"4!a!!2t)1!'6o!!!~$7!!0_+u!&1T!!!m!a!!.<)1!$?!!!!l$7!!&[+u!%?07=!&!a!!-j*V!!4+!!!l$7!!$3!#!!!l$7!!Aa&K!%?0!!#%!I)1!r)1!-!#7=!&$7!!Aa'p!!.n!!#%!I)1!r)1!+Is7=",$7!!>k&K!")D!!"k!A!!'N)1!*>}!!![$7!!8?&K
+!%G@!!";!A!!1B)1!'&M!!"2$7!!-Y&K!(6~!!!^!A!!7>)1!#.]!!"T$7!!!A&K!*#x!!!#!A!!<H)1!!&M!!"d$7!!!A&K!)*{7M!"!9.[!1Ex!!)27E@C!(Iv2##u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u
+#e#u#m"'3V.[!)Is!!"0$W!!9A&K!'D\!!!Q!Q!!6aD\!!!Q!Q!!3V.[!$!$!!!}$W!!)1)1!&Av!!!Q!Q!!.L.[!0DI!!!`$W!!FK&K!#<L!!#/!A!!$X.[!,6m!!#a$G!!>[&K!.Au!!"q!A!!BD+u!+G/!!"t$G!!?]&K!+&_!!#&!A!!:$+u!-G/!!"O$G!!FK&K!)Au!!#P!A"B!)Au!!#d!A!!9b+u!!It!!"_$G!!%y)1!+1U!!!L
+!Q!!A"+u!$<:!!#B$G!!-Y)1!.D[!!!k!Q!!'n.[!'It!!!I$W!!3u)1!'GB!!"T!Q!!9b.[!,G0!!"T$W!!Jc)1!*#z!!!A!a!!6|.[!%)5!!"#$W!!1!+u!%!6!!"<!hIq!"Av!!"I!a!!JD+u!)1E!!#;$G!!7m+u!,.o!!"D!a!!9R+u!(1E!!"G$G!!4W+u!(?1!!"4!a!!4h+u!(#i!!"/$G!!47+u!'1U!!"8!a!!1R+u!(Iu!!"$
+$G!!6[+u!&!5!!"B!a!!.\+u!(Iu!!!q$G!!6[+u!&!5!!#96[)1!&!5!!#9!Q!!.\+u!.+x!!"$$G!!E))1!'#y!!#9!Q!!36+u!!._!!"A$G!!'}+u!*7!!!!b!a!!?^+u!&<;!!#8$G!!2C+u!0,+!!")!a!!#&.[!'1E!!!A$W!!11+u!#J(!!!r!a!!+F.[!%)5!!!f$W!!)Q+u!%.p!!"B&;+u!%.p!!!(!a!!+6.[!0)4!!!L$W!!
+G])1!"?2!!#8!Q!!KV+u!,It!!#-$G!!=9)1!*.o!!"P!Q!!4h+u!(4*!!")$G!!1q)1!&1U!!!p!Q!!.<+u!$4*!!!o$G!!%9)1!%GA!!#W!A!!0`+u!.#g!!":$G!!@/&K!*#y!%4';U&K!,,+!!"R!A!!Fl+u!)Is!!#U$G!!9A&K!!1V!!"W!A!!&\.[!*>}!!!T$W!!<7&K!$J(!!"g!A!!,h.[!++w!!!k$[<7!++w!!!o$W!!<W&K
+!&&`!!"b!A!!/N.[!*DI!!!y$W!!:s&K!&Av!!"R!A!!0`.[!)Is!!"0$W!!9A&K!'D\!!"R!A!!Aa!'<O+u!1%.!!#r9A!&!=!!"+'q!!?#!=!!"*6nAa!%$O+u!1%.!!#r9A!$!9+l7M"B!x!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"
+#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C4,,-!!#/!Q!!*D1A!(Kq!Q!!&\1A!+6n!!!3$g!!91)1!!&a!!"8!Q!!KV.[!&<:!!#_$W!!+%)1!0<L!!!-!Q!!#&1A!/+w!!!P$g!!B#&K!&&a!!"c!A!!6l1A!)Is!!"z$g!!9A&K!/)G!!"R!A!!"d4'!*<9!!!L$w!!>{&K!#?4!!"s!A!!9R4'6["s!A!!9R4'!,!#!!"a
+$w!!>{&K!+4>!!"s!A!!=j4'!,#g!!"n$w!!?=&K!+D^!!"v!A!!>\4'!,1C!!"s$w!!@O&K!,#|!!#$!A!!?.4'!-1C!!"t$w!!D7&K!,!8!!#:!A!!>l4'!.<9!!"q$w!!F;&K!+Ax!!#B!A!!=j5H!!#C!A!!=J4'!.Is!!"a$w!!F{&K!*!8!!#D!A!!9R4'!.Is!!!s$w!!F{&K!&&b!!#D!A!!244'!04)!!"2$w!!$w)1!'J*!!!_
+!Q!!3v4'!'9T!!"!$w!!9A)1!$Ax!!"r!Q!!%J4'!-G0!!#S$g!!Fk)1!,.q!!#C!Q!!;h#{!!#C!Q!!7n1A!.>~!!"1$g!!Dw)1!&GC!!#F!Q!!/>1A!/Ad!!!p$g!!Js)1!%<M7=!z!a!!-*1A!!6o!!!h$g!!#U+u!%4=!!!6!a!!-Z1A!"?!!!!p$g!!&K+u!&,-!!!G!a!!1B1A!#<;!!"4$g!!(O+u!(<M!!!N!a!!9r1A!#Iu!!"|
+$g!!)1-<!(J*!!!R!a!!(`4'!$._!!!c$w!!*S+u!')H!!!]!a!!6,4'!%6o!!"S$w!!0_+u!+)H!!"2!a!!><4'!)4+!!"o$w!!<w+u!+Ax!!#0!a!!;64'!/Iu!!"8$w!!$'.[!%!8!!!d!q!!KF1A!&DL!!"g$g!!0o.[!'#{!!!~!q!!0a9g!!!o!q!!Kf.[!#Iv!!#F$W!!&+.[!.,,!!!-!q!!E*.[!0<;!!#9$W!!J3+u!.1V!!#N
+!a!!F,.[!/#i!!#E$W!!E)+u!/Av!!#'!a!!LH.[!+Ae!!!"$g!!6e9U!!!3$g!!:S+u!$&a!!"6!a!!&L1A!'6o!!!5$g!!11+u!!Aw!!!w!a!!!r1A!%G1!!!#$g!!,W+u!!&a!!![!a!!!B1A!#DK!!!($g!!&;+u!"#{!!!/!a!!%J1A!0It!!!Q$g!!H?)1!&,-!!#/!Q!!/>1A!-<:!!!u$g!0!-<:!!!u$g!!CE)1!)$'7M!"!9.[
+!1Ex!!)26{*W!(Iv%i#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!=>\1A!+9S!!"X$g!!=i&K!)!7!!"v!A!!3f1A!-6m!!!~$g!!FK&K!&,-!!#_!A!!/>1A!#.^!!!u$g!!0O)1!'!7!!"H!Q!!5:1A!+)4!!"L$g!!@O)1!*J)!!#)!Q!!6f?3!!#)!Q!!E:1A!-+x!!#O$g!!@o)1!0?3!!"j!Q!!#&4'!*+x!!!6$w!!4w)1!".r
+!!!l!Q!!$X4'!".^!!!*$w!!H_&K!0#{!!#0!A!!G.1A!,+w!!#/$g!!=i&K!+GC!!"l!A!!>\1A!+9S!!"q$g!!=i&K!+GC!!"l!A!$!)$B7M!"!9.[!1Ex!!)26|HS!(Iv&;#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!@.L1A!(4+!!!`$g!!8O+u!$&a!!"]!a!!(@1A!+9U!!!D$g!!@O+u!"GC!!#,!a!!&,1A!.)5!!!?
+$g!!G]+u!#7#!!#W!a!!+61A!0Iu!!""$g!!$G.[!*#{!!!?6[.[!.#{!!!?!q!!#F4'!"G2!!!^$w!!$G.[!&<N!!#c!a!!5:4'!/4+!!"I$w!!DG+u!)1X!!"{!a!!7n4'!+1E!!"A$w!!;%+u!'Ax!!"U!a!!0@4'!)<;!!!X$w!!7]+u!!&b!!"G!a!!?n1A!)&O!!";$g!!6K+u!%J)!!!?59+u!%J)!!":!a!!.L1A!(4+!!!p$g!!
+59+u!))R7M!"!9.[!1Ex!!)27=-=!(Iv/M#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!v3v6k!)Is!!"2%)!!9A&K!'J+!!#_!A!!3v6k!0<9!!"Y%)!!?M&K4W##%)!!9A&K!/7%!!"R!A!!Kf6k!)Is!!!+%9!!:C&K!"4@!!"c
+!A!!&|9Q!+Ac!!!J%9!!@_&K!#9j!!#.!A!!'~9Q!.1C!!!F%9!!GM&K!"?6!!#P!A!!$89Q!0.]!!!)%9!!KE&K!0Ay!!#^!A!!Ir8.!!#^!A!!G^6k!0)3!!#8%)!!H?&K!-.s!!#A!A!!@`6k!..]!!"v%)!!E9&K!+Ay!!#:!A!!=:6k!.6m!!"b%)!!G-&K!*!9!!#S!A!!6l6k!!.^!!"2%)!!'M)1!'J+!!!G!Q!!3v6k!!6o!!"2
+%)!!"C+u!'J+!!!D!a!!4NJ+!!!X!a!!5J6k!%+y!!"@%)!!.++u!).s!!!v!a!!9b6k!&?!!!"^%)!!1Q+u!+Ay!!"'!a!!Ar6k!'+y!!#&%)!!2#+u!-#}!!":!a!!Ar6k!(4+!!#&%)!!59+u!-J*!!":!a!!D84'!(4+!!#4$w!!59+u!-J*!!"'!a!!6gJ*!!"'!a!!HP4'!'+y!!#_$w!!1A+u!!.s!!!y!a!!#F6k!&)5!!!4%)!!
+-i+u!"4?!!!_!a!!%*6k!$9U!!!:%)!!'m+u!"9i!!!-!a!!%:6k!!Ae!!!:%)!!/M)1!"9i!!!v!Q!!%:6k!"G0!!!9%)!!L'&K!"1Y!!#X!A"B!",/!!#M!A!!#f6k!/#g!!!*%)!!FK&K!!)I!!#<!A!!Kv4'!..]!!#X$w!!E9&K!/9h!!#:!A!!F\4'!.4)!!#4$w!!F[&K!-J*!!#B!A!!CF4'!-<9!!#/$w!!CE&K!-<N!!#/!A!!
+006k!)Is!!!z%)!!9A&K!&9i!!"R!B1A!'J+!!"R!A!!3v6k!)Is!!#%!!.67M!"!9.[!1Ex!!.\Aa!%A)+u"S1BAa!%?='p=a+u!1%.!!#r9A!$!9*^7M"B!w+v#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"
+#f"C2'GG!!!S!a!!%z<7!&6o!!#d%9!!3e+u!(LJ%9!!4g+u!/!:!!"A!a!!Cf9Q!)&O!!"z%9!!7-+u!*4@!!"E!a!!5z9Q!(._!!")%9!!11+u!&#~!!!j!a!!-*9Q!#?!!!!h%9!!"3+u!%4@!!#U!Q!!-z9Q!.Ad!!!w%9!!CU)1!',0!!"v!Q!!6,9Q!*DJ!!"b%9!!8/)16[#'%9!!4g)1!0D`!!!|!Q!!.<<7!$DJ!!!o%I!!+E)1
+!%GG!!!K!Q!!.<<7!#<:!!!o%I!!Ke&K!%4A!!#@!A!!*T<7!-<9!!!J%I!!@?&K!")K!!"r!A!!Jt9Q!+Is!!#F%9!!>k&K!.!:!!"y!A!!B49Q!-#g!!"y%9!!Cu&o!!"r%9!!F+&K!+J,!!#N!A!!>l9Q!/9S!!"s%9!!"3)1!,!:6[!!"3)1!,!:!!!8!Q!!><9Q!#+x!!"g%9!!(O)1!*Az!!!U!Q!!9r9Q!$9T!!"G%9!!*c)1!(4@
+!!!Z!Q!!3V9Q!$+x!!"(%9!!(?)1!&D`!!!D!Q!!009Q!"1D!!!z%9!!"3)1!&9j!!#M!A!!2T9Q!-G/!!"I%9!!?]&K!+/|%9!!;U&K!-J,!!"R!A!!"$<7!)Is!!!Q%I!!9A&K!&&e!!"Z!A!!3f<7!+.]!!"E%I!!>k&K!*$!!!#%!A!!;6<7!.1C!!"c%I!!G}&K!+,1!!!%!Q!!<x<7!$#h!!"g%I!!)A)1!+,1!!#7!Q!!<x<7!.&N
+!!"g%I!!LG)1!(KZ%I!!%I+u!+1[!!!F!a!!=Z<7!#G1!!"n%I!!*3+u!+J-!!!Z!a!!?><7!$Ae!!"{%I!!+U+u!,Da!!!_!a!!B$<7!$G1!!#,%I!!+E+u!-?7!!!\!a!!Dh<7!$1E!!#E%I!!'}+u!0.u!!!6!a!!Jd<7!"._!!#Z%I!!)A+u35#Z%I!!)A+u!-GG!!"(!a!!=j<7!)#i!!"I%I!!6{+u!(.u!!"D!a!!2T<7!(<;!!"!
+%I!!3e+u!&)K!!"%!a!!.<<7!%Iu!!!o%I!!)Q+u!%GG!!!S!a!!.<<7!$&O!!!o%I!!)Q+u!)#j7M!"!9.[!1Ex!!)26y83!(Iv%9#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!:.<<7!"#i!!!o%I!!#u+u!%GG!!!~!Q!!.<<7!&DJ!!!;%I!!4G)1!07&!!"C!Q!!HP9Q!)6n!!#2%9!!:s)1!,<P!!"k!Q!!>\9Q!,6n!!"f%9!!C5)1
+!*Az!!#@!Q!!;V9Q2s#T!Q!!;V9Q!!4+!!"g%9!!%Y+u!,&d!!!M!a!!Ar9Q!$Ae!!#7%9!!,W+u!/1Z!!!e!a!!!2<7!%+y!!!D%I!!)a+u!%GG!!!2!a!!.<<7!"#i!!!o%I!!#u+u!%GG!!!2!a!!Aa!%%Q+u!1%.!!#r9A!$!9+r7M!("#%,Jc'o?u+u!1%.!!#r9A!$!9('7M"B!u9R#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"
+#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C-O,3!!!a!a!!-zAa!&6o!!!W%i!!3%+u!#!=!!"8!a!!"dAa!)#i!!#W%Y!!7m+u!.9l!%4'7m+u!+.v!!"I!a!!5J>{!(!%!!!s%Y!!,W+u!#<R!!!:!a!!$x>{!/&N!!!8%Y!!;u)1!"4B!!!{!Q!!(`>{!"Ad!!!y%`Iq!/+w!!"E%Y!!>;&K!,9l!!"R
+!A!!Kv>{!)Is!!!G%i!!9A&K!%7)!!"`!A!!2$Aa!,6m!!"'%i!!@?&K!',3!!"#!A!!2$Aa!'!#!!"'%i!!(/&K!')M!!!*!A!!12Aa!0Ab!!!~%i!!J##e!&9m!!#M!1!!/>Aa!/+v!!!o6\Aa!.Ir!!!h%i!!F[#e!$J/!!#B!1!!*4Aa!.DH!!!J%i!!G-#e!"?9!!#J!1!!%ZAa!/.\!!!5%i!!Dg#e!",3!!#7!1!!$HAa!.&L!!"e
+%i!!:s#e!+&g!!"[!1!!<XAa!*6l!!"|%i!!:s#e!,9m!!"[!1!!@PAa!*6l!!"B@PAa!,>~!!"|%i!!@o)1!,9m!!#W!Q!!@`Aa!"+y!!##%i!!&;+u!-!=!!!M!a!!BDAa!$._!!#.%i!!*c+u!.!=!!!_!a!!EJAa!%!%!!#B%i!!+u+u!/4C!!!a!a!!JTAa!$G1!!!$%y!!*S+u!!)N!!!Y!a!!"TDG!%?!!&)1"TDG!%?!!!!*%y!!
+-i+u!(A}!!"I!a!!6,Aa!)1E!!"?%i!!7m+u!',3!!"I!a!!2$Aa!)1E!!"'%i!!7m+u!',3!!!a!a!!2$Aa!%!%!!"D+-+u!1%.!!#r9A!$!9$%7M"B!rIr#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C&A,3!!!=!a!!2$Aa!"Ae!!"'%i!!(/)1!',3!!!K!Q!!1bAa!")4!!!|%i!!Ku&K!&$#!!#N!A!!-*Aa!.1C!!!Z%i!!
+C%&K!#7)!!##!A!!$hAa!,+w!!!(%i!!>rIs!!#[%Y!!>k&K!.7(!!"r!A!!A">{!,DI!!"h%Y!!Ei&K!).v!!#`!A!!5*>{!$!$!!"9%Y!!4w)1!(1\!!"}!Q!!7N>{!0!$!!"f%Y!!$W+u!-&f!!![!a!!Gn>{!%Ae!!!*%i!!-y+u!#7)!!!m!a!!,xAa!$Ae!!"'%i!!&,Ae!!"'%i!!%i+u!',3!!!=!a!!2$Aa!"Ae!!"AHG)1'M#e
+*l(~E8E=:bJR0e,f:f>#LJIq!0#d!p3"+jGM;qEp4c)q!!!17M!.HA1A!!G:!!#b)a!!#=G-!aAa"#'r!!5K!A1B!33m7=!%!A!o!Y1A!EG091!,;e1A!*DM!!"E+c:v!!)2!$"H!!*EC1"G!"8o4D%i!!!13y!!!0Gv!!!;,G!!H$!!!!Ew!!6v!!#j7-1C!9+u!a%*K#=\!#6p*C#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u
+#e#u#e#u6\!"#f!"#f!"#f!"#f!"#f"C*H*D!!"T9Q!!/4#e!*%9!!#^4G!!B[Iq!0:e!!#*9A!!KL&K!-0.!!!D4W!!B[Iq!#*F!!#*9A!!'$)1!-0.!!!D4W!!6$.[!#*F!!">:C!!'$)1!.C:!!!J4W!!%21A!$"6!!!R:S!!*Z)1!%:r:S!!-@)1!&@U!!"%4W!!2|1A!(@2!!"::S!!?4)1!(@U!!#c4W!!6d1A!0HB!!"B:S!!L>)1
+!+C;!!#c4W!!>D1A!0HB!!"o:S!!4N#e!+C;!!"547!!>D1A!('^!!"o:S!!4N#e!(KK!!"547!!6d1A!-*D!!">:S!!K,#e!(K,:S!!#l&K!';+!!!I4G!!0X1A!$8!!!!l:S!!,>&K!$5_!!!j4G!!&t1A!%K'!!#I:C!!.R&K!(@T!!!p4G!!6$.[!%K'!!#69a!!.R&K!.%:!!!p4G!!/V#e!%:e!!!%9a!!,>&K!/"S!!!_4G!!BL!!
+!$-+!!"t9Q!!'4&K.K"f9Q!!$N&K!*0/!!#c47!!9j!!!/@0!!"T9Q!!C\#e!*%9!!"a47!!;n!!!'-*!!"|9Q!!2*#e!,;%!!!t47!!9j!!!&*D!!"T9Q!!6Y@B!$4(!$;'In.X/F4&+jBg.T4a=hJR(u1~6*04Cy#94<C;*|;f+u!!#gB>!!"(,w!!*w6k!(?p!!!.91!%#%!'!I.[";&M"##f'[C(!!+w!%G07m!#.;*a!!@\"#!!;e1A
+!)(III)1*C#e*l(~E8E=:bJR0e,f:f>#LJJk"=A7:%9(+{!NAMAM'h4g!!!1EnAa!-4B!!!n1Q!!>]&K!!Ew!!6v!!#j7-1C!9+u!a%+1oHR!'Iv,G#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!d0o&K!#9V!!!~!A!!'}.[!#!#!!#8!q!!&K&K!.)6!!!A!A!!
+Dw.[!"@B!!0r!q!!%a)1!~)6!!!<7=!&Dw.[!"@B!!0[!q!!%a)1!|Af!!"v7=!~)A.[!"G.!!#$!a!!0o#e!'6o!!"^!1!!#u+u!,9R!!#%!Q!!@O#e!(4*!!"|!1!!+u)1!+6l!!!4!Q!!7]#e!/Is!!"'!1!!CU&K!$>|!!"|!A!!#%#e!,9S!!#G7=!&@O&K!,=\!!0d!A!!:{)1!~G/!!"97=!&K%&K!&C(!!.w!Q!!.#)1!uAd!!!m
+7=!&-y)1!$-<!!/I!Q!!)y)1!uAd!!!`7=!&Ku&K!&@B!!0^!A!!87)1"<.]!!"x!!!'!'>}!!#Q7="8/]&K!#G.!!!w!A!!5)#e!&1C!!"t!1!!3E&K!/#f!!"]!A!!#e&K!-4)!!!I!A!!L7&K!#6m!!!]!Q!!'m&K!'9T!!!?!A!!:3)1!!<9!!#&!Q!!H_#e!!1E!!"x!1!!.[+u!'G.!!"a!a!!!Q#e!"+z!!#&7=!&0?.[!+5L!!/m
+!q!!=Q)150!&!!"L!1!!4'.[!)9R!!"3!q!!@?#e!(!&!!#<!1!!3u.[!/>|!!".!q!!L7#e!'4,!!!/!A!!1A.[!"Ac!!!w!q!!(O&K!%?"!!!Z!A!!+E.[!%+w!!!J!q!!,W&K!#9V!!!~!A!!'}.[!&DI!!!J!q!!6YK8!$4(!$;'In.X/F4&+jBg.T4a=hJR2lJX)G70EM!YGp>VG?FC+u!!#mH'!!!O%)!!;[.[!.?A!!!.91!%#%!'
+!I.[";&M"##f'\"F!!+w!%G07m!#.;*a!!@\"#!!2c1A!)+=J+)1*C#e*l(~E8E=:bJR0e,f:f>#LJJ'>^F[,!3f+z72@,7#8|$G!!!1;-DG!.!k!!"59a!!EN#e!!Ew!!6v!!#j7-1C!9+u!a%,46'p!'.`1Q#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u
+#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m"$,?)1!qIt!!!|7=!&Dw&K!(=\!!0E!A!!<O)1!y.]!!#+7=!&2C&K!00"!(Ji!A!!(o#e!&1C!!"9!1!!/]&K!+>|!!"/!A!!DW#e!*<9!!#R!1!!A!&K!0>|!!#F!A!!Ke#e!!4*!!#`!1!!,w)1!.)2!!"K!Q!!7=#e!-Ad!!"|!1!!G=)1!/&L!!#d!Q!!L7#e!#4+!!!;!A!!.++u!#4)
+!!"?!a!!']&K(o"t!a!!']&K!0Ae!!!0!A!!+U.[!.G.!!"9!q!!<7#e!,G2!!!f!1!!G].[!-C(!!1$!q!!9y)1"!)6!!",7=!&F;.[!&-<!!0j!q!!+m)1!|DL!!!U7=!&>K.[!$-<!!0<!q!!)y)1!z!&!!![7=!&7].[!%-<!!/y!q!!.3)1!x)6!!!z7=!&3e.[!'82!!/k!q!!4_)1!wG2!!"A7=!&3u.[!):v!!/p!q!!9i)1!x1F
+!!"d7=!&6;.[!,@B!!0*!q!!E1)1!z6p!!#L7=!&<G.[!0"F!$3)!q!!!1#e!+6p!!!2!1!!=y.[!#+v!!"m!q!!.K#e!+<<!!"9!1!!;%.[!*4(!!":!q!!@?$n!!!w!q!!C%#e!#DL!!#-!1!!LG+u!-6l!!#A!a!!Aa#e!,?!!!"t!1!!;E+u!+.\!!"G!a!!;%#e!(#i!!"O!1!!2#+u!(<8!!!t!a!!1A#e!%)5!!!`!1!!*3+u!#!"
+!!!H!a!!LO)1!s!%!!#A7=!&&K+u!.C(!!.{!a!!C-)1!s!%!!#-7=!&&K+u!-82!!.{!a!!C-)1!qDK!!#-7=!&#5+u!/:v!'DP!a!!#%#e!0>~!!!O!1!!HO)1!&#f!!#9!Q!!3%#e!,>~!!";!1!!<')1!)6l!!"F!Q!!9Q#e!')4!!"S!1!!,')1!*!"!!!6!Q!!7-#e!0&M!!")!1!!EI&K!%<8!!"}!A!!'m#e!+DI!!#d7=!&>K&K
+!,@B!!0L!A!!7U)1!~#g!!!x7=!&%9)1!&5L!!.t!Q!!,?)1!qIt!!!c7=!'#U)1!(Id7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+iGl!`;N)?$G45'e055|D[!!!""I8?!!D+1A!#C;!!#H/-!!#=G-!aAa"#'r!!5K!A1B!33y7=!%!A!U!Y1A!D+x91!,2c1A!*DM!!"E+d0"!!)2!$"H!!*EC1"G!"8o4D%i!!!1/W<7!&GH!!#L>[!!,i&K
+!!Ew!!6v!!#j7-1C!9+u!a%*K$2f!!4-!9&9!I$h7M!"!9.[!1Ew!!6v!!#j7-1C!9+u!Q%**k+u6[.}!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16m(ZF{!!9G.[!-A@!!"R23!!CbIq!%*9!!#0F{!!,M1A!-A@!!!d2C!!GzG-!%*9!!#IFk!!,M1A!/.9!!!d2C!!GzG-!!Bk!!#IFk!!#+6k!/.9!!!-2c!!#bHN!!!-
+2c!!#bG-!!Bk!!!0Fk!!#+6k!!L5!!!d2C!!#bG-!%*9!!!0Fk!!,M1A!$;p!!!d2C!!*p>{!%*9!!!ZF;!!,M1A!$;p!!"d23!!*p>{!+$l!!!ZF;!!<M.[!&3c!!!F1Q!!/jG-!#/^!!!wFk!!'C#e!/.9!!!F1Q!!Gp;s!!!F1Q!!GzG-!#/^!!#IFk!!9G.[!/.9!!"R23!!GzG-!)Jx!!#0F{!!9G.[!-A@!!"R23!!6s83!!#f7]!"
+#=G-"C>{!10!"#&L7M!#!7%-!&!&"c#u#e#u#e#u#m!+#bG-!)Jx!!!0Fk!!9G.[!!L5!!!S1a!!#bG-!$'O!!!0Fk!!)W&K!,0z!!"R23!!?z>{!)Jx!!"xF;!!9G.[!!L5!!Iq9G.[!!L5!!"R23!!6Z5L!$4(!$;'In.X/F4&+jBg.T4a=hJR%KAG@|(QGq"{&g;c({0V+u!!#f5o!!#*$w!!'H)1!(&o!!!.91!%#%!'!I.[";&M"##f
+'\82!!+w!%G07m!#.;*a!!@\"#!!2c1A!)(dKM)1*C#e*l(~E8E=:bJR0e,f:f>#LJK3"[$z166V+w!e6@(L/z$G!!!1*P>{!#!k!!!GF{!!!v#e!!Ew!!6v!!#j7-1C!9+u!a%+6J=\!(Iv,w#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!g+E&K!'4)!!!^
+!A!!2S&K!!>}!!#:!A!!"s&K!..]!!!,!A!!E9&K!!)2!!#:!A!!!Q#e!..]"s!!!Q#e!..]!!#-7=!&-Y)1!-82!%=#!Q!!+%#e!&<:!!"Z!1!!7m)1!.9R!!#.!Q!!$'&K!!)5!!!P!A!!-9+u!#Is!!"Z!a!!)!&K!-1E!!!F!A!!Iq+u!")3!!!9!y)1+u&K!$Iv!!#N!1!!1A.[!-Ab!!"?!q!!>{#e!*6p!!"S!1!!>K.[!'G.!!##
+!q!!+%#e!.4,!!!*!1!!G].[!.2f!!1$!q!!<O)1"!)6!!"=7=!&F+.[!'*V!!0g!q!!-q)1!|.`!!!`7=!&<W.[!$K8!!0,!q!!+m)1!y!&!!!e7=!&5).[!%El!!/k!q!!0')1!w+z!!"'7=!&11.[!(*V!!/\!q!!6S)1!vIv!!"K7=!&1A.[!*%,!!/a!q!!;-)1!w6p!!"j7=!&4'.[!,@B!!/|!q!!FC)1!z.`!!#a7="0<7.[!"DH
+!!"c!q!!.K#e!+!&!!"?!1!!9!.[!+#f!!"*!q!!C%#e!%#j!!#@!1!!$'.[!.>|!!#@!a!!F;#e!+1E!!#/!1!!4w+u!+6l!!!h!a!!7]#e!"9U!!!x!1!!Jc)1!"Ab!!#A!Q!!I9)1!}9T!!"p7=!&A1)1!&C(!!0Z!Q!!0g)1(z>~!!!%!1!!2S&K!!+v!!"*!A!!!a#e!'4)!!!^!A!!2S&K!$DI!!"*!A!!6Z@B!$4(!$;'In.X/F4&
++jBg.T4a=hJR?&<};b92Hs#94<C;*|;f+u!!#eL.!!"(,w!!?k)1!(?p!!!.91!%#%!'!I.[";&M"##f'\C(!!+w!$+x7m!#)q*a!!@'"#!!;e1A!)+(L/)1%)#e*l(~E8E=:bJR0e,f:f>#LJJM.VDfB4J=Ie#-IcL/<0"z+u!!#q1:!!!Q%i!!"RG-!$1d!!!.91!)"s!"!y&Q!A%-!!+v7BA_7=!("#%,/-'nK=+u!1%.!!#r9A!$!9&&
+7M"B!t+v#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C)v!#!!!w!A!!.[&K!&1C!!!q!A!!3u&K!&!#!!"2!A!!$w&K!(+w!!#N!1!!6k&K!-.\!!"T!A!!<G#e!+#g!!"A!1!!A!&K!!=4!1!!Fk&K!$4(7=!5!Q!!%I#e!#6n!!!%!1!!.{)1!/C(!!/z!Q!!F3)1!{It!!#/7="BHo)1!!6l
+!!#%!Q!!,w#e!+>~!!"G!1!!>+)1!-!"!!"n!Q!!JC#e!-)4!!!@!A!!JS)1!%<9!!!D!a!!1Q&K!'#i!!"$!A!!>K+u!'#g!!#Z!a!!-Y&K!$9V!!!@!A!!4g.[!/9R!!#"!q!!<g#e!/)6!!!l!1!!G].[!"!"!!1AG].[!.C(!!0m!q!!?U)1!{1F!!"$7=!&0?.[!$82!!16!a!!*[)1!xAe!!!Y7=!&(o+u!%82!!1#!Q!!2k)1!zAd
+!!"I7=!&/])1!,*V!!.r!Q!!II)1.I#g!!!I!1!!=y&K!'!"!!"H!A!!:C#e!(#g!!#/!1!!11&K!0Ab!!!w!A!!(?&K!&1C!!!L!A!!/]&K!&!#!!!w!A!!.[&K!&1C!!"D/e+u!1%.!!#r9A!$!9$@7M!G!s&L#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C&vK8!!.u!a!!@7)1!v)5!!"v7=!&7-+u!,*V!!0E!a!!?U)1
+!}Iu!!"~7=!&Ku+u!-=\!!/*!q!!F3)1!vAf!!#U7="B7M.[!!Ir!!"c!q!!'-#e!,+z!!!_!1!!AA.[!&G.!!##!q!!7=#e!,G2!!"g!1!!>K.[!-&L!!"L!q!!F{#e!'1F!!#S!1!!)a.[!/G.!!#X!a!!IQ#e!+9U!!#D!1!!2s+u!-&L!!!T!a!!=)#e!0DJ!!"?!1!!GM)1!%1B!"G-GM)1!$1B!!#G!Q!!'=#e!/1D!!!2!1!!IA)1
+!0K8!!15!Q!!Gu)1!q&O!!#$7=!&%I+u!,K8!!.u!a!!AY)1!r<;!!#$7=!'%I+u!(Ip7=!X!1!Z:!L+L,-OLJJo2'KL*}9P+l3e717I?{Gm?g31HH-O@C!!!""mJc!!:d6k!&!#!1!d'=!!#=G-!aAa"#'r!!HQ!A1B!31A!1!!!A!U!Y1A!D+x91!f2c1A!'6q!!"D5)#f!!!"!$;'In.X/F4&+jBg.T4a=hJR<>6E"'H`J7"'I_4yGz0p
++u!!#l,@!1!9-y!!@1DH!!/P!!!.91!)"s!"!y&Q!A%-!#<86|G/!1!!!rIr#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C&C-<!!/d!A!!7U)1.14)!!!z!A!!2S&K!&9S!!"*!A!!0/&K!'4)!!!z!A!!6k&K!&9S!!"C!A!!0/&K!)!#!!!W!1!!H?.[!$1B!!#L!q!!*3#e!/4,!!#R7=!&H?.[!/El!!1(!q!!II)1(m4,!!#X
+!1!!DW&K!0)2!!#6!A!!JC#e!.#g!!!$!1!!DW&K!!)2!!#6!A!!Do)1!~#g!!"r7=!&EI&K!*=\!!1#!A!!51)1""1C!!!z7=!&$G)1!%*V!!/;!Q!!,O)1!tG0!!!Q7=!&*3)1!$"F!!/3!Q!!)9)1!t1D!!"G7=!&2S&K!)-<!%"*!A!!6K)2!!!"!$;'In.X/F4&+jBg.T4a=hJR+i!^;M=/J7#94<C;*|;f+u!!#k9v!1"(,w!!#H&L
+!(?p!!!.91!%#%!'!I.[#M&M"##f'M+v!!!#!$+x7m!#)q*a!%51"#!!;e1A!-!!$6&P!1!!!1!Z:!L+L,-OLJJo2'KL*}9P+n.c+b5e*b!a)xHM*_;$D{!!!"#>!Q#e)F)1!$,1!1"B0?!!#=G-"C>{!10!"#&L7M!3!=!!$06q!1!!"#%i!"'{"+'Q7M!"!9.[!1Ex!!)2715M!(Af+u#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u
+#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!aF{#e!'Iu!!#6!1!!?M+u!,.\!!#M!a!!8o#e!!DL!!"'!1!!)A.[!$1B!!!f!q!!!a#e!%.`!!#/7=!&,g.[!*2f!!/(!q!!3=)1""9U!!!_7=!&Bs+u!#82!!0$!a!!'u)1!t!%!!!I7=!&Fk)1!%%,!!0;!Q!!4O)1!w9T!!"e7=!&*3)1!.El!(J/!Q!!&K#e!"Ad!!!t
+!1!!%i)1!(DH!!!K!Q!!<'#e!%.^!!#%!1!!1A)1!.!"!!">!Q!!DG#e!*9T!!#5!1!!=Y)1!->|!!"v!Q!!B##e!,DJ!!"|!1!!BS)1!+Ab!!#.!Q!!;U#e!-9T!!"G!1!!C5)1!(+v!!#'!Q!!3%#e%9"v!Q!!1q#e!+>~!!"!!1!!;U)1!&Ab!!!V7m)1!&9R!!"3!Q!!.{#e!&G0!!!e!1!!/-)1!$4(!!!h!Q!!'=#e!%#h!!!/!1!!
+,')1!/82!!/>!Q!!C=)1!uIt!!"v7=!&35)1!**V!!0/!Q!!7U)1!}#h!!"G7=!&LG)1!)-<!!/:!a!!:+)1!x._!!"u7=!&<w+u!.%,!!0s!a!!K])1/k?!!!!O!1!!I!+u!&)2!!#P!a!!4g#e!.G1!!"U!1!!Bc+u!+4(!!"x!a!!@o#e!*._!!#4!1!!2S+u!-Ir!!"*!a!!F{#e!'Iu!!#D!1!!3u+u!)"[7M!"!9.[!1Ex!!&L63+u
+5i.h!2!1!2!1!2!1!2!16kE;!a!!)A1A!&&O!!!R"#!!K5#e!$#k!!#]!1!!)A1A!06l!!!R"#!!K5#e!!)7!!#]!1!!!Q1A!06l!!!$"#!!.{+u!!)7!!!s!a!!!Q1A!&&O!!!$"#!!.{+u!$#k!!!s!a!!)A1A!)*{7M!"!9.[!1Ex!!)27E@C!(Iv2##u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u
+#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m"'@O.[!"Ad!!"|!q!!%i)1!,9V!!#2!Q!!6f9V!!#2!Q!!@O.[!-DJ!!"i!q!!Cu)1!+1F!!#2!Q!!:s.[!*.^!!"I!q!!4')1!(!&!!!}!Q!!/}.[!%6n!!!]!q!!+U)1!"<<!!!_!Q!!LG+u!$G0!!#O!a!!,g)1!.9U!!!t!Q!!C5+u!'#h
+!!#&!a!!4')1!-#i!!"D!Q"B!-#i!!"Y!Q!!Bs+u!+9T!!#8!a!!@?)1!.G1!!#,!Q!!K%+u!.4*!!!<!q!!H_)1!"?"!!#N!Q!!3U.[!"&O!!"0!q!!$'+u!,<<!!!X!a!!G=.[!'9U!!#F!q!!=)+u!/#j!!#:!a!!D7.[!0Ae!!"n!q!!%9.[!)4,!!!X!xIq!&Iv!!!f!q!!)a.[!%.`!!!4!q!!,g.[!/G1!!!`!q!!Bc+u!$)6!!"|
+!a!!)1.[!+G1!!!O!q!!=I+u!#G2!!"a!a!!(o.[!*4+!!!S!q!!9q+u!$DL!!"U!a!!+E.[!)!%!!!^!q!!6k+u!$DL!!"C!a!!+E.[!)!%!!"D35+u!)!%!!"D!a!!6k+u!)#i!!"U!a!!6{+u!*&O!!"D!a!!;e+u!,4+!!"u!a!!Fk+u!-Iu!!#^!a!!IA+u!"+z!!!0!q!!&k.[!$+z!!!C!q!!.;.[!#&P!!"'!q!!%I.[!(+z!!!,
+!q!!6c.`!!#a!a!!9!.[!/9U!!"P!q!!E)+u!)DL!!"|!a!!7=.[!+)5!!"4!q!!9q+u!&G2!!"C!a!!*s.[!'<;!!!$!q!!.;+u!-Ae!!!T!a!!=I+u!"?!!!"Z!a!!!q+u!)1E!!#T!Q!!6K+u!.+x!!"A!a!!?M)1!(G1!!"K!Q"B!)DK!!"'!Q!!=y+u!%4*!!#,!a!!(/)1!/DK!!!=!Q!!%i.[!"Ad!!!Q!q!!%i)1!%6p!!!B!Q!!
+23.[!#9T!!"<!q!!)!)1!)1F!!!S!Q!!9!.[!$&N!!"V!q!!)Q)1!*4,!!!R!Q!!;E.[!#DJ!!"a!q!!(?)1!+&P!!!F!S+u!+1F!!!=!Q!!=9.[!"Ad!!"|!q!!%i)1!,9V!!!=!Q!!74K9!!#f7]!"#=Iq!Q%+1i+u6[/@!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1
+!2!16o+9"#!!6k&K!-+{!!"C!A!!BC1A!#>~!!#)"#!!(?)1!-+{!!!L!Q!!+E4'!#>~!!!^"3!!(?)1!$Eh"3!!(?)1!$DN!!!s!Q!!+E4'!&&N!!!^"3!!.{)1!-+{!!!t!Q!!BC1A!&)4!!#)"#!!/-)1!-+{!!"g!a!!BC1A!++y!!#)"#!!Bc+u!-9W!!#B!a!!Dg1A!/9U!!#B"#!!Jc+u!/6q!!#_!a!!K%1A!0<;!!!%"3!!KU+u
+!(J$"3!!K%+u!"DN!!#T!a!!'m4'!/4+!!!Q"3!!F;+u!$4.!!#1!a!!*C4'!-Ae!!!n"3!!Ce+u!%DN!!#1!a!!,'4'!0#i!!!N"3!!#5.[!"1H!!!B!q!!L'1A!$)6!!#H"#!!+U.[!-<=!!!_!q!!@?1A!$G2!!"j"#!!*c.[6["Z"#!!(o.[!)1G!!!E!q!!5i1A!"1F!!"4"#!!!q.[!'9W!!#W!a!!2C1A!.1E!!")"#!!?-+u!'1G
+!!"t!a!!2C1A!&&N!!")"#!!.{)1!'1G!!!s!Q!!$71A!&&N!!!4"#!!.{)1!")7!!!s!Q!!$71A!$It!!!4"#!!+e*7!!!I"#!!*C)1!$DM!!!J!Q!!/-1A!".^!!","#!!!A)1!(DM!!#O!A!!9!1A!-Is!!"Z"#!!Aq&K!+)7!!"i!A!!?M1A!)!#!!"v"#!!6k&K!-+{!!"C!A!!BC1A!)!#!!"E@w+u!1%.!!#r9A!$!9(-7M!("#%+
+:S'n=Q+u!1%.!!#r9A!$!9%37M!5!s>|#f!"#f!"#f!"#f!"#f!"#f"B!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16mA&"3!!Iq)1!-.b!!!^!a!!Ei4'!(9U!!#b"3!!=)+u!#)9!!#6!a!!.K6k!/4+!!"F"C!!H?+u!++}!!#L!a!!B36k!.DK!!#A"C!!CU+u!0.c!!"{!a!!"c9Q!*4+!!!<"S!!3,Iu!!!<"S!!3%+u!#DP!!"9!a!!
+(_9Q!(1E!!!E"S!!=y+u!!DP!!#?!a!!H?6k!!+z!!#&"C!!)!.[!*&S!!!f!q!!/}6k!%.`!!!:"C!!,g.[!/+|!!!L!q!!@/4'!0<;!!"N"3!!CU+u!(.b!!"K!a!!4w4'!$4+!!"8"3!!56DJ!!"O"3!!;%)1!,9X!!"*!Q!!H?4'!$+x!!!A"C!!%i)1!'+}!!!=!Q!!<'6k!"Ad!!#4"C!!)1)1!0.c!!!w!Q!!%I9Q!(DJ!!!N"S!!
+>{)1!#DP!!#U!Q!!(_9Q!0!$!!#*"3!!Iq)1!-.b!!#U!Q!!6y=]!!#f7]!"#=Iq!Q%)C}+u6[.q!2!1!2!1!2!1!2!1!2!1!2!1!2!16l3J"3!!D7)1!-.b!!#4!Q!!?}6k!-It!!"y"C!!D7)1!,+}!!"q!Q!!>{6k!*1D!!"m"C!!8?)1!+#m!!"6!Q!!9q6k!')4!!"B"C!!/m)1!'DO!!!l!Q!!0/6k!%.^!!!f"C!!,g*!!!!F"C!!
+,g)1!!<?!!!q!Q!!Iq4'!'9T!!#="3!!6{)1!-<>!!"g!Q!!BS4'!-It!!#*"3!!D7)1!-.b!!#4!Q!!BS4'!-It!!#%!!3&7M!"!9.[!1Ex!!.\Aa!'75+u"s1BAa!'5I+5!!,+7M!"!9.[!1Ex!!)27L5M!(Iv4'#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u
+#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m"3Ke9Q!(1E!!#@"S!!6a4+!!#("S!!.[+u!,&T!!!V!a!!<79Q!"9U!!"["S!!KU)1!*6t!!#>!Q!!:s9Q!+.^!!"o"S!!5Y)1!.):!!!u!Q!!KE9Q!#It!!!L"c!!%i)1!'6u!!!=!Q!!:s<7!"Ad!!#("c!!'m)1!/6u!!!a!Q!!HO<7!%!$!!!w"s!r!%!$
+!!!w"s!!+u)1!'1L!!!a!Q!!4'>{!%!$!!"5"s!!,')1!(,"!!!c!Q!!59>{!%+x!!";"s!!,w)1!(<B!!!j!Q!!5y>{!&!$!!">"s!!6`9T!!">"s!!1a)1!(<B!!",!Q!!5Y>{!'G0!!";"s!!3u)1!(1L!!"4!Q!!4G>{!(&N!!"3"s!!4W)1!'1L!!"6!Q!!/]>{!()4!!!w"s!!4W)1!")<!!"6!Q!!$7>{!()4!!!I"s!!91)1!$&V
+!!"t!Q!!)Q>{!.Ad!!!S"s"B!!Ae!!!@"s!!*3+u!0<A!!!z!a!!E9<7!(<;!!"g"c!!8o+u!'.e!!"O!a!!-y<7!)Ae!!!S"c!!8/+u!"41!!"C!a!!"#<7!)Iu!!#`"S!!;E+u!0.d!!"j!a!!Iq9Q!,#i!!#Q"S!!@_+u!/Aj!!#(!a!!I19Q!-6o!!#U"Y!!!-Iu!!#Z"S!!E9+u!0?&!!#@!a!!"C<7!/!%!!!<"c!!GM+u!#.e!!#H
+!a!!+e<7!/._!!"-"c!!H?+u!,6u!!#M!a!!Ho<7!/?!!!!""s!!Ia+u!#.f!!#X!a!!,'@B!(Iv!!!w"s!!$g.[!'?(!!!L!q!!5)>{!%1F!!"9"s!!2C.[!(1L!!"T!q!!1a>{!,6p!!!Z"s!!F{.[!0I{!!!6"#!!?-<7!$#k!!!t"c!!)A1A!!9[!!!R"#!!Ce9Q!##k!!"\"S!!LG.[!(Aj!!#R!q!!3e9Q!.9V!!"1"S!!6g.`!!"1
+"S!!A!.[!(#n!!"u!q!!4g9Q!+9V!!">"S!!;E.[!)6t!!"J!q!!;e9Q!'Iv!!"b"S!!35.[!,&T!!!w!q!!EI9Q!$!&!!#'"S!!'-.[!,+~!!!;!q!!>;9Q!"#j!!"g"S!!"3.[!+!*!!#b!a!!<79Q!0#i!!"c"S!h!/)5!!"i"S!!E)+u!,#n!!#&!a!!@o9Q!,!%!!#9"S!!:S+u!0?&!!"9!a!!Ke9Q!(1E!!#`"S!!5)+u!0?&!!"9
+!a!!6}"G!!#f7]!"#=Iq!Q%*!Y+u6[.w!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16lBa"c!!*S)1!%&U!!!Y!Q!!(?<7!%+x!!!8"c!!0?)1!!.e!!"3!Q!!Ke9Q!*&N!!#`"S!!Aa)1!0?&!!#a!Q!!"C<7!#<;!!!C"c!!-i+u!$.e!!"&!a!!.;<7!(!%!!"B3E<7!(!%!!"L"c!!4'+u!+#o!!"(!a!!?M<7!%Iu!!#+"c!!*s+u
+!-I{!!!:!a!!D7<7!/<:!!#4"c!!>k)1!-&U!!"B!Q!!=Y<7!&DJ!!"X"c!!,g)1!(Ak!!!Y!Q!!1!<7!$6n!!"!"c!!*S)1!&G7!!!Y!Q!!1!<7!$6n!!)16~@C!!#f7]!"#=Iq!Q%*&3+u6[.z!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16lLL"S!!*#.[!/+~!!!k!q!!EI9Q!&?"!!#3"S!!35.[!-.d!!"@!q!!Aa9Q!)Af
+!!#%"S!!;5.[!-!*!!"n!q!!CE9Q!,Af!!#E"S!!CE.[!!41!!#F!q!!+U<7!/Eh!q!!7]<7!/DL!!#-"c!!IA.[!0?'!!#F!q!!%Y>{!-6p!!!\"s!!>{.[!%Al!!"Y!q!!-y>{!(Af!!!m"s!!2c.[!%&V!!!{!q!!)!>{!&&P!!!<"s!!-Y.[!0,!!!!e!q!!@_<7!%)6!!"("c!!+u.[!#);!!!]!q!!Jc9Q!&7B!q!!Jc9Q!$.`!!#Z
+"S!!*#.[!0.d!!!V!q!!2s4(!!!"!$;'In.X/F4&+jBg.T4a=hJR+|H94c("H##M6D!A2#@q+u!!#nH{!!#P!A!!<!Aa!!?/!!!.91!%"K!'!I.["3#z"C#e!!-E!%$bKDLV6t!*!1!!!1!Z:!L+L,-OLJJo2'KL*}9P+j*!CYH67x>;K$)e4<=??i!!!"!{=i!!H_&K!(8^!!"f"C!!#=G-!b!!"#'r!!-;"#&L7M!)!4,!!1!!!q0#!&8/
+!t7p!!"p#E!!G#+u!-6v!!!r2C!!>KG-!.Jw!!![#5!!*Y)1!+DU!!"DBs>|!!!"!$;'In.X/F4&+jBg.T4a=hJREp!C2f2yHS#%DNCn;|-CAa!!#g3J7m!*&76k!!G7!!!.91!)"s!"!y&Q!A%-!&>|7#I}!1!!!s6l#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C'xAb!!"f"#!!A!#e!+)7!!#!!1!!Aq1A!,Ab
+!!#&"#!!,7#e!).a!!#I7=!&(_1A!+%,!!0V!q!!1))1!u#j!!!\7=!&Aa+u!$@B!!/3!a!!+-)1!{1D!!""7=!&&k)1!+5L!!0I!A!!II)1..+w!!!j!1!!G-#e!,Ab!!"o!1!!A!#e!+Ab!!#!!1!!C5#e!,Ab!!#.!1!!7-#e!/<8!!!t!1!!$G&K!$!"!!!l!A!!"s#e!)&M!!#T7=!&Bs&K!.El!!.x!Q!!CM)1!x#h!!#'7=!&C%)1
+!-'p!!.~!a!!B+)1!yAe!!#/7=!&HO+u!.@B!!/:!q!!I))14P&P!!!&!1!!EY.[!#4(!!!0"#!!-I#e!%.a!!">!1!!591A!,Ab!!"f"#!!A!#e!+)7!!#!!1!!<g1A!,Ab!!"f"#!!7)44!1!!!1!Z:!L+L,-OLJJo2'KL*}9P+t(`?J?#(M<wAn"?C>HC8[!!!""XD_1A"[Cy!!!/"c!!#=G-"C>{!10!"#&L7M!T!9$v#E#e!!/%!2!1
+!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16m7,7=!&C5#e!"K8!!0h!1!!&C)1!{Ab!!!@7=!&>;#e!*82!!1)!1!!K-)1+I#g!!![!1!!?}&K!(DH!!!L!Q!!<'#e!+<:!!"b!1!!*3+u!*Ir!!#+!a!!5y#e!%<<!!!U!1!!Aq.[!/HR!!/6"#!!9i)1!yG3!!!@7=!&Aq1A!"K8!!0`"#!!&C)1!{)7!!!@7=!&<g1A
+!&82!!0#"#!!8')1!v9W!!"o7=!&&[1A!.%,!!1,!q!!II)1!{.`!!#c7=!V.K.[!"!"!!#`!a!!%9#e!++y!!!:!1!!-)+u!"9R!!#E!Q!!#e#e!)&N!!!"!1!!)!)1!/K8!!0z!A!!EQ)1!z.]!!"v7=!&11&K!*%,!!/$!A!!19)1"".\!!!@7=!&C5#e!"K8!!0h!1!!&C)1!}9R!!!@7=!VC5#e!)$,#U#e!!#e*l(~E8E=:bJR0e,f
+:f>#LJJ;H;J+IZD-+}"#>L)9Eb(O!!!1LR+u!!El!!;?@/!!6;#e!!Ew!!6v!!#j7-1C!9+u&[%)Cv!"!!!&$g#u#e#u#e#u#e#u#e#u#e#u#e#u#m!7)I)1!s&N!!!R7=!&&k)1!!C(!!.}!Q!!#-)1!s&N!!!-7=!&&k)1!*5L!!/e!A!!:k)1!w6m!!"Z7=!&2c&K!.@B!!/e!A!!FC)1!w6m!!#@7=!V2c&K!'1B!!!C!Q!!2C#e!#&N
+!!")!1!!&k)1!$Ir!!!C!Q!!+e#e!#&N!!!`!1!!&k)1!,:v!!0N!A!!@W)1!{Is!!"|7=!&>k&K!$%,!!.}!Q!!)I)1,I&N!!#%!!@b#u#e!!#e*l(~E8E=:bJR0e,f:f>#LJJ1J`A5D,D.+u!I%=9H4=+5!!!1.v>{!+>}!!#8BC!!B#6k!!Ew!!6v!!#j7-1C!9+u$'%i!!?f$'#e!!1BAa!,+e*V=a+u!1%.!!#r9A!$!9*^7M"B!w+v
+#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C2))2!!"o!A!!1q#e!+Ac!!"&!1!!/M)1!%$j!1!!/M)1!')2!!!v!Q!!.k#e!&.^!!!r!1!!/M)1!%+v!!!A!Q!!)Q#e!0Ac!!!>!1!!H_&K!!4(!!#;!A!!
+I9)1!}Ac!!#07=!&Ce&K!,%,!!0k!A!!;m)1!~)3!!"Q7=!&G-&K!(HR!!1/!A!!51)1""Ac!!"97=!&#5)1!(2f!!.|!Q!!63)1!t)4!!"J7=!&,')1!*'p!!/M!Q!!=q)1!vIt!!#17=!&4')1!-C(!&/m!Q!!%Y#e!*4*!!!<!1!!:c)1!'+v!!"}!Q!!8?#e!/<:!!"L!1!!'-+u!)9R!!!r!a!!5I#e!(1E!!!w!1!!9q+u!$)2!!"r
+!a!!#5#e!,Ae!!#H7=!&A!+u!--<!!0[!a!!<_)1!|1E!!">7=!&>++u!'K8!!0G!a!!2;)1!{1E!!"!7=!&=9+u!&0"!!0E!a!!.C)1!{<;!!!k7=!&?]+u!%=\!!0S!a!!*[)1!|+y!!!Y7=!&?]+u!$82!!0S!a!!*[)1!q#i!!!Y7=!&!1+u!$82!!.\!a!!-a)1!q#i!!!k7=!&!1+u!&-<!!/1!a!!2k)1!v<;!!"G7=!&4g+u!+%,
+!!0,!a!!Ay)1!z?!!!#I7=!&;E+u!0El!%2~!a!!$'#e!*)5!!!B!1!!7M+u!$#f!!"9!a!!*c#e!'+y!!!Z!1!!.[+u!$9R!!!X!a!!)1#e!#&O!!!?!1!!#u+u!!Ab7=!%!a!!Hw)1"!>~!!"y7=!&DG)1!)"F!!0V!Q!!1))1!{!$!!!o7=!&8O)1!$HR!!/r!Q!!*;)1!vAd!!!W7=!&+E)1!$2f!!.o!Q!!,_)1""#g!!"#7=!&E9&K
+!(C(!!0Y!A!!<O)1!{Ac!!#27=!&>;&K!/"F!!0K!A!!K-)13p#g!!!4!1!!@?&K!#1B!!##!A!!)Q#e!-#g!!!Z!1!!Aq&K!$G.!!#&!A!!,G#e!-!#!!!g!1!!A1&K!%9R!!"~!A!!.+#e!,.]!!!r!1!!>;&K!&#f!!"o!A!!1q#e!+Ac!!"&!1!!>;&K!)*07M!"!9.[!1Ex!!)27A"G!!4-!9)i!I$'7M!"!9.[!1Ex!!)26{*W!(Iv
+%i#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!=.k&K!+6l!!""!A!!=Y#e!'Ac!!"q!1!!5I&K!,6l!!"E!A!!B3#e!)4)!!#5!1!!7}&K!.Ir!!"J!A!!IQ#e!)&M!!#a!1!!5I&K!!1C!!"/!A!!#u&K!&Is!!!7!A!!6`#g!!!7!A!!,'&K!"1C!!!U!A!!#u&K!#<9!!!'!A!!&;&K!0Ab!!!:!A!!IQ#e!"9S!!#D!1!!%9&K!.!"
+!!!@!A!!B3#e!#9S!!"{!1!!)q&K!+G.!!!b!A!!=Y#e!&#g!!"k!1!!.k&K!+6l!!!r!A!!=Y#e!&#g!!"k!1!$!)&^7M!"!9.[!1Ex!!)27,2g!(Iv*C#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!X6;&K!+Ac!!"@!A!!>;&K!(DI!!!]!a!!6;&K!$Ae!!"@!A!!0O+u!(Is!!"2
+!a!!7M&K!(<;!!"K!A!!7M+u!)Is!!"O47+u!*6m!!"T!a!!<G&K!*1E!!"t!A!!:s+u!-9S!!"[!a!!C5&K!*6o!!#.!A!!>;+u!-9S!!"o!a!!C5&K!+Ae!!#=!1!!>;+u!.6l!!"o!a!!Ei#e!+Ae!!#=!1!!:s+u!.6l!!"[!a!!Iq#e!*6o7="B!A!!:S+u!!6m!!"U!a!!#e&K!)Ae!!!8!A!!7m+u!">}!!"=!a!!&[&K!'Iu!!!D
+!A!!0?+u!#)3!!!]!a!!&{&K!$Ae!!!D!A!!6+)1!#)3!!"?!Q!!&{&K!%4*!!!C!A!!'-)1!"Is!!!5!Q!!%Y&K!!6n!!!9!A!!!1)1!(J%!A!!Ku&K!!DI!!#]!A!!!q&K!01C!!#a!1!!Js&K!0&L!!#[!A!!H/#e!06m!!#=!1!!L'&K!.6l!!#b!A!!DG#e!/9S!!#5!1!!H_&K!.!"!!#N!A!!2C&K!+Ac!!")!A!!>;&K!'1C!!"o
+!A!!6;&K!+Ac!!"@!A!!>;&K!q#%!!,H7M!"!9.[!1Ex!!.\Aa!%$/+u6[/p!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!16r*h!Q!!$W)1!-K4!Q!!D7&K!!4+!!"o!A!!+5+u
+!+Ac!!!x!a!!>;&K!'G1!!"v!A!!6{+u!-!#!!"X!a!!D7&K!+._!!#J!A!!>{+u!!+x!!"z!a!!%9)1!,Ae!!![!Q!!A!+u!'6n!!#!!a!!2c)1!,Ae!!!]!a!!A!+u!$Ae!!#!!a!!0O+u!(Ks!a!!4'+u!-+y!!"?!a!!Bs+u!)+y!!#3!a!!8o+u!.4+!!"T!a!!F{+u!*1E!!#U!a!!:s+u!!4,!!"[!a!!"3.[!*6o!!!(!q!!>;+u
+!!4,!!"o!a!!"3.[!+Ae!!!3!a!!>;+u!"&O!!"o!a!!$'+u!+Ae!!!3!a!!:s+u6[!3!a!!:s+u!"&O!!"[!a!!%i+u!*6o!!!=!a!!:s+u!$)5!!"[!a!!,W+u!*._!!!n!a!!91+u!&1E!!"J!a!!0_+u!(DK!!"#!a!!3u+u!'#i!!"-!a!!1a+u!&9U!!"%!a!!+5+u!'&O!!!]!a!!1a+u!(!$!!"%!a!!4'*R!!"%!a!!,7)1!&Ae
+!!!B!Q!!.[+u!!DJ!!!f!a!!K5&K!$#i!!#S!A!!$W+u!/G/!!#P!Q!!IQ&K!-!$!!!&!Q!!:C)1!$.^!!"X!Q!!*#)1!*.^!!!]!a!!:C)1!$Ae!!"X!Q!!1!+u!*6n!!"6!a!!;E)1!(<;!!"d!Q!!7TIu!!"j!Q!!8o+u!,!$!!"T!a!!@O)1!*1E!!#1!Q!!:s+u!/4*!!"[!a!!H?)1!*6o!!#L!Q!!>;+u!/4*!!"o!a!!H?)1!+Ae
+!!#U!A!!>;+u!0!#!!"o!a!!Iq&K!+Ae!!#U!A!!:s+u!0!#!!"[!a!!Iq&K!*6o!!#`!A!!6d6o!!#`!A!!:s+u!".^!!"[!a!!'=)1!*&O!!!O!Q!!7m+u!$4*!!";!a!!+%)1!'!%!!!\!Q!!+5+u!$>~!!!]!a!!+%)1!)+x!!!\!Q!!7M)1!$>~!!!i!Q!!*s)1!#+x!!!X!Q!!$w)1!$.^!!!+!Q!!)1)1!!#h!!!L!Q"B!0Ac!!!F
+!Q!!K5&K!"DJ!!#[!A!!$W)1!01C!!!,!Q!!Js&K!0G/!!#]!A!!Iq&K!0DI!!#U!A!!L'&K!/6m!!#N!A!!HO&K!/9S!!#M!A!!H_&K!(G0!!"o!A!!6K)1!+Ac!!"A!Q!!>;&K!*.^!!"o!A!!:C)1!+Ac!!"X!V.[!+Ac!!"X!Q!!$W)1!*.^!!!6!Q!!Aa!%%:)2!!!"!$;'In.X/F4&+jBg.T4a=hJR2P&9(:'QH3!!'n:;K,$jAa!!
+#sI#!!#X!A!!G86k!+)9!!!.91!)"s!"!y&Q!A%-!(Ir7I#y!1!!!w<8#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f!"#f"C3+1B!!#X!1!!2C#e-i#X!1!!$'#e!"4*!!!3!1!!$w)1!"&L!!!8!Q!!
+4W#e!"4*!!"6!1!!$w)1!*G.!!!8!Q!!AQ#e!"!$!!#9!1!!!Q)1!/9R!!#[!I)16[&K!.9S!!!8!A!!>K&K!"4)!!"p!A!!(?&K!+DI!!!L!A!!>K&K!#>}!!"p!A!!Fk#e!,9T!!#C!1!!@O)1!.G.!!"|!Q!!C%#e!,9T!!#-!1!!@O)1!-G.!!"f!Q!!DG#e!*#h!!#5!1!!7M)1!.!"!!"1!Q!!C5#e!&Ad!!!b@o#e!&!$!!"o!1!!
+,G)1!*&L!!!_!Q!!3%#e!$G0!!"-!1!!+U)1!!4(!!!_!Q!!"3#e!$G0!!!(!1!!+U)1!--<!!/$!a!!BK)1!s4+!!"{7=!&-i+u!,'p!!/`!a!!?E)1!wIu!!"u7=!&6++u!,5L!!0#!a!!Ay)1!y?!!!#07=!&9q+u!/*V!#F!!a!!"c#e!*6o!!!+!1!!:s+u!!)2!!"o!a!!!Q#e!+Ae!!!$!1!!>;+u!/-<LG0K!a!!Gu+t!{Ae!!#I
+7LIv>;+u!/@BLG07!a!!I)+t!z6o!!!(7=!&:c+u!"=\!!04!a!!'5)1!z#i!!!T7=!&8_+u!$El!!0!!a!!,O)1!x6o!!!n7=!&2s+u!&:v!!/H!a!!2[)1!rAe!!"*7=!&%i+u!/0"!!/]!A!!H')1!w!#!!#V7=!&+5&K!02f!!.{!A!!J{)1!qAc!!#[7=!&!A&K!0-<!!1;!1!!IY)1""+v!!#O7=!&IA#e!/*V!!1)!1!!F3)1"!+v
+!!#57=!&G=#e!,K8!!1!!1!!<o)1"!!"!!"f7=!&G-#e!+:v!!0k!1!!=q)1!}Ab!!"l7="BCe#e!/4)!!#1!1!!H?&K!-Ab!!#L!A!!Ce#e!,!#!!"H!A!!>{&K!).]!!"s!A!!7]&K!*Ac!!"H!A!!;U&K!).]!!"d!A!!3u&K!+&M!!!}!A!!<W&K!%G/!!"e!A!!*3&K!*>}!!!E!A!!9A&K!".]!!"E!A!!"C&K!(!#!(<7L7#e!&Ac
+!!#]!1!!.+&K!0.\!!!M!A!!JC#e!0<8!!#X!1!!KU#e!0)2!!")!1!!JC#e!'1B!!#X!1!!78<L!1!!!1!Z:!L+L,-OLJJo2'KL*}9P+n#R2r@\DE:3!#7&-H5:1}!!!"#;D'!!D')1!!>L!!#$"C!!#=G-"C>{!10!"#&L7M!|!9'O$g#e!!/@!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1!2!1
+!2!1!2!1!2!1!2!1!2!16o)\!1!!+%&K!#>|!!!\!I)1!q#e!-G/7=!&!1!!D''p!$6l!!#3!A!!-i#e!-G/!!!l!1!!D'&K!%>|!!#3!A!!,7#e!0!#!!!c!1!!Iq&K!%&L!!#U!A!!Jk)1""!#!!#Z7=!&Iq&K!00"!!11!A!!:+)1!t!%!!"V7=!&)1+u!)2f!!/R!a!!6s)1!wAe!!"C7=!&59+u!)"F!!/z!a!!7%)1!y#i!!"G7=!&
+7M+u!)5L!!0&!a!!8G)1!y9U!!"Q7=!&8?+u!*0"!!0(!a!!</)1!y)5!!"p7=!&59+u!,0"!!/l!a!!Bk)1!v9U!!#F7=!&)q+u!/%,!!/1!a!!JK)1!u&O!!#X7=!&,7+u!.-<!!/o!a!!@')1!z)5!!"]7=!&=9+u!)5L!!0R!a!!4_)1!|<;!!"#7=!&@_+u!&%,!!0Y!a!!,_)1!|._!!!\7=!&=y+u!$%,!!0?!a!!(g)1!z+y!!!N
+7=!&7M+u!#El!!/m!a!!)i)1!v&O!!!`7=!&(/+u!$K8!!/'!a!!;})1""!#!!"a7=!&Iq&K!*HR!!11!A!!-q)1""!#!!!l7=!&Iq&K!%@B!!11!A!!.s)1!~>}!!!r7=!&F;&K!(:v!!0o!A!!;=)1!|Is!!"y7=!&=y&K!.%,!!04!A!!J+)11X!#!!!5!1!!+%&K!"+v!!!\!A!!(?#e!$>}!!!L!1!!+%&K!)(I$w#e!!#e*l(~E8E=
+:bJR0e,f:f>#LJI{#t,c9_.C+u!cHbD|$|Ce!!!1CQ4'!.6n!!"'Cu!!.+6k!!Ew!!6v!!#j7-1C!9+u3e%+1b6l!!!&,G#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#e#u#m!d>+#e!#<9!!";!1!!(/&K!%)2!!!O!A!!&{#e!$G/!!"67=!&:C&K!&HR!!/J!Q!!07)1
+!w1D!!!a7=!&KE)1!)*V!!/h!a!!J;)16a?!!!!N!1!!35+u!(4(!!!^!a!!<W#e!0<:!!#$!1!!.K+u!!#g!!".!a!!)!&K!'?!!!"U!A!!35+u!!1D!!!$!a!!&k)1!')4!!!`!Q!!B#&K!!6n!!":!A!!Dg&K!%<9!!"t!A!!)1&K!(Ac!!!K!A!!+U&K!#<9!!!_!A"B!#<9!!!\!A!!+E&K!$>}!!!^!A!!1!&K!%<9!!"H!A!!1A&K
+!*&M!!"6!A!!@O&K!+Ac!!#'!A!!KE&K!,#g!!!y!Q!!:S&K!06n!!!z!A!!*S+u!#&M!!!Y!a!!"c&K!$6o!!#)!1!!(O+u!-<8!!"q!Q!!G}#e!(>~!!#`!7Iq!%Ad!!!&!A!!#u)1!!Ac!!#P!A!!%)&K!)>}!!#H!1!!8_&K!+Ab!!"N!A!!:s#e!/G/!!"U!1!!$')1!)4(!!!u!Q!!91#e!)6n!!"Y!1!!>K)1!(9R!!!/!a!!,G#e
+!$6o!!!0!1!!*S+u!.El!!/5!a!!>s)1!q&O!!#27=!&/m)1!.El!!)0!I)1+e#e!+DI!!!\!1!!4g&K!&!"!!"#!A!!6;#e!%<9!!"k!1!!+E&K!+6l!!!^!A!!>+#e!#<9!!"n!1!!(/&K!.#4$%"d?.>\!!!!!!!!!!!!!!!!!!!!!$G-!Q#cLG9Q"#!!!!!!!!!!!!!!!1!!!!#e!!!!!!!!!"!!!0IpLVIq!!!!LFLVLG!!!!!!!!!!
+LVLVLVLVLVLVLVLVLVLVLVLVLVIq!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'&K!!"&!!!!2#!!!'.[!!")!!!!2S!!!'6k!!!!!!!!!1.[!!.[!!!.!!!!.//Q,+2,-}/M-M*'!/)P!!!JJRLV2e.[!!6kG^L.#%1N!1!*!!!$<(&K!!1A8?)1!!!!%y!!!#1G#U!P!%E00#:-&Q*E29${29,71h9q.1:V4MJz4M$m5KB#-OH2
+(q!n2Z7t4M.{5,$5)4!!!!+u!!!$!16k!q!!!!>}!!!!!!.[!!!-!A#e!1!&!!!!#%'q!=+x"3!!!0Ac!!#dLVIq!!!%!!!!(_#e!!9Q!!#_!A.[!!!!!!!!!!!C!!+u!!!N!1#e#E!!!#+x!q!w!'9R/]"E!@<77-&E!'9R/]",!14'!!#a!A#e!!!!!!!!!a!!!#DH!A!*!!!!KU&K!!!!!!!!!!!!&k!%!!!!(_#h!!6k!!!F!Q&K/]"-
+!66k2s#m!!!!'=)3!&1A5I$l!'9R"C!!!#.^!A!|!)#f4W",!16k!!!F!Q&K3%"D!9!!2s#m!!!!'=)3!(6k6{%8!'9R"C!!!#.^!A"H!)#f;e",!16k!!!F!Q&K:#"D!;<72s#m!!!!'=)3!+!!6{%a!'9R"C!!!#.^!A"r!)#fBS",!16k!!!F!Q&KA1"D!>+u2s#m!!!!'=)3!-<76{&-!'9R"C!!!#.^!A#=!)#fIa",!16k!!!F!Q&K
+H/"D!@<73U#m!!!!'=)3!0+u6{&E!(>|"C!!!#.^!A!w!'9RKU",!16k!!!F!Q&K=i",!;9Q+5$!!!!!'=)<!+9Q+%%]!$>|;e!P!<+u)!%F!#+v?]!E!:DG%9%]!"9R;e!-!<+u#%%F!!#f#%!!!#.^!a"`!!#f?]!"!:DGJs"l!01A"C!!!#.^!A"l!01A=i#7!!4'!!#a!A!!Am#%!!!!!a!!!#DH!a!(!!!!%Y..!/)1Bs"1!!+u!!!N
+!1&K"C!!!#.^!A#<!-4'EY"m!"<7!!!F!Q>{EY"m!/)1=y#1!*G-G]"a!-Aa9q#H!*&KCe"J!/)17}#1!(AaG]"?!-Aa3u!-!!!!'=)5!-Aa3u#H!'IqCe"'!.4'2#!)!!!!'=)3!.4'2##<!%&K"3!!!0Ac!!!!!!!!!!!%!!!!(_#j!!+u!!!N!1#e"S#e!$6p"S!:!!.[#u!2!!4'#e!0!"#e"3!~!Y>{0O*a!&6n9Q!v!YG-/-*\!&.^
+7]!x!Y)10/*V!&Ad7M!~!Y1A0o*Z!&Ad7}!|!Y1A0?*X!&<:7M!y!Y+u/]*X!&1D7}!v!Y6k/]*]!&1D8o!z!YG-0O*a!&Ad9!!~!Y>{3E*h!&G0:C"!!Z+u3E*g!'Ad:C":!YAa59*b!'Ad9A"7!Y+u4'*W!'It7M"1!Y.[3e*Z!'DJ7}"0!Y)159*V!(4*7M"2!YIq4g*b!(.^91"9!YDG59*_!(<:8/"?!YAa6[*a!)!$91"D!YDG7-*^
+!))48_"D!YG-6K*c!(<:91"<!Y9Q5i*X!(G07="E!Y+u7=*Y!))48/"=!Y6k5i*Z!)!$7}"C!Y.[6[*W!(DJ7M">!Y.[5i*Z!)9T6;"L!YDG8?*a!)9T9A"N!YIq7]*b!)1D9A"I!YG-7m*`!)1D7-"I!XIq7m*Q!).^6K"G!XG-8/*P!)9T6;"S!XDG9Q*`!*!$91"T!YIq9q*b!)Ad9A"P!YIq91*a!)G09!"Q!Y&K91*R!)G06K"P!XG-
+8o*Q!*!$6;"X!Y6k:c*_!*<:91"^!YG-;U*`!*DJ8_"a!Y>{;U*a!*9T9Q"X!YG-:3*\!*.^7]"\!Y)1;e*W!*G07m"a!Y6k:C*[!*.^7}"^!Y4';E*X!*<:7M"[!Y+u:S*X!*.^7}!^!1!!*S.d!$4'!q!1!"!!"3!0!!Iq#e!(!.+w']#:!C1AEY&p!.6m'=#?!C.[F;&r!.DI'=#D!C.[G=&p!/&M']#H!C9QG]&y!/)3)1#I!D#eFk&|
+!.Is)A#E!D!!G-&y!/!#'}#E!C4'Fk&q!.DI']#@!C6kF;&t!.>}(o#@!D!!FK&{!.DI)A#<!D#eEi&{!.9S)1#>!CG-Ey&t!.9S']#=!C4'EY&q!.1C']#9!C6kE)&y!.+w)1#9!D#eEI&|!.!#)A#6!D#eDW&{!.&M(o#7!C<7Dg&r!.#g']#6!C1ADG&r!.!#'M#8!C.[E)&p!.+w']#W!D4'Gm'$!/+w*3#W!D1AJ3'$!0DI(_#b!D#e
+J3&|!0>}'M#[!C1AJc&q!0+w']#Y!C6kJC&s!0)3'=#c!C.[Jc&{!0<9)1#a!D!!Ku&z!0DI(_!"!S<7!A)_!!.^)!!(!SIq"S)]!!9T(_!*!SIq"C)a!!+x)Q!!!T!!LG&v!!!$'M!%!S.["C)W!!9T(/!"!S<7!1)Z!!1D'}!'!S4'!q)W!!+x'M!#!S1A!1)Z!!It&+!0!SG-#U)a!"!$)A!2!T#e"s)b!!Ad)A!.!T!!#5)_!!DJ&{!.
+!S#e#%)Q!!>~&K!/!RG-#U)O!"1D&+!7!SG-$w)a!"4*)A!9!T#e$')b!"+x)A!5!T!!$G)_!"+x&{!5!S#e$G)Q!")4&K!3!S!!$g)O!"Ad(/!>!SG-&K)`!#&N)!!E!SAa'-)^!#+x)!!D!T!!&;)c!">~)1!;!S>{%Y)W!"It'=!D!S1A'-)[!"Ad(/!=!S9Q&[)Z!##h']!A!S1A&;)W!"DJ'M!=!S9Q!a!!!#DH!A!%!!!!(_#h!!6k
+!!!F!Q&K+u!h!5!!Iq!%!!!!(_#j!!G-!!!E!Q.[*3!$!5!!Iq!j!!)2+u#^!$1A!Q#i!!!!(_#f!&6k!!!E!S<7.[!)!6+u#E$]!"#f/}!2!66k$'$X!"&L.k!2!6&K#u$Y!"!".{!0!5Iq"c$R!!Ir-Y!1!5<7#u$S!"#f-y!3!5.[$'$L!"#f,w!2!56k#e$Q!!G..;!*!5<7!a$O!!#f-)!"!51A!!$U!!!".+!"!5Aa!1$T!!)2.[!(
+!6)1!Q$Z!!&L/=!"!6)1!1$Y!!!"/}!!!64'!1$\!!#f/M!#!6+u!Q$W!!6l!a!!!#DH!!!/!!!!'-)6!%.\2s$L!9&LH?%+!?4(2s$L!79R!a!!!#DH!A!%!!!!(_#h!!6k!!!F!Q&K,g%!!6&L2s#m!!!!'=)3!%6l6{$g!79R"C!!!#.^!A!w!9#f3U$p!16k!!!F!Q&K23%*!8>|2s#m!!!!'=)3!(&L6{%3!79R"C!!!#.^!A"C!9#f
+:c$p!16k!!!F!Q&K9!%*!;.\2s#m!!!!'=)3!*>|6{%[!79R"C!!!#.^!A"m!9#fAa$p!16k!!!F!Q&K@/%*!=Ir2s#m!!!!'=)3!-.\6{&'!79R"C!!!#.^!A#9!9#fH?$t!16k!!!F!Q&KG=%*!?4(5y#m!!!!'=)3!%.\2s&2!79R"C!!!#.^!A"Y!79R:S$C!2<7!!!F!Q>{:S$B!;#f+%%3!3Ir<G$6!9<8'-%J!3+v8O#~!;#f%9%3
+!1Ab<G#q!9<8!1#q!!!!'=)5!)<8!1%J!1#f8O&A!*1BJs!)!!!!'=)3!*1BJs"Y!>&K!a!!!#DH!a!(!!!!%Y..!.!"Bs!|!1+u!!!N!1&K"C!!!#.^!A"*!=4'2S%S!"<7!!!F!Q>{2S%S!(&L=y!|!:G-4G%G!&>|9q"5!:&K0O%0!(&L7}!|!8Aa4G%%!&>|3u!-!!!!'=)5!&>|3u"5!7Iq0O$k!'4(2#!)!!!!'=)3!'4(2#"*!5&K
+"C!!!#.^!A#)!=4'BC%S!"<7!!!F!Q>{BC%S!.!"=y"{!:G-DG%G!,6l9q#5!:&K@?%0!.!"7}"{!8AaDG%%!,6l3u!-!!!!'=)5!,6l3u#5!7Iq@?$k!-+v2#!)!!!!'=)3!-+v2##)!5&K!a!!!#DH!a!(!!!!%Y,_!'Ir+5#1!!+u!!!N!1!!!a!!!#DH!1!/!!!!'-)6!$!#2c$7!I!"E)'m!>+w2c$7!G6l!a!!!#DH!A!%!!!!(_#h
+!!6k!!!F!Q&K)1'c!4G/2c#m!!!!'=)3!$+w6k$R!G6l"C!!!#.^!A!d!I!"0?'U!16k!!!F!Q&K.['m!76m2c#m!!!!'=)3!&G/6k$|!G6l"C!!!#.^!A"0!I!"7='U!16k!!!F!Q&K5i'm!:&M2c#m!!!!'=)3!)6m6k%H!G6l"C!!!#.^!A"X!I!">K'U!16k!!!F!Q&K<g'm!<<92c#m!!!!'=)3!,&M6k%q!G6l"C!!!#.^!A#$!I!"
+Dw'Y!16k!!!F!Q&KCu'm!>)35Y#m!!!!'=)3!$!#2c%|!G6l"C!!!#.^!A"E!G6l7-'&!2<7!!!F!Q>{7-'&!9G/*c$~!CG.91&y!84)&{%7!C)259&a!9G/$g$~!A>|91&V!84)LG!-!!!!'=)5!(4)LG"Q!PIq59)%!)&MJS!)!!!!'=)3!)&MJS"E!N#e!a!!!#DH!a!(!!!!%Y.,!,DIBS!i!A+u!!!N!1&K"C!!!#.^!A!t!M.[/-(7
+!"<7!!!F!Q>{/-(7!&Is=Y!i!JAa11(+!%6m9a""!J#e-9's!&Is7m!i!H9Q11'f!%6m3e!-!!!!'=)5!%6m3e""!GG--9'O!&)31a!)!!!!'=)3!&)31a!t!DIq"C!!!#.^!A"t!M.[?-(7!"<7!!!F!Q>{?-(7!,Ac=Y"h!JAaA!(+!+.]9a#!!J#e=)'s!,Ac7m"h!H9QA!'f!+.]3e!-!!!!'=)5!+.]3e#!!GG-=)'O!,#g1a!%!!!!
+(_#i!!4'!!!<!e.[0O''!,9R!a!!!#DH!A!)!!!!'=)3!,&M2#"u!E!!!a!!!#DH!!!%!!!!(_#f!!G-!!!E!Q.[&+*<!2G07-%k!Y&LB#*<!2G02s#i!!!!(_#g!!+u!!!N!1)1"C!!!#.^!A!?!X6l(O*<!16k!!!F!Q&K&{*T!4>~2s#m!!!!'=)3!$#h6{$O!W9R"C!!!#.^!A!_!Y#f/]*<!16k!!!F!Q&K-y*T!7)42s#m!!!!'=)3
+!&>~6{$x!W9R"C!!!#.^!A"+!Y#f6k*<!16k!!!F!Q&K5)*T!9DJ2s#m!!!!'=)3!)+x6{%D!W9R"C!!!#.^!A"T!Y#f=i*<!16k!!!F!Q&K<7*T!<1D2s#m!!!!'=)3!+DJ6{%j!WDH"C!!!#.^!A"~!Y#fAq*N!16k!!!F!Q&K&+*<!=#h2s#m!!!!'=)3!(!$2s$w!TAb%I!!!#.^"s"3!T>|5y)l!7.^)!%$!SIr23)U!8>~'-$l!R6l
+5y)I!7.^#%%$!QAb23)2!1Aa!!!F!Q+u23)2!8>~!1$l!`1A4'+k!!6k!!!F!Q&K4'+k!(!$Dg!%!!!!(_#i!!4'!!!<!n)1>++<!$1D!a!!!#DH!A!)!!!!'=)3!%#hBs!b![<7%I!!!#.^"s!b![<7.+*}!$1D;u!n!ZG-*3*e!%DJ9q!W!Y4'.+*Z!$1D6+!n!XAa*3*B!!Aa!!!F!Q+u*3*B!%DJ3u!W!W+u,'*7!!6k!!!F!Q&K,'*7
+!%#h+u!%!!!!(_#i!!4'!!!<!e6k-I)m!+.]!a!!!#DH!q!%!!!!(_#f!*9R!!!Y!q9Q*C!&!#)1$w!2!!4'&[!.!!<70o+)!&G0?M""!\&K1Q+'!')4?="'!\)12#+)!'1D?="+!\&K3%+'!'>~?]".!\1A35+0!'>~A1"/!\DG3U+3!'4*AA",!\DG2s+0!'9T?}",!\+u2c+)!'4*?M")!\+u2#+*!'+x?}"'!\>{2#+2!'.^A1")!\G-
+1A+3!'#hA1"%!\DG1a+0!'&N?}"$!\+u1A+(!&G0?]!~!\.[0o+0!&DJA1!~!\G-11+3!&9TAA!{!\G-0?+2!&<:@o!{!\4'0?+)!&9T?M!z!\+u/}+(!&Ad?=!~!\&K0o+)!(>~BC"0!]+u3U+8!(>~B3">!]+u7=+'!))4?}"F!\+u7-+(!)!$?="A!\)16K+)!(G0?m"C!\1A7-+,!)+x@o"F!\G-7-+4!)!$AQ"B!\Iq6K+3!(DJAA"?
+!\G-6++/!(DJA!"A!\DG6[+3!)!$AA"E!\DG7-+1!)&N@_"D!\<76[+.!(DJ@/"?!\.[6;+(!)!$?="D!\&K7-+'!))4?="M![G-8O+'!)Ad?="O!\)18O+(!)<:@o"M!\Aa8_+2!)AdA1"O!\Aa9!+1!)>~AA"M!\G-8?+3!)6nA1"J!\>{7}+(!).^?M"H!\&K7}+&!)6n>{"L![G-8O+#!*!$@/"T!\>{:3+1!*1DA!"Z!\>{:s+.!*6n
+@_"Y!\DG:#+4!)ItA1"Q!\6k9A+(!*)4?="Z!\)1:s+*!*6n@/"S!\4'9Q++!*.^?}"X!\+u:3+(!*)4?M"T!\)19Q++!*DJ@_"^!\6k;5++!*Ad?M"b!\&K<W+'!+.^?="h!\)1=9+(!+1D?]"h!\+u<g+)!++x?}"f!\9Q<'+/!*DJ@_"`!\>{;U+1!*DJA!"b!\Aa<g+2!+.^A1"i!\Iq<w+7!*ItBC"]!])1;%+7!*<:Aq"^!]!!;U+3
+!*>~A1"^!\>{;e+/!*It?="a!\)1;e+(!*DJ?m"a!\9Q<'+/!+#h@O"e!\6k<W++!+&N?m"d!\)1<7+(!*It?="`!\G-;U+4!*>~Aq"_!]&K<7+7!+)4B#"h!]!!<w+4!+#hAQ"`!\G-8?)1!$6p$w!*!"#e&k!<!!Iq"S!*!"!!'M!0!!9Q"S!1!"1A&K!E!!<7"c!;!#!!"S!:!!G-$W"G!"1A7M!7!).[$g"I!".[7m!5!)1A$G"H!"+u
+7M!6!)+u$g"L!"1A9q!7!*+u%)"W!"6k:C!3!*.[$'"W!")1:3!5!*+u$G"U!"+u91!5!)Aa$G"N!")18_!3!)>{$W"L!"1A8?!c!).[,7"O!%.[8o!g!)>{-)"M!%6k8O!i!)Iq-)"R!%4'91!g!)DG,g"P!%&K9!!c!*&K,7"W!%)1:3!e!*+u,W"X!$DG:C!^!*+u+U"W!$Iq:3!a!*&K+u"J!$Iq7m!`!).[+U"H!$DG7]!j!).[-Y"K
+!%9Q8/!i!)1A-)"I!%1A7]!c!).[.K"L!%Iq8o!q!)<7.k"L!&&K8O!t!)<7/-"N!&)18o!s!)Aa.k"O!&!!8_!p!)DG.K"U!%Iq:3!r!*+u.k"X!%>{:C!l!*+u-y"W!%DG:3!n!*&K.+"Q!%DG8o!m!)>{-i"N!%G-8?!p!)9Q/M"Q!&4'9q!z!*)10O"V!&DG9a!~!*)10_"W!&6k:C!v!*+u/="S!&.[8_!z!)9Q0_"N!&DG91!v!)G-
+/M"P!&<79!!{!)Aa0/"N!&6k8O!x!)>{/]"N!&1A8o!v!)DG1Q"G!'&K7M"%!).[1a"I!'#e7m"#!)1A1A"H!'!!7M"$!)+u1a"L!'&K9q"%!*+u1q"W!'+u:3"'!*.[11"X!&Iq:3"#!*+u1A"U!'!!91"#!)Aa1A"N!&Iq8_"!!)>{1a"L!'6k7M"+!)Aa35"M!'Aa8?"0!)<73e"M!'Iq8o"2!)G-3u"U!'Iq:3"3!*+u47"W!(#e:C".
+!*.[35"W!'Aa:3"0!*+u3U"U!'DG91"0!)Aa3E"N!'>{8_"-!)>{2c"P!'6k9q",!*+u3%"W!'<7:C"(!*.[23"W!'1A:3")!*&K2C"K!'1A7m")!).[23"I!'.[7]"+!)+u4W"Q!(.[9q":!*)15Y"V!(>{9a"<!*+u5I"X!(1A:C"6!*+u4G"S!()18_":!)9Q5i"N!(>{91"6!)G-4W"P!(6k9!";!)Aa59"N!(1A8O"8!)>{4g"N!(+u
+8o"6!)DG6["G!)!!7M"C!).[6k"I!(Iq7m"A!)1A6K"H!(G-7M"B!)+u6k"L!)!!9q"C!*+u6{"W!)&K:3"E!*.[6;"X!(DG:3"A!*+u6K"U!(G-91"A!)Aa6K"N!(DG8_"?!)>{6k"L!)1A7m"I!)<78?"M!)9Q8_"I!)>{7m"U!)4':#"K!*+u8/"V!)9Q:#"K!*+u7}"X!)1A:C"H!*+u7]"V!)+u9q"G!)>{7="N!))18O"G!)9Q7]"K
+!)1A7m"T!)9Q9a"P!*!!8_"Q!)<78o"N!)Aa8o"O!)DG91"Q!*!!9A"U!*&K9a"W!)G-:C"O!*.[8_"X!)>{9a"O!*)18o"W!)G-:3"S!*+u9Q"V!*!!9a"P!*!!8_"Q!)<79!"N!)Aa8_"M!)DG8O"Q!)9Q9A"M!*!!8O"T!)<79a"L!*4'9a"X!)Iq:3"Q!*.[8o"Y!)>{;%"L!*>{8O"_!)<7;u"M!*Iq8O"b!)>{;u"N!*Aa8_"`!)G-
+;U"S!*9Q9a"Z!*#e:S"U!*1A:#"Z!*)1;%"V!*Aa:#"a!*+u<'"X!*Iq:S"`!*9Q:s"]!*+u;%"W!*6k:3"Z!*.[:S"Y!*.[:C"W!*.[:#"X!*&K:c"T!*9Q8O"Z!)>{:c"P!*4'9Q"[!*#e;%"T!*<79Q"^!)G-;5"N!*9Q8O"Y!*.[:S"Y!*.[:c"Y!*6k;%"\!*DG:s"a!*1A;e"Y!*>{:C"Y!*.[<g"L!+)18o"i!)9Q=I"M!+4'8_"j
+!)Aa=9"O!+.[8o"h!)>{<w"N!+)19!"f!*&K<g"W!++u:3"h!*+u=)"X!*Iq:C"b!*+u<G"W!+#e9q"d!)G-<G"O!+#e8_"c!)>{<'"N!+)18?"q!*)1>;"X!+>{:C"l!*+u=Y"U!+9Q9a"m!)Iq>;"R!+G-91"q!)DG>["N!+Aa8O"n!)>{>+"O!+<79!"l!)DG=i"O!+<78O"p!)9Q>["M!+Iq8O"s!)>{>{"P!,!!9a"s!*)1?-"V!,#e
+:3"t!*)1?="V!,!!:C"r!*.[>["V!+G-:#"q!)G->;"R!+>{9Q"m!*&K>+"V!+Aa:3"p!*+u>["V!,>{:3"}!*.[@O"X!,6k:C"w!*+u?M"S!,+u91"x!)>{@?"L!,<78O"~!)<7@o"K!,>{7m"}!).[@O"I!,9Q7]#!!)+uA1"G!,DG9Q#"!*)1AA"W!,G-:##$!*+u@o"X!,>{:3"~!*)1@o"P!,<78o"|!)>{@?"M!,4'8_"y!)>{?}"P
+!,.[9A"y!*#e?}"V!,6k:3"|!*+u@o"V!!+u!!!N!1&K!a!!!#DH!Q!(!!!!%)-W!#6k5)!!!!+u!!!N!1.[!a!!!#DH!1!G!!!!'-)B!-)1GM#-!/!!C%#V!-6kJC#.!0+uCU#Y!->{Jc#(!0.[B3#Y!-.[JS#+!0)1Bc#V!-1AH/#+!/)1BS#G!-)1G]#(!/&K!a!!!#DH!A!%!!!!(_#h!!4'!!!9!pDGF;#:!,)1!a!!!#DH!q!%!!!!
+(_#f!$Aa!!!E!RAa'M$l!#.\2s!:!79Q%9$o!"DH2#!A!7!!&k$d!#&L0O!C!69Q&[$_!"G./]!=!64'%I$a!"9R0?!;!64'%Y$\!"Ir/=!D!61A'=$`!#+v0_!D!6Iq&[$i!"G.23!=!74'&[$n!#+v2C!F!71A'M$l!!+u!!!N!1&K!a!!!#DH!Q!(!!!!%)-)!$+v-I!-!1+u!!!N!1.[!a!!!#DH!1!o!!!!'-)V!+AbH?"r!?)1?-&.
+!,&LGM"y!?+u@/&0!,4(H/"w!?>{@/&8!,6lIa"{!@!!?}&@!,+vK%"s!@4'>K&B!+AbJs"p!@.[>[&@!+IrJc"t!@1A?=&A!,+vJc"y!@&K?}&<!,.\Iq"w!?Iq?=&8!,!"IA"s!?Aa?=&7!,+vHo"w!?6k?M&0!,#fGm"r!?.[>K&2!+AbH?!%!!!!(_#g!!+u!!!N!1)1"3!!!"6oLG#,!>1A<7#i!!!!(_#j!!+u!!!N!1#e'M!!!$6p
+!A!-!!+u#u'M!"#g1a!/!G&K#E'U!!Ac2c!-!G&K!Q'O!!)31A!-!F)1#E'@!!G/1A!2!G!!#%'M!!Ac/]!%!G!!#%'M!!+u!!!N!1&K!a!!!#DH!Q!(!!!!%)-(!"Is-9#[!1+u!!!N!1.[!a!!!#DH!1!Y!!!!'-)K!+)3G-"e!O)1;E(r!*<9G}"c!O6k<W(|!+&MIq"d!P&K<7)$!*IsJS"a!P+u;5)&!*6mJS"Z!P)1:c)#!*6mJ3"\
+!P&K;5)$!*AcJC"b!P&K<7(~!*IsI!"_!O9Q:s(w!*>}G-"f!O!!!a!!!#DH!A!%!!!!(_#h!!4'!!!9!pDG?=(d!)<9!a!!!#DH!q!%!!!!(_#f!%Aa!!!Y!q&K$W!/!!!$/M!!!V1AKu'D!0<9/}#]!F>{K%'L!0>}0o#d!FIq!!*6!0Is2c#_!G<7Js'V!0+w2C#X!G&KJS'L!0+w0o#[!F>{K%'E!0>}/]#d!F.[!!*(!01C1A#[!G)1
+K%'S!06m2c#]!G9QKE'W!0<93%#a!G6kL''R!0Ac1A#_!FG-KE'L!06m11#[!G!!!a!!!#DH!A!%!!!!(_#h!!4'!!!9!h&K#E){!/4)!a!!!#DH!q!%!!!!(_#f!"<7!!!E!Q>{7]+[!*!$H/"S!_4'8O+p!)6nKe"Q!_9Q8/+^!)1DH_"G!_>{7=+`!).^H/!%!!!!(_#g!!+u!!!N!1)1"3!!!"6oL'"a!^.[59)5!!!!(_#j!!+u!!!N
+!1#e-i#e!$6p"S!7!!.[&K!4!"#e"C!F!!9Q"c!=!Q4(%I)<!24*#%#z!QAb$7);!2&N"##x!Q#f$w+t!"<:!!$#!Q&L%Y)4!2<:!Q#~!Q)2%9)3!26n!!#|!Q!"$W)2!2+x!q#z!Q6l%));!2<:"S$#!Q4((?)C!2DJ$'$$!R#f(?)B!3>~$'$:!`Iq)a)4!4&N!Q$8!Q#f)!)1!3G0!!$4!Q&L(o)4!3It!a$8!Q.\)q)9!4+x"c$:!Q>|
+)1)=!3DJ#%$3!QAb(O)9!3DJ"c$7!Q>|)A)<!4&N"S$8!Q6l)!)7!3DJ"#$3!Q.\(O)4!3DJ!!$6!`Iq)A)1!4&N!!$9!`Iq)a+t!$9TKu!Z!Q!"+5)1!49T!!$@!Q6l*c);!4<:"c$B!Q<8+5):!4>~"s$@!QAb*S)=!44*"s$>!Q9R*C)1!4.^!!$>!`Iq*S+r!$9TKu!`!Q+v+u)7!5!$"C$K!Q<8,w):!54*"3$O!Q4(,w)<!5)4#%$H
+!QAb+e);!4DJ"#$F!Q#f,G+t!%1D!1$O!Q+v+e)5!4It!Q$L!Q)2,W)3!5)4!1$I!Q!"+u)2!5!$!A$F!Q)2-y)8!5>~"#$Q!Q+v-Y)3!5>~!1$V!`Iq.{)1!6+x!!$\!Q!"/M)2!6+x!1$Z!Q#f/=)4!6+x!a$Y!Q4(.k)9!5It"C$T!Q6l-y)9!5Ad"S$S!Q<8.+);!5It"c$Y!Q<8/=)<!6.^#5$[!R!".;)C!5<:#e$P!QIr-I)?!5<:
+#5$R!QAb-Y)<!5<:"c$R!Q9R-y)8!5It!!$T!Q#f-y)4!5DJ"#$V!Q4(.k)7!6#h!a$W!Q#f.K)1!5Ad#%$R!QDH-i)?!5Ad#U$W!R!"/-)@!6+x#5$[!QAb.k)=!5Ad#%#i!!!!(_#g!!+u!!!N!1)1"C!!!#.^!A!+!D4'"c&T!!+u!!!N!1.[#E!!!#+x!q!!!B<7"c&T!")3%I!+!B#e!!&e!!+u!!!N!1#e&k!!!#+x#U!~!BG-0/&g
+!&1C%)!u!AIq/m&Q!&9S!A!~!A!!0o&L!&<9!a!y!A9Q/m&Z!&6m$W!{!B<70O&g!&DI&+!I!!!!'-)C!(<9!1"=!A!!6K&M!)!#"#"F!AIq7-&_!)!#%)"@!BAa5i&i!(DI%Y"A!B9Q6[&a!)!#$7"C!B!!6k&W!(Is"S"@!A+u5i&L!"+u!!!E!Q6k'-&P!#)3!q!H!A!!'m&K!#>}!q!K!A.[']&M!#+w!q"y!!!!*S._!##e"S!0!"G-
++E&Y!$DI$'!]!B!!*s&Z!$6m#U!Y!B!!*S&]!$<9$7!]!B+u+U&b!$DI%I![!B<7*S&e!$4)%I!W!B<7*3&a!$4)$g!Y!B6k*S&d!$<9%I!]!B9Q+5&c!$Ac$w!Z!B.[*C&^!$1C$'!X!B#e*C&Z!$<9#E!]!AG-+5&Z!$DI#U!^!AG-,G&S!%+w"C!e!A9Q,W&U!%)3"s!c!A<7,7&T!%&M"C!d!A6k,W&Y!%+w%)!e!B9Q,g&d!%1C%I!a
+!B<7,'&e!%&M%9!c!B6k,7&^!%&M#u!b!B!!+u&[!%)3#E!e!AG--i&\!%G/#E!q!AIq.k&[!&#g$7!r!B6k.{&d!&)3%I!n!B<7.;&e!%Is%9!p!B6k.K&^!%Is#e!o!B!!-i&\!%>}%)!l!B9Q-y&e!%4)%I!i!B9Q-9&c!%6m$7!i!B#e-9&[!%4)#e!g!B!!-Y&Y!%>}#E!l!B#e,7!!!#+x&;!G!A<7'-&\!#1C#u!J!B!!(/&Y!#>}
+#E!J!B+u'm&_!#9S$7!I!B&K'M&]!#+w$'!C!B4'&k&d!#+w%I!>!B<7&;&d!#!#$w!D!AAa&{&U!#)3"S!B!A9Q&k&T!#Is"S!O!ADG(_&X!#DI#%!N!A>{(O&U!#9S"c!G!A<7(O!!!#+x$G":!AAa5)&Z!(6m#U";!B!!5)&[!(+w$w"6!B9Q4g&d!(1C$w"9!B6k4g&e!()3%I"5!B<747&d!(&M$w"7!B!!4G&[!(&M#U"8!AG-59&W
+!%<7!!!E!S)12#&W!'#g#%!~!B!!0_&^!&DI$w"#!B9Q2#&a!'4)%9"-!B6k3U&^!'DI#E".!AAa2c&W!'4)#%",!ADG3%&[!'<9$7",!B4'2S&c!'1C%)"(!B.[2C&^!'1C#u")!AIq23&Y!'+w#u"&!B)12#&`!'&M$w"#!B6k11&b!&Is$7"$!ADG1q&X!'+w#%!%!!!!(_#e!!+u!!#U!1&K"S!!!0<9!!!!!!!!!!!!!#&K!a!!!#DH
+!A!%!!!!Iq#h!!+u!!#U!1#e!Q!!!!!!!Q!!"k)1!vAd!!!+7=!&0_)1!+5L!!.w!Q!!=Q)1!rAd!$!Q
+{  124   309 0 0}
+19778 39768 0 0 1068
+40 309 124 1 8 0 38688 0 0 0 0
+!!!!!!!!6k!!6k!!!)"C!)!!!!"C!)!!6s!!!-#%Aa#%FW!!I}>!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!J"A`!+-Y<7"C6s!!!!#d!!#d!!!!LVIqLG!!!0IqLG#dLG!!LVLV!-.[5ZG,!1!%LG#e!`Ir!!.Z!1!$LG#e!`Ir!!.Z!1!%LG#e!`Ir!!+t!1!%LG#e!`Ir!">z!1!%LG#e!`Ir!!.Z!1!$LG#e!`Ir!!.Z!1!%LG#e!`Ir!!+t!1!%LG#e!`Ir!">z!1!%LG#e!`Ir
+!!+t!1!%LG#e!`Ir!!.Z!1!$LG#e!`Ir!!.Z!1!$LG#e!pIr!">z!1!%LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!)0!Q#*!(9oLG#e!pIr!!+t!1!%LG#e!`Ir!!+t!1!%LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!;LG#e!pIr!!+t!1!%LG#e!`Ir!!+t!1!%LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!;
+LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!+t!1!%LG#e!`Ir!!.Z!1!;LG#e!pIr!!+t!1!%LG#e!`Ir!!.Z!1!$LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!"LG)1@O"<&JIr!!.Z!1!$LG#e!pIr!!+t!1!$LG#e!pIr!!.Z!1!$LG#e!`Ir!!.Z!1!?LG#e!pIr!!+t!1!%LG#e!`Ir!!+t!1!%LG#e!pIr!!+t!1!$LG#e!pIr
+!"Ip!1!%LG#e!`Ir!!+t!1!%LG#e!`Ir!!.Z!1!$LG#e!`Ir!!.Z!1!$LG#e!`Ir!"A`!1!%LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!%LG#e!pIt!-.[5ZDF!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!+t!1!%LG#e!pIr!!+t!1!$LG#e!pIr!">z!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!+t!1!%LG#e!pIr!!+t!1!$
+LG#e!pIr!">z!1!$LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!+t!1!%LG#e!`Ir!"A`!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!.Z!1!$LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!Q#*!(9nLG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!$LG#e!pIr!!.Z!1!$LG#e!`Ir!!.Z!1!;LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!$LG#e!pIr
+!!.Z!1!$LG#e!`Ir!!.Z!1!;LG#e!`Ir!!.Z!1!$LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!<LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!+t!1!%LG#e!`Ir!!.Z!1!#LG)1BS"<&:Ir!!+t!1!$LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!.Z!1!%LG#e%XIr!!+t!1!$LG#e!`Ir!!.Z!1!$
+LG#e!pIr!!+t!1!%LG#e!`Ir!!.Z!1!%LG#e%XIr!!)0!1!%LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!+t!1!%LG#e%hIr!!+t!1!$LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!.Z!1!%LG#e!@It!,9Q5ZIp!1!%LG#e!`Ir!!.Z!1!$LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!%LG#e&:Ir!!.Z!1!$LG#e!`Ir
+!!.Z!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!.Z!1!?LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!.Z!1!$LG#e!`Ir!!.Z!1!;LG#e!pIr!!+t!1!%LG#e!`Ir!!+t!1!%LG#e!`Ir!!.Z!1!$LG#e!pIr!!1@!Q"|!(9mLG#e!PIr!!.Z!1!$LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!.Z!1!?LG#e!pIr!!+t!1!$
+LG#e!pIr!!+t!1!%LG#e!`Ir!!.Z!1!$LG#e!pIr!"Ip!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!.Z!1!$LG#e!pIr!!+t!1!$LG#e&JIr!!.Z!1!$LG#e!pIr!!+t!1!$LG#e!pIr!!+t!1!%LG#e!`Ir!!.Z!1!%LG)1$W"<%xJG!"9P)q!9LJ+u%8JG!!&J!Q!6!(:)LG#e-xIr!%A`!1!lLG#e%XIt!".[5\4&!1!lLG#e-xIr!%A`!1!;
+LG)1$W"<*BIr!%A`!1!lLG#e-xIr!">z!Q!6!(:)LG#e-xIr!%A`!1!lLG#e%XIt!".[5\4&!1!lLG#e-xIr!%A`!1!;LG)1$W"<*BIr!%A`!1!lLG#e-xIr!">z!Q!6!(:)LG#e-xIr!%A`!1!lLG#e%XIt!".[5\4&!1!lLG#e-xIr!%A`!1!;LG)1$W"<*BIr!%A`!1!lLG#e-xIr!">z!Q!:!(9fLG#e&ZIr!%A`!1!lLG#e-xIr!">z
+!Q!:!(9fLG#e&ZIr!%A`!1!lLG#e-xIr!">z!Q!:!(9fLG#e&ZIr!%A`!1!lLG#e-xIr!">z!Q!:!(9fLG#e&ZIr!%A`!1!lLG#e-xIr!">z!Q!:!(9fLG#e&ZIv!%6j!q!hLG#e-xIv!"4&!Q!:!(9fLG#e&zIs!%>z!A!iLG.[-XIs!"6j!Q!:!(9fLG#e&ZIs!%>z!A!lLG&K-XIs!"<6!Q!:!(9fLG#e&:Is!%>z!A!kLG)1-XIs!"A`
+!Q!:!(9fLG#e%xIz!%+t"S!dLG9Q,fIy!"4&!Q!:!(9fLG#e&zIs!%>z!A!kLG&K-hIs!"6j!Q!:!(9fLG#e&ZIs!%>z!A!kLG&K-hIs!"<6!Q!:!(9fLG#e&:Is!%>z!A!kLG&K-hIs!"A`!Q!:!(9fLG#e%xIz!%+t"S!dLG9Q,fIy!"4&!Q!:!(9fLG#e&jIs!%>z!A!lLG&K-hIs!"6j!Q!:!(9fLG#e&:It!%<6!Q!lLG&K-hIs!"<6
+!Q!:!(9fLG#e%xIz!%+t"S!fLG&K-hIs!"A`!Q!:!(9fLG#e&zIs!%>z!A!eLG9Q,fIy!"4&!Q!:!(9fLG#e&ZIs!%>z!A!mLG&K-XIs!"9P!Q!F!(9fLG)1!PIs!"9P!A!kLG&K.*Is!#LV!q!+LG)1"RIs!">z!Q!B!(9fLG#e!PIr!!&J!1!8LG9Q,VIz!%1@!A!jLG6k$vIt!$#e5Z1@!1!$LG&K&*Is!%>z!A!eLG9Q(.It!!1@!Q!"
+LG#e!@It!!&J!Q!,LG&K%(It!#9Q5Z1@!1!$LG#e%xIs!%>z!A!mLG&K(>Ir!!<6!1!$LG#e#dIs!"<6!Q!R!(9bLG#e!`Ir!!&J!A!<LG&K-hIs!%DF!A!MLG#e"BIs!!9P!1!"LG#e"BIs!"A`!Q!Z!(9cLG#e!PIt!">z"S!dLG9Q,vIs!#Ip!1!"LG#e"BIr!!+t!1!"LG#e!@Ir!!&J!1!'LG6k$vIt!"DG5Z)0!q!ALG&K-hIs!%1@
+"S!TLG#e$VIs!"9P!Q!J!(9dLG+u&*It!!4&!q!_LG)1"2Iv!%&J!A!$LG.[,&Is!!1@!q!1LG)1*c"<$VIt!"A`!q!&LG#e""Ir!$A`!q!&LG#e""Ir!$G,!Q!%LG#e""Ir!$G,!a!%LG#e""Ir!!LV!Q!Z!(9eLG&K&ZIr!!.Z!1!(LG#e+dIr!!.Z!1!(LG#e+$Iv!!+t!1!(LG#e+tIr!!+t!1!(LG#e#TIt!%.[5Z1@!1!ALG#e!`Ir
+!!.Z!1!%LG#e+TIr!!+t!1!&LG#e!`Ir!$G,!1!#LG#e""Ir!!+t!1!_LG#e!PIr!!<6!1!.LG)1,'"<*BIr!!)0!1!&LG#e""Ir!$DF!1!#LG#e"2Ir!!.Z!1!]LG#e!@Ir!!4&!1!%LG#e+TIr!!&J!1!,LG#e#4It!%#e5\4&!1!#LG#e""Ir!!1@!1!]LG#e!PIr!!.Z!A!&LG#e+DIr!!&J!1!'LG#e!pIr!$G,!1!"LG#e#$Ir!!DF
+!Q!b!(:)LG#e!PIr!!1@!1!&LG#e+DIr!!)0!1!'LG#e!pIr!$DF!1!"LG#e""Ir!!1@!1!^LG#e!@Ir!!A`!1!-LG)1,'"<*BIr!!)0!1!&LG#e""Ir!$DF!1!#LG#e""Is!!.Z!1!]LG#e!@Ir!!.Z!1!'LG#e+TIr!!&J!1!,LG#e#4It!$DG5\4&!1!#LG#e""Ir!!1@!1!]LG#e!PIr!!A`!1!]LG#e!@Ir!!1@!A!%LG#e+TIr!!&J
+!1!,LG#e#4It!$.[5\4&!1!$LG#e"bIr!$G,!1!$LG#e"bIr!$G,!1!#LG#e"bIr!$Ip!1!#LG#e"bIr!!G,!Q!V!(:)LG#e!pIr!!6j!1!_LG#e!pIr!!6j!1!_LG#e!`Ir!!6j!1!`LG#e!`Ir!!6j!1!/LG)1*#"<*BIr!!1@!1!&LG#e+tIr!!1@!1!&LG#e+tIr!!.Z!1!&LG#e,&Ir!!.Z!1!&LG#e#dIt!#.[5\4&!1!'LG.[,&Ir
+!!4&!q!aLG#e""Iv!%&J!1!&LG.[#tIt!!4'5hLV*BIt!".[5[+t'M!GLI1A'\J9!#4&'M!)LG)1'="<',Ir!#+|!1!GLG#e'-4(!#4&!1!E"3#e'\Ir!#+|!1!)LG)1%9"<',J9!#4&'M!GLG#e'-4(!#4&'M!)LG)1%9"<,vIr!#G,!1!>LG#e(.J9!#>z!1!JLG)1'="<,vIr!#G,!1!>LG#e(nIr!"G,!1!NLG#e#DIv!!>z!Q!+LG)1
+%y"<,vIr!#G,!1!>LG#e(nIr!"G,!1!NLG#e(.It!$9Q5]1@!1!NLG#e&*Ir!#G,!1!>LG#e(nIr!!6j!1!"LG&K!@Ir!!1@!1!$LG#e!@Is!!)0!Q!+LG)1'}"<,vIr!#G,!1!>LG#e(nIr!"G,!1!NLG#e"BIr!!G,!1!#LG#e#tIt!#DG5]1@!1!NLG#e&*Ir!#G,!1!>LG#e(nIr!!6j!1!+LG&K!@Ir!!9P!1!+LG)1*c"<,vIr!#G,
+!1!>LG#e(nIr!"G,!1!NLG#e"2Iu!!&J!1!'LG#e!PIr!!)0!1!"LG#e!`Ir!!>z!Q!>!(:8LG#e(nIr!"G,!1!NLG#e&*Ir!#G,!1!JLG)1%y"<,vIr!#G,!1!>LG#e(nIr!"G,!1!NLG#e(.It!"DG5]1@!q!JLG.[%HIv!#<6!q!:LG+u(>Iv!#1@!Q!>!(::LG&K(^Is!"DF!A!MLG&K%hIs!#G,!A!GLG)1%y"<,vIs!#DF!A!=LG&K
+(^Is!"A`!A!NLG&K'|It!"DG5]+t!A!MLG&K%xIs!#DF!A!<LG&K(nIs!#>z!Q!>!(:4LG9Q'LIz!"1@"S!FLG9Q$fIy!#4&"S!FLG)1&["<!pIv!$G,!A!MLG&K%xIs!#G,!A!<LG&K(^Is!#6j!Q!J!(9SLG&K""Is!#.Z!1!4LG)1(NIt!"A`!Q!NLG&K%hIs!#A`!Q!JLG)10/"<!@Ir!!.Z!A!$LG#e"RIs!!)0!A!"LG&K!@Iw!!&J
+!A!"LG&K!@Ir!!&J!1!#LG.[!@It!!&J!Q!%LG9Q'LIz!"1@"S!HLG&K%hIs!#A`"S!%LG.[%xIt!%9Q5Y&J!1!%LG#e!pIr!!LV!1!(LG#e!@Ir!!)0!1!"LG#e#$Ir!!)0!1!#LG#e"rIs!#DF!A!=LG&K'\Iz!"1@"C!MLG&K'\It!&)15Y#e""Ir!!1@!1!7LG#e!pIr!!&J!1!#LG#e!@Ir!!DF!1!)LG&K(^Is!"DF!A!NLG&K%hIs
+!#DF!A!%LG&K"BIr!!)0!Q!"LG#e!pIs!!G,!Q"&!(9R!!1@!1!&LG#e"bIr!!&J!1!"LG&K"rIr!!&J!1!"LG#e"2Ir!!+t!A!%LG&K"2Is!#DF!A!=LG&K(^It!"A`!A!MLG&K"2Ir!!9P!1!#LG#e!`Ir!!.Z!1!"LG#e#4It!#Iq5Y#e#$Ir!#LV!1!%LG9Q'LIz!"1@"S!FLG9Q$fIy!#4&"S!,LG#e""Ir!"+t!Q!d!(9R!!1@!1!&
+LG#e%hIr!"+t!1!*LG&K(^Is!"DF!A!NLG&K%hIs!#DF!A!&LG#e""Ir!!&J!1!#LG&K!@Ir!"+t!Q!J!(9RLG#e"bIr!$6j!Q!LLG)1%hIt!#G,!A!<LG&K(NIt!"1@!1!4LG)1'}"<!@Ir!!<6!1!VLG9Q'LIz!"1@"S!HLG&K%hIs!#A`"S!2LG#e$FIt!#.[5Y)0!A!&LG&K+DIs!#DF!A!=LG&K'\Iz!"1@"C!MLG&K'\It!##e5Y.Z
+!q!^LG#e(nIr!"G,!1!OLG&K%hIs!#DF!1!ILG)1%y"<,fIs!#DF!A!=LG&K(nIs!"A`!A!MLG&K(.It!"DG5])0!A!MLG&K%xIs!#G,!A!<LG&K(^Is!#A`!Q!F!(:4LG9Q#tIv!"#d"S!6LG9Q'LIz!"1@"C!2LG.[#tIz!#1@!Q!R!(:9LG&K$&Ir!!1@!1!5LG&K%xIs!"&J!q!8LG&K%hIs!"#d!A!&LG&K$FIs!#6j!Q!b!(:6LG)1
+$6Ir!!&J!a!#LG#e#tIt!"A`!Q!2LG&K""Is!"+t!A!<LG&K$&Ir!!)0!A!"LG#e!`Ir!!LV!Q!JLG)1-I"<,6Iv!"&J!1!$LG#e""Ir!!G,!q!:LG.[#tIr!!1@!1!$LG#e#tIs!"A`!A!"LG#e$&Ir!!)0!1!#LG#e!`Ir!!G,!q!JLG)1,g"<,vIr!"#d!1!&LG#e""Ir!"#d!1!>LG#e#tIr!!1@!1!$LG#e#TIv!"<6!q!1LG#e!`Ir
+!!)0!1!%LG#e#tIr!#<6!Q!^!(:8LG#e#tIr!!A`!1!1LG#e&*Ir!!LV!1!'LG#e!pIr!"&J!1!>LG#e#tIr!!+t!a!%LG#e#tIr!#<6!Q!b!(:8LG#e#tIr!!4&!1!%LG#e#tIr!"G,!1!0LG#e"2Ir!!.Z!1!2LG#e&*Ir!"#d!1!%LG#e"2Ir!"#d!1!JLG)1,g"<,vIr!"#d!1!$LG#e!PIr!!.Z!1!1LG#e&*Ir!!LV!1!'LG#e!pIr
+!"&J!1!>LG#e#tIr!!.Z!1!'LG#e#tIr!#<6!Q!b!(:8LG#e#tIr!!.Z!A!&LG#e#tIr!"G,!1!0LG#e"2Ir!!.Z!1!2LG#e&*Ir!"&J!1!&LG#e!`Ir!"&J!1!JLG)1*#"<,vIr!"&J!1!*LG#e$&Ir!"G,!1!1LG#e"bIr!")0!1!>LG#e$&Ir!!<6!1!2LG#e(.It!$.[5]1@!1!3LG#e"BIr!")0!1!>LG#e#tIr!!<6!1!3LG#e&*Ir
+!")0!A!&LG&K$6Ir!#<6!Q!R!(:8LG#e$FIr!!1@!1!4LG#e&*Ir!"&J!A!&LG&K$FIr!"G,!1!5LG.[$VIr!#<6!Q!F!(:8LG#e$VIv!".Z!1!>LG#e$FIv!"1@!1!>LG#e(nIr!#<6!Q!6!(:4LJ.[%hIr!#G,!1!:LJ.['lIt!"9Q5]&J!1!T"3#e%(JG!"9P!1!T"3#e'lIt!"DG5]&J!1!T"3#e%(Ir!$&R!1!9LG#e)a4(!#6j!Q!2
+!(:4LJ.[%(JG!"9P*#!HLG)1"S"<=XIr!)G,!Q!.!(;<LG#e,vIv!%+t!Q!*!(;<LG#e90It!#9Q5c6j!1!`LG#e!@Is!!&J!1!'LG&K!@It!!&J!1!#LG#e!@Is!$.Z!Q!:!(;<LG#e+tIr!!.Z!1!*LG#e!`Ir!$>z!Q!:!(;<LG#e+tIr!!.Z!1!(LG#e""Ir!$>z!Q!B!(;<LG#e+tIs!!&J!1!"LG#e"RIs!!&J!1!"LG#e+$It!!DG
+5c6j!1!sLG#e+$It!!DG5c6j!1!sLG#e+$It!!9Q5c6j!1"PLG)1$W"<=(Ir!!)0!1!#LG#e$fIr!(.Z!Q!V!(;:LG#e!@Ir!!&J!1!%LG#e"2Ir!!&J!1!"LG#e!@Ir!!&J!1!%LG#e!`Ir!!4&!1"*LG)1*#"<=8Iv!!.Z!A!'LG#e!PIr!!&J!1!"LG#e!@Ir!!)0!1!"LG#e!@Ir!!)0!1!$LG#e2bIt!$.[5c4&!Q!'LG)1""Ir!!&J
+!1!"LG#e!@Ir!!&J!1!#LG#e!@Ir!!&J!1!#LG#e!`Ir!'6j!Q!:!(;;LG)1"2Ir!!LV!1!'LG#e"2Ir!'6j!Q!6!(;<LG#e"BIr!!)0!1!'LG#e6*It!!9Q5e#d!1"7LG)1#5"<?,Is!">z!1"+LG)1"3"<LVJILG)1
+
+.EQN 2 -29 154 0
+{0:c_steg}NAME:100
+.TXT 0 10 158 0
+Cg a17.250000,93.125000,28
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Federkonstante Steggitter}}
+}
+.EQN 3 -10 221 0
+{0:c_zelle1}NAME:1.6
+.TXT 0 10 252 0
+Cg a18.500000,59.000000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Federkonstante Zelle rechts}}
+}
+.EQN 3 -10 155 0
+{0:m_zelle}NAME:5
+.TXT 0 10 159 0
+Cg a11.625000,93.125000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Masse Einzelzelle}}
+}
+.EQN 4 -10 156 0
+{0:m_steg}NAME:50
+.TXT 0 10 160 0
+Cg a11.375000,93.125000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Masse Steggitter}}
+}
+.EQN 4 -10 193 0
+{0:dr_zelle}NAME:0.05
+.TXT 0 10 196 0
+Cg a14.125000,59.000000,21
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Dämpfungsmaß Zelle}}
+}
+.EQN 4 -10 195 0
+{0:dr_steg}NAME:0.1
+.TXT 0 10 197 0
+Cg a17.375000,59.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Dämpfungsmaß Steggitter}}
+}
+.TXT 6 -12 162 0
+Cg a41.875000,112.125000,63
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Eigenwerte ohne Koppeleffekte
+ (starre Rahmeneinspannung):}}
+}
+.EQN 3 0 163 0
+{0:\l_zelle}NAME:(2*{0:c_zelle}NAME)/({0:m_zelle}NAME)
+.EQN 0 13 164 0
+{0:\l_zelle}NAME={0}?_n_u_l_l_
+.EQN 0 12 165 0
+{0:\l_steg}NAME:({0:c_steg}NAME)/({0:m_steg}NAME)
+.EQN 0 13 166 0
+{0:\l_steg}NAME={0}?_n_u_l_l_
+.TXT 0 13 167 0
+Cg a15.625000,61.125000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Eigenwerte (omega**2)}}
+}
+.EQN 5 -51 222 0
+{0:\l_zelle1}NAME:(2*{0:c_zelle1}NAME)/({0:m_zelle}NAME)
+.EQN 0 13 223 0
+{0:\l_zelle1}NAME={0}?_n_u_l_l_
+.TXT 0 38 275 0
+Cg a15.125000,42.000000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {toleranzbehaftete Zelle}}
+}
+.TXT 5 -51 168 0
+Cg a10.750000,112.125000,18
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Systemmatrizen:}}
+}
+.EQN 11 0 172 0
+{0:K}NAME:({7,7}ö{0:c_steg}NAME+{0:c_zelle1}NAMEö-{0:c_zelle1}NAMEö0ö0ö0ö0ö0ö-{0:c_zelle1}NAMEö2*{0:c_zelle1}NAMEö-{0:c_zelle1}NAMEö0ö0ö0ö0ö0ö-{0:c_zelle1}NAMEö{0:c_steg}NAME+{0:c_zelle}NAME+{0:c_zelle1}NAMEö-{0:c_zelle}NAMEö0ö0ö0ö0ö0ö-{0:c_zelle}NAMEö2*
+{0:c_zelle}NAMEö-{0:c_zelle}NAMEö0ö0ö0ö0ö0ö-{0:c_zelle}NAMEö{0:c_steg}NAME+2*{0:c_zelle}NAMEö-{0:c_zelle}NAMEö0ö0ö0ö0ö0ö-{0:c_zelle}NAMEö2*{0:c_zelle}NAMEö-{0:c_zelle}NAMEö0ö0ö0ö0ö0ö-{0:c_zelle}NAMEö{0:c_steg}NAME+{0:c_zelle}NAME)
+.EQN 18 0 173 0
+{0:M}NAME:({7,7}ö{0:m_steg}NAMEö0ö0ö0ö0ö0ö0ö0ö{0:m_zelle}NAMEö0ö0ö0ö0ö0ö0ö0ö{0:m_steg}NAMEö0ö0ö0ö0ö0ö0ö0ö{0:m_zelle}NAMEö0ö0ö0ö0ö0ö0ö0ö{0:m_steg}NAMEö0ö0ö0ö0ö0ö0ö0ö{0:m_zelle}NAMEö0ö0ö0ö0ö0ö0ö0ö{0:m_steg}NAME)
+.TXT 12 0 176 0
+Cg a41.125000,71.000000,64
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Eigenwerte mit Koppeleffekte
+ berechnen (flexibler Rahmen):}}
+}
+.EQN 3 0 7 0
+{0:omega}NAME:{0:genvals}NAME({0:K}NAME,{0:M}NAME)
+.EQN 4 0 9 0
+{0:vektoren}NAME:{0:genvecs}NAME({0:K}NAME,{0:M}NAME)
+.TXT 8 0 326 0
+Cg a31.875000,71.000000,52
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Normierung der Eigenvektoren
+ auf X*M*X=1}{\b :}}
+}
+.EQN 5 1 294 0
+{0:vektor_1}NAME:(({0:vektoren}NAME){52}(0))/(\(|((({0:vektoren}NAME){52}(0)){51}*{0:M}NAME*({0:vektoren}NAME){52}(0))))
+.EQN 0 27 327 0
+{0:vektor_2}NAME:(({0:vektoren}NAME){52}(1))/(\(|((({0:vektoren}NAME){52}(1)){51}*{0:M}NAME*({0:vektoren}NAME){52}(1))))
+.EQN 9 -27 328 0
+{0:vektor_3}NAME:(({0:vektoren}NAME){52}(2))/(\(|((({0:vektoren}NAME){52}(2)){51}*{0:M}NAME*({0:vektoren}NAME){52}(2))))
+.EQN 0 27 329 0
+{0:vektor_4}NAME:(({0:vektoren}NAME){52}(3))/(\(|((({0:vektoren}NAME){52}(3)){51}*{0:M}NAME*({0:vektoren}NAME){52}(3))))
+.EQN 8 -27 330 0
+{0:vektor_5}NAME:(({0:vektoren}NAME){52}(4))/(\(|((({0:vektoren}NAME){52}(4)){51}*{0:M}NAME*({0:vektoren}NAME){52}(4))))
+.EQN 0 27 331 0
+{0:vektor_6}NAME:(({0:vektoren}NAME){52}(5))/(\(|((({0:vektoren}NAME){52}(5)){51}*{0:M}NAME*({0:vektoren}NAME){52}(5))))
+.EQN 9 -27 332 0
+{0:vektor_7}NAME:(({0:vektoren}NAME){52}(6))/(\(|((({0:vektoren}NAME){52}(6)){51}*{0:M}NAME*({0:vektoren}NAME){52}(6))))
+.TXT 9 -1 179 0
+Cg a21.625000,71.000000,36
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Darstellung der Eigenvektoren:}}
+}
+.EQN 0 23 17 0
+{0:i}NAME:1;7
+.TXT 3 -15 180 0
+Cg a9.500000,62.000000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {1. Eigenvektor}}
+}
+.TXT 0 24 181 0
+Cg a9.500000,62.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {2}{. Eigenvektor}}
+}
+.TXT 0 23 182 0
+Cg a9.500000,62.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {3}{. Eigenvektor}}
+}
+.EQN 2 -48 338 0
+({0:omega}NAME)[(1)={0}?_n_u_l_l_
+.EQN 0 23 340 0
+({0:omega}NAME)[(0)={0}?_n_u_l_l_
+.EQN 0 24 341 0
+({0:omega}NAME)[(2)={0}?_n_u_l_l_
+.EQN 2 -51 336 0
+0.4&-0.4&(_n_u_l_l_&_n_u_l_l_)&({0:vektor_2}NAME)[({0:i}NAME-1,0)@7&1&(_n_u_l_l_&_n_u_l_l_)&{0:i}NAME
+0 1 1 1 6 0 1 
+0 1 1 1 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 14 12 0 3 
+.EQN 0 24 26 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:vektor_1}NAME)[({0:i}NAME-1,0)@7&1&(_n_u_l_l_&_n_u_l_l_)&{0:i}NAME
+0 1 1 1 6 0 1 
+0 1 1 1 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 14 12 0 3 
+.EQN 0 23 339 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:vektor_3}NAME)[({0:i}NAME-1,0)@7&1&(_n_u_l_l_&_n_u_l_l_)&{0:i}NAME
+0 1 1 1 6 0 1 
+0 1 1 1 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 14 12 0 3 
+.TXT 19 -42 183 0
+Cg a9.500000,62.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {4}{. Eigenvektor}}
+}
+.TXT 0 24 184 0
+Cg a9.500000,62.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {5}{. Eigenvektor}}
+}
+.TXT 0 23 185 0
+Cg a9.500000,11.875000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {6}{. Eigenvektor}}
+}
+.EQN 3 -47 342 0
+({0:omega}NAME)[(3)={0}?_n_u_l_l_
+.EQN 0 24 348 0
+({0:omega}NAME)[(6)={0}?_n_u_l_l_
+.EQN 1 -29 345 0
+0.2&-0.2&(_n_u_l_l_&_n_u_l_l_)&({0:vektor_4}NAME)[({0:i}NAME-1,0)@7&1&(_n_u_l_l_&_n_u_l_l_)&{0:i}NAME
+0 1 1 1 6 0 1 
+0 1 1 1 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 14 12 0 3 
+.EQN 0 24 349 0
+0.2&-0.2&(_n_u_l_l_&_n_u_l_l_)&({0:vektor_7}NAME)[({0:i}NAME-1,0)@7&1&(_n_u_l_l_&_n_u_l_l_)&{0:i}NAME
+0 1 1 1 6 0 1 
+0 1 1 1 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 14 12 0 3 
+.EQN 0 27 344 0
+({0:omega}NAME)[(5)={0}?_n_u_l_l_
+.EQN 1 -5 347 0
+0.2&-0.2&(_n_u_l_l_&_n_u_l_l_)&({0:vektor_6}NAME)[({0:i}NAME-1,0)@7&1&(_n_u_l_l_&_n_u_l_l_)&{0:i}NAME
+0 1 1 1 6 0 1 
+0 1 1 1 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 14 12 0 3 
+.EQN 16 -22 346 0
+0.2&-0.2&(_n_u_l_l_&_n_u_l_l_)&({0:vektor_5}NAME)[({0:i}NAME-1,0)@7&1&(_n_u_l_l_&_n_u_l_l_)&{0:i}NAME
+0 1 1 1 6 0 1 
+0 1 1 1 2 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 14 12 0 3 
+.TXT 2 -20 186 0
+Cg a9.500000,62.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {7}{. Eigenvektor}}
+}
+.EQN 3 -1 343 0
+({0:omega}NAME)[(4)={0}?_n_u_l_l_
+.TXT 15 -5 201 0
+Cg a54.625000,70.000000,103
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Berechnung der Frequenzgänge
+ nach der Methode der modalen Superposition:\par 
+}{\b0 (Abschnitt 5.9.4)}}
+}
+.EQN 7 0 49 0
+{0:w}NAME:0.01,0.015;2
+.TXT 0 14 202 0
+Cg a11.000000,56.000000,18
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Frequenzbereich}}
+}
+.EQN 4 -14 51 0
+{0:m1}NAME:1
+.EQN 0 9 52 0
+{0:m2}NAME:1
+.EQN 0 10 53 0
+{0:m3}NAME:1
+.EQN 0 10 55 0
+{0:m4}NAME:1
+.EQN 0 9 56 0
+{0:m5}NAME:1
+.EQN 0 11 57 0
+{0:m6}NAME:1
+.EQN 0 11 58 0
+{0:m7}NAME:1
+.EQN 4 -60 59 0
+{0:k1}NAME:({0:omega}NAME)[(0)
+.EQN 0 9 60 0
+{0:k2}NAME:({0:omega}NAME)[(1)
+.EQN 0 10 61 0
+{0:k3}NAME:({0:omega}NAME)[(2)
+.EQN 0 10 62 0
+{0:k4}NAME:({0:omega}NAME)[(3)
+.EQN 0 9 63 0
+{0:k5}NAME:({0:omega}NAME)[(4)
+.EQN 0 11 64 0
+{0:k6}NAME:({0:omega}NAME)[(5)
+.EQN 0 11 65 0
+{0:k7}NAME:({0:omega}NAME)[(6)
+.EQN 5 -60 66 0
+{0:c1}NAME:2*{0:dr_zelle}NAME*\(({0:omega}NAME)[(0))
+.EQN 0 15 67 0
+{0:c2}NAME:2*{0:dr_zelle}NAME*\(({0:omega}NAME)[(1))
+.EQN 0 14 68 0
+{0:c3}NAME:2*{0:dr_zelle}NAME*\(({0:omega}NAME)[(2))
+.EQN 0 14 69 0
+{0:c4}NAME:2*{0:dr_steg}NAME*\(({0:omega}NAME)[(3))
+.EQN 4 -43 70 0
+{0:c5}NAME:2*{0:dr_steg}NAME*\(({0:omega}NAME)[(4))
+.EQN 0 15 71 0
+{0:c6}NAME:2*{0:dr_steg}NAME*\(({0:omega}NAME)[(5))
+.EQN 0 14 72 0
+{0:c7}NAME:2*{0:dr_steg}NAME*\(({0:omega}NAME)[(6))
+.TXT 8 -3 204 0
+Cg a42.125000,45.000000,66
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Realteil und Imaginärteil des Lastvektors
+ (Erregung am Punkt 4)}}
+}
+.EQN 3 -26 74 0
+{0:FR}NAME:({7,1}ö0ö0ö0ö1+1i*0ö0ö0ö0)
+.TXT 10 -1 316 0
+Cg a28.500000,71.000000,50
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b M}{\b odale Transformation der
+ Lastvektoren:}}
+}
+.EQN 3 0 76 0
+{0:fr1}NAME:({0:vektor_1}NAME){51}*{0:FR}NAME
+.EQN 0 12 77 0
+{0:fr1}NAME={0}?_n_u_l_l_
+.EQN 0 16 85 0
+{0:fr5}NAME:({0:vektor_5}NAME){51}*{0:FR}NAME
+.EQN 0 12 86 0
+{0:fr5}NAME={0}?_n_u_l_l_
+.EQN 4 -40 78 0
+{0:fr2}NAME:({0:vektor_2}NAME){51}*{0:FR}NAME
+.EQN 0 12 79 0
+{0:fr2}NAME={0}?_n_u_l_l_
+.EQN 0 16 87 0
+{0:fr6}NAME:({0:vektor_6}NAME){51}*{0:FR}NAME
+.EQN 0 12 88 0
+{0:fr6}NAME={0}?_n_u_l_l_
+.EQN 4 -40 80 0
+{0:fr3}NAME:({0:vektor_3}NAME){51}*{0:FR}NAME
+.EQN 0 12 81 0
+{0:fr3}NAME={0}?_n_u_l_l_
+.EQN 0 16 89 0
+{0:fr7}NAME:({0:vektor_7}NAME){51}*{0:FR}NAME
+.EQN 0 12 90 0
+{0:fr7}NAME={0}?_n_u_l_l_
+.EQN 4 -40 82 0
+{0:fr4}NAME:({0:vektor_4}NAME){51}*{0:FR}NAME
+.EQN 0 12 83 0
+{0:fr4}NAME={0}?_n_u_l_l_
+.TXT 5 -13 317 0
+Cg a24.250000,71.000000,37
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Frequenzgänge der Schwingmoden:}}
+}
+.EQN 0 30 100 0
+{0:w0}NAME:{0:\l_zelle}NAME
+.EQN 5 -29 350 0
+{0:S1}NAME({0:w}NAME):({0:k1}NAME-({0:w}NAME)^(2)*{0:m1}NAME)+1i*({0:c1}NAME*{0:w}NAME)
+.EQN 0 23 355 0
+{0:U1}NAME({0:w}NAME):({0:fr1}NAME)/({0:S1}NAME({0:w}NAME))
+.EQN 0 14 226 0
+{0:U1}NAME({0:w0}NAME)={0}?_n_u_l_l_
+.EQN 4 -37 356 0
+{0:S2}NAME({0:w}NAME):({0:k2}NAME-({0:w}NAME)^(2)*{0:m2}NAME)+1i*({0:c2}NAME*{0:w}NAME)
+.EQN 0 23 357 0
+{0:U2}NAME({0:w}NAME):({0:fr2}NAME)/({0:S2}NAME({0:w}NAME))
+.EQN 0 14 358 0
+{0:U2}NAME({0:w0}NAME)={0}?_n_u_l_l_
+.EQN 4 -37 359 0
+{0:S3}NAME({0:w}NAME):({0:k3}NAME-({0:w}NAME)^(2)*{0:m3}NAME)+1i*({0:c3}NAME*{0:w}NAME)
+.EQN 0 23 360 0
+{0:U3}NAME({0:w}NAME):({0:fr3}NAME)/({0:S3}NAME({0:w}NAME))
+.EQN 0 14 361 0
+{0:U3}NAME({0:w0}NAME)={0}?_n_u_l_l_
+.EQN 4 -37 362 0
+{0:S4}NAME({0:w}NAME):({0:k4}NAME-({0:w}NAME)^(2)*{0:m4}NAME)+1i*({0:c4}NAME*{0:w}NAME)
+.EQN 0 23 363 0
+{0:U4}NAME({0:w}NAME):({0:fr4}NAME)/({0:S4}NAME({0:w}NAME))
+.EQN 0 14 364 0
+{0:U4}NAME({0:w0}NAME)={0}?_n_u_l_l_
+.EQN 4 -37 365 0
+{0:S5}NAME({0:w}NAME):({0:k5}NAME-({0:w}NAME)^(2)*{0:m5}NAME)+1i*({0:c5}NAME*{0:w}NAME)
+.EQN 0 23 366 0
+{0:U5}NAME({0:w}NAME):({0:fr5}NAME)/({0:S5}NAME({0:w}NAME))
+.EQN 0 14 367 0
+{0:U5}NAME({0:w0}NAME)={0}?_n_u_l_l_
+.EQN 4 -37 368 0
+{0:S6}NAME({0:w}NAME):({0:k6}NAME-({0:w}NAME)^(2)*{0:m6}NAME)+1i*({0:c6}NAME*{0:w}NAME)
+.EQN 0 23 369 0
+{0:U6}NAME({0:w}NAME):({0:fr6}NAME)/({0:S6}NAME({0:w}NAME))
+.EQN 0 14 370 0
+{0:U6}NAME({0:w0}NAME)={0}?_n_u_l_l_
+.EQN 4 -37 371 0
+{0:S7}NAME({0:w}NAME):({0:k7}NAME-({0:w}NAME)^(2)*{0:m7}NAME)+1i*({0:c7}NAME*{0:w}NAME)
+.EQN 0 23 372 0
+{0:U7}NAME({0:w}NAME):({0:fr7}NAME)/({0:S7}NAME({0:w}NAME))
+.EQN 0 14 373 0
+{0:U7}NAME({0:w0}NAME)={0}?_n_u_l_l_
+.TXT 14 -37 318 0
+Cg a27.625000,71.000000,42
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Rücktransformation der Auslenkungen:}}
+}
+.EQN 4 0 233 0
+{0:UR1}NAME({0:w}NAME):{0:vektor_1}NAME*{0:U1}NAME({0:w}NAME)
+.EQN 0 17 382 0
+{0:UR2}NAME({0:w}NAME):{0:vektor_2}NAME*{0:U2}NAME({0:w}NAME)
+.EQN 0 17 378 0
+{0:UR3}NAME({0:w}NAME):{0:vektor_3}NAME*{0:U3}NAME({0:w}NAME)
+.EQN 3 -34 383 0
+{0:UR4}NAME({0:w}NAME):{0:vektor_4}NAME*{0:U4}NAME({0:w}NAME)
+.EQN 0 17 384 0
+{0:UR5}NAME({0:w}NAME):{0:vektor_5}NAME*{0:U5}NAME({0:w}NAME)
+.EQN 0 17 385 0
+{0:UR6}NAME({0:w}NAME):{0:vektor_6}NAME*{0:U6}NAME({0:w}NAME)
+.EQN 3 -34 386 0
+{0:UR7}NAME({0:w}NAME):{0:vektor_7}NAME*{0:U7}NAME({0:w}NAME)
+.TXT 4 0 319 0
+Cg a15.250000,71.000000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b M}{\b odale Superposition:}}
+}
+.EQN 4 0 126 0
+{0:UR}NAME({0:w}NAME):{0:UR1}NAME({0:w}NAME)+{0:UR2}NAME({0:w}NAME)+{0:UR3}NAME({0:w}NAME)+{0:UR4}NAME({0:w}NAME)+{0:UR5}NAME({0:w}NAME)+{0:UR6}NAME({0:w}NAME)+{0:UR7}NAME({0:w}NAME)
+.TXT 4 0 320 0
+Cg a38.625000,70.000000,58
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Berechnung der Amplituden charakteristischer
+ Punkte:}}
+}
+.EQN 6 0 128 0
+{0:ampl_e}NAME({0:w}NAME):\((({0:Re}NAME(({0:UR}NAME({0:w}NAME))[(3))))^(2)+(({0:Im}NAME(({0:UR}NAME({0:w}NAME))[(3))))^(2))
+.TXT 0 33 322 0
+Cg a15.000000,39.000000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Erregerpunkt (Punkt 4)}}
+}
+.EQN 5 -33 394 0
+{0:ampl_s}NAME({0:w}NAME):\((({0:Re}NAME(({0:UR}NAME({0:w}NAME))[(4))))^(2)+(({0:Im}NAME(({0:UR}NAME({0:w}NAME))[(4))))^(2))
+.TXT 0 33 323 0
+Cg a12.875000,39.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Steggitter (Punkt 5)}}
+}
+.EQN 5 -33 395 0
+{0:ampl_n}NAME({0:w}NAME):\((({0:Re}NAME(({0:UR}NAME({0:w}NAME))[(5))))^(2)+(({0:Im}NAME(({0:UR}NAME({0:w}NAME))[(5))))^(2))
+.TXT 0 33 324 0
+Cg a14.875000,39.000000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Nachbarzelle (Punkt 6)}}
+}
+.TXT 6 -20 209 0
+Cg a8.625000,63.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Erregerpunkt}}
+}
+.TXT 0 33 210 0
+Cg a6.500000,25.000000,13
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Steggitter}}
+}
+.EQN 2 -43 129 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:ampl_e}NAME({0:w}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:w}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 25 18 0 3 
+.EQN 0 33 145 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:ampl_s}NAME({0:w}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:w}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 25 18 0 3 
+.TXT 26 7 213 0
+Cg a19.125000,21.000000,48
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {logarithmische Darstellung\par 
+}{alle Kennlinien}}
+}
+.TXT 1 -30 211 0
+Cg a8.500000,62.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Nachbarzelle}}
+}
+.EQN 2 -10 147 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:ampl_n}NAME({0:w}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:w}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 25 17 0 3 
+.EQN 0 32 212 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:ampl_e}NAME({0:w}NAME),{0:ampl_s}NAME({0:w}NAME),{0:ampl_n}NAME({0:w}NAME)@2&&(_n_u_l_l_&_n_u_l_l_)&{0:w}NAME
+0 0 1 1 0 0 1 
+1 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 26 17 0 3 

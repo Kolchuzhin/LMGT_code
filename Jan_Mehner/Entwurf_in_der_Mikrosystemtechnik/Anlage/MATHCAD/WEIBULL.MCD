@@ -1,0 +1,346 @@
+.MCAD 303010000 1 76 489 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=20 im=i et=3 zt=100 pr=5 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 1
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.000000 1.000000 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 9 365 0
+Cg a54.625000,59.250000,141
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b \fs24 Berechnung der Weibull-Parameter
+ einer gegebenen Stichprobe\par         
+                   }{\i \b0 \fs24 weibull.mcd
+ - Beispiel 5.7}}
+}
+.TXT 7 -6 441 0
+Cg a9.500000,71.250000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Eingabedaten:}}
+}
+.EQN 3 2 366 0
+{0:anz}NAME:7
+.TXT 0 30 367 0
+Cg a17.500000,54.250000,28
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Anzahl der Messintervalle}}
+}
+.TXT 12 0 371 0
+Cg a40.500000,41.250000,94
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {s}{igma ... Messintervall \par 
+daten ... ausgefallenen Probanten}{ im jeweiligen
+ Messintervall}}
+}
+.EQN 2 -30 444 0
+{0:sigma}NAME:({7,2}ö1157.5*(10)^(6)ö1102.5*(10)^(6)ö1047.5*(10)^(6)ö992.5*(10)^(6)ö937.5*(10)^(6)ö882.5*(10)^(6)ö827.5*(10)^(6)ö1102.5*(10)^(6)ö1047.5*(10)^(6)ö992.5*(10)^(6)ö937.5*(10)^(6)ö882.5*(10)^(6)ö827.5*(10)^(6)ö772.5*(10)^({0}6))
+.EQN 0 21 370 0
+{0:daten}NAME:({7,1}ö2ö7ö6ö4ö4ö3ö3)
+.TXT 13 -24 443 0
+Cg a12.000000,72.250000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Berechnungsteil:}}
+}
+.TXT 3 39 438 0
+Cg a13.875000,30.250000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain b{enutzte Stützstellen}}
+}
+.EQN 1 -36 386 0
+{0:i}NAME:1;{0:anz}NAME-1
+.EQN 6 0 376 0
+{0:ggs}NAME:((1,{0:anz}NAME,{0:i}NAME,({0:daten}NAME)[({0:i}NAME)){64})
+.EQN 0 20 377 0
+{0:ggs}NAME={0}?_n_u_l_l_
+.TXT 0 16 378 0
+Cg a11.375000,41.250000,18
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Grundgesamtheit}}
+}
+.TXT 7 -38 390 0
+Cg a55.625000,69.875000,87
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Zuverlässigkeitsfunktion       
+    Ordinaten- und Abszissenwerte des Weibull-Papiers}}
+}
+.EQN 8 2 385 0
+({0:R}NAME)[({0:i}NAME):({0:ggs}NAME-((1,{0:i}NAME,{0:j}NAME,({0:daten}NAME)[({0:j}NAME)){64}))/({0:ggs}NAME)
+.EQN 0 18 391 0
+({0:Y}NAME)[({0:i}NAME):{0:log}NAME({0:log}NAME((1)/(({0:R}NAME)[({0:i}NAME))))
+.EQN 0 16 394 0
+({0:X}NAME)[({0:i}NAME):{0:log}NAME(({0:sigma}NAME)[({0:i}NAME,2))
+.TXT 0 18 451 0
+Cg a16.375000,23.250000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Ende des Messintervalls}}
+}
+.EQN 11 -52 382 0
+{0:R}NAME={0}?_n_u_l_l_
+.EQN 0 18 393 0
+{0:Y}NAME={0}?_n_u_l_l_
+.EQN 0 17 395 0
+{0:X}NAME={0}?_n_u_l_l_
+.TXT 10 -38 396 0
+Cg a13.875000,72.250000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Weibull-Kennwerte:}}
+}
+.EQN 4 5 399 0
+{0:\b}NAME:{0:slope}NAME({0:X}NAME,{0:Y}NAME)
+.EQN 0 16 401 0
+{0:\b}NAME={0}?_n_u_l_l_
+.TXT 0 21 404 0
+Cg a20.500000,24.250000,34
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain b{}{erechneter Weibull-Parameter}}
+}
+.EQN 5 -37 405 0
+{0:null}NAME:{0:intercept}NAME({0:X}NAME,{0:Y}NAME)
+.EQN 0 16 417 0
+({0:reg}NAME)[({0:i}NAME):{0:\b}NAME*({0:X}NAME)[({0:i}NAME)+{0:null}NAME
+.TXT 0 21 419 0
+Cg a12.750000,24.250000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Regressionsgerade}}
+}
+.EQN 8 -37 420 0
+{0:\h}NAME:(10)^((-0.362-{0:null}NAME)/({0:\b}NAME))
+.EQN 0 16 421 0
+{0:\h}NAME={0}?_n_u_l_l_
+.TXT 0 21 427 0
+Cg a20.250000,28.250000,34
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain c{}{harakteristische Lebensdauer}}
+}
+.TXT 10 -42 428 0
+Cg a11.000000,72.250000,21
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Weibull-Papier:}}
+}
+.EQN 1 2 397 0
+&&(_n_u_l_l_&_n_u_l_l_)&({0:Y}NAME)[({0:i}NAME),({0:reg}NAME)[({0:i}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&({0:X}NAME)[({0:i}NAME)
+0 1 1 1 8 0 1 
+0 1 1 1 8 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 52 18 0 3 
+.TXT 26 -2 429 0
+Cg a10.875000,70.250000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b B-Lebensdauer:}}
+}
+.TXT 4 1 433 0
+Cg a11.375000,45.250000,32
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {B}{\fs16 \dn6 10}{-Lebensdauer}}
+}
+.TXT 0 45 437 0
+Cg a25.500000,28.250000,73
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Lebensdauer bei der 10% bzw. 1%\par 
+der Grundgesamtheit ausgefallen sind.}}
+}
+.EQN 1 -23 430 0
+{0:\h}NAME*((-{0:ln}NAME(0.9)))^((1)/({0:\b}NAME))={0}?_n_u_l_l_
+.TXT 4 -22 435 0
+Cg a11.750000,45.250000,33
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {B}{\fs16 \dn6 0.1}{-Lebensdauer}}
+}
+.EQN 1 22 434 0
+{0:\h}NAME*((-{0:ln}NAME(0.999)))^((1)/({0:\b}NAME))={0}?_n_u_l_l_
+.TXT 5 -24 480 0
+Cg a49.625000,73.250000,74
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Darstellung der Wahrscheinlichkeitsdichtefunktion
+ und der Messwerte:}}
+}
+.EQN 7 2 452 0
+{0:f}NAME({0:\s}NAME):{0:\b}NAME*(({0:\s}NAME)^({0:\b}NAME-1))/(({0:\h}NAME)^({0:\b}NAME))*({0:e}NAME)^(-((({0:\s}NAME)/({0:\h}NAME)))^({0:\b}NAME))
+.EQN 0 20 454 0
+{0:\s}NAME:500*(10)^(6),505*(10)^(6);1500*(10)^(6)
+.EQN 0 22 460 0
+{0:j}NAME:1;{0:anz}NAME+2
+.EQN 6 -42 461 0
+({0:a}NAME)[({0:j}NAME):(({0:sigma}NAME)[(1,1)+({0:sigma}NAME)[(1,2))/(2)+({0:j}NAME-2)*(-({0:sigma}NAME)[(1,1)+({0:sigma}NAME)[(1,2))
+.EQN 0 35 470 0
+({0:v}NAME)[(1):0
+.EQN 0 7 474 0
+{0:daten}NAME:{0:stack}NAME({0:v}NAME,{0:daten}NAME)
+.EQN 0 14 475 0
+{0:daten}NAME:{0:stack}NAME({0:daten}NAME,{0:v}NAME)
+.EQN 4 -55 453 0
+4.5*(10)^(-9)&&(_n_u_l_l_&_n_u_l_l_)&{0:f}NAME({0:\s}NAME),(({0:daten}NAME)[({0:j}NAME))/(1.6*(10)^(9))@1500*(10)^(6)&500*(10)^(6)&(_n_u_l_l_&_n_u_l_l_)&{0:\s}NAME,({0:a}NAME)[({0:j}NAME)
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 0 1 3 NO-TRACE-STRING
+0 0 2 4 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+1 1 44 21 0 3 

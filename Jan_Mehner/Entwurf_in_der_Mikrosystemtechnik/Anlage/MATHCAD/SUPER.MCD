@@ -1,0 +1,713 @@
+.MCAD 303010000 1 74 596 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=30 pr=6 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 0.979167 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 16 249 0
+Cg a40.500000,60.125000,128
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\fs24 \b Modale Superposition eines
+ Torsionsaktuators}{\fs24 \par   }{\fs24 
+\i \b0 super.mcd - Beispiel 5.12 und Abschnitt
+ 5.9.4}}
+}
+.TXT 8 -14 251 0
+Cg a9.500000,72.125000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\fs20 \b Eingabedaten:}}
+}
+.EQN 4 4 2 0
+{0:e_mod}NAME:169*(10)^(9)
+.TXT 0 13 252 0
+Cg a6.250000,57.125000,10
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {E_Modul}}
+}
+.TXT 0 20 259 0
+Cg a32.750000,34.750000,178
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b0 Trapezförmige Feder mit 30 
+µm Höhe und 30 µm Breite (kleine Seite).
+ Die Länge beträgt 1700 µm.\par Die Spiegelpatte
+ ist 4000 x 4000 µm, die Platten-\par dicke
+ ebenfalls 30 µm. }}
+}
+.EQN 3 -33 274 0
+{0:dens}NAME:2329
+.TXT 0 13 376 0
+Cg a4.375000,55.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Dichte}}
+}
+.EQN 3 -13 254 0
+{0:iyy}NAME:1.08*(10)^(-19)
+.TXT 0 13 257 0
+Cg a16.375000,55.125000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Flächenträgheitsmoment}}
+}
+.EQN 3 -13 256 0
+{0:git}NAME:1.47*(10)^(-8)
+.TXT 0 13 377 0
+Cg a12.500000,55.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Torsionssteifigkeit}}
+}
+.EQN 3 -13 261 0
+{0:m_la}NAME:0.004
+.TXT 0 13 263 0
+Cg a8.250000,55.125000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Plattenlänge}}
+}
+.EQN 3 -13 5 0
+{0:h}NAME:30*(10)^(-6)
+.TXT 0 13 280 0
+Cg a16.250000,55.125000,27
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Plattendicke; Federdicke}}
+}
+.EQN 3 -13 7 0
+{0:l}NAME:1700*(10)^(-6)
+.TXT 0 13 277 0
+Cg a7.375000,55.125000,13
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Federlänge}}
+}
+.EQN 3 -13 264 0
+{0:u_ele}NAME:100
+.TXT 0 13 265 0
+Cg a13.875000,55.125000,21
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Elektrodenspannung}}
+}
+.EQN 3 -13 266 0
+{0:d_ele}NAME:300*(10)^(-6)
+.TXT 0 13 378 0
+Cg a16.500000,55.000000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Elektrodengrundabstand}}
+}
+.EQN 3 -13 268 0
+{0:d1}NAME:0.02
+.TXT 0 13 270 0
+Cg a20.000000,55.125000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Dämpfungsmaß translatorisch}}
+}
+.EQN 3 -13 271 0
+{0:d2}NAME:0.01
+.TXT 0 13 272 0
+Cg a18.125000,55.125000,27
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Dämpfungsmaß rotatorisch}}
+}
+.TXT 3 -17 276 0
+Cg a9.000000,72.125000,28
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Folgegrößen}{\b \fs16 :}}
+}
+.EQN 3 4 4 0
+{0:EI}NAME:{0:e_mod}NAME*{0:iyy}NAME
+.TXT 0 13 281 0
+Cg a10.250000,55.125000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Biegesteifigkeit}}
+}
+.EQN 3 -13 278 0
+{0:m}NAME:({0:m_la}NAME)^(2)*{0:h}NAME*{0:dens}NAME
+.TXT 0 13 379 0
+Cg a4.500000,55.000000,8
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Masse}}
+}
+.TXT 3 0 381 0
+Cg a16.500000,55.000000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Massenträgheitsmoment}}
+}
+.EQN 1 -13 14 0
+{0:J}NAME:({0:m}NAME)/(12)*(({0:m_la}NAME)^(2)+({0:h}NAME)^(2))
+.TXT 6 -4 476 0
+Cg a22.750000,72.125000,36
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Berechnung der Modellmatrizen:}}
+}
+.EQN 5 1 148 0
+{0:u1}NAME({0:F1}NAME,{0:F2}NAME):(({0:l}NAME)^(3))/(24*{0:EI}NAME)*({0:F1}NAME+{0:F2}NAME)+({0:l}NAME)/({0:git}NAME*2)*({0:F1}NAME-{0:F2}NAME)*((({0:m_la}NAME)/(4)))^(2)
+.TXT 0 41 419 0
+Cg a27.000000,30.000000,71
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Verschiebungsansatz nach Castigliano}{\par 
+vgl. Datei }{\i harmonic.mcd}}
+}
+.EQN 6 -41 151 0
+{0:u2}NAME({0:F1}NAME,{0:F2}NAME):(({0:l}NAME)^(3))/(24*{0:EI}NAME)*({0:F1}NAME+{0:F2}NAME)+({0:l}NAME)/({0:git}NAME*2)*({0:F2}NAME-{0:F1}NAME)*((({0:m_la}NAME)/(4)))^(2)
+.TXT 7 -1 558 0
+Cg a13.125000,71.125000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Steifigkeitsmatrix:}}
+}
+.EQN 7 1 154 0
+{0:K_INV}NAME:({2,2}ö(({0:l}NAME)^(3))/(24*{0:EI}NAME)+({0:l}NAME*({0:m_la}NAME)^(2))/(32*{0:git}NAME)ö(({0:l}NAME)^(3))/(24*{0:EI}NAME)-({0:l}NAME*({0:m_la}NAME)^(2))/(32*{0:git}NAME)ö(({0:l}NAME)^(3))/(24*{0:EI}NAME)-({0:l}NAME*({0:m_la}NAME)^(2))/(32*
+{0:git}NAME)ö(({0:l}NAME)^(3))/(24*{0:EI}NAME)+({0:l}NAME*({0:m_la}NAME)^(2))/(32*{0:git}NAME))
+.EQN 0 31 417 0
+{0:K}NAME:({0:K_INV}NAME)^(-1)
+.EQN 0 19 418 0
+{0:K}NAME={0}?_n_u_l_l_
+.TXT 7 -51 560 0
+Cg a7.875000,9.500000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Lastvektor:}}
+}
+.TXT 3 26 572 0
+Cg a5.250000,46.000000,12
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Realteil:}}
+}
+.TXT 0 28 573 0
+Cg a8.125000,18.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Imaginärteil:}}
+}
+.EQN 3 -52 478 0
+{0:F_Trans}NAME:(0.5*({0:m_la}NAME)^(2)*8.85*(10)^(-12)*({0:u_ele}NAME)^(2))/(2*({0:d_ele}NAME)^(2))
+.EQN 1 24 421 0
+{0:F}NAME:({2,1}ö0ö{0:F_Trans}NAME)
+.EQN 0 10 479 0
+{0:F}NAME={0}?_n_u_l_l_
+.EQN 0 18 524 0
+{0:F_I}NAME:({2,1}ö0ö0)
+.EQN 0 9 525 0
+{0:F_I}NAME={0}?_n_u_l_l_
+.TXT 8 -63 452 0
+Cg a10.250000,71.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Massenmatrix:}}
+}
+.TXT 2 48 448 0
+Cg a18.750000,24.000000,79
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Kräftevergleich bei gleich-\par 
+gerichteter und entgegen-\par gerichter 
+Bewegung. }}
+}
+.EQN 3 -44 442 0
+{0:M_fak}NAME:(({2,2}ö-1ö1ö1ö1))^(-1)*({2,1}ö(2)/(3)ö0.5)*{0:m}NAME
+.EQN 7 0 169 0
+{0:M}NAME:({2,2}ö({0:M_fak}NAME)[(0)ö({0:M_fak}NAME)[(1)ö({0:M_fak}NAME)[(1)ö({0:M_fak}NAME)[(0))
+.EQN 0 18 170 0
+{0:M}NAME={0}?_n_u_l_l_
+.TXT 5 -22 451 0
+Cg a8.125000,71.000000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Eigenwerte:}}
+}
+.EQN 4 4 194 0
+{0:omega}NAME:{0:genvals}NAME({0:K}NAME,{0:M}NAME)
+.EQN 0 20 195 0
+(1)/(2*{0:\p}NAME)*\(({0:omega}NAME)[(1))={0}?_n_u_l_l_
+.EQN 0 22 197 0
+(1)/(2*{0:\p}NAME)*\(({0:omega}NAME)[(0))={0}?_n_u_l_l_
+.TXT 4 -46 461 0
+Cg a12.750000,71.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Dämpfungsmatrix:}}
+}
+.TXT 2 50 561 0
+Cg a13.375000,31.125000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b0 Rayleigh-Dämpfung}}
+}
+.EQN 6 -47 453 0
+{0:alpha_beta}NAME:(({2,2}ö0.5*((({0:omega}NAME)[(0)))^(0.5)ö0.5*((({0:omega}NAME)[(1)))^(0.5)ö(1)/(2*((({0:omega}NAME)[(0)))^(0.5))ö(1)/(2*((({0:omega}NAME)[(1)))^(0.5))))^(-1)*({2,1}ö{0:d1}NAMEö{0:d2}NAME)
+.EQN 0 34 205 0
+{0:C}NAME:({0:alpha_beta}NAME)[(0)*{0:M}NAME+({0:alpha_beta}NAME)[(1)*{0:K}NAME
+.EQN 6 0 207 0
+{0:C}NAME={0}?_n_u_l_l_
+.TXT 6 -37 485 0
+Cg a38.875000,70.125000,58
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Berechnung der Kennwerte der
+ entkoppelten Schwinger:}}
+}
+.TXT 4 51 563 0
+Cg a9.625000,26.125000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b0 Eigenvektoren}}
+}
+.EQN 1 -48 586 0
+{0:vektoren}NAME:{0:genvecs}NAME({0:K}NAME,{0:M}NAME)
+.EQN 0 17 488 0
+{0:omega_1}NAME:\(({0:omega}NAME)[(1))
+.EQN 0 14 489 0
+{0:omega_2}NAME:\(({0:omega}NAME)[(0))
+.TXT 1 17 565 0
+Cg a17.875000,30.125000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Normierung auf X*M*X=1}}
+}
+.EQN 4 -48 490 0
+{0:vektor_1}NAME:(({0:vektoren}NAME){52}(1))/(\(|((({0:vektoren}NAME){52}(1)){51}*{0:M}NAME*({0:vektoren}NAME){52}(1))))
+.EQN 0 27 592 0
+{0:vektor_2}NAME:(({0:vektoren}NAME){52}(0))/(\(|((({0:vektoren}NAME){52}(0)){51}*{0:M}NAME*({0:vektoren}NAME){52}(0))))
+.EQN 8 -27 492 0
+{0:m1}NAME:({0:vektor_1}NAME){51}*{0:M}NAME*{0:vektor_1}NAME
+.EQN 0 20 493 0
+{0:m1}NAME={0}?_n_u_l_l_
+.EQN 4 -20 494 0
+{0:m2}NAME:({0:vektor_2}NAME){51}*{0:M}NAME*{0:vektor_2}NAME
+.EQN 0 20 495 0
+{0:m2}NAME={0}?_n_u_l_l_
+.TXT 0 26 566 0
+Cg a15.750000,33.125000,26
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {äquivalentes Verfahren:}}
+}
+.EQN 4 -46 503 0
+{0:k1}NAME:({0:vektor_1}NAME){51}*{0:K}NAME*{0:vektor_1}NAME
+.EQN 0 20 504 0
+{0:k1}NAME={0}?_n_u_l_l_
+.EQN 0 26 511 0
+({0:omega_1}NAME)^(2)={0}?_n_u_l_l_
+.EQN 4 -46 505 0
+{0:k2}NAME:({0:vektor_2}NAME){51}*{0:K}NAME*{0:vektor_2}NAME
+.EQN 0 20 506 0
+{0:k2}NAME={0}?_n_u_l_l_
+.EQN 0 26 512 0
+({0:omega_2}NAME)^(2)={0}?_n_u_l_l_
+.EQN 3 -46 507 0
+{0:c1}NAME:({0:vektor_1}NAME){51}*{0:C}NAME*{0:vektor_1}NAME
+.EQN 0 20 508 0
+{0:c1}NAME={0}?_n_u_l_l_
+.EQN 0 26 513 0
+2*{0:d2}NAME*{0:omega_1}NAME={0}?_n_u_l_l_
+.EQN 3 -46 509 0
+{0:c2}NAME:({0:vektor_2}NAME){51}*{0:C}NAME*{0:vektor_2}NAME
+.EQN 0 20 510 0
+{0:c2}NAME={0}?_n_u_l_l_
+.EQN 0 26 514 0
+2*{0:d1}NAME*{0:omega_2}NAME={0}?_n_u_l_l_
+.TXT 4 -46 577 0
+Cg a5.250000,69.000000,12
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Realteil:}}
+}
+.TXT 0 41 578 0
+Cg a8.125000,37.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Imaginärteil:}}
+}
+.EQN 3 -41 515 0
+{0:fr1}NAME:({0:vektor_1}NAME){51}*{0:F}NAME
+.EQN 0 14 516 0
+{0:fr1}NAME={0}?_n_u_l_l_
+.EQN 0 27 519 0
+{0:fi1}NAME:({0:vektor_1}NAME){51}*{0:F_I}NAME
+.EQN 0 14 520 0
+{0:fi1}NAME={0}?_n_u_l_l_
+.EQN 3 -55 517 0
+{0:fr2}NAME:({0:vektor_2}NAME){51}*{0:F}NAME
+.EQN 0 14 518 0
+{0:fr2}NAME={0}?_n_u_l_l_
+.EQN 0 27 521 0
+{0:fi2}NAME:({0:vektor_2}NAME){51}*{0:F_I}NAME
+.EQN 0 14 522 0
+{0:fi2}NAME={0}?_n_u_l_l_
+.TXT 5 -56 593 0
+Cg a65.500000,70.125000,197
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {In diesem Beispiel wird die komplexe
+ Rechnung von MathCad nicht ausgenutzt. 
+Die dynamische\par Steifigkeit S (komplexe
+ Kröße) wird deshalb in den Realteil und
+ Imaginärteil zerlegt (vgl. array.mcd).}}
+}
+.TXT 12 -1 567 0
+Cg a34.250000,71.125000,52
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Beginn der modalen Analyse des
+ Frequenzganges:}}
+}
+.EQN 0 38 529 0
+{0:w}NAME:1,100;10000
+.TXT 4 -36 574 0
+Cg a8.875000,68.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {1. Schwinger:}}
+}
+.TXT 0 33 575 0
+Cg a8.875000,33.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {2. Schwinger:}}
+}
+.EQN 5 -33 527 0
+{0:S1}NAME({0:w}NAME):({2,2}ö|({0:k1}NAME)-({0:w}NAME)^(2)*|({0:m1}NAME)ö-|({0:c1}NAME)*{0:w}NAMEö|({0:c1}NAME)*{0:w}NAMEö|({0:k1}NAME)-({0:w}NAME)^(2)*|({0:m1}NAME))
+.EQN 0 33 530 0
+{0:S2}NAME({0:w}NAME):({2,2}ö|({0:k2}NAME)-({0:w}NAME)^(2)*|({0:m2}NAME)ö-|({0:c2}NAME)*{0:w}NAMEö|({0:c2}NAME)*{0:w}NAMEö|({0:k2}NAME)-({0:w}NAME)^(2)*|({0:m2}NAME))
+.EQN 7 -33 532 0
+{0:F1}NAME:({2,1}ö|({0:fi1}NAME)ö|({0:fr1}NAME))
+.EQN 0 11 533 0
+{0:F1}NAME={0}?_n_u_l_l_
+.EQN 0 22 534 0
+{0:F2}NAME:({2,1}ö|({0:fi2}NAME)ö|({0:fr2}NAME))
+.EQN 0 14 535 0
+{0:F2}NAME={0}?_n_u_l_l_
+.EQN 6 -47 536 0
+{0:U_modal1}NAME({0:w}NAME):({0:S1}NAME({0:w}NAME))^(-1)*{0:F1}NAME
+.EQN 0 33 537 0
+{0:U_modal2}NAME({0:w}NAME):({0:S2}NAME({0:w}NAME))^(-1)*{0:F2}NAME
+.EQN 5 -33 540 0
+{0:U_modal1}NAME(100)={0}?_n_u_l_l_
+.EQN 0 33 541 0
+{0:U_modal2}NAME(100)={0}?_n_u_l_l_
+.TXT 6 -36 570 0
+Cg a38.500000,72.125000,60
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Rücktransformation auf die gekoppelten
+ Freiheitsgrade:}}
+}
+.EQN 4 2 538 0
+{0:U_1}NAME({0:w}NAME):{0:vektor_1}NAME*({0:U_modal1}NAME({0:w}NAME)){51}
+.EQN 0 34 539 0
+{0:U_2}NAME({0:w}NAME):{0:vektor_2}NAME*({0:U_modal2}NAME({0:w}NAME)){51}
+.EQN 5 -34 542 0
+{0:U_1}NAME(100)={0}?_n_u_l_l_
+.EQN 0 34 543 0
+{0:U_2}NAME(100)={0}?_n_u_l_l_
+.EQN 7 -34 544 0
+{0:U_ges}NAME({0:w}NAME):{0:U_1}NAME({0:w}NAME)+{0:U_2}NAME({0:w}NAME)
+.EQN 0 34 545 0
+{0:U_ges}NAME(100)={0}?_n_u_l_l_
+.TXT 6 -36 571 0
+Cg a26.375000,72.125000,41
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Berechnung von Amplitude und
+ Phase:}}
+}
+.EQN 6 3 547 0
+{0:U1}NAME({0:w}NAME):\(((({0:U_ges}NAME({0:w}NAME))[(0,0)))^(2)+((({0:U_ges}NAME({0:w}NAME))[(0,1)))^(2))
+.EQN 0 33 548 0
+{0:U2}NAME({0:w}NAME):\(((({0:U_ges}NAME({0:w}NAME))[(1,0)))^(2)+((({0:U_ges}NAME({0:w}NAME))[(1,1)))^(2))
+.EQN 5 -33 552 0
+{0:phi1}NAME({0:w}NAME):{0:if}NAME(({0:U_ges}NAME({0:w}NAME))[(0,0)<0,{0:atan}NAME((({0:U_ges}NAME({0:w}NAME))[(0,1))/(({0:U_ges}NAME({0:w}NAME))[(0,0)))-{0:\p}NAME,{0:atan}NAME((({0:U_ges}NAME({0:w}NAME))[(0,1))/(({0:U_ges}NAME({0:w}NAME))[(0,0))))*(360)
+/(2*{0:\p}NAME)
+.EQN 5 0 556 0
+{0:phi2}NAME({0:w}NAME):{0:if}NAME(({0:U_ges}NAME({0:w}NAME))[(1,0)<0,{0:atan}NAME((({0:U_ges}NAME({0:w}NAME))[(1,1))/(({0:U_ges}NAME({0:w}NAME))[(1,0)))-{0:\p}NAME,{0:atan}NAME((({0:U_ges}NAME({0:w}NAME))[(1,1))/(({0:U_ges}NAME({0:w}NAME))[(1,0))))*(360)
+/(2*{0:\p}NAME)
+.EQN 4 0 557 0
+{0:phi2}NAME({0:w}NAME):{0:if}NAME({0:phi2}NAME({0:w}NAME)>(-180),{0:phi2}NAME({0:w}NAME)-360,{0:phi2}NAME({0:w}NAME))+360
+.TXT 4 -3 594 0
+Cg a17.125000,70.125000,28
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Vergrößerungsfunktion:}}
+}
+.TXT 0 41 595 0
+Cg a8.875000,29.125000,17
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Phasengang:}}
+}
+.EQN 1 -39 549 0
+10&&(_n_u_l_l_&_n_u_l_l_)&({0:U1}NAME({0:w}NAME))/({0:U1}NAME(0)),({0:U2}NAME({0:w}NAME))/({0:U2}NAME(0))@&&(_n_u_l_l_&_n_u_l_l_)&{0:w}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 24 18 0 3 
+.EQN 0 35 555 0
+&&(_n_u_l_l_&_n_u_l_l_)&{0:phi1}NAME({0:w}NAME),{0:phi2}NAME({0:w}NAME)@&&(_n_u_l_l_&_n_u_l_l_)&{0:w}NAME
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 24 19 0 3 

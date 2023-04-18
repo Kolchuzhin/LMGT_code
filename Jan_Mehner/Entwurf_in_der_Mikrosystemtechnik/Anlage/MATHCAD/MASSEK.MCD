@@ -1,0 +1,357 @@
+.MCAD 303010000 1 76 422 0
+.CMD FORMAT  rd=d ct=20 im=i et=3 zt=100 pr=5 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.000000 1.000000 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 2 17 2 0
+Cg a38.625000,68.000000,109
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b \fs24 Mechanische Kennwerte 
+von Massekörpern}{\fs24 \par            
+ }{\i \fs24 massek.mcd - Abschnitt 5.3}}
+}
+.TXT 7 -14 3 0
+Cg a10.000000,71.000000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Materialdaten:}}
+}
+.EQN 4 0 4 0
+{0:DENS}NAME:2329
+.TXT 0 48 8 0
+Cg a4.375000,28.000000,9
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Dichte}}
+}
+.TXT 4 -48 10 0
+Cg a24.125000,72.000000,38
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Geometriedaten des Massekörpers:}}
+}
+.TXT 3 0 36 0
+Cg a5.250000,71.000000,10
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Quader:}}
+}
+.EQN 4 0 12 0
+{0:a}NAME:4000*(10)^(-6)
+.EQN 0 11 13 0
+{0:b}NAME:4000*(10)^(-6)
+.EQN 0 11 364 0
+{0:h}NAME:520*(10)^(-6)
+.TXT 0 26 14 0
+Cg a19.250000,28.000000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Maßangaben nach Tafel 5.13}}
+}
+.TXT 3 -48 39 0
+Cg a12.000000,71.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Pyramidenstumpf:}}
+}
+.EQN 4 0 15 0
+{0:a_p}NAME:{0:a}NAME+({0:h}NAME*2)/({0:tan}NAME(54.73*{0:deg}NAME))
+.EQN 0 16 365 0
+{0:b_p}NAME:{0:b}NAME+({0:h}NAME*2)/({0:tan}NAME(54.73*{0:deg}NAME))
+.TXT 1 32 34 0
+Cg a19.750000,23.000000,74
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Pyramidenstumpf Kanten der Grundfläche
+ }{\par (111)-Ebene auf (100)-Ebene}}
+}
+.EQN 3 -48 16 0
+{0:a_p}NAME={0}?_n_u_l_l_
+.EQN 0 16 366 0
+{0:b_p}NAME={0}?_n_u_l_l_
+.TXT 4 -16 40 0
+Cg a19.000000,71.000000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Doppelter Pyramidenstumpf:}}
+}
+.TXT 4 0 374 0
+Cg a29.875000,73.250000,45
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\i Maßangaben analog zu einfacher
+ Pyramide}}
+}
+.TXT 1 48 35 0
+Cg a15.750000,23.000000,64
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {beidseitig geätzter Pyramidenstumpf\par 
+Kanten der Mittelfläche}}
+}
+.TXT 6 -48 42 0
+Cg a29.500000,71.000000,44
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Berechnung der mechanischen 
+Kennwerte:}}
+}
+.TXT 3 42 43 0
+Cg a28.625000,71.000000,106
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {***_q    Index für Quader\par ***_p
+    Index für Pyramidenstumpf\par ***_d 
+   Index für Doppelpyramidenstumpf}}
+}
+.TXT 1 -42 44 0
+Cg a36.750000,71.000000,124
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Die Berechnung der folgenden Zahlenwerte
+ erfolgt\par numerisch, analytische Terme
+ sind mit dem Symbolic-\par Prozessor möglich.}}
+}
+.EQN 8 0 53 0
+{0:xo_p}NAME({0:z}NAME):({0:a_p}NAME)/(2)-|(({0:a_p}NAME-{0:a}NAME)/(2*{0:h}NAME)*{0:z}NAME)
+.EQN 0 21 375 0
+{0:yo_p}NAME({0:z}NAME):({0:b_p}NAME)/(2)-|(({0:b_p}NAME-{0:b}NAME)/(2*{0:h}NAME)*{0:z}NAME)
+.TXT 0 23 63 0
+Cg a27.750000,28.000000,90
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {seitliche }{Begrenzung des Massekörpers\par 
+Lage des Koordinatensystems wie in Tafel
+ 5.13}}
+}
+.EQN 4 -44 54 0
+{0:xu_p}NAME({0:z}NAME):-(({0:a_p}NAME)/(2))+|(({0:a_p}NAME-{0:a}NAME)/(2*{0:h}NAME)*{0:z}NAME)
+.EQN 0 21 376 0
+{0:yu_p}NAME({0:z}NAME):-(({0:b_p}NAME)/(2))+|(({0:b_p}NAME-{0:b}NAME)/(2*{0:h}NAME)*{0:z}NAME)
+.TXT 5 -21 46 0
+Cg a14.250000,71.000000,28
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b \ul Volumen und Masse:}}
+}
+.EQN 6 0 64 0
+{0:V_q}NAME:(0&{0:h}NAME`(-(({0:b}NAME)/(2))&({0:b}NAME)/(2)`(-(({0:a}NAME)/(2))&({0:a}NAME)/(2)`1&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 30 381 0
+{0:M_q}NAME:{0:DENS}NAME*{0:V_q}NAME
+.EQN 0 15 66 0
+{0:V_q}NAME={0}?_n_u_l_l_
+.EQN 0 13 382 0
+{0:M_q}NAME={0}?_n_u_l_l_
+.EQN 9 -58 47 0
+{0:V_p}NAME:(0&{0:h}NAME`({0:yu_p}NAME({0:z}NAME)&{0:yo_p}NAME({0:z}NAME)`({0:xu_p}NAME({0:z}NAME)&{0:xo_p}NAME({0:z}NAME)`1&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 30 383 0
+{0:M_p}NAME:{0:DENS}NAME*{0:V_p}NAME
+.EQN 0 15 67 0
+{0:V_p}NAME={0}?_n_u_l_l_
+.EQN 0 13 385 0
+{0:M_p}NAME={0}?_n_u_l_l_
+.EQN 9 -58 377 0
+{0:V_d}NAME:(-{0:h}NAME&{0:h}NAME`({0:yu_p}NAME({0:z}NAME)&{0:yo_p}NAME({0:z}NAME)`({0:xu_p}NAME({0:z}NAME)&{0:xo_p}NAME({0:z}NAME)`1&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 30 384 0
+{0:M_d}NAME:{0:DENS}NAME*{0:V_d}NAME
+.EQN 0 15 378 0
+{0:V_d}NAME={0}?_n_u_l_l_
+.EQN 0 13 386 0
+{0:M_d}NAME={0}?_n_u_l_l_
+.TXT 15 -58 69 0
+Cg a24.625000,73.250000,60
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b \ul Mass}{\b \ul enschwerp}{\b 
+\ul unkt in Z-Richtung:}}
+}
+.EQN 6 0 70 0
+{0:Xs_q}NAME:(1)/({0:V_q}NAME)*(0&{0:h}NAME`(-(({0:b}NAME)/(2))&({0:b}NAME)/(2)`(-(({0:a}NAME)/(2))&({0:a}NAME)/(2)`{0:z}NAME&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 44 77 0
+{0:Xs_q}NAME={0}?_n_u_l_l_
+.EQN 10 -44 387 0
+{0:Xs_p}NAME:(1)/({0:V_p}NAME)*(0&{0:h}NAME`({0:yu_p}NAME({0:z}NAME)&{0:yo_p}NAME({0:z}NAME)`({0:xu_p}NAME({0:z}NAME)&{0:xo_p}NAME({0:z}NAME)`{0:z}NAME&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 44 388 0
+{0:Xs_p}NAME={0}?_n_u_l_l_
+.EQN 8 -44 389 0
+{0:Xs_d}NAME:(1)/({0:V_d}NAME)*(-{0:h}NAME&{0:h}NAME`({0:yu_p}NAME({0:z}NAME)&{0:yo_p}NAME({0:z}NAME)`({0:xu_p}NAME({0:z}NAME)&{0:xo_p}NAME({0:z}NAME)`{0:z}NAME&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 44 390 0
+{0:Xs_d}NAME={0}?_n_u_l_l_
+.TXT 9 -44 81 0
+Cg a18.125000,73.250000,69
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b \ul Masse}{\b \ul n}{\b \ul 
+trägheitsmome}{\b \ul nte}{\b \ul :}}
+}
+.EQN 6 0 391 0
+{0:Jxx_q}NAME:{0:DENS}NAME*(0&{0:h}NAME`(-(({0:b}NAME)/(2))&({0:b}NAME)/(2)`(-(({0:a}NAME)/(2))&({0:a}NAME)/(2)`({0:y}NAME)^(2)+({0:z}NAME)^(2)&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 44 392 0
+{0:Jxx_q}NAME={0}?_n_u_l_l_
+.EQN 11 -44 393 0
+{0:Jyy_q}NAME:{0:DENS}NAME*(0&{0:h}NAME`(-(({0:b}NAME)/(2))&({0:b}NAME)/(2)`(-(({0:a}NAME)/(2))&({0:a}NAME)/(2)`({0:x}NAME)^(2)+({0:z}NAME)^(2)&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 44 394 0
+{0:Jyy_q}NAME={0}?_n_u_l_l_
+.EQN 11 -44 395 0
+{0:Jzz_q}NAME:{0:DENS}NAME*(0&{0:h}NAME`(-(({0:b}NAME)/(2))&({0:b}NAME)/(2)`(-(({0:a}NAME)/(2))&({0:a}NAME)/(2)`({0:x}NAME)^(2)+({0:y}NAME)^(2)&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 44 396 0
+{0:Jzz_q}NAME={0}?_n_u_l_l_
+.EQN 14 -44 397 0
+{0:Jxx_p}NAME:{0:DENS}NAME*(0&{0:h}NAME`({0:yu_p}NAME({0:z}NAME)&{0:yo_p}NAME({0:z}NAME)`({0:xu_p}NAME({0:z}NAME)&{0:xo_p}NAME({0:z}NAME)`({0:y}NAME)^(2)+({0:z}NAME)^(2)&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 44 398 0
+{0:Jxx_p}NAME={0}?_n_u_l_l_
+.EQN 9 -44 403 0
+{0:Jyy_p}NAME:{0:DENS}NAME*(0&{0:h}NAME`({0:yu_p}NAME({0:z}NAME)&{0:yo_p}NAME({0:z}NAME)`({0:xu_p}NAME({0:z}NAME)&{0:xo_p}NAME({0:z}NAME)`({0:x}NAME)^(2)+({0:z}NAME)^(2)&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 44 404 0
+{0:Jyy_p}NAME={0}?_n_u_l_l_
+.EQN 9 -44 405 0
+{0:Jzz_p}NAME:{0:DENS}NAME*(0&{0:h}NAME`({0:yu_p}NAME({0:z}NAME)&{0:yo_p}NAME({0:z}NAME)`({0:xu_p}NAME({0:z}NAME)&{0:xo_p}NAME({0:z}NAME)`({0:x}NAME)^(2)+({0:y}NAME)^(2)&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 44 406 0
+{0:Jzz_p}NAME={0}?_n_u_l_l_
+.EQN 17 -44 407 0
+{0:Jxx_d}NAME:{0:DENS}NAME*(-{0:h}NAME&{0:h}NAME`({0:yu_p}NAME({0:z}NAME)&{0:yo_p}NAME({0:z}NAME)`({0:xu_p}NAME({0:z}NAME)&{0:xo_p}NAME({0:z}NAME)`({0:y}NAME)^(2)+({0:z}NAME)^(2)&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 45 408 0
+{0:Jxx_d}NAME={0}?_n_u_l_l_
+.EQN 10 -45 409 0
+{0:Jyy_d}NAME:{0:DENS}NAME*(-{0:h}NAME&{0:h}NAME`({0:yu_p}NAME({0:z}NAME)&{0:yo_p}NAME({0:z}NAME)`({0:xu_p}NAME({0:z}NAME)&{0:xo_p}NAME({0:z}NAME)`({0:x}NAME)^(2)+({0:z}NAME)^(2)&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 45 410 0
+{0:Jyy_d}NAME={0}?_n_u_l_l_
+.EQN 10 -45 411 0
+{0:Jzz_d}NAME:{0:DENS}NAME*(-{0:h}NAME&{0:h}NAME`({0:yu_p}NAME({0:z}NAME)&{0:yo_p}NAME({0:z}NAME)`({0:xu_p}NAME({0:z}NAME)&{0:xo_p}NAME({0:z}NAME)`({0:x}NAME)^(2)+({0:y}NAME)^(2)&{0:x}NAME)&{0:y}NAME)&{0:z}NAME)
+.EQN 0 45 412 0
+{0:Jzz_d}NAME={0}?_n_u_l_l_
+.TXT 7 -45 100 0
+Cg a36.875000,42.250000,56
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Satz von Steiner (Transformation
+ auf den Schwerpunkt)}}
+}
+.EQN 5 0 85 0
+{0:Jxx_q}NAME:{0:Jxx_q}NAME-({0:Xs_q}NAME)^(2)*{0:M_q}NAME
+.EQN 0 23 413 0
+{0:Jxx_p}NAME:{0:Jxx_p}NAME-({0:Xs_p}NAME)^(2)*{0:M_p}NAME
+.EQN 0 22 415 0
+{0:Jxx_d}NAME:{0:Jxx_d}NAME-({0:Xs_d}NAME)^(2)*{0:M_d}NAME
+.EQN 4 -45 88 0
+{0:Jxx_q}NAME={0}?_n_u_l_l_
+.EQN 0 23 414 0
+{0:Jxx_p}NAME={0}?_n_u_l_l_
+.EQN 0 22 416 0
+{0:Jxx_d}NAME={0}?_n_u_l_l_
+.EQN 8 -45 417 0
+{0:Jyy_q}NAME:{0:Jyy_q}NAME-({0:Xs_q}NAME)^(2)*{0:M_q}NAME
+.EQN 0 23 418 0
+{0:Jyy_p}NAME:{0:Jyy_p}NAME-({0:Xs_p}NAME)^(2)*{0:M_p}NAME
+.EQN 0 22 419 0
+{0:Jyy_d}NAME:{0:Jyy_d}NAME-({0:Xs_d}NAME)^(2)*{0:M_d}NAME
+.EQN 4 -45 420 0
+{0:Jyy_q}NAME={0}?_n_u_l_l_
+.EQN 0 23 421 0
+{0:Jyy_p}NAME={0}?_n_u_l_l_
+.EQN 0 22 422 0
+{0:Jyy_d}NAME={0}?_n_u_l_l_

@@ -1,0 +1,386 @@
+.MCAD 303010000 1 114 661 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 1 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=14 pr=3 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 -2.354167 1.200000 1.200000 1
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 4 6 198 0
+Cg a60.875000,68.000000,173
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b \fs24 Parameteranpassung der
+ Steifigkeitmatrix an gemessenen Eigenwe}{\b 
+\fs24 rt}{\b \fs24 en}{\fs24 \par       
+                   }{\i \fs24 adaption.mcd
+ - Beispiel 4.2}}
+}
+.TXT 8 -5 199 0
+Cg a16.000000,68.000000,40
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b vorläufige Modelldaten}{\b \fs20 
+:}}
+}
+.EQN 0 48 661 0
+{   28    20 1412 0 8 228 166}{66}
+!1!*!!!$B#&K!!6k&K!!!!!!%y!!!#1G#U!P!%E00#:-&Q*E29${29,71h9q.1:V4MJz4M$m5KB#-OH2(q!n2Z7t4M.{5,$5)4!!!!+u!!!$!16k!q!!!!>}!!!!!!.[!!!-!A#e!1!&!!!!#%(\!A.]"3!!!0Ac!!#dLVIq!!!%!!!!(_#e!!9Q!!#_!A.[!!!!!!!!!!!C!!+u!!!N!1#e"3!!!"?!Ce&O!A!!!!!/!!!!'-)6!%#e4w'.
+!*G/<G%G!K#f4w'.!(.]"3!!!0Ac!1!!!!!!!!!%!!!!(_#g!!9Q!!#_!A!!!!!!!!!!!!!C!!+u!!!N!1)1"C!!!#.^!A!b!(6m,'"8!A6k!!!F!Q&K,'"W!G!!4w&S!!!!'=)3!&6k;U'l!(.]"C!!!#.^!A":!*Ac;e"8!A6k!!!F!Q&K:S"_!LAa4w&S!!!!'=)3!,+u;U(j!(.]"C!!!#.^!A#8!*AcKU"8!A6k!!!F!Q&KJ3"_!B9R
+4w&S!!!!'=)3!!G.;U'"!8.]"C!!!#.^!A!N!:Ac/]$|!A6k!!!F!Q&K-y%E!H&L4w&S!!!!'=)3!'>|;U'~!8.]"C!!!#.^!A"L!:Ac;u%0!A6k!!!F!Q&K,'"8!JG.4w&S!!!!'=)3!0!!4w)!!#9S&K!!!#.^#E#T!#9SFk!J!A+v$w(m!"4)!a#g!NG-!A&O!@!"Fk#U!1+vFK&)!.Ab!a%s!>G-CE#i!<.\Ia"x!16k!!!F!Q&KIq"x
+!@!!6;#l!!!!Ku&K!-#%Aa!!!!+u!!!N!1+u"3!!!"?!5y$Y!76l9a!%!!!!(_#g!!6k!!!F!Q&K:s"+!:6k%Y$'!!!!'=)?!*6k%Y%/!">|>K!(!91A"3%V!0.[7m#Z!+DGG-"I!/!!>K#3!)1AD'"p!,<77m"}!+DG=Y"[!+6k"C!!!#.^!A"[!+6k:s"0!!6k!!!F!Q&K-)$o!54(%Y$'!!!!'=)?!%4(%Y$<!2>|0O#l!4.\"3$b!@.[
+*#&@!&>|G-!V!?!!0O%w!$.\D'!|!<<7*#%c!&>|=Y!h!;6k"C!!!#.^!A!h!;6k-)$t!!+u!!!N!1+u"3!!!"6o7="q!&>{7m!(!!!!%)-<!&Ab0O!V!2.[!!#`!L)-!!!!!!!!9Q#e!!!!!!!!!&-"3[/p&OH45;!s3{EJ3e#aLG+u!!!N!1.[!a!!!!&L!1!6!!!!Ke(fLG!!!!!!!*!"!!!!!!!!!!!u2yEN4Y!o2:4G/#K"1WG-*c!%
+!!!!(_#k!!DG!!!S"nIq%i!%!!!!-nJY)BG-$G!8!".[!a!!!#DH!q!%!!!!(_#k!!DG!!!S"o4'3U#i!!!!-nJY)RG-$G!8!".[!a!!!#DH!q!%!!!!(_#k!!DG!!!S"m<8$g#i!!!!-nJe,(G-$G!=!"DG!a!!!#DH!q!%!!!!(_#k!!DG!!!S"f+v?m!%!!!!.0Je,)+u$W!<!"G-!a!!!#DH!q!%!!!!(_#k!!Aa!!!S"h4''=!$!!!!
+.0Jf!#+u$W!8!!+u!!!N!1.[!a!!!#DH"#!-!!!!)Q=3!'Ab!Q!!!%EH/-!E!".[$w!%!!!!(_#j!!+u!!!N!11A"S!!!$&U<7%p!1#e!!!y!"G-!a!!!#DH!A!)!!!!'=)3!,)2$w(B!9.\"3!!!0Ac!!!!!!!!!!!%!!!!(_#l!!G-!!!E!Q.[<g%L!<)27M%k!;)2?M%=!;)2<g#i!!!!(_#e!!+u!!#U!1&K"S!!!0<9!!!!!!!!!!!!
+!#&K!a!!!#DH!A!%!!!!Iq#f!!+u!!#U!1)1#e!!!0>}#e!(!!!!!!#!!A!!!!!"!A&m/4:f4m/j!'G1!!!!(_#f!!+u!!#U!1.[!a!!!0!""#!$!!!!!!!Q
+
+.EQN 4 -44 517 0
+{0:K_F1}NAME:3
+.TXT 0 15 530 0
+Cg a18.875000,99.000000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Federkonstante Schwinger 1}}
+}
+.EQN 4 -15 518 0
+{0:K_F2}NAME:3.1
+.TXT 0 15 532 0
+Cg a18.875000,99.000000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Federkonstante Schwinger 2}}
+}
+.EQN 4 -15 519 0
+{0:K_RA}NAME:1000
+.TXT 0 15 534 0
+Cg a14.375000,99.000000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Federkonstante Gitter}}
+}
+.EQN 4 -15 523 0
+{0:M_S}NAME:5.8*(10)^(-8)
+.TXT 0 15 535 0
+Cg a14.375000,99.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Masse der Schwinger}}
+}
+.EQN 4 -15 524 0
+{0:M_R}NAME:2*(10)^(-6)
+.TXT 0 15 536 0
+Cg a10.250000,99.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Masse Rahmen}}
+}
+.TXT 4 -19 526 0
+Cg a7.750000,118.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Messdaten:}}
+}
+.EQN 4 4 527 0
+{0:f_F1}NAME:1100
+.TXT 0 15 537 0
+Cg a15.000000,99.000000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Eigenfrequenz }{Mode 1}}
+}
+.EQN 4 -15 528 0
+{0:f_F2}NAME:1200
+.TXT 0 15 538 0
+Cg a15.000000,99.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Eigenfrequenz Mode 2}}
+}
+.TXT 5 -19 543 0
+Cg a13.875000,117.000000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Parametermatrizen:}}
+}
+.TXT 6 50 550 0
+Cg a17.750000,64.000000,47
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {vollständige Steifigkeits-\par 
+und Massenmatrix}}
+}
+.EQN 1 -45 544 0
+{0:K}NAME:({3,3}ö{0:K_F2}NAMEö0ö-{0:K_F2}NAMEö0ö{0:K_F1}NAMEö-{0:K_F1}NAMEö-{0:K_F2}NAMEö-{0:K_F1}NAMEö{0:K_RA}NAME+{0:K_F1}NAME+{0:K_F2}NAME)
+.EQN 0 30 548 0
+{0:M}NAME:({3,3}ö{0:M_S}NAMEö0ö0ö0ö{0:M_S}NAMEö0ö0ö0ö{0:M_R}NAME)
+.TXT 9 15 552 0
+Cg a24.375000,54.000000,50
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {fehlerhafte Anteile der Steifigkeits-\par 
+matrizen}}
+}
+.EQN 1 -45 545 0
+{0:KF_1}NAME:({3,3}ö0ö0ö0ö0ö{0:K_F1}NAMEö-{0:K_F1}NAMEö0ö-{0:K_F1}NAMEö{0:K_F1}NAME)
+.EQN 0 19 546 0
+{0:KF_2}NAME:({3,3}ö{0:K_F2}NAMEö0ö-{0:K_F2}NAMEö0ö0ö0ö-{0:K_F2}NAMEö0ö{0:K_F2}NAME)
+.TXT 8 26 553 0
+Cg a20.625000,23.750000,57
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {nicht zu korrigierender Anteil\par 
+der Steifigkeitsmatrix}}
+}
+.EQN 1 -45 547 0
+{0:K_S}NAME:({3,3}ö0ö0ö0ö0ö0ö0ö0ö0ö{0:K_RA}NAME)
+.EQN 6 0 554 0
+{0:omega}NAME:{0:genvals}NAME({0:K}NAME,{0:M}NAME)
+.EQN 0 21 555 0
+{0:vektoren}NAME:{0:genvecs}NAME({0:K}NAME,{0:M}NAME)
+.TXT 0 24 557 0
+Cg a18.375000,24.750000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Berechnung der }{Eigenwerte}}
+}
+.TXT 4 -49 558 0
+Cg a21.875000,67.750000,35
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Normierung der Eigenvektoren:}}
+}
+.EQN 6 3 564 0
+{0:vektor_1}NAME:(({0:vektoren}NAME){52}(2))/(\(|((({0:vektoren}NAME){52}(2)){51}*{0:M}NAME*({0:vektoren}NAME){52}(2))))
+.EQN 0 27 624 0
+{0:vektor_2}NAME:(({0:vektoren}NAME){52}(1))/(\(|((({0:vektoren}NAME){52}(1)){51}*{0:M}NAME*({0:vektoren}NAME){52}(1))))
+.EQN 10 -27 625 0
+{0:vektor_3}NAME:(({0:vektoren}NAME){52}(0))/(\(|((({0:vektoren}NAME){52}(0)){51}*{0:M}NAME*({0:vektoren}NAME){52}(0))))
+.TXT 0 46 626 0
+Cg a17.875000,24.750000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Normierung auf X*M*X=1}}
+}
+.TXT 10 -49 583 0
+Cg a24.000000,68.750000,38
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Berechnung der Funktionalmatrix:}}
+}
+.EQN 7 4 584 0
+{0:Dv}NAME:({3,2}ö|(({0:vektor_3}NAME){51}*{0:KF_2}NAME*{0:vektor_3}NAME)ö|(({0:vektor_2}NAME){51}*{0:KF_2}NAME*{0:vektor_2}NAME)ö|(({0:vektor_1}NAME){51}*{0:KF_2}NAME*{0:vektor_1}NAME)ö|(({0:vektor_3}NAME){51}*{0:KF_1}NAME*{0:vektor_3}NAME)ö|((
+{0:vektor_2}NAME){51}*{0:KF_1}NAME*{0:vektor_2}NAME)ö|(({0:vektor_1}NAME){51}*{0:KF_1}NAME*{0:vektor_1}NAME))
+.EQN 0 39 590 0
+{0:b}NAME:({3,1}ö({0:omega}NAME)[(0)-|(({0:vektor_3}NAME){51}*{0:K_S}NAME*{0:vektor_3}NAME)ö(({0:f_F2}NAME*2*{0:\p}NAME))^(2)-|(({0:vektor_2}NAME){51}*{0:K_S}NAME*{0:vektor_2}NAME)ö(({0:f_F1}NAME*2*{0:\p}NAME))^(2)-|(({0:vektor_1}NAME){51}*{0:K_S}NAME*
+{0:vektor_1}NAME))
+.TXT 8 -43 594 0
+Cg a25.125000,68.750000,39
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Berechnung der Korrekturfaktoren:}}
+}
+.TXT 4 50 597 0
+Cg a22.375000,27.750000,36
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Gewichte der fehleraften Matrizen}}
+}
+.EQN 1 -44 595 0
+{0:a}NAME:((({0:Dv}NAME){51}*{0:Dv}NAME))^(-1)*({0:Dv}NAME){51}*{0:b}NAME
+.EQN 0 18 596 0
+{0:a}NAME={0}?_n_u_l_l_
+.TXT 5 -24 599 0
+Cg a23.375000,68.750000,39
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Korrektur der Steifigkeitsmatrix:}}
+}
+.EQN 3 6 600 0
+{0:K_KORR}NAME:{0:K_S}NAME+({0:a}NAME)[(0)*{0:KF_1}NAME+({0:a}NAME)[(1)*{0:KF_2}NAME
+.TXT 4 -6 601 0
+Cg a10.250000,68.750000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {\b Ergebnisdaten:}}
+}
+.TXT 4 9 646 0
+Cg a11.500000,27.750000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {vor der Korrektur}}
+}
+.TXT 0 24 647 0
+Cg a12.500000,27.750000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {nach}{ der Korrektur}}
+}
+.EQN 6 -27 602 0
+{0:K}NAME={0}?_n_u_l_l_
+.EQN 0 22 603 0
+{0:K_KORR}NAME={0}?_n_u_l_l_
+.EQN 10 0 606 0
+{0:genvals}NAME({0:K_KORR}NAME,{0:M}NAME)={0}?_n_u_l_l_
+.EQN 0 23 652 0
+(({0:f_F2}NAME*2*{0:\p}NAME))^(2)={0}?_n_u_l_l_
+.EQN 1 -45 605 0
+{0:omega}NAME={0}?_n_u_l_l_
+.EQN 2 45 653 0
+(({0:f_F1}NAME*2*{0:\p}NAME))^(2)={0}?_n_u_l_l_
+.EQN 5 -43 618 0
+{0:K_F1}NAME={0}?_n_u_l_l_
+.EQN 0 24 616 0
+({0:K_KORR}NAME)[(1,1)={0}?_n_u_l_l_
+.TXT 0 17 656 0
+Cg a14.750000,27.750000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Steifigkeit Feder K_F1}}
+}
+.EQN 3 -41 619 0
+{0:K_F2}NAME={0}?_n_u_l_l_
+.EQN 0 24 617 0
+({0:K_KORR}NAME)[(2,2)={0}?_n_u_l_l_
+.TXT 0 17 657 0
+Cg a14.750000,27.750000,25
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Steifigkeit Feder K_F2}}
+}
+.TXT 6 -47 613 0
+Cg a67.500000,67.750000,279
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+}
+{\plain {Die korrigierte Steifigkeitsmatrix
+ beschreibt ein System, das den gemessenen
+ Eigenwerten entspricht. \par Damit sind
+ nachfolgende Simulationen mit verbesserter
+ Genauigkeit möglich. Fehler in der Massen-\par 
+matrix und in der Gittersteifigkeit wird
+ in diesem Beispiel ausgeschlossen.}}
+}

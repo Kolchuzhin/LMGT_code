@@ -1,0 +1,481 @@
+.MCAD 303010000 1 74 242 0
+.CMD PLOTFORMAT
+0 0 1 1 0 0 1 
+0 0 1 1 0 0 1 
+0 1 0 0 NO-TRACE-STRING
+0 2 1 0 NO-TRACE-STRING
+0 3 2 0 NO-TRACE-STRING
+0 4 3 0 NO-TRACE-STRING
+0 1 4 0 NO-TRACE-STRING
+0 2 5 0 NO-TRACE-STRING
+0 3 6 0 NO-TRACE-STRING
+0 4 0 0 NO-TRACE-STRING
+0 1 1 0 NO-TRACE-STRING
+0 2 2 0 NO-TRACE-STRING
+0 3 3 0 NO-TRACE-STRING
+0 4 4 0 NO-TRACE-STRING
+0 1 5 0 NO-TRACE-STRING
+0 2 6 0 NO-TRACE-STRING
+0 3 0 0 NO-TRACE-STRING
+0 4 1 0 NO-TRACE-STRING
+0 1 21 15 0 3 
+.CMD FORMAT  rd=d ct=10 im=i et=3 zt=15 pr=6 mass length time charge temperature tr=0 vm=0
+.CMD SET ORIGIN 0
+.CMD SET TOL 0.001000000000000
+.CMD SET PRNCOLWIDTH 8
+.CMD SET PRNPRECISION 4
+.CMD PRINT_SETUP 1.200000 0.979167 1.200000 1.200000 0
+.CMD HEADER_FOOTER 1 1 *empty* *empty* *empty* 0 1 *empty* *empty* *empty*
+.CMD HEADER_FOOTER_FONT fontID=14 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD HEADER_FOOTER_FONT fontID=15 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE_NAME fontID=0 name=Variables
+.CMD DEFINE_FONTSTYLE_NAME fontID=1 name=Constants
+.CMD DEFINE_FONTSTYLE_NAME fontID=2 name=Text
+.CMD DEFINE_FONTSTYLE_NAME fontID=4 name=User^1
+.CMD DEFINE_FONTSTYLE_NAME fontID=5 name=User^2
+.CMD DEFINE_FONTSTYLE_NAME fontID=6 name=User^3
+.CMD DEFINE_FONTSTYLE_NAME fontID=7 name=User^4
+.CMD DEFINE_FONTSTYLE_NAME fontID=8 name=User^5
+.CMD DEFINE_FONTSTYLE_NAME fontID=9 name=User^6
+.CMD DEFINE_FONTSTYLE_NAME fontID=10 name=User^7
+.CMD DEFINE_FONTSTYLE fontID=0 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=1 family=Times^New^Roman points=8 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=2 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=4 family=Arial points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=5 family=Courier^New points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=6 family=System points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=7 family=Script points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=8 family=Roman points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=9 family=Modern points=10 bold=0 italic=0 underline=0
+.CMD DEFINE_FONTSTYLE fontID=10 family=Times^New^Roman points=10 bold=0 italic=0 underline=0
+.CMD UNITS U=1
+.CMD DIMENSIONS_ANALYSIS 0 0
+.TXT 3 7 42 0
+Cg a54.375000,64.000000,164
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\fs24 \b Wärmeübergang durch }{\fs24 
+\b \f0 freie Konvektion an umströmten Platten\par 
+                               }{\i \b0 
+\f0 \fs24 konvekt.mcd - Abschnitt 7.2}}
+}
+.TXT 6 -3 43 0
+Cg a9.500000,70.000000,23
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b \f0 Eingabedaten:}}
+}
+.EQN 4 1 46 0
+{0:PL_H}NAME:0.002
+.EQN 0 10 132 0
+{0:PL_B}NAME:0.002
+.TXT 0 12 50 0
+Cg a32.125000,49.000000,52
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Plattenhöhe; Plattenbreite bei 
+vertikalen Flächen}}
+}
+.EQN 3 -22 133 0
+{0:PL_L}NAME:0.002
+.EQN 0 10 136 0
+{0:PL_B}NAME={0}?_n_u_l_l_
+.TXT 0 12 135 0
+Cg a34.125000,49.000000,55
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Plattenlänge; Plattenbreite bei
+ horizontalen Flächen}}
+}
+.EQN 3 -22 137 0
+{0:T_PL}NAME:80
+.EQN 0 10 139 0
+{0:T_FL}NAME:20
+.TXT 0 12 141 0
+Cg a33.375000,47.000000,53
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Plattentemperatur; Fluidtemperatur
+ in grad Celsius}}
+}
+.TXT 4 -23 142 0
+Cg a27.375000,34.125000,44
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Fluidkennwerte und Folgegrößen
+ (Luft):}}
+}
+.EQN 3 1 143 0
+{0:T_M}NAME:({0:T_PL}NAME+{0:T_FL}NAME)/(2)+273
+.EQN 0 21 144 0
+{0:T_M}NAME={0}?_n_u_l_l_
+.TXT 0 13 145 0
+Cg a22.125000,38.000000,37
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {mittlere Fluidtemperatur in Kelvin}}
+}
+.EQN 4 -34 182 0
+{0:\DT}NAME:{0:T_PL}NAME-{0:T_FL}NAME
+.EQN 0 21 183 0
+{0:\DT}NAME={0}?_n_u_l_l_
+.TXT 0 13 184 0
+Cg a13.375000,38.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Temperaturdifferenz}}
+}
+.EQN 4 -34 146 0
+{0:\r}NAME:(100000)/(287*{0:T_M}NAME)
+.EQN 0 21 147 0
+{0:\r}NAME={0}?_n_u_l_l_
+.TXT 0 13 149 0
+Cg a9.625000,38.000000,18
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {mittlere Dichte}}
+}
+.EQN 5 -34 150 0
+{0:\l}NAME:(0.002502*({0:T_M}NAME)^(1.5))/(194.4+{0:T_M}NAME)
+.EQN 0 21 151 0
+{0:\l}NAME={0}?_n_u_l_l_
+.TXT 0 13 152 0
+Cg a17.750000,38.000000,30
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {mittlere Wärmeleitfähigkeit}}
+}
+.EQN 5 -34 153 0
+{0:\h}NAME:(1.4592*(10)^(-6)*({0:T_M}NAME)^(1.5))/(110.56+{0:T_M}NAME)
+.EQN 0 21 154 0
+{0:\h}NAME={0}?_n_u_l_l_
+.TXT 0 13 155 0
+Cg a20.250000,38.000000,33
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {mittlere dynamische Viskosität}}
+}
+.EQN 5 -34 158 0
+{0:\b}NAME:(1)/({0:T_M}NAME)
+.EQN 0 21 159 0
+{0:\b}NAME={0}?_n_u_l_l_
+.TXT 0 13 160 0
+Cg a29.000000,38.000000,45
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {mittlerer thermische Ausdehungskoeffizient}}
+}
+.EQN 5 -34 173 0
+{0:c}NAME:1007
+.TXT 0 34 175 0
+Cg a18.375000,38.000000,29
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {spezifische Wärmekapazität}}
+}
+.EQN 4 -34 161 0
+{0:g}NAME:9.81
+.TXT 0 34 163 0
+Cg a14.750000,38.000000,24
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Gravitationskonstante}}
+}
+.TXT 5 -34 164 0
+Cg a12.000000,69.000000,22
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\b Berechnungsteil:}}
+}
+.EQN 4 0 168 0
+{0:al_v}NAME:{0:PL_H}NAME
+.EQN 0 20 171 0
+{0:al_v}NAME={0}?_n_u_l_l_
+.TXT 0 14 172 0
+Cg a26.625000,38.000000,41
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Anströmlänge (charakteristische
+ Länge)}}
+}
+.EQN 3 -34 169 0
+{0:al_h}NAME:({0:PL_L}NAME*{0:PL_B}NAME)/(2*({0:PL_L}NAME+{0:PL_B}NAME))
+.EQN 0 20 170 0
+{0:al_h}NAME={0}?_n_u_l_l_
+.TXT 0 14 242 0
+Cg a22.375000,49.125000,72
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {***.v  Index für verikale Platte\par 
+***.h  Index für horizontale Platte}}
+}
+.EQN 6 -34 177 0
+{0:Pr}NAME:({0:\h}NAME*{0:c}NAME)/({0:\l}NAME)
+.EQN 0 20 178 0
+{0:Pr}NAME={0}?_n_u_l_l_
+.TXT 0 14 180 0
+Cg a8.250000,38.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Prandtl-Zahl}}
+}
+.EQN 6 -34 181 0
+{0:Gr_v}NAME:({0:g}NAME*({0:al_v}NAME)^(3)*({0:\r}NAME)^(2)*{0:\b}NAME)/(({0:\h}NAME)^(2))*{0:\DT}NAME
+.EQN 0 20 186 0
+{0:Gr_v}NAME={0}?_n_u_l_l_
+.TXT 0 14 189 0
+Cg a8.750000,38.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Grashof-Zahl}}
+}
+.EQN 6 -34 185 0
+{0:Gr_h}NAME:({0:g}NAME*({0:al_h}NAME)^(3)*({0:\r}NAME)^(2)*{0:\b}NAME)/(({0:\h}NAME)^(2))*{0:\DT}NAME
+.EQN 0 20 187 0
+{0:Gr_h}NAME={0}?_n_u_l_l_
+.EQN 6 -20 190 0
+{0:Ra_v}NAME:{0:Gr_v}NAME*{0:Pr}NAME
+.EQN 0 20 191 0
+{0:Ra_v}NAME={0}?_n_u_l_l_
+.TXT 0 14 195 0
+Cg a9.375000,38.000000,16
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Rayleigh-Zahl}}
+}
+.EQN 4 -34 193 0
+{0:Ra_h}NAME:{0:Gr_h}NAME*{0:Pr}NAME
+.EQN 0 20 194 0
+{0:Ra_h}NAME={0}?_n_u_l_l_
+.TXT 12 20 199 0
+Cg a8.625000,37.000000,15
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Nusselt-Zahl}}
+}
+.EQN 7 -41 198 0
+{0:f_Pr_v}NAME:((1+(((0.492)/({0:Pr}NAME)))^((9)/(16))))^(-((16)/(9)))
+.EQN 9 0 197 0
+{0:Nu_v}NAME:((0.825+0.387*(({0:Ra_v}NAME*{0:f_Pr_v}NAME))^((1)/(6))))^(2)
+.EQN 0 23 204 0
+{0:Nu_v}NAME={0}?_n_u_l_l_
+.TXT 0 18 202 0
+Cg a9.750000,36.000000,19
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {vertikale Platte}}
+}
+.EQN 11 -41 200 0
+{0:f_Pr_h_o}NAME:((1+(((0.322)/({0:Pr}NAME)))^((11)/(20))))^(-((20)/(11)))
+.EQN 9 0 201 0
+{0:Nu_h_o}NAME:0.766*(({0:Ra_h}NAME*{0:f_Pr_h_o}NAME))^((1)/(5))
+.EQN 0 21 205 0
+{0:Nu_h_o}NAME={0}?_n_u_l_l_
+.TXT 0 20 203 0
+Cg a18.000000,36.000000,47
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {horizontale Platte \par (Wärmeabgabe
+ nach oben)}}
+}
+.EQN 11 -41 210 0
+{0:f_Pr_h_u}NAME:((1+(((0.492)/({0:Pr}NAME)))^((9)/(16))))^(-((16)/(9)))
+.EQN 7 0 207 0
+{0:Nu_h_u}NAME:0.6*(({0:Ra_h}NAME*{0:f_Pr_h_u}NAME))^((1)/(5))
+.EQN 0 21 208 0
+{0:Nu_h_u}NAME={0}?_n_u_l_l_
+.TXT 0 20 209 0
+Cg a18.500000,36.000000,48
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {horizontale Platte \par (Wärmeabgabe
+ nach unten)}}
+}
+.EQN 7 -41 211 0
+{0:\a_v}NAME:({0:Nu_v}NAME*{0:\l}NAME)/({0:al_v}NAME)
+.EQN 0 14 214 0
+{0:q_v}NAME:{0:\a_v}NAME*{0:PL_H}NAME*{0:PL_B}NAME*{0:\DT}NAME
+.TXT 0 27 217 0
+Cg a28.250000,36.000000,70
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Wärmeübergangskoeffizient\par Wärmestrom
+ bezogen auf eine Plattenseite}}
+}
+.EQN 6 -41 218 0
+{0:\a_h_o}NAME:({0:Nu_h_o}NAME*{0:\l}NAME)/({0:al_h}NAME)
+.EQN 0 14 219 0
+{0:q_h_o}NAME:{0:\a_h_o}NAME*{0:PL_L}NAME*{0:PL_B}NAME*{0:\DT}NAME
+.EQN 6 -14 220 0
+{0:\a_h_u}NAME:({0:Nu_h_u}NAME*{0:\l}NAME)/({0:al_h}NAME)
+.EQN 0 14 221 0
+{0:q_h_u}NAME:{0:\a_h_u}NAME*{0:PL_L}NAME*{0:PL_B}NAME*{0:\DT}NAME
+.TXT 5 -15 222 0
+Cg a29.250000,71.000000,53
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {\ul \b Ergebnisse (bezogen auf 
+eine Plattenseite):}}
+}
+.TXT 4 1 224 0
+Cg a10.125000,70.000000,20
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {vertikale Platte:}}
+}
+.EQN 0 23 225 0
+{0:\a_v}NAME={0}?_n_u_l_l_
+.EQN 0 15 226 0
+{0:q_v}NAME={0}?_n_u_l_l_
+.TXT 4 -38 228 0
+Cg a18.000000,70.000000,51
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {horizontale}{ Platte:}{\par (Wärmeabgabe
+ nach oben)}}
+}
+.EQN 0 23 229 0
+{0:\a_h_o}NAME={0}?_n_u_l_l_
+.EQN 0 15 230 0
+{0:q_h_o}NAME={0}?_n_u_l_l_
+.TXT 6 -38 234 0
+Cg a18.500000,70.000000,52
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {horizontale}{ Platte:}{\par (Wärmeabgabe
+ nach unten)}}
+}
+.EQN 0 23 235 0
+{0:\a_h_u}NAME={0}?_n_u_l_l_
+.EQN 0 15 236 0
+{0:q_h_u}NAME={0}?_n_u_l_l_
+.TXT 6 -38 237 0
+Cg a57.500000,70.000000,85
+{\rtf1\ansi \deff0
+{\fonttbl
+{\f0\fnil Times New Roman;}
+{\f1\fnil Arial;}
+{\f2\fnil Symbol;}
+}
+{\plain {Bei Wärmeabgabe nach unten ist 
+die Gültigkeit auf Ra_h*f_Pr_h_u > 1000 
+beschränkt!}}
+}
+.EQN 3 0 238 0
+{0:Ra_h}NAME*{0:f_Pr_h_u}NAME={0}?_n_u_l_l_
