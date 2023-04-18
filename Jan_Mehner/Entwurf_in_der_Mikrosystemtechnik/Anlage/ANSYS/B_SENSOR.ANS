@@ -1,0 +1,238 @@
+!           Analyse eines mikromechanischen Beschleunigungssensors
+!                       b_sensor.ans - Kapitel 6.4
+
+
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                           PENDELSCHWINGER                             *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                Mechanische Analyse einer Mikrostruktur                *
+/COM,*               fuer Anwendungen als Beschleunigungssensor              *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,             
+/COM,     Alle Masze sind Strukturabmessungen auf der Waferoberseite.
+/COM,     Die Struktur wurde mit der Bulktechnologie gefertigt. 
+/COM,            
+/COM,
+/COM,
+/WAIT,5
+
+!EINGABEDATEN
+
+L_FE=0.0005                     ! Laenge Federn 
+B_FE=0.0002                     ! Breite Federn
+D_FE=0.0001                     ! Dicke Federn
+A_FE=0.002                      ! Abstand Federn
+L_MA=0.004                      ! Laenge Masse
+B_MA=0.004                      ! Breite Masse
+D_MA=0.00051                    ! Dicke Masse
+B_RA=0.001                      ! Breite Rahmen
+D_RA=0.00052                    ! Dicke Rahmen
+A_RA=0.0005                     ! Abstand Rahmen-Masse
+BESCH=20*9.81                   ! Nennbeschleunigung
+ 
+!WEITERE PARAMETER
+
+N_FQ=3                          ! Netzdichte Federquerschnitt
+N_FL=20                         ! Netzdichte Federlaenge
+V_FL=4                          ! Verteilungsparameter 
+N_RA=3                          ! Netzdichte Rahmen
+N_RA1=9
+N_RA2=4
+N_MA=6                          ! Netzdichte Masse
+N_MA1=4
+N_MA2=4
+
+!BEGINN DER ANSYS-RECHNUNG
+/PREP7                          ! Aufruf Preprozessor
+
+ET,1,45                         ! Volumenelement 8-Knoten
+
+MP,EX,1,130.132e9               ! orthogonale elastische Eigenschaften
+MP,EY,1,130.132e9               ! fuer die Elementarzelle
+MP,EZ,1,130.132e9               ! Alle 9 Konstanten muessen definiert sein,
+MP,NUXY,1,0.2783                ! sonst rechnet ANSYS isotrop.
+MP,NUYZ,1,0.2783
+MP,NUXZ,1,0.2783
+MP,GXY,1,79.6e9
+MP,GYZ,1,79.6e9
+MP,GXZ,1,79.6e9
+MP,DENS,1,2329
+
+LOCAL,11,0,0,0,0,45             ! lokales Koordinatensystem definieren
+ESYS,11                         ! Materialkoordinatensystem
+CSYS,0                          ! Strukturkoordinatensystem
+
+!GEOMETRIEMODELLIERUNG MIT DER BOTTOM UP-METHODE
+!ERSTE LAGE Z=0
+K,1                             ! Definition der Keypoints (Waferoberseite)
+K,2,B_RA
+K,3,B_RA+L_FE
+K,4,B_RA+L_FE+L_MA
+K,5,B_RA+L_FE+L_MA+A_RA
+K,6,B_RA+L_FE+L_MA+A_RA+B_RA
+KGEN,2,1,6,1,,A_FE/2-B_FE/2
+KGEN,2,1,6,1,,A_FE/2+B_FE/2
+KGEN,2,1,6,1,,B_MA/2
+KGEN,2,1,6,1,,B_MA/2+A_RA
+KGEN,2,1,6,1,,B_MA/2+A_RA+B_RA
+
+!ZWEITE LAGE Z=FEDERDICKE
+
+KGEN,2,1,36,1,,,D_FE            ! kopieren aller Keypoints 
+*AFUN,DEG
+DEL=D_FE*TAN(35.3)              ! Differenz durch Aetzschraege
+OFS=36
+KGEN,2,2+OFS,,,DEL,,,,,1        ! Korrektur der Aetzschraege
+KGEN,2,3+OFS,,,-DEL,,,,,1       ! durch Move-Befehle (rel. Verschiebung)
+KGEN,2,4+OFS,,,DEL,,,,,1
+KGEN,2,5+OFS,,,-DEL,,,,,1
+KGEN,2,7+OFS,,,,-DEL,,,,1      
+KGEN,2,8+OFS,,,DEL,-DEL,,,,1
+KGEN,2,9+OFS,,,-DEL,-DEL,,,,1
+KGEN,2,10+OFS,,,DEL,-DEL,,,,1
+KGEN,2,13+OFS,,,,DEL,,,,1
+KGEN,2,14+OFS,,,DEL,DEL,,,,1
+KGEN,2,15+OFS,,,-DEL,DEL,,,,1
+KGEN,2,16+OFS,,,DEL,DEL,,,,1
+KGEN,2,21+OFS,,,-DEL,DEL,,,,1
+KGEN,2,22+OFS,,,DEL,DEL,,,,1
+KGEN,2,26+OFS,,,DEL,-DEL,,,,1
+KGEN,2,29+OFS,,,-DEL,-DEL,,,,1
+
+!DRITTE LAGE Z=RAHMENDICKE
+
+KGEN,2,37,72,1,,,D_RA-D_FE
+DEL=(D_RA-D_FE)*TAN(35.3)
+OFS=72      
+
+KGEN,2,2+OFS,,,-DEL,,,,,1       ! Rahmenkeypoints verschieben
+KGEN,2,5+OFS,,,DEL,,,,,1
+KGEN,2,8+OFS,,,-DEL,,,,,1
+KGEN,2,11+OFS,,,DEL,,,,,1
+KGEN,2,14+OFS,,,-DEL,,,,,1
+KGEN,2,17+OFS,,,DEL,,,,,1
+KGEN,2,26+OFS,,,-DEL,DEL,,,,1
+KGEN,2,29+OFS,,,DEL,DEL,,,,1
+
+DEL=(D_MA-D_FE)*TAN(35.3)     
+DEL1=D_MA-D_RA
+KGEN,2,3+OFS,,,DEL,,DEL1,,,1    ! Massekeypoints verschieben
+KGEN,2,4+OFS,,,-DEL,,DEL1,,,1
+KGEN,2,9+OFS,,,DEL,,DEL1,,,1
+KGEN,2,10+OFS,,,-DEL,,DEL1,,,1
+KGEN,2,15+OFS,,,DEL,,DEL1,,,1
+KGEN,2,16+OFS,,,-DEL,,DEL1,,,1
+KGEN,2,21+OFS,,,DEL,-DEL,DEL1,,,1
+KGEN,2,22+OFS,,,-DEL,-DEL,DEL1,,,1
+
+
+OFS=0
+OFS1=36                        ! Volumengeneration
+                               ! Federvolumen
+V,8,9,15,14,8+OFS1,9+OFS1,15+OFS1,14+OFS1
+                               ! Massekoerpervolumen
+V,3+OFS,4+OFS,10+OFS,9+OFS,3+OFS1,4+OFS1,10+OFS1,9+OFS1
+*REPEAT,3,6,6,6,6,6,6,6,6
+                               ! Rahmenvolumen
+V,1+OFS,2+OFS,8+OFS,7+OFS,1+OFS1,2+OFS1,8+OFS1,7+OFS1
+V,7+OFS,8+OFS,14+OFS,13+OFS,7+OFS1,8+OFS1,14+OFS1,13+OFS1
+V,13+OFS,14+OFS,26+OFS,31+OFS,13+OFS1,14+OFS1,26+OFS1,31+OFS1
+V,26+OFS,29+OFS,36+OFS,31+OFS,26+OFS1,29+OFS1,36+OFS1,31+OFS1
+V,5+OFS,6+OFS,36+OFS,29+OFS,5+OFS1,6+OFS1,36+OFS1,29+OFS1
+                               ! zweite Lage der Volumen
+OFS=36
+OFS1=72    
+V,3+OFS,4+OFS,10+OFS,9+OFS,3+OFS1,4+OFS1,10+OFS1,9+OFS1
+*REPEAT,3,6,6,6,6,6,6,6,6
+
+V,1+OFS,2+OFS,8+OFS,7+OFS,1+OFS1,2+OFS1,8+OFS1,7+OFS1
+V,7+OFS,8+OFS,14+OFS,13+OFS,7+OFS1,8+OFS1,14+OFS1,13+OFS1
+V,13+OFS,14+OFS,26+OFS,31+OFS,13+OFS1,14+OFS1,26+OFS1,31+OFS1
+V,26+OFS,29+OFS,36+OFS,31+OFS,26+OFS1,29+OFS1,36+OFS1,31+OFS1
+V,5+OFS,6+OFS,36+OFS,29+OFS,5+OFS1,6+OFS1,36+OFS1,29+OFS1
+
+!VERNETZUNG
+LSEL,S,LOC,X,B_RA+L_FE/2        ! Vernetzung Federband
+LESIZE,ALL,,,N_FL,-V_FL,1
+LSEL,ALL
+ESIZE,,N_FQ
+VMESH,1
+
+ESIZE,,N_MA                     ! Vernetzung Massekoerper
+VMESH,3
+ESIZE,,N_MA1
+VMESH,4
+ESIZE,,N_MA2
+VMESH,2
+
+
+ESIZE,,N_RA                     ! Vernetzung Rahmen
+VMESH,5,7
+ESIZE,,N_RA1
+VMESH,8
+ESIZE,,N_RA2
+VMESH,9
+
+ESIZE,,N_RA                     ! Vernetzung zweite Lage
+VMESH,ALL                       ! der Volumen
+
+VSYM,Y,ALL                      ! spiegeln des Halbmodells
+
+NUMMRG,ALL,1e-7                 ! zusammenfassen der Items 
+                                ! an der Spiegelflaeche
+FINI
+
+/SOLU                           ! Aufruf des Loesers
+NSEL,S,LOC,Z,D_RA               ! feste Einspannung am Rahmen
+D,ALL,ALL
+NSEL,ALL
+ACEL,,,BESCH                    ! Last definieren
+/PBC,ALL,1                      ! Graphik Einstellungen
+/VIEW,1,1,1,1
+EPLOT
+SOLVE                           ! Modell loesen
+FINI
+
+/POST1                          ! Aufruf Postprozessor
+
+/TRIAD,OFF
+/ERASE
+/WINDOW,1,LTOP
+/VIEW,1,1,1,1
+/EDGE,1,1
+PLDISP,2                        ! verformte Struktur
+/NOERASE
+/WINDOW,1,OFF
+/WINDOW,2,RTOP
+/VIEW,2,1,1,1
+/CONTOUR,2,120
+PLNSOL,U,SUM                    ! Auslenkung (Niveaulinien)
+/WINDOW,2,OFF
+/WINDOW,3,LBOT
+/FOCUS,3,B_RA+L_FE/2,A_FE/2,D_FE
+/DIST,3,L_FE
+/CONTOUR,3,120
+PLNSOL,S,1                      ! Hauptspannung im Federband
+/WINDOW,3,OFF
+/WINDOW,4,RBOT
+LPATH,NODE(0,A_FE/2,0),NODE(B_RA+L_FE+L_MA+A_RA+B_RA,A_FE/2,0)
+PDEF,AUSL,U,SUM
+PLPATH,AUSL                     ! Auslenkung entlang eines Pfades
+/WINDOW,4,OFF
+
+FINI
+
+!ENDE DES FILES
+
+

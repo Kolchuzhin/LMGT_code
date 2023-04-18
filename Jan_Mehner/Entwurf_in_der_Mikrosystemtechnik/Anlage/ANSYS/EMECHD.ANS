@@ -1,0 +1,509 @@
+! Transiente Bewegungsanalyse eines elektromechanischen Systems (Teststruktur)
+!                          emechd.ans - Kapitel 7.4
+
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                              EMECH - transient                        *
+/COM,*                                                                       *
+/COM,*               Transiente Analyse elektrostatisch-mechanischer         *
+/COM,*                             Mikrostrukturen                           *
+/COM,*                                                                       *
+/COM,*                     -Rahmenprogramm + Modellfile-                     *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,           
+/COM,
+/COM,            Die elektrostatische Kraftberechnung basiert auf eine
+/COM,            Analogiebeziehung zum magnetischen Scalarpotential.
+/COM,            Elektrodenspannungen werden nicht durch die elektrische
+/COM,            Schaltung beeinflusst (Innenwiderstand = 0).
+/WAIT,1
+
+
+!MACRODEFINITION
+
+*CREATE,STARTPAR
+/COM,***************STARTPARAMETER*****************
+/COM,NUTZERDEFINIERTE PARAMETER
+EL_ANZ=1                                         !Anzahl der Elektroden
+GES_T=1                                          !Gesamtzeit
+GG_IT=2                                          !Anzahl Gleichgewichtsiterationen
+DITS=.001                                        !Startschrittweite
+/COM,WEITERE PARAMETER
+KONV_0=0                                         
+ITS=0                                            
+NUL=0                   
+ZAEHLER=0
+PARAM1=0
+PARAM2=0
+*END
+
+*CREATE,ZERLEGUN
+/COM,*****************MODELLZERLEGUNG************************
+/FILNAME,STRUKTUR                                !Strukturfeld
+/PREP7
+SHPP,OFF
+MODMSH,NOCHECK
+ET,1,5,2
+ESEL,U,TYPE,,1
+NELEM
+FINI
+SAVE
+/FILNAME,ELEKTROS                                !elektrostatisches Feld
+/PREP7
+ET,1,5,10
+ESEL,S,TYPE,,1           
+NELEM
+SAVE
+CMSEL,S,EL00
+NWRITE,ELEK
+FINI
+/FILNAME,VERSCHIE                                !Verschiebungsfeld
+/PREP7
+ET,1,45
+ESEL,S,TYPE,,1
+NELEM
+FINI
+SAVE
+/OUTPUT,DEBUG,VAR                                !Debugfile oeffnen
+/COM,DEBUGGERVARIABLE VON FILE DEBUG
+/OUTPUT,EMECH,OUT,,APPEND
+*END
+
+*CREATE,DELTA-T
+/COM,********BERECHNUNG DER INTEGRATIONSZEITSPANNE***************
+OUT=0                                            !Zaehler Gesamtzeit
+/COM,INTEGRATIONSZEIT GLEICH PERIODE/NANZ
+NANZ=20                                          !Stuetzstellen je Periode
+*IF,FRQ,NE,0,THEN                                !ANSYS Antwortfrequenz
+  DT=1/FRQ
+  DT=DT/NANZ                                     !Zeitschrittweite
+  ITS=ITS+DT                                     !Endzeit des Zeitschrittes
+ *ELSE
+  ITS=ITS+DITS
+  DT=DITS
+*ENDIF
+*IF,ITS,GE,GES_T,THEN
+  OUT=1                                          !Programmende
+*ENDIF
+*END
+
+*CREATE,UC-BERE
+/COM,***********BERECHNUNG DER ELEKTRODENSPANNUNGEN**********
+*USE,QUELLE,ITS                                  !Lesen der Quellspannungen
+*CFOPEN,SPANNUNG
+*CFWRITE,/NOPR
+/NOPR
+UC1=UQ1
+*IF,EL_ANZ,GE,1,THEN
+  *CFWRITE,CMSEL,S,EL01
+  *CFWRITE,D,ALL,MAG,UC1                         !Quellspannungfile schreiben
+*ENDIF
+*IF,EL_ANZ,GE,2,THEN
+  *CFWRITE,CMSEL,S,EL02
+  *CFWRITE,D,ALL,MAG,UC2
+*ENDIF
+*IF,EL_ANZ,GE,3,THEN
+  *CFWRITE,CMSEL,S,EL03
+  *CFWRITE,D,ALL,MAG,UC3
+*ENDIF
+*IF,EL_ANZ,GE,4,THEN
+  *CFWRITE,CMSEL,S,EL04
+  *CFWRITE,D,ALL,MAG,UC4
+*ENDIF
+*CFWRITE,/GOPR
+/GOPR
+*CFCLOSE,SPANNUNG
+*END
+
+*CREATE,EL-ANALY
+/COM,***********ELEKTROSTATISCHE FELDANALYSE**********
+/FILNAME,ELEKTROS
+RESUM,,,,1
+*IF,NUL,NE,0,THEN                                !erste Iteration kein update
+  /PREP7
+  NREAD,UPNODE                                   !aktuelle Koordinaten lesen
+  FINI
+*ENDIF
+NUL=1
+/SOLU
+*USE,SPANNUNG                                    !aktuelle Spannung lesen
+NALL
+SOLVE
+FINI
+*END
+
+*CREATE,ME-ANALY
+/COM,***********MECHANISCHE FELDANALYSE**********
+/FILNAME,STRUKTUR
+RESUM,,,,1
+*GET,INI,ACTIVE,,SET,TIME                        !Test neue Analyse
+*IF,INI,NE,0,:M01                                !neue Anlyse
+  /SOLU                                          !Anfangsauslenkung setzen
+  ANTYPE,TRANS
+  TRNOPT,FULL
+  KBC,1
+  TIME,1E-9
+  OUTRES,NSOL,LAST
+  DELTIME,1E-9
+  AUSL=.0000                                     !Anfangsauslenkung
+  *IF,AUSL,NE,0,THEN
+    TIMINT,OFF
+    DELTIME,1e-9/2
+    NSEL,S,LOC,Z,d                               !Knoten fuer Anfangsauslenkung
+    D,ALL,UZ,AUSL
+    KBC,1
+    LSWRITE
+    TIMINT,ON
+    NSEL,S,LOC,Z,d
+    DDELE,ALL,UZ
+    TIME,2E-9
+    LSWRITE
+    LSSOLVE,1,2
+   *ELSE
+    SOLVE
+  *ENDIF  
+  SAVE
+  FINI
+  /COPY,STRUKTUR,emat,,STRUOLD,emat               !Systemmatrizen retten
+  /COPY,STRUKTUR,esav,,STRUOLD,esav
+  /COPY,STRUKTUR,rst,,STRUOLD,rst
+:M01
+/COM,*************MATRIX VON DELTA_T-ANFANG******************
+*IF,KONV_0,NE,0,THEN
+  /COPY,STRUOLD,emat,,STRUKTUR,emat
+  /COPY,STRUOLD,esav,,STRUKTUR,esav
+  /COPY,STRUOLD,rst,,STRUKTUR,rst
+*ENDIF
+ /COM,*************TRANSIENTE ANALYSE IN DELTA-T**************
+/SOLU
+ANTYPE,TRANS,RESTART
+TIME,ITS                                         !neue Endzeit
+DELTIME,DT,,,OFF                                 !Zeitschrittweite setzen
+TINTP,0                                          !keine numerische Daempfung
+LDREAD,FORC,LAST,,,,ELEKTROS,rst                 !Lesen der elektros. Kraefte
+KBC,0
+AUTOTS,ON
+OUTRES,ALL,ALL
+SOLVE
+FINI
+*GET,FRQ,ACTIVE,,SOLU,RESFRQ                    !Antwortfrequenz fuer dt-Berechnung
+*END
+
+*CREATE,KONVER
+/COM,***********KONVERGENZTEST******************
+KONV=0                                          !Statusvariable
+/COM,BERECHNUNG DER KONVERGENZ EINES ZEITSCHRITTES
+KONV_0=KONV_0+1                                
+KONV_1=KONV_0
+*IF,KONV_0,EQ,GG_IT,THEN
+  KONV_0=0                           
+  KONV=1                                        !neue Iteration
+  /COPY,STRUKTUR,emat,,STRUOLD,emat             !Systemmatrizen retten
+  /COPY,STRUKTUR,esav,,STRUOLD,esav
+  /COPY,STRUKTUR,rst,,STRUOLD,rst
+*ENDIF
+*IF,OUT,NE,2,THEN
+  *USE,STOP                                     !externer Abbruch? auswerten
+*ENDIF
+*IF,STOPW,EQ,1,THEN
+  /OUTPUT
+  /INP,TERM
+*ENDIF
+*IF,STOPW,EQ,2,THEN
+  OUT=1
+*ENDIF
+*END
+
+*CREATE,DEBUG
+/COM,************DEBUG-PROGRAMM FUER EMECHD************
+/GOPR
+/OUTPUT,DEBUG,VAR,,APPEND                       !Ausgabevariable setzen
+*SET,TIMEENDE,ITS                               !Endzeit der Iteration                           
+*SET,DELTATIM,DT                                !Zeitschrittweite
+*SET,KONVERGE,KONV_1                            !Iterationsnummer des Zeizschrittes
+/NOPR
+/OUTPUT,EMECH,OUT,,APPEND
+*END
+
+*CREATE,POSTDATA
+/COM,************AUSGABEN FUER DAS GRAFIKFENSTER***********
+/FILNAME,STRUKTUR
+RESUM,,,,1
+/POST26                                         !grafische Ergebnisausgabe
+/RESET                                          !nach jedem Zeitschritt
+NSOL,2,20,U,Z
+NSOL,3,20,U,X
+PLVAR,2,3
+FINI
+*END
+
+*CREATE,POSTD1
+/COM,****************ERGEBNISDATEN IN PARAMETERFILE**********
+/FILNAME,ELEKTROS
+RESUM,,,,1
+/POST1
+SET,LAST
+CMSEL,S,EL01
+ETABLE,FZZ,FMAG,Z
+SSUM
+*GET,FZZ1,SSUM,,ITEM,FZZ
+FINI
+PARAM1=ITS                                      !Zeitachs
+PARAM2=FZZ1                                     !elektrostatische Kraft
+/OUTPUT,PARAM1,VAR,,APPEND
+*VWRITE,PARAM1
+(E10.3)
+/OUTPUT,PARAM2,VAR,,APPEND
+*VWRITE,PARAM2
+(E10.3)
+/OUTPUT,EMECH,OUT,,APPEND
+ZAEHLER=ZAEHLER+1
+*END
+
+*CREATE,POSTD2
+/COM,**************DARSTELLUNG ZUSAETZLICHER GROESSEN*************
+*DIM,ZEIT,ARRAY,ZAEHLER                          !Darstellung am Programmende
+*DIM,Y1,ARRAY,ZAEHLER
+*VREAD,ZEIT(1,1,1),PARAM1,VAR
+(E10.3)
+*VREAD,Y1(1,1,1),PARAM2,VAR
+(E10.3)
+/RESET
+*VPLOT,ZEIT(1,1,1),Y1(1,1,1)                     !Kraft-Zeit-Diagramm
+*END
+
+*CREATE,QUELLE
+/COM,**********BESCHREIBUNG VON UQ*****************
+/COM,QUELLE 1                                    !Beschreibung der Quellspannungen
+*IF,ARG1,GE,0,THEN
+  UQ1=200
+*ENDIF
+
+*IF,ARG1,GT,.17,THEN
+  UQ1=0
+*ENDIF
+
+*IF,ARG1,GT,.34,THEN
+  UQ1=100
+*ENDIF
+
+*IF,ARG1,GT,.5,THEN
+  UQ1=100+100*sin(ARG1*10-4)
+*ENDIF
+*END
+
+
+*CREATE,UPDATE
+/COM,**************UPDATE****************
+/COM,AKTUALLISIERUNG DER LUFTRAUMKOORDINATEN
+/FILNAME,STRUKTUR                                !Routine zum Koordinatenupdate
+RESUM,,,,1
+/POST1
+SET,LAST
+CMSEL,S,EL00                     
+CBDOF,ELEK,,,UPELEK
+EALL
+NALL
+FINI
+/FILNAME,VERSCHIE
+RESUM,,,,1
+/SOLU
+*USE,UPELEK
+SOLVE
+FINI
+/POST1
+UPCOORD,1
+FINI
+/PREP7
+NWRITE,UPNODE
+FINI
+*END
+
+*CREATE,STOP
+/COM,**************FILE ZUM ABBRUCH DER ITERATIONEN*******
+STOPW=0                                          !2--> ENDE 1--> STOP
+*END
+
+*CREATE,STOP,ANS                              
+/COM,**************DATENFILES LOESCHEN********************
+/SYS,del DEBUG.VAR
+/SYS,del DEBUG
+/SYS,del DELTA-T
+/SYS,del ELEKTROS.*
+/SYS,del STRUKTUR.*
+/SYS,del VERSCHIE.*
+/SYS,del STRUOLD.*
+/SYS,del EL-ANALY
+/SYS,del EMECH.*
+/SYS,del KONVER
+/SYS,del ME-ANALY
+/SYS,del POSTDATA
+/SYS,del STARTPAR
+/SYS,del STOP
+/SYS,del SPANNUNG
+/SYS,del UPDATE
+/SYS,del UPNODE
+/SYS,del UC-BERE
+/SYS,del QUELLE
+/SYS,del ZERLEGUN
+/SYS,del PARAM1.VAR
+/SYS,del PARAM2.VAR
+/SYS,del PARAM.VAR
+/SYS,del POSTD1
+/SYS,del POSTD2
+/SYS,del file.*
+/SYS,del stop.ans
+*END
+
+
+/COM,*****************************************************************
+/COM,*********************BEGINN HAUPTPROGRAMM************************
+/COM,*****************************************************************
+/NOPR
+/NOLIST
+/OUTPUT,EMECH,OUT                                !Ergebnisfile
+*IF,ARG1,EQ,1,:E01
+/COM,*********************STARTPARAMETER******************************
+*USE,STARTPAR                                    !Startparameter lesen
+/OUTPUT
+/COM,*********************MODELLEINGABE*******************************
+/OUTPUT,EMECH,OUT,,APPEND
+*USE,modell                                      !Modell lesen
+*USE,ZERLEGUN                                    !Modell zerlegen
+:E01
+  /OUTPUT
+  /COM,
+  /COM,*********************DELTA T-BERECHNUNG**************************
+  /OUTPUT,EMECH,OUT,,APPEND
+  *USE,DELTA-T                                   !Zeitschrittweite berechnen
+  :E02
+    /OUTPUT
+    /COM,*********************UC-BERECHNUNG*******************************
+    /OUTPUT,EMECH,OUT,,APPEND
+    *USE,UC-BERE                                 !Elektrodenspannung bestimmen
+    /OUTPUT
+    /COM,*********************ELEKTROSTATISCHE FELDANALYSE****************
+    /OUTPUT,EMECH,OUT,,APPEND
+    *USE,EL-ANALY                                !elektrostatische Analyse
+    /OUTPUT
+    /COM,*********************TRANSIENTE MECHANISCHE ANALYSE**************
+    /OUTPUT,EMECH,OUT,,APPEND
+    *USE,ME-ANALY                                !mechanische Analyse
+    /OUTPUT
+    /COM,*********************KOORDINATENUPDATE***************************
+    /OUTPUT,EMECH,OUT,,APPEND
+    *USE,UPDATE                                  !Koordinatenupdate
+    /OUTPUT
+    /COM,*********************KONVERGENZTEST******************************
+    /OUTPUT,EMECH,OUT,,APPEND
+    *USE,KONVER                                  !Konvergenztest
+    /OUTPUT
+    /COM,*********************ERGEBNISAUSGABE*****************************
+    /OUTPUT,EMECH,OUT,,APPEND
+    *USE,DEBUG                                   !Debugdaten ausgeben
+  *IF,KONV,EQ,0,:E02                             !Konvergenzverzweigung
+  *USE,POSTDATA                                  !Ergebnisdaten darstellen
+  *USE,POSTD1                                    !Ergebnisdaten ins Protokoll
+*IF,OUT,EQ,0,:E01                                !Gesamtzeit erreicht?
+*USE,POSTD2                                      !Protokolldaten anzeigen
+PARSAVE,ALL,PARAM,VAR                            !Parameter retten fuer Restart
+/OUTPUT
+/COM,*********************************************
+/COM,*******RESTART MIT *USE,EMECHD,1*************
+/COM,*********************************************
+
+
+
+!                         Modellbeispiel Hubsystem
+!            - als separates File mit dem Namen modell erzeugen-
+
+
+/com,***************einfaches Hubsystem*********************
+c=1.33                                           !Federkonstante
+m=1.15e-4                                        !seismische Masse
+k=.01                                            !Laenge und Breite der Elektrode
+d=.0005                                          !Elektrodengrundabstand
+UQ=200                                           !Quellspannung in Volt
+/com,**************Modellgenerierung************************
+/prep7
+et,1,5
+et,2,45
+et,3,14
+emunit,muzr,8.85e-12       
+mp,murx,1,1               
+ex,1,1
+nuxy,1,0
+dens,1,1e-3
+ex,2,169e9                 
+nuxy,2,.2
+dens,2,2300
+r,3,c/4                                          !Federkonstante
+k,1
+k,2,k
+k,3,k,k
+k,4,,k
+kgen,3,1,4,1,,,d
+type,1
+mat,1
+real,1
+esize,,3
+v,1,2,3,4,5,6,7,8                                !Luftraum
+vmesh,1
+type,2
+mat,2
+real,2
+esize,,1
+v,5,6,7,8,9,10,11,12                             !Silizium
+vmesh,2
+type,3
+mat,3
+real,3
+*get,s1,node,,num,max
+s2=node(0,0,3*d)
+s3=node(k,0,3*d)
+s4=node(k,k,3*d)
+s5=node(0,k,3*d)
+n,s1+1,0,0,4*d
+n,s1+2,k,0,4*d
+n,s1+3,k,k,4*d
+n,s1+4,0,k,4*d
+e,s2,s1+1
+e,s3,s1+2
+e,s4,s1+3
+e,s5,s1+4                                       !Federelemente
+fini
+/solu
+nsel,s,loc,z,d*4
+d,all,ux
+d,all,uy
+d,all,uz
+nsel,s,loc,z,d
+d,all,mag,0
+d,all,ux
+d,all,uy
+cm,EL00,node
+esel,s,type,,1
+sf,all,mxwf,1
+/com,F,ALL,FZ,.00001                           !zusaetzliche Last
+eall
+nsel,s,loc,z,0
+cm,EL01,node
+d,all,ux,0
+d,all,uy,0
+d,all,uz,0
+nall
+/view,1,1,1,1
+/pbc,all,1
+/psf,mxwf,,1
+/com,alpha,.0005
+/com,beta,.0005                                !Rayleigh Daempfung
+fini
+

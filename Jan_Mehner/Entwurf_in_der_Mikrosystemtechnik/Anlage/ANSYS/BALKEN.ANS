@@ -1,0 +1,161 @@
+!             Berechnung mechanischer Kennwerte von Balkenelementen
+!                         balken.ans - Abschnitt 5.3
+
+
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                          Balkenkennwerte                              *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*               Bestimmung der mechanischen Kennwerte von               *
+/COM,*                          Balkenelementen                              *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,
+/COM,
+/COM,                 Bestimmung der mechanischen Kennwerte
+/COM,        (Flaeche, Flaechentraegheitsmomente, Torsionssteifigkeit)
+/COM,                   von beliebigen Balkenquerschnitten
+/COM,
+/WAIT,5
+!EINGABEDATEN
+G_XY=50.85e9                                       ! Gleitmodul Gxy
+G_XZ=79.55e9                                       ! Gleitmodul Gxz
+
+b=30e-6                                            ! Balkenbreite (kleine Seite)
+h=30e-6                                            ! Balkenhoehe
+b_type=2                                           ! Balkentype 0... Rechteck
+                                                   ! 1... Trapez; 2... Sechseck
+!FOLGEGROESSEN
+*AFUN,DEG                                          ! Winkelfunktionen in degree
+b_r=b                                              ! Breite Rechteck
+b_t=b+2*h/tan(54.73)                               ! Breite grosse Seite (Trapez)
+b_s=b+2*h/tan(25.24)                               ! Breite (Sechseck)
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*      Die Berechnung bezieht sich auf Massangaben nach Tab. 5.11.      *
+/COM,*                                                                       *
+/COM,*************************************************************************
+ND=15                                              ! Netzdichteparameter
+!
+!BEGINN DER ANSYS-RECHNUNG
+!
+/PREP7                                             ! Aufruf Preprozessor
+
+ET,1,55                                            ! 2D-Temperaturfeldelement
+MP,KXX,1,1/G_XZ                                    ! Gleitmodul 1/G_XZ
+MP,KYY,1,1/G_XY                                    ! Gleitmodul 1/G_XY
+
+*IF,b_type,EQ,0,THEN                               ! Rechteckquerschnitt
+RECTNG,-b_r/2,b_r/2,0,h                            ! Rechteckdefinition
+*ENDIF
+
+*IF,b_type,EQ,1,THEN                               ! Trapezquerschnitt
+diff=(B_t-b)/2
+K,1,-B_T/2                                         ! Trapezdefinition
+K,2,B_t/2
+K,3,B_t/2-diff,h
+K,4,-B_t/2+diff,h
+A,1,2,3,4
+*ENDIF
+
+*IF,b_type,EQ,2,THEN                               ! Sechseckquerschnitt
+diff=(B_s-b)/2                                                       
+K,1,-B_s/2                                         ! Sechseckdefinition
+K,2,B_s/2
+K,3,B_s/2-diff,h
+K,4,-B_s/2+diff,h
+K,5,B_s/2-diff,-h
+K,6,-B_s/2+diff,-h
+A,1,2,3,4
+A,1,2,5,6
+*ENDIF
+
+ESHAPE,2                                           ! Viereckvernetzung
+ESIZE,,ND                                          ! Netzdichte
+AMESH,ALL                                          ! Netzgenaeration
+EPLOT                                              ! Elementplot
+
+FINI                                               ! Verlassen Preprozessor
+/SOLU                                              ! Aufruf Loeser
+
+NSEL,S,EXT                                         ! Randknoten selektieren
+D,ALL,TEMP,0                                       ! Torsionsfunktion auf Null
+NSEL,ALL                                           ! Randknoten freigeben
+
+BFE,ALL,HGEN,,1                                    ! Verdrillung gleich 0.5
+
+SOLVE                                              ! Problem loesen
+
+FINI                                               ! Loeser verlassen
+
+/POST1                                             ! Aufruf Postprozessor
+
+PLNSOL,TEMP                                        ! Darstellung der Torsionsfunktion
+WAIT,5
+PLNSOL,TG,SUM                                      ! Darstellung der 
+Spannungsverteilung
+
+! Bestimmung der Kenngroessen von allen Elementen 
+ETABLE,TOR,TEMP                                    ! Torsionsfunktion
+ETABLE,AREA,VOLU                                   ! Elementflaeche
+ETABLE,XS,CENT,X                                   ! Elementschwerpunkt in X-
+ETABLE,YS,CENT,Y                                   ! und Y-Richtung
+! Berechnung der Kennwerte auf Elementebene
+SMULT,G_It,AREA,TOR,4                              ! G*It  TOR*AREA*4
+SEXP,IZZ,XS,AREA,2,1                               ! IZZ   XS**2*AREA**1  
+SEXP,IYY,YS,AREA,2,1                               ! IYY   YS**2*AREA**1
+SMULT,YS_F,XS,AREA                                 ! YS_F  XS*AREA
+SMULT,ZS_F,YS,AREA                                 ! ZS_F  YS*AREA
+SSUM                                               ! Summe ueber alle Elemente
+! Ausgabe der Summe auf Variable	
+*GET,AREA,SSUM,,ITEM,AREA                          ! Querschnittsflaeche
+*GET,IZZ,SSUM,,ITEM,IZZ                            ! Flaechentraegheitsmoment IZZ
+*GET,IYY,SSUM,,ITEM,IYY                            ! Flaechentraegheitsmoment IYY
+*GET,YS_F,SSUM,,ITEM,YS_F                          ! statische Moment in Y-Richtung
+*GET,ZS_F,SSUM,,ITEM,ZS_F                          ! statische Moment in Z-Richtung
+*GET,G_It,SSUM,,ITEM,G_It                          ! Torsionssteifigkeit
+
+! Berechnung der schwerpunktbezogenen Kennwerte                                            
+YS_F=YS_F/AREA                                     ! Flaechenschwerpunkt
+ZS_F=ZS_F/AREA
+IZZ=IZZ-AREA*(YS_F*YS_F)                           ! Satz von Steiner
+IYY=IYY-AREA*(ZS_F*ZS_F)
+FINI                                               ! Verlassen des Postprozessors
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM, ************************************************************************* 
+/COM, *                                                                       * 
+/COM, *                                                                       * 
+*MSG,INFO,AREA,YS_F,ZS_F
+.* Querschnittsflaeche: %G %/* Schwerpunkt in Y-Richtung: %G &
+%/* Schwerpunkt in Z-Richtung: %G 
+*MSG,INFO,IYY,IZZ,G_It
+.* Flaechentraegheitsmoment IYY: %G %/* Flaechentraegheitsmoment IZZ: %G &
+%/* Torsionssteifigkeit G_It: %G 
+/COM, *                                                                       *
+/COM, *                                                                       *
+/COM, ************************************************************************* 
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+!ENDE DES FILES
+

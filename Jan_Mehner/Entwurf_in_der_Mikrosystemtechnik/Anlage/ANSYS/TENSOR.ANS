@@ -1,0 +1,125 @@
+! Transformation der elastischen Konstanten in ein anderes Koordinatensystem
+!                      tensor.ans - Abschnitt 5.2
+
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                        TENSORTRANSFORMATION                           *
+/COM,*                             -4.Stufe-                                 *
+/COM,*               Transformation der elastischen Konstanten               *
+/COM,*                   in ein anderes Koordinatensystem                    *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,
+/COM,            Ref.:  Timoshenko, Woinowskey-Kreiger
+/COM,
+/COM,            Theorie of Plates and Shells, McGraw-Hill, 1959
+/COM,
+/COM,
+/WAIT,1
+
+/COM,  Bei der folgenden Transformation wird aus Gruenden der geometrischen 
+/COM,  Modellierung vom Berechnungskoordinatensystem (BKS) ausgehend die Lage
+/COM,  des Materialkoorinatensystems (MKS) definiert und nicht umgekehrt wie
+/COM,  in tensor.mcd von MathCad5.0 beschrieben ist. Soll die gleiche Trans-
+/COM,  formation wie in MathCad5.0 ausgefÅhrt werden:
+/COM,  - darf die Matrix MRK in tensor.mcd nicht transponiert werden,
+/COM,  - oder die Rotationen muessen in umgekehrter Reihenfolge und mit neg-
+/COM,    iertem Winkel erfolgen (ausser bei einer Drehung um die Y-Achse, da
+/COM,    in ANSYS eine Drehung um diese Achse im mathematisch negativen Dreh-
+/COM,    sinn durchfÅhrt).                                               
+/COM,  Beispiel: 
+/COM,     MathCad5.0 MKS ROT_Z=35, dann ROT_X=25,  dann ROT_Y=15  --> BKS
+/COM,     ANSYS      BKS ROT_Y=15, dann ROT_X=-25, dann ROT_Z=-35 --> MKS
+/COM,  In ANSYS gilt folgende besondere Anordnung der Elemente der C-Matrix:
+/COM,             _                            _
+/COM,            | C11  C12  C13  C16  C14  C15 | 
+/COM,            | C21  C22  C23  C26  C24  C25 |
+/COM,            | C31  C32  C33  C36  C34  C35 |
+/COM,            | C61  C62  C63  C66  C46  C56 |
+/COM,            | C41  C42  C43  C64  C44  C45 |
+/COM,            | C51  C52  C53  C65  C54  C55 |
+/COM,             -                            -
+/WAIT,1
+
+!EINGABEDATEN
+S11=7.691e-12                                    ! Matrix der elastischen
+S12=-2.142e-12                                   ! Konstanten von Silizium
+S44=12.57e-12
+
+ROT_Z=-45                                        ! Rotation um die Z-Achse
+ROT_X=0                                          ! Rotation um die X-Achse
+ROT_Y=0                                          ! Rotation um die Y-Achse
+
+!
+!BEGINN DER ANSYS-RECHNUNG
+!
+
+/PREP7                                           ! Aufruf Preprozessor
+
+ET,1,64                                          ! Anisotropieelement
+KEYOPT,1,9,1                                     ! Ausgabe der Materialmatrix
+
+
+MP,EX,1,1/S11                                    ! Materialgesetz
+MP,EY,1,1/S11                                    ! orthogonales Material
+MP,EZ,1,1/S11                                    ! ElastizitÑtsmodule
+MP,NUXY,1,-S12/S11                               ! Poisson-Zahlen
+MP,NUXZ,1,-S12/S11                               
+MP,NUYZ,1,-S12/S11
+MP,GXY,1,1/S44                                   ! Gleitmodule
+MP,GXZ,1,1/S44                                   
+MP,GYZ,1,1/S44          
+                         
+! Die RichtungsabhÑngigkeit der elastischen Eiegenschaften (orthogonales
+! Materialverhalten) wird erst bei einer Definition aller neun Material- 
+! konstanten berÅcksichtigt. Ansonsten rechnet ANSYS isotrop.
+! FÅr eine allgemeine Anisotropie erfolgt die Eingabe mit TB-, und TBDATA-
+! Kommandos.
+
+LOCAL,11,0,0,0,0,ROT_Z,ROT_X,ROT_Y               ! lokales Koordinatensystem
+! Die Reiehnfolge der Rotation ist entscheidend. Befehl CLOCAL verwenden.
+ESYS,11                                          ! Materialkoordinatensystem 
+CSYS,0                                           ! Berechnungskoordinatensystem
+
+! Definition eines Dummy-Elementes
+BLOCK,0,1,0,1,0,1                                ! Quaderelement
+ESIZE,,1                                         ! Netzdichte: 1 Element
+VMESH,ALL                                        ! Netzgeneration
+FINI                                             ! Verlassen Preprozessor
+
+/SOLU                                            ! Aufruf Loesers
+
+D,ALL,ALL                                        ! Randbedingungen am Dummy
+
+/OUTPUT,RESULT                                   ! Umlenkung der Ausgaben 
+                 
+! Ausgabe der Loeserausschriften auf das File "RESULT".                                                 
+! ANSYS schreibt die C-Matrix im Material- und im Berechnungskoordinatensystem
+
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*   C-Matrix im Materialkoorinatensystem wird als                       *
+/COM,*     MATERIAL MATRIX IN ELEMENT COORDINATES            bezeichnet.     *
+/COM,*                                                                       *
+/COM,*   C-Matrix im Berechnungskoorinatensystem wird als                    *
+/COM,*     MATERIAL MATRIX IN GLOBAL CARTESIAN COORDINATES   bezeichnet.     *
+/COM,*                                                                       *
+/COM,*************************************************************************
+
+
+SOLVE                                            ! Problem loesen
+/OUTPUT                                          ! Ausgaben auf Bildschirm 
+FINI                                             ! Verlassen des Loesers
+
+*LIST,RESULT                                     ! Ergebnisbetrachtung 
+
+!ENDE DES FILES

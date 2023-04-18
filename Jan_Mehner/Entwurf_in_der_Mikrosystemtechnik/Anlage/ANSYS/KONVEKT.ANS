@@ -1,0 +1,211 @@
+!               Analyse der W„rmeabfuhr an einer Siliziumplatte
+!                        konvekt.ans - Abschnitt 7.2
+
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*              FREIE KONVEKTION EINER HORIZONTALEN PLATTE               *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*             2D-Modell zur Berechnung der Waermeabfuhr und             *
+/COM,*                      an einer Siliziumplatte                          *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,                   Ref: VDI-Waermeatlas 
+/COM,
+/COM,              Waermeuebergang durch freie Konvektion
+/COM,                an umstroemten Koerpern Fa1-Fa7
+/COM,
+/COM,
+/WAIT,5
+
+
+! EINGABEDATEN
+
+/SYS,rm file.rfl                                  ! Datenbasis loeschen
+/SYS,rm file.rsw
+/SYS,rm file.pfl
+/SYS,rm file.dbg
+
+LU_L=.06                                          ! Laenge der Lufthuelle
+LU_H=.06                                          ! Breite der Lufthuelle
+L_PL=0.01                                         ! Laenge der SI-Platte 
+H_PL=0.002                                        ! Breite der SI-Platte
+T_SI=373                                          ! Temperatur der SI-OF [Kelvin]
+T_FL=293                                          ! Temperatur der Luft  [Kelvin]
+
+n1=12                                             ! Netzdichte der SI-Platte  hor. 
+n2=4                                              ! Netzdichte der SI-Platte  ver.
+n3=25                                             ! Netzdichte der Lufthuelle hor.
+n4=25                                             ! Netzdichte der Lufthuelle ver.
+
+!
+!BEGINN DER ANSYS-RECHNUNG
+!
+
+/PREP7
+                                             
+ET,1,141                                          ! 2D-Stroemungselement
+
+MP,KXX,2,156                                      ! Waermeleitfaehigkeit Silizium
+MP,DENS,2,2300                                    ! Dichte Silizium
+MP,C,2,713                                        ! spez. Waermekapazitaet Silizium
+
+FLDATA7,PROT,VISC,AIR-SI_B                        ! Viskositaet Luft                      
+FLDATA7,PROT,DENS,AIR-SI_B                        ! Dichte Luft
+FLDATA7,PROT,COND,AIR-SI_B                        ! Waermeleitfaehigkeit Luft
+FLDATA7,PROT,SPHT,AIR-SI_B                        ! cpez. Waermekapazitaet Luft
+
+K,1,-LU_L/2,LU_H/2                                ! Geometriedefinition buttom op
+K,2,-L_PL/2,LU_H/2
+K,3,L_PL/2,LU_H/2
+K,4,LU_L/2,LU_H/2
+K,5,-LU_L/2,H_PL/2
+K,6,-L_PL/2,H_PL/2
+K,7,L_PL/2,H_PL/2
+K,8,LU_L/2,H_PL/2
+K,9,-LU_L/2,-H_PL/2
+K,10,-L_PL/2,-H_PL/2
+K,11,L_PL/2,-H_PL/2
+K,12,LU_L/2,-H_PL/2
+K,13,-LU_L/2,-LU_H/2
+K,14,-L_PL/2,-LU_H/2
+K,15,L_PL/2,-LU_H/2
+K,16,LU_L/2,-LU_H/2
+
+A,5,6,2,1
+A,6,7,3,2
+A,7,8,4,3
+A,9,10,6,5
+A,10,11,7,6
+A,11,12,8,7
+A,13,14,10,9
+A,14,15,11,10
+A,15,16,12,11
+
+LSEL,S,LINE,,12                                   ! Netzerstellung
+LSEL,A,LINE,,15
+LESIZE,ALL,,,n2
+
+LSEL,S,LINE,,2
+LSEL,A,LINE,,14
+LESIZE,ALL,,,n1
+LSEL,ALL
+
+ASEL,S,AREA,,5                                    ! Siliziumplatte vernetzen
+MAT,2
+ESHAPE,2
+AMESH,5
+
+LSEL,S,LINE,,2
+LSEL,A,LINE,,9
+LSEL,A,LINE,,6
+LSEL,A,LINE,,20
+LESIZE,ALL,,,n4,4,1
+
+LSEL,S,LINE,,4
+LSEL,A,LINE,,19
+LSEL,A,LINE,,22
+LSEL,A,LINE,,24
+LESIZE,ALL,,,n4,1/4,1
+
+LSEL,S,LINE,,3
+LSEL,A,LINE,,16
+LSEL,A,LINE,,23
+LSEL,A,LINE,,8
+LESIZE,ALL,,,n3,4,1
+
+LSEL,S,LINE,,1
+LSEL,A,LINE,,11
+LSEL,A,LINE,,10
+LSEL,A,LINE,,18
+LESIZE,ALL,,,n3,1/4,1
+ALLSEL
+
+MAT,1                                             ! Vernetzung Luftraum
+ESHAPE,2
+AMESH,ALL
+ALLSELL
+FINI
+
+/SOLU
+NSEL,S,LOC,Y,-H_PL/2,H_PL/2                       ! Randbedingungen der Si-Platte
+NSEL,R,LOC,X,-L_PL/2,L_PL/2
+D,ALL,TEMP,T_SI                                   ! Temperatur T_SI
+D,ALL,VX,0                                        ! Geschwindigkeit Null
+D,ALL,VY,0
+
+NSEL,S,LOC,Y,-LU_H/2                              ! Randbedingungen Luftraum unten
+D,ALL,TEMP,T_FL                                   ! Einlassrandbedingungen
+D,ALL,PRES,0                                      ! Druck Null
+NSEL,ALL
+
+FLDATA1,SOLU,TEMP,TRUE                            ! Temperaturfeldanalyse
+FLDATA1,SOLU,FLOW,TRUE                            ! + Stroemungsanalyse
+FLDATA1,SOLU,TURB,FALSE                           ! laminar
+FLDATA2,ITER,EXEC,40                              ! 100 Iterationen
+FLDATA13,VARY,DENS,TRUE                           ! variable Dichte
+FLDATA18,METH,PRES,1                              ! TDMA Loeser fuer Druck
+FLDATA19,TDMA,PRES,100                            ! 100 Subiterationen
+FLDATA18,METH,TEMP,1                              ! TDMA Loeser fuer Temperatur
+FLDATA25,RELX,TEMP,1.0                            ! Relaxationsparameter
+FLDATA25,RELX,DENS,0.5
+ACEL,,9.81                                        ! Gravitation
+
+/PNUM,MAT,1
+/PBC,ALL,1
+EPLOT
+
+SOLVE
+
+FINI
+
+/POST1
+
+SET,LAST
+
+/EDGE,1,1
+ESEL,U,MAT,,2
+NSLE,S,1
+
+PLNSOL,TEMP                                       ! Temperaturfeld
+PLNSOL,PRES                                       ! Druckverteilung
+PLVECT,V                                          ! Geschwindigkeitsvektoren
+PLNSOL,HFLUX                                      ! Waermeflussdichte aus dem Si
+ALLSEL
+
+LPATH,NODE(-L_PL/2,-H_PL/2,0),NODE(L_PL/2,-H_PL/2,0)
+PDEF,SS,HFLUX
+PCALC,INTG,SS_U,SS,S                              ! Berechnung des Waermestromes
+*GET,Q_UNTEN,PATH,,LAST,SS_U                      ! durch die Teilflaechen
+
+LPATH,NODE(-L_PL/2,H_PL/2,0),NODE(L_PL/2,H_PL/2,0)
+PDEF,SS,HFLUX
+PCALC,INTG,SS_O,SS,S
+*GET,Q_OBEN,PATH,,LAST,SS_O
+
+LPATH,NODE(-L_PL/2,-H_PL/2,0),NODE(-L_PL/2,H_PL/2,0)
+PDEF,SS,HFLUX
+PCALC,INTG,SS_L,SS,S
+*GET,Q_LINKS,PATH,,LAST,SS_L
+
+LPATH,NODE(L_PL/2,-H_PL/2,0),NODE(L_PL/2,H_PL/2,0)
+PDEF,SS,HFLUX
+PCALC,INTG,SS_R,SS,S
+*GET,Q_RECHTS,PATH,,LAST,SS_R
+
+Q_GES=Q_UNTEN+Q_OBEN+Q_RECHTS+Q_LINKS             ! Gesamtwaermestrom bei 1 m Tiefe
+*STAT
+
+FINI
+
+
+! ENDE DES FILES
+

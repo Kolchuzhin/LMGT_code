@@ -1,0 +1,461 @@
+!     Stabilitaetsanalyse eines elektromechanischen Systems (1D-Torsionsspiegel)
+!                            emechk.ans - Kapitel 7.4
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                           EMECH - Stabilitaetspunkt                   *
+/COM,*                                                                       *
+/COM,*              Stabilitaetsanalyse elektrostatisch-mechanischer         *
+/COM,*                             Mikrostrukturen                           *
+/COM,*                                                                       *
+/COM,*                     -Rahmenprogramm + Modellfile-                     *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,           
+/COM,
+/COM,            Die elektrostatische Kraftberechnung basiert auf eine
+/COM,            Analogiebeziehung zum magnetischen Scalarpotential.
+/COM,
+/COM,
+/WAIT,1
+
+
+!MACRODEFINITION
+
+*CREATE,STARTPAR
+/COM,***********DEFINITION DER STARTPARAMETER****************
+XS=0                                             !Lage des Bezugspunkts
+YS=0.6*BR_PL/2
+ZS=0
+DELTAS=-0.001*PL_AB                              !Auslenkungsaenderung fuer 
+                                                 !Stabilitaetstest                     
+DELTAV=0.001*PL_AB                               !Abbruchkriterium der Auslenkung
+STARTV=-0.43*PL_AB*0.6                           !theoretische Auslenkung
+STARTDEL=-PL_AB/20                               !Schrittweite zur Maximumsuche
+!interne Variable
+KONV=1                                           !interne Konvergenzparameter
+ITER=0                                           !Iterationschleife Uc-Suche
+SCHLEIFE=0                                       !aeussere Schleife Auslenkungssuche
+STAB=0
+STABO=0
+AUSL=STARTV
+DELTA=STARTDEL
+FR2=0
+A1=0
+A2=0
+F1=0
+F2=0
+*END
+
+*CREATE,ZERLEGUN
+/COM,********MODELLAUFBEREITUNG**************
+/FILNAME,STRUKTUR                                !mechanisches Modell
+/PREP7
+ET,1,5,2
+MODMSH,NOCHECK
+SHPP,OFF
+FINI
+SAVE
+/FILNAME,ELEKTROS                                !elektrostatisches Modell
+/PREP7
+ET,1,5,10
+ESEL,S,TYPE,,1
+NELEM
+FINI
+SAVE
+BEZUG=NODE(XS,YS,ZS)
+*END
+
+*CREATE,ME-ANALY
+/COM,***********MECHANISCHE ANALYSE************
+/FILNAME,STRUKTUR                                !Strukturfeldanalyse
+RESUM,,,,1
+/SOLU
+D,BEZUG,UZ,AUSL                                  !Auslenkung des Bezugsknotens
+SOLVE
+FINI
+/POST1
+NSEL,S,NODE,,BEZUG
+FSUM
+*GET,FR,FSUM,,ITEM,FZ                            !Reaktionskraft
+NALL
+FINI
+CPHI=(FR*YS*YS)/AUSL                             !Torsionssteifigkeit
+*USE,UPDATE                                      !Koordinatenupdate
+*END
+
+*CREATE,UC-BERE
+/COM,*********BERECHNUNG DER NOETIGEN ELEKTRODENSPANNUNG************
+*IF,ITER,NE,0,:B03
+CPHI=ABS(CPHI)
+D=PL_AB**3
+L=BR_PL/2
+L=L**3
+EPS=8.85e-12
+V1=CPHI*D/(EPS*LA_PL*L)
+V1=SQRT(V1)
+UC2=0.91*V1                                      !Sollspannung bei 41% Auslenkung
+:B03
+iter=1
+:B01
+UC1=UC2
+*USE,DEBUG1
+*IF,ITER,EQ,1,:B04
+/FILNAME,STRUKTUR
+RESUM,,,,1
+/SOLU
+D,BEZUG,UZ,AUSL
+LDREAD,FORCE,LAST,,,,ELEKTROS,rst
+SOLVE
+FINI
+*USE,UPDATE
+:B04
+/FILNAME,ELEKTROS
+RESUM,,,,1
+/PREP7
+NREAD,UPNODE
+FINI
+/SOLU
+CMSEL,S,EL01
+D,ALL,MAG,UC1
+NELEM
+SOLVE
+FINI
+/FILNAME,STRUKTUR
+RESUM,,,,1
+/SOLU
+D,BEZUG,UZ,AUSL
+LDREAD,FORCE,LAST,,,,ELEKTROS,rst
+SOLVE
+FINI
+/POST1
+NSEL,S,NODE,,BEZUG
+FSUM
+*GET,FR1,FSUM,,ITEM,FZ
+FINI
+KONST=(FR-FR1)/(UC1*UC1)
+UC2=SQRT(((FR1/KONST)+(UC1*UC1)))                !scalieren der neuen Spannung
+ITER=ITER+1
+*IF,ABS(FR1),GT,1e-9,:B01
+/OUTPUT
+ENDSP=UC1
+/OUTPUT,EMECH,OUT,,APPEND
+*END
+
+*CREATE,KONVER
+/COM,*********STABILITAETSTEST UND SCHRITTWEITENSTEUERUNG**********
+STABO=STAB
+SCHLEIFE=SCHLEIFE+1
+/FILNAME,STRUKTUR
+RESUM,,,,1
+/SOLU
+D,BEZUG,UZ,AUSL+DELTAS
+LDREAD,FORCE,LAST,,,,ELEKTROS,rst
+SOLVE
+FINI
+*USE,UPDATE
+/FILNAME,ELEKTROS
+RESUM,,,,1
+/PREP7
+NREAD,UPNODE
+FINI
+/SOLU
+CMSEL,S,EL01
+D,ALL,MAG,UC1
+NELEM
+SOLVE
+FINI
+/FILNAME,STRUKTUR
+RESUM,,,,1
+/SOLU
+D,BEZUG,UZ,AUSL+DELTAS
+LDREAD,FORCE,LAST,,,,ELEKTROS,rst
+SOLVE
+FINI
+/POST1
+NSEL,S,NODE,,BEZUG
+FSUM
+*GET,FR2,FSUM,,ITEM,FZ
+A1=A2
+A2=AUSL
+F1=F2
+F2=FR2
+M=(F2-F1)/(A2-A1)
+N=F2-M*A2
+AUSL_O=AUSL
+AUSL_N=-N/M
+ABBR=ABS(AUSL_N-AUSL_O)
+FINI
+/OUTPUT
+*IF,(FR2-FR1),GE,0,:K01
+STAB=-1
+*SET,AUSL,(AUSL-DELTA)
+/COM,***********INSTABIL**********
+/COM,
+*GO,:K02
+:K01
+STAB=1
+*SET,AUSL,(AUSL+DELTA)
+/COM,***********STABIL************
+/COM,
+:K02
+/OUTPUT,EMECH,OUT,,APPEND
+*USE,DEBUG2
+STABT=STAB*STABO
+*IF,STABT,NE,-1,:K03
+DELTA=DELTA/2
+:K03
+*IF,ABS(DELTA),GE,DELTAV,:K04
+KONV=0
+:K04
+*IF,SCHLEIFE,EQ,1,:K05
+AUSL=AUSL_N
+:K05
+*IF,ABBR,GE,DELTAV,:K06
+KONV=0
+:K06
+*END
+
+*CREATE,UPDATE
+/COM,**************UPDATE****************
+/COM,AKTUALLISIERUNG DER LUFTRAUMKOORDINATEN
+/FILNAME,STRUKTUR
+RESUM,,,,1
+/POST1
+SET,LAST
+ESEL,S,TYPE,,1                                   !Luftraumelemente
+NELEM
+UPCOORD,1                                        !Knoten aktualisieren
+FINI
+/PREP7
+NWRITE,UPNODE                                    !Knoten ausgeben
+FINI
+*END
+
+*CREATE,DEBUG1
+/COM,*****************DEBUGPROGRAMM UC-SUCHE*********************************
+/GOPR
+/OUTPUT,DEBUG,VAR,,APPEND
+*SET,AUSLENKU,AUSL
+*SET,REAKTION,FR1
+*SET,SPANNUNG,UC1
+*SET,ITERATIO,ITER
+/COM,
+/NOPR
+/OUTPUT,EMECH,OUT,,APPEND
+/NOPR
+*END
+
+*CREATE,DEBUG2
+/COM,*****************DEBUGPROGRAMM AUSLENKUNGSSUCHE**************************
+/GOPR
+/OUTPUT,DEBUG,VAR,,APPEND
+/COM,NEUE ITERATIONSSCHLEIFE
+*SET,STABILIT,STAB
+*SET,DELTAFR,FR2
+*SET,SCHLEIFE,SCHLEIFE
+/NOPR
+/OUTPUT,EMECH,OUT,,APPEND
+*END
+
+
+
+/COM,*************************************************************************
+/COM,************************BEGINN HAUPTPROGRAMM*****************************
+/COM,*************************************************************************
+/NOLIST
+/NOPR
+/COM,*********MODELLAUFBEREITUNG**************
+/COM,
+/OUTPUT,EMECH,OUT
+/NERR,0
+/OUTPUT,DEBUG,VAR                                !Ergebnisfile
+/COM,DEBUGGER
+/OUTPUT,EMECH,OUT,,APPEND
+*USE,modell                                      !Modell lesen
+*USE,STARTPAR                                    !Startparameter lesen
+*USE,ZERLEGUN                                    !Modell zerlegen
+:E01
+ /OUTPUT
+ /COM,NEUE ITERATIONSCHLEIFE
+ /COM,**********MECHANISCHE ANALYSE************
+ /OUTPUT,EMECH,OUT,,APPEND
+ *USE,ME-ANALY                                   !mechanische Analyse
+ /OUTPUT                                         !Systemsteifigkeit
+ /COM,**********UC-BERECHNUNG******************
+ /OUTPUT,EMECH,OUT,,APPEND
+  *USE,UC-BERE                                   !Berechnung der noetigen
+ /OUTPUT                                         !Elektrodenspannung
+ /COM,***********KONVERGENZTEST****************
+ /OUTPUT,EMECH,OUT,,APPEND
+  *USE,KONVER                                    !Berechnung des Anstieges
+*IF,KONV,NE,0,:E01                               !der Uc-x-Kennlinie ` Stabilitaets-
+                                                 !kriterium
+/OUTPUT
+/GOPR
+/GOLI 
+/COM,******************************************************
+/COM,********Alle Ausgaben im File PARAM.VAR.**************
+/COM,******************************************************
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM, ************************************************************************* 
+/COM, *                                                                       * 
+/COM, *                                                                       * 
+*MSG,INFO,UC1,AUSL,SCHLEIFE
+.* Ansteuerspannung: %G %/* Auslenkung im Bezugspunkt: %G &
+%/* Anzahl Durchleaufe: %G 
+/COM, *                                                                       *
+/COM, *                                                                       *
+/COM, ************************************************************************* 
+/COM,
+/COM,
+
+!                         Modellbeispiel 1D-Torsionaktor
+!              -als separates File mit dem Namen modell erzeugen-
+!     - Unterprogramm balken erforderlich; Variable B und H auskommentieren-
+
+/com,**********1D-Torsionsaktor***************************
+FE_LA=.00177                                     !Laenge des Federbalkens
+LA_PL=.004                                       !Laenge der Platte
+BR_PL=.004                                       !Breite der Platte
+DI_PL=.000030                                    !Dicke der Platte
+PL_AB=.00030                                     !Elektrodengrundabstand
+SP_EL=600                                        !Spannung der Elektrode
+b=30e-6                                          !Balkenbreite
+h=DI_PL                                          !Balkenhoehe
+/filname,spiegel
+save
+
+!Balkeneigenschaften
+/filname,balken
+*use,balken
+
+/com,**********Spiegel mit Luftraum definieren************
+/filname,spiegel
+resum,,,,1
+/prep7
+et,1,5                                           !1-->Luftraum
+et,2,63                                          !2-->Silizium
+et,3,4                                           !3-->Balken
+
+emunit,muzr,8.85e-12                             !Epsilon null
+mp,murx,1,1                                      !Epsilon relativ
+ex,1,1                                           !kleiner E-Modul (Mitfuehrung)
+nuxy,1,0
+ex,2,169e9
+nuxy,1,.066
+dens,1,2329
+ex,3,169e9                
+dens,3,2329
+nuxy,3,0.3
+ex,4,16.9e12                                     !Balken hart zur Abstuetzung
+dens,4,2
+gm=169e9/(2*(1+.3))
+itg=G_IT/gm
+
+r,2,DI_PL
+r,3,AREA,IZZ,IYY,HOEHE,BR_KL
+rmore,,ITG,1.2,1.2
+
+k,1
+k,2,LA_PL/2
+k,3,LA_PL/2,BR_PL/2
+k,4,,BR_PL/2
+k,5,LA_PL/2+FE_LA
+a,1,2,3,4
+kgen,2,1,5,1,,,-PL_AB
+v,6,7,8,9,1,2,3,4                                !Volumen Luftraum
+
+esize,,6                                         !Laterale Vernetzung der Platte
+type,2
+mat,2
+real,2
+amesh,1                                          !Spiegelplatte
+n1=3                                             
+esize,,3
+type,1
+mat,1
+real,1
+vmesh,1                                          !Luftraum
+
+l,2,5
+type,3
+real,3
+mat,3
+esize,,6 
+lmesh,13                                         !Federbalken
+
+lsym,x,all                                       !Struktur spiegeln
+arsym,x,all
+arsym,y,all
+vsym,x,all
+vsym,y,all
+
+nummrg,all,1e-7
+
+/com,**************rotz Abstuetzung***************
+nsel,s,loc,x,LA_PL/2
+nsel,r,loc,z,0
+a=node(LA_PL/2,0,0)
+nsel,u,node,,a
+b=node(LA_PL/2,0,0)
+nsel,u,node,,b
+c=node(LA_PL/2,0,0)
+type,3
+real,3
+mat,4
+e,a,b
+e,a,c
+nsel,s,loc,x,-(LA_PL/2)
+nsel,r,loc,z,0
+a=node(-LA_PL/2,0,0)
+nsel,u,node,,a
+b=node(-LA_PL/2,0,0)
+nsel,u,node,,b
+c=node(-LA_PL/2,0,0)
+nsel,u,node,,e
+e,a,b
+e,a,c
+allsel
+fini
+
+/solu
+/com,*************Randbedingungen******************
+nsel,s,loc,x,FE_LA+LA_PL/2,,,1
+d,all,ux
+d,all,uy
+d,all,uz
+d,all,rotx
+d,all,roty
+d,all,rotz
+
+nsel,s,loc,z,-PL_AB
+nsel,r,loc,y,0,BR_PL/2
+cm,EL01,node
+d,all,mag,SP_EL                                  !Spannung an der Bodenelektrode
+d,all,uz,0
+nsel,s,loc,z,0
+nsel,r,loc,x,-LA_PL/2,LA_PL/2
+sf,all,mxwf,1                                    !Flaeche der Kraftberechnung
+d,all,mag,0                                      !Spannung an der beweglichen 
+Elektrode
+nall
+eall
+/pbc,all,1
+/psf,mxwf,,1
+/view,1,1,1,1
+eplot
+save
+fini
+

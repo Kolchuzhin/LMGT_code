@@ -1,0 +1,111 @@
+!               Berechnung der Daempfungs- und Squeezekonstante
+!                       squeeze.ans - Kapitel 7.1.3
+
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                        SQUEEZE-FILM DAEMPFUNG                         *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                    Berechnung der Daempfungs- und                     *
+/COM,*                      der Squeezefederkonstante                        *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,              Ref.: W. S. Griffin; Journal of Basic Engineering
+/COM,                    Juni 1966; pp. 451-456
+/COM,
+/COM,                  A Study of Fluid Squeeze-Film Damping
+/COM,            
+/COM,
+/WAIT,5
+
+!EINGABEDATEN
+
+PL_KL=0.00178                                     ! Kleine Plattenseite
+PL_GR=0.003                                       ! Grosse Plattenseite
+ABST=4e-6                                         ! Plattenabstand
+VISC=3.144e-6                                     ! effektive Viskositaet
+PRES=3000                                         ! Druck
+FREQ=850                                          ! Erregerfrequenz
+
+!FOLGEGROESSEN
+AMPL=ABST/100                                     ! Amplitude (unabh.)
+AN_S=40                                           ! Stuetzstellen je Periode
+
+!BEGINN DER ANSYS-RECHNUNG
+/PREP7                                            ! Aufruf Preprozessor   
+ET,1,55                                           ! 2D-Temperaturfeldelement
+MP,KXX,1,PRES*ABST*ABST/(12*VISC)                 ! analoge Waermeleitfaehigkeit
+MP,C,1,1                                          ! spezifische Waerme
+MP,DENS,1,1                                       ! Dichte
+RECTNG,-PL_GR/2,PL_GR/2,-PL_KL/2,PL_KL/2          ! Plattengeometrie
+ESIZE,,30                                         ! Netzdichte
+AMESH,ALL                                         ! Vernetzung
+FINI                                              ! Verlassen Preprozessor
+
+/SOLU                                             ! Aufruf Loeser
+NSEL,S,EXT                                        ! Knoten am Plattenrand sel.
+D,ALL,TEMP,0                                      ! analoge Druckrandbedingungen
+ALLSEL                                            ! alles selektieren
+ANTYPE,TRANS                                      ! transiente Analyse
+DT=1/(FREQ*AN_S)                                  ! Zeitschrittweite
+NSUBST,1,1,1                                      ! Anzahl Subschritte
+OUTRES,ALL,ALL                                    ! alle Daten ausgeben
+DELTIME,DT                                        ! Zeitschrittw. zuweisen
+i=0                                               ! Schleife fuer Last
+:l01
+i=i+1
+*IF,i,EQ,2*AN_S+1,:l02                            ! zwei Perioden
+TIME,i*DT
+FAK=sin(i*2*3.14/AN_S)
+BFE,ALL,HGEN,,AMPL*FREQ*2*3.14*FAK/ABST           ! analoge Last
+LSWRITE,i
+ALLSEL
+*GO,:l01
+:l02
+LSSOLVE,1,2*AN_S                                  ! Lastschritte loesen
+FINI                                              ! Loeser verlassen
+
+/POST1                                            ! Aufruf Postprozessor
+i=0                                               ! Startwerte setzen
+MAXIM=0
+ANG=0
+*DIM,ARR,TABLE,2*AN_S,3                           ! Ergebnismatrix definieren
+:l03
+i=i+1
+*IF,i,EQ,2*AN_S,:l04                              ! Schleife ueber alle Lasten
+SET,i                                             ! Lastfall i laden
+ETABLE,DRU,TEMP                                   ! Druck auslesen
+ETABLE,ARE,VOLU                                   ! Flaeche auslesen
+SMULT,KR,DRU,ARE                                  ! Elementkraft
+SSUM                                              ! Gesamtkraft
+*GET,RES,SSUM,,ITEM,KR
+*IF,i,GT,AN_S,THEN                                ! Funktionsmaximum suchen
+ *IF,RES,GT,MAXIM,THEN                            ! und Phase
+  MAXIM=RES
+  ANG=i*360/AN_S
+ *ENDIF
+*ENDIF
+ARR(i,1,1)=RES
+*GO,:l03
+:l04
+*VSCFU,SCAL,MAX,ARR(1)
+*DO,i,1,2*AN_S
+ ARR(i,2,1)=SCAL*sin(i*2*3.14/AN_S)               ! Vergleichskurve
+ ARR(i,3,1)=i*360/AN_S
+*ENDDO
+*VPLOT,,ARR(1,1,1),2                              ! Lastkurve darstellen
+ANG=ANG-360
+MAXIM=MAXIM*PRES/AMPL
+D_KO=MAXIM*sin(ANG*2*3.14/360)/(FREQ*2*3.14)      ! Daempfungskonstante
+S_KO=-MAXIM*cos(ANG*2*3.14/360)                   ! Squeezefederkonstante
+FINI                                              ! Postprozessor verlassen
+
+! ENDE DES FILES

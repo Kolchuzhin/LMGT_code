@@ -1,0 +1,386 @@
+!     Statische Analyse eines elektromechanischen Systems (2D-Torsionsspiegel)
+!                            emechs.ans - Kapitel 7.4
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                           EMECH - statisch                            *
+/COM,*                                                                       *
+/COM,*              Statische Analyse elektrostatisch-mechanischer           *
+/COM,*                             Mikrostrukturen                           *
+/COM,*                                                                       *
+/COM,*                     -Rahmenprogramm + Modellfile-                     *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,           
+/COM,
+/COM,            Die elektrostatische Kraftberechnung basiert auf eine
+/COM,            Analogiebeziehung zum magnetischen Scalarpotential.
+/COM,
+/COM,
+/WAIT,1
+
+
+/COM,********************EMECH - STATISCH ****************************
+/NOPR                                            !alle Ausgaben
+/NOLIST                                          !im separaten
+/OUTPUT,EMECH,OUT                                !Protokollfile
+
+!MACRO DEFINIEREN
+*CREATE,UPDATE                                   !Routine zum Koordinatenupdate
+/COM,**************UPDATE****************
+/COM,AKTUALLISIERUNG DER LUFTRAUMKOORDINATEN
+/FILNAME,STRUKTUR
+RESUM,,,,1
+/POST1
+SET,LAST
+CMSEL,S,EL00                                     !Verschiebung der Elektroden
+CBDOF,ELEK,,,UPELEK                              !auslesen und als vorgegebene
+EALL                                             !Verschiebungen in File UPELEK 
+NALL                                             !schreiben
+FINI
+/FILNAME,VERSCHIE
+RESUM,,,,1
+/SOLU
+*USE,UPELEK
+SOLVE                                            !Verschiebungsanalyse im gesamten
+FINI                                             !Feldraum mit den Randbedingungen
+/PREP7                                           !aus UPELEK
+UPCOORD,1                                        !Koordinatenupdate aller Knoten
+NWRITE,KNOTEN
+EALL
+NALL
+FINI
+*END
+
+RESTART=ARG1                                     !ohne Argument=neue Aanalyse;
+                                                 !ARG1=Restart
+*IF,RESTART,EQ,1,:L01
+ANZ_IT=0                                         !Anzahl Iterationen; bei NULL gilt
+MAX_DI=1e-6                                      !Konvergenzkontrolle durch Ausl.
+/OUTPUT
+/COM,*********************MODELLEINGABE*******************************
+/OUTPUT,EMECH,OUT,,APPEND
+*USE,modell                                      !Modell lesen
+/COM,MODELLZERLEGUNG
+/FILNAME,STRUKTUR                                !mechanisches Modell
+/PREP7
+MODMSH,NOCHECK
+MODMSH,DETA
+SHPP,OFF
+ET,1,45
+ESEL,U,TYPE,,1
+NELEM
+KONV=0                                           !Parameter fuer Konvergenzkontrolle
+FINI
+SAVE
+/FILNAME,ELEKTROS                                !Modell fuer Elektrostatik
+/PREP7
+MODMSH,NOCHECK
+MODMSH,DETA
+ET,1,5,10
+ESEL,S,TYPE,,1
+NELEM
+SAVE
+CMSEL,S,EL00
+NWRITE,ELEK
+FINI
+/FILNAME,VERSCHIE                                !Modell fuer Luftraumupdate
+/PREP7
+ET,1,45
+ESEL,S,TYPE,,1           
+NELEM
+FINI
+SAVE
+
+/DELETE,ERGEBNIS,F                               !Ergebnisfiles loeschen
+/DELETE,ERGEBNIS,D
+/NOERR,1
+/OUTPUT
+/COM,******************BEGINN DER ITERATION***************************
+/OUTPUT,EMECH,OUT,,APPEND
+ITER=1
+:L01
+/OUTPUT,EMECH,OUT,,APPEND
+/FILNAME,ELEKTROS
+/OUTPUT
+/COM,
+/COM,*****************ELEKTROSTATISCHE FELDRECHNUNG*******************
+/OUTPUT,EMECH,OUT,,APPEND
+RESUM,,,,1
+/COM,KOORDINATENUPDATE
+*IF,ITER,EQ,1,:L02
+/PREP7
+NREAD,KNOTEN                                     !aktualisierte Knoten lesen
+FINI
+:L02
+/SOLU                  
+SOLVE
+FINI
+/COM,LASTBERCHNUNG FUER ABBRUCH
+/POST1
+ETABLE,FORCE_X,FMAG,X
+ETABLE,FORCE_Y,FMAG,Y
+ETABLE,FORCE_Z,FMAG,Z
+/SHOW,,,1
+/EDGE,1,1
+/VIEW,1,1,1,1
+PLVECT,FORCE_X,FORCE_Y,FORCE_Z                   !Kraftvektoren darstellen
+/SHOW,,,0
+/EDGE,1,0
+SSUM
+*GET,FX1,SSUM,,ITEM,FORCE_X
+*GET,FY1,SSUM,,ITEM,FORCE_Y
+*GET,FZ1,SSUM,,ITEM,FORCE_Z
+/OUTPUT,ERGEBNIS,F,,APPEND                       !Gesammtkraft in das File ergebnis.f
+*MSG,NOTE,ITER,FX1,FY1,FZ1                       !schreiben
+AKTUELLE ITERATION:   %I %/F_EL_X_GES:   %G %/&
+F_EL_Y_GES:   %G %/F_EL_Z_GES:   %G %/
+/OUTPUT
+*MSG,NOTE,ITER,FX1,FY1,FZ1
+AKTUELLE ITERATION:   %I %/F_EL_X_GES:   %G %/&
+F_EL_Y_GES:   %G %/F_EL_Z_GES:   %G %/
+/OUTPUT,EMECH,OUT,,APPEND
+FINI
+
+/FILNAME,STRUKTUR                                !Strukturfeldanalyse
+/OUTPUT
+/COM,********************STRUKTURFELDANALYSE**************************
+/OUTPUT,EMECH,OUT,,APPEND
+RESUM,,,,1
+/SOLU
+LDREAD,FORC,LAST,,,,ELEKTROS,rst                 !elektrostatische Kraefte lesen
+SOLVE                                            
+FINI
+/COM,DISPLACEMENTBERECHNUNG FUER ABBRUCH
+/POST1
+/VIEW,1,1,1,1
+PLNSOL,U,SUM
+NSORT,U,SUM,,1
+*GET,KONV_A,SORT,,MAX
+DIFF=KONV_A-KONV
+KONV=KONV_A
+NSORT,U,X
+*GET,U_MAX_X,SORT,,MAX
+*GET,U_MIN_X,SORT,,MIN
+NSORT,U,Y
+*GET,U_MAX_Y,SORT,,MAX
+*GET,U_MIN_Y,SORT,,MIN
+NSORT,U,Z
+*GET,U_MAX_Z,SORT,,MAX
+*GET,U_MIN_Z,SORT,,MIN
+/OUTPUT,ERGEBNIS,D,,APPEND                       !Auslenkung in das File ergebnis.d 
+*MSG,NOTE,ITER,U_MAX_X,U_MIN_X,U_MAX_Y,U_MIN_Y,U_MAX_Z,U_MIN_Z           !schreiben
+AKTUELLE ITERATION:    %I %/AUSLENKUNG UX VON:    %G  BIS:    %G %/&
+AUSLENKUNG UY VON:    %G  BIS:    %G %/AUSLENKUNG UZ VON:    %G  BIS:    %G %/
+/OUTPUT
+*MSG,NOTE,ITER,U_MAX_X,U_MIN_X,U_MAX_Y,U_MIN_Y,U_MAX_Z,U_MIN_Z
+AKTUELLE ITERATION:    %I %/AUSLENKUNG UX VON:    %G  BIS:    %G %/&
+AUSLENKUNG UY VON:    %G  BIS:    %G %/AUSLENKUNG UZ VON:    %G  BIS:    %G %/
+/OUTPUT,EMECH,OUT,,APPEND
+EALL
+NALL
+FINI
+
+*USE,UPDATE                                      !Koordinatenupdate vorbereiten
+
+ITER=ITER+1
+*IF,ANZ_IT,EQ,0,:L04
+*IF,ITER,GE,ANZ_IT+1,:L03                        !Anzahl der Iterationen erreicht?
+*GO,:L01
+:L04
+*IF,DIFF,LT,MAX_DI,:L03                          !Auslenkung aendert sich?
+*GO,:L01
+/COM,ITERATIONEN BEENDET
+:L03
+/OUTPUT
+/COM,
+*ASK,WEITER,"EINE WEITERE ITER. (J=1 N=0)?",0
+*IF,WEITER,EQ,1,:L01
+/COM,
+/COM,*****PROGRAMM BEENDET**************
+/COM,***RESTART MIT AKTUELLEN WERTEN:***
+/COM,***  *use,emechs,1  ***************
+
+
+
+!Modellbeispiel 2D-Torsionaktor
+!-als separates File mit dem Namen modell erzeugen-
+!- Unterprogramm balken erforderlich; Variable B und H auskommentieren-
+
+
+
+/COM,***********************Eingabemodell fuer EMECHS*********************
+H=20e-6                                          !Federdicke
+B=25e-6                                          !Federbreite klein
+L=2000e-6                                        !Federlaenge
+AB=100e-6                                        !Abstand der Federn
+LM=2000e-6                                       !halbe Spiegellaenge
+HL=200e-6                                        !Luftspalt
+UC=900                                           !Elektrodenspannung
+
+/FILNAME,SPIEGEL
+SAVE
+*USE,balken                                      !Balkenkennwerte berechnen
+
+/FILNAME,SPIEGEL
+RESUM,,,,1
+
+/PREP7
+
+ET,1,5                                           !Luftraum
+ET,2,4                                           !Federbalken
+ET,3,63                                          !Spiegelplatte
+
+EMUNIT,MUZR,8.85e-12                             !Epsilon null
+MP,MURX,1,1                                      !Epsilon relativ
+MP,EX,1,1                                        !mechanische Eigenschaften
+MP,NUXY,1,0                                      !fuer Verschiebungsfeldupdate
+MP,DENS,1,1
+MP,EX,2,169e9
+MP,NUXY,2,0
+MP,DENS,2,2329
+MP,GXY,2,79.6e9
+GM=84.5e9                                        !isotroper Balkenansatz                                        
+MP,EX,3,149e9
+MP,DENS,3,2329
+MP,NUXY,3,0.2
+MP,GXY,3,79e9
+
+ITG=G_IT
+R,2,AREA,IZZ,IYY,H,B                             !Balkenkennwerte
+RMORE,,ITG/GM,0,0
+R,3,AREA*100,IZZ*100,IYY*100,H,B                 !fuer Versteifung
+RMORE,,ITG*100/GM,1.2,1.2
+R,4,H                                            !Plattendicke
+
+K,1                                              !Geometriemodellierung
+K,2,LM
+K,3,LM,LM
+K,4,,LM
+K,5,LM+AB
+K,6,LM+2*AB
+K,7,LM+AB,L
+K,8,LM+2*AB,L
+K,9,LM+3*AB
+K,10,,LM+AB
+K,11,L,LM+AB
+K,12,L,LM+2*AB
+K,13,,LM+2*AB
+K,14,,LM+3*AB
+
+L,5,7
+L,6,8
+L,10,11
+L,13,12
+
+L,2,5
+L,6,9
+L,4,10
+L,13,14
+L,7,8
+L,11,12
+
+A,1,2,3,4
+
+TYPE,2
+REAL,2
+MAT,2
+ESIZE,,10
+LMESH,1,4
+
+REAL,3
+ESIZE,,1
+LMESH,5,10
+
+TYPE,3
+REAL,4
+MAT,3
+ESIZE,,6
+AMESH,1
+
+!LUFTRAUM                                        !Netz Luftraum 
+TYPE,1                                           !muss Typ 1 sein
+REAL,1
+MAT,1
+ESIZE,,3
+VEXT,1,,,,,-HL
+VMESH,1
+
+
+LSYM,X,ALL
+LSYM,Y,ALL
+ARSYM,X,ALL
+ARSYM,Y,ALL
+VSYM,X,ALL
+VSYM,Y,ALL
+
+!STUETZBALKEN
+ND=6                                             !fuer ungenaue rot_z-
+REAL,3                                           !Freiheitsgrade der Platten
+TYPE,2
+MAT,2
+A1=NODE(LM,0,0)
+A2=NODE(LM,LM/ND,0)
+A3=NODE(0,LM,0)
+A4=NODE(LM/ND,LM,0)
+E,A1,A2
+E,A3,A4
+A1=NODE(-LM,0,0)
+A2=NODE(-LM,-LM/ND,0)
+A3=NODE(0,-LM,0)
+A4=NODE(-LM/ND,-LM,0)
+E,A1,A2
+E,A3,A4
+A1=NODE(LM,0,0)
+A2=NODE(LM,-LM/ND,0)
+A3=NODE(0,LM,0)
+A4=NODE(-LM/ND,LM,0)
+E,A1,A2
+E,A3,A4
+A1=NODE(-LM,0,0)
+A2=NODE(-LM,LM/ND,0)
+A3=NODE(0,-LM,0)
+A4=NODE(LM/ND,-LM,0)
+E,A1,A2
+E,A3,A4
+
+
+NUMMRG,ALL,1e-7
+FINI
+
+/SOLU
+D,NODE(LM+3*AB,0,0),ALL                          !mechanische Randbedingungen
+D,NODE(-LM-3*AB,0,0),ALL
+D,NODE(0,LM+3*AB,0),ALL
+D,NODE(0,-LM-3*AB,0),ALL
+
+ESEL,S,TYPE,,3
+NSLE,S,1
+CM,EL00,NODE                                     !bewegliche Elektrode selektieren
+ESEL,S,TYPE,,1
+NSLE,S,1
+NSEL,R,LOC,Z,0
+SF,ALL,MXWF,1                                    !Kraftflag setzen
+D,ALL,MAG,0
+
+NSEL,S,LOC,Z,-HL
+NSEL,R,LOC,X,0,LM
+NSEL,R,LOC,Y,0,LM
+CM,EL01,NODE                                     !feste Bodenelektrode
+D,ALL,MAG,UC                                     !Spannung anlegen
+
+
+NSEL,S,LOC,Z,-HL                                 !Luftraum am Boden festhalten
+D,ALL,UX
+D,ALL,UY
+D,ALL,UZ
+ALLSEL
+FINI
+EPLOT
+

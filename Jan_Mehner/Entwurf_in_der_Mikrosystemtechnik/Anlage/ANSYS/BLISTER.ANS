@@ -1,0 +1,141 @@
+!        Blistertest zur Bestimmung des E-Moduls und der Schichtspannungen
+!                      blister.ans - Abschnitt 5.1.3
+
+
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                           BLISTER - TEST                              *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*               Bestimmung des Elastizitaetsmoduls und                  *
+/COM,*                      der Schichteigenspannung                         *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,              Ref.: B.Folkmer u.a. Micro Mat 95, Berlin
+/COM,
+/COM,              Die mechanischen Eigenschaften von Membranen
+/COM,            aus Silizium, Siliziumcarbid und Siliziumnitrid
+/COM,
+/COM,
+/WAIT,1
+
+!EINGABEDATEN
+
+E_MOD=290e9                                        ! E-Modul von Siliziumnitrid
+POI_R=0.2                                          ! Poisson-Ratio
+SIG_V=1000e6                                       ! Vorspannung
+DIC_F=0.5e-6                                       ! Schichtdicke
+MEM_L=100e-6                                       ! Membranlaenge, -breite
+
+!FOLGEGROESSEN
+
+AUS_M=3*DIC_F                                      ! maximale Auslenkung (soll)
+
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*         p=fak1*e*h*w**3/(a**4*(1-nu))+fak2*s*h*w/a**2                 *
+/COM,*                                                                       *
+/COM,*************************************************************************
+
+FAK_1=31.05                                       ! Faktor lt. ANSYS-Run
+FAK_2=13.57                                       ! Faktor lt. ANSYS-Run
+PRES1=FAK_1*E_MOD*DIC_F*AUS_M**3/((MEM_L**4)*(1-POI_R))     
+PRES1=PRES1+FAK_2*SIG_V*DIC_F*AUS_M/(MEM_L**2)    ! Druck lt. Formel
+AUS_M=2*AUS_M                                     ! doppelte Auslenkung
+PRES2=FAK_1*E_MOD*DIC_F*AUS_M**3/((MEM_L**4)*(1-POI_R))      
+PRES2=PRES2+FAK_2*SIG_V*DIC_F*AUS_M/(MEM_L**2)    ! Druck lt. Formel
+TEM_D=100                                         ! Temperaturdifferenz
+ALP_D=SIG_V*(1-POI_R)/(TEM_D*E_MOD)               ! Waemeausdehnungskoeffizient
+                                                  ! fuer Vorspannung
+!
+!BEGINN DER ANSYS-RECHNUNG
+!
+/PREP7                                            ! Aufruf Preprozessor
+ET,1,41                                           ! Membranelement
+MP,EX,1,E_MOD                                     ! E-Modul
+MP,NUXY,1,POI_R                                   ! Poisson-Konstante
+MP,ALPX,1,ALP_D                                   ! Waermeausdehnungskoeffizient
+R,1,DIC_F                                         ! Membrandicke
+RECTNG,-MEM_L/2,MEM_L/2,-MEM_L/2,MEM_L/2          ! Membranflaeche
+ESHAPE,1                                          ! Dreieckelemente gefordert
+ESIZE,,10                                         ! Netzdichte
+AMESH,ALL                                         ! Netzgenaeration
+FINI                                              ! Verlassen Preprozessor
+
+/SOLU                                             ! Aufruf Loeser
+CNVTOL,F,,1e-8                                    ! Convergenztoleranz 
+                                                  ! --> problemabhaengig
+NLGEOM,ON                                         ! grosse Auslenkung
+SSTIFF,ON                                         ! Konvergenzverbesserung
+NSEL,S,EXT                                        ! Randknoten selektieren
+D,ALL,ALL                                         ! feste Einspannung
+NSEL,ALL                                          ! Randknoten freigeben
+TREF,TEM_D                                        ! Bezugstemperatur
+TUNIF,0                                           ! Berechnungstemperatur
+SF,ALL,PRES,PRES1                                 ! berechneter Druck 1. LS
+LSWRITE,1                                         ! Lastschritt schreiben
+SF,ALL,PRES,PRES2                                 ! berechneter Druck 2. LS
+LSWRITE,2                                         ! Lastschritt schreiben
+LSSOLVE,1,2                                       ! Lastschritte loesen
+FINI                                              ! Loeser verlassen
+
+/POST1                                            ! Aufruf Postprozessor
+SET,1                                             ! 1. LS auswaehlen
+PLNSOL,U,Z                                        ! Auslenkung darstellen
+NSORT,U,Z                                         ! Knoten sortieren
+*GET,W_MAX,SORT,,MAX                              ! max. Auslenkung bestimmen
+FEHLER=(W_MAX-AUS_M/2)*50/AUS_M                   ! relativer Fehler
+SET,2                                             ! 2. LS
+NSORT,U,Z                                         ! wie oben
+*GET,W_MAX1,SORT,,MAX
+FEHLER1=(W_MAX1-AUS_M)*100/AUS_M
+
+!FAKTORBESTIMMUNG
+
+*DIM,COEFF,,2,2                                   ! 2x2 Koeffizientenmatrix
+*DIM,RHS,,2,1                                     ! 2x1 rechte Seite Vektor
+*DIM,X,,2,1                                       ! 2x1 Vektor der Unbekannten
+K1=E_MOD*DIC_F*W_MAX**3/((MEM_L**4)*(1-POI_R))    ! Koeffizienten berechnen
+K3=E_MOD*DIC_F*W_MAX1**3/((MEM_L**4)*(1-POI_R))
+K2=SIG_V*DiC_F*W_MAX/(MEM_L**2)
+K4=SIG_V*DiC_F*W_MAX1/(MEM_L**2)
+COEFF(1,1)=K1,K3                                  ! Koeffizienten zuweisen
+COEFF(1,2)=K2,K4   
+RHS(1,1)=PRES1,PRES2                              ! RHS Vector zuweisen 
+*MOPER,X(1,1),COEFF(1,1),SOLVE,RHS(1,1)           ! loese Gleichung
+*STAT,X                                           ! liste Faktoren
+FINI                                              ! Postprozessor verlassen
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM, *************************************************************************
+/COM, *                                                                       *
+/COM, *                                                                       *
+*MSG,INFO,FEHLER,FEHLER1,X(1,1),X(2,1)
+.* relativer Fehler 1. Lastschritt: %G %/* relativer Fehler 2. Lastschritt: %G &
+%/* Faktor1: %G %/* Faktor2: %G
+/COM, *                                                                       *
+/COM, *                                                                       *
+/COM, *************************************************************************
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+
+!ENDE DES FILES

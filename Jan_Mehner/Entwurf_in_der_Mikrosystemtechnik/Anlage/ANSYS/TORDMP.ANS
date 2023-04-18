@@ -1,0 +1,229 @@
+!          Berechnung der viskosen Daempfung eines Torsionsaktuators
+!                       tordmp.ans - Abschnitt 7.1.6
+
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                       TRANSIENTE STROEMUNGSANALYSE                    *
+/COM,*                                                                       *
+/COM,*                   zur Berechnung der viskosen Daempfung               *
+/COM,*                        eines Torsionsspiegels                         *
+/COM,*                            mit FLOTRAN (2D)                           *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,              
+/COM,
+/COM,              
+/COM,            
+/COM,
+/COM,
+/WAIT,1
+
+!DATENBASIS LOESCHEN
+/SYS,rm -i file.dbg                                ! FLOTRAN Files loeschen
+/SYS,rm -i file.pfl                                ! fuer Neustart
+/SYS,rm -i file.rfl
+/SYS,rm -i file.rsw
+
+!EINGABEDATEN
+PL_B=0.003                                         ! Plattenlaenge
+PL_L=0.003                                         ! Plattenbreite 
+                                                   ! parallel zur Drehachse
+PL_D=30e-6                                         ! Plattendicke   
+ABST=370e-6                                        ! Spaltabstand
+ST_D=100e-6                                        ! Stegdicke
+ST_B=500e-6                                        ! Stegbreite
+ST_A=0.00175                                       ! Stegabstand
+AMPL=6e-6                                          ! Amplitude
+
+FREQ=1000                                          ! Erregerfrequenz
+AN_S=40                                            ! Anzahl Stuetzstellen 
+                                                   ! je Periode
+AN_P=2                                             ! Anzahl Perioden
+
+! FOLGEGROESSEN
+PI=3.14                                            ! Konstanten                  
+W2=SQRT(2)
+
+
+!BEGINN DER ANSYS-RECHNUNG
+/PREP7                                             ! Aufruf Preprozessor
+ET,1,141                                           ! 2D-Fluidelement
+
+K,1,,-ABST-PL_D/2                                  ! Geometriedefinition
+K,2,PL_B/2+PL_D/(2*W2),-ABST-PL_D/2                ! Keypoints 
+K,3,ST_A-PL_D/W2,-ABST-PL_D/2
+K,4,,-PL_D/2
+K,5,PL_B/2+PL_D/(2*W2),-PL_D/2
+K,6,ST_A-PL_D/W2,-PL_D/2
+K,7,,PL_D/2
+K,8,PL_B/2-PL_D/(2*W2),PL_D/2
+K,9,ST_A,PL_D/2
+K,10,,ST_A/2
+K,11,PL_B/2-PL_D/(2*W2),ST_A/2
+K,12,ST_A,ST_A/2
+K,13,ST_A+ST_B/2,-ABST-PL_D/2
+K,14,ST_A+ST_B+PL_D/W2,-ABST-PL_D/2
+K,15,2*ST_A,-ABST-PL_D/2
+K,16,ST_A+ST_B/2,-(ST_D-PL_D/2)
+K,17,ST_A+ST_B+PL_D/W2,-PL_D/2
+K,18,2*ST_A,-PL_D/2
+K,19,ST_A+ST_B,PL_D/2
+k,20,2*ST_A,PL_D/2
+K,21,ST_A+ST_B,ST_A/2
+K,22,2*ST_A,ST_A/2
+
+A,1,2,5,4                                          ! Flaechen
+A,2,3,6,5
+A,4,5,8,7
+A,5,6,9,8
+A,7,8,11,10
+A,8,9,12,11
+A,3,13,16,6
+A,13,14,17,16
+A,14,15,18,17
+A,17,18,20,19
+A,9,19,21,12
+A,19,20,22,21
+
+LSEL,S,LINE,,11                                    ! Netzdichte festlegen
+LSEL,A,LINE,,8,10,2
+LSEL,A,LINE,,27,29,2
+LESIZE,ALL,,,2*2
+LSEL,S,LINE,,2,6,2
+LSEL,A,LINE,,19,25,3
+LESIZE,ALL,,,10
+LSEL,S,LINE,,1,9,2
+LSEL,A,LINE,,12,14,2
+LSEL,A,LINE,,17
+LESIZE,ALL,,,20
+LSEL,S,LINE,,15
+LESIZE,ALL,,,16/2,1/5
+LSEL,S,LINE,,13,16,3
+LSEL,A,LINE,,31,33,2
+LESIZE,ALL,,,16,5
+LSEL,S,LINE,,24,32,2
+LSEL,A,LINE,,34
+LESIZE,ALL,,,12
+LSEL,S,LINE,,5,7,2
+LSEL,A,LINE,,12,20,8
+LSEL,A,LINE,,17,18,1
+LSEL,A,LINE,,21,23,2
+LESIZE,ALL,,,10,,1
+LSEL,ALL
+AMESH,ALL                                          ! Flaechen vernetzen
+ARSYM,X,ALL                                        ! Geometrie spiegeln
+
+NUMMRG,ALL,1e-8                                    ! an Achse zusammenfassen
+FINI                                               ! Prepprozessor verlassen
+
+/SOLU                                              ! Loeser aufrufen
+FLDATA7,PROT,DENS,AIR-SI                           ! Dichte Luft
+FLDATA7,PROT,VISC,AIR-SI                           ! dyn. Viskositaet Luft
+FLDATA1,SOLU,TRAN,1                                ! transiente Analyse
+FLDATA4,TIME,GLOB,10                               ! 10 Iteration je Zeitschritt
+FLDATA4,TIME,NUMB,500                              ! max. 500 Iterationen 
+FLDATA4,TIME,RNOP,1                                ! Ergebnisse nach jedem Schritt
+
+NSEL,S,EXT                                         ! Geschwindigkeitsrand-
+D,ALL,VX                                           ! bedingungen an fester Wand
+D,ALL,VY                                           ! auf Null setzen
+NSEL,S,LOC,X,2*ST_A,,,1
+NSEL,A,LOC,Y,ST_A/2
+D,ALL,PRES,0                                       ! Druck am Modellaussenraum 
+DDELE,ALL,VX                                       ! auf Null setzen
+DDELE,ALL,VY
+   
+ASEL,S,AREA,,3,15,12                               ! an bewegter Struktur
+NSLA,S,1                                           ! X-Komponente der Ge-
+CM,PLATTE,NODE                                     ! schwindigkeit auf Null
+D,ALL,VX                                           ! setzen
+FINI
+   
+/PREP7                                             ! Elemente die nicht zum
+ACLEAR,3,15,12                                     ! Fluid gehoeren loeschen
+FINI
+
+/SOLU
+E_TIME=AN_P/FREQ                                   ! Gesamtrechenzeit
+D_TIME=E_TIME/(AN_S*AN_P)                          ! Zeitschrittweite
+ERR=2*PI*FREQ                                      ! Erregerkreisfrequenz
+i=0                           
+:L01                                               ! Schleife zum definieren
+i=i+1                                              ! der harmonischen Last
+
+   OMEGA=AMPL*ERR*SIN(ERR*D_TIME*i)                ! Winkelgeschwindigkeit
+   
+   /NOPR                                           ! Routine zum umrechnen
+   CMSEL,S,PLATTE                                  ! der Winkelgeschwindigkeit
+    :M02                                           ! in die Bahngeschwindigkeit
+    *GET,LOW,NODE,,NUM,MIN                         ! der bewegten Platte
+    *IF,LOW,EQ,0,:M01
+      NX=NX(LOW)
+      VEL=NX*OMEGA
+      D,LOW,VY,VEL
+      NSEL,U,NODE,,LOW
+     *GO,:M02
+    :M01
+    /GOPR
+
+   ALLSEL
+   FLDATA4,TIME,STEP,D_TIME                        ! Schrittweite akt. Schritt
+   FLDATA4,TIME,TEND,D_TIME*i                      ! Endzeit akt. Schritt
+   
+   SOLVE                                           ! Zeitschritt loesen
+
+*IF,i,NE,(AN_S*AN_P),:L01                          ! Schleife beenden
+   
+FINI                                               ! Loeser verlassen
+
+/POST1                                             ! Postprozessor aufrufen
+
+MAXIM=0
+ANG=0
+*DIM,ARR,TABLE,40,2                                ! Ergebnisvektor definieren
+i=0                                                ! Schleife ueber alle Zeit-
+:V01                                               ! schritte
+i=i+1
+*IF,i,EQ,AN_S*AN_P,:V02
+SET,i
+A1=NODE(PL_B/2-PL_D/(2*W2),PL_D/2,0)               ! Integrationsbereich
+A2=NODE(PL_B/2+PL_D/(2*W2),-PL_D/2,0)              ! Eckknoten der Platte
+A3=NODE(-PL_B/2+PL_D/(2*W2),PL_D/2,0)
+A4=NODE(-PL_B/2-PL_D/(2*W2),-PL_D/2,0)
+LPATH,A3,A1                                        ! Pfad an Plattenoberseite
+PDEF,DRUCK,PRES                                    ! Druck auslesen
+PCALC,MULT,DR_DI,DRUCK,XG,PL_L                     ! Druck * Abstand Drehachse
+PCALC,INTG,MOM,DR_DI,S                             ! Moment aufintegrieren
+*GET,ERG,PATH,,LAST,MOM                            ! Ergebnis auf Variable 
+LPATH,A4,A2                                        ! Plattenunterseite
+PDEF,DRUCK,PRES
+PCALC,MULT,DR_DI,DRUCK,XG,PL_L
+PCALC,INTG,MOM,DR_DI,S
+*GET,ERG1,PATH,,LAST,MOM
+ERG=ERG-ERG1                                       ! Gesamtmoment
+*GET,VPL,NODE,A2,V,Y                               ! Plattenbahngeschwindigkeit
+*IF,i,GE,AN_S,THEN                                 ! zur Referenz
+ *IF,(ERG/MAXIM),GT,1,THEN
+  MAXIM=ERG                                        ! maximales Moment suchen
+  ANG=i*360/AN_S                                   ! zugehoerige Phase
+ *ENDIF
+*ENDIF
+ARR(i,1,1)=ERG                                     ! Ergbnisse in Vektor eintr.
+ARR(i,2,1)=VPL
+*GO,:V01
+:V02
+FINI  
+/GRTYPE,2
+ANG=ABS(ANG-450)                                  ! Phase Kraft-Geschwindigkeit
+*VPLOT,,ARR(1,1,1),2                              ! grafische Ausgabe
+D_KO=MAXIM*COS(ANG*2*PI/360)/(AMPL*ERR)           ! Daempfungskonstante
+JXX=PL_B**3*PL_L*PL_D*2329/12                     ! Massentraegheitsmoment
+GUETE=ABS(ERR*JXX/D_KO)                           ! Guete       

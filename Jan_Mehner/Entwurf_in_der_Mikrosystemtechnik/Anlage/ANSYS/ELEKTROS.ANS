@@ -1,0 +1,240 @@
+!                     Berechnung elektrostatischer Kennwerte
+!                          elektros.ans - Kapitel 7.3
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                    ANALYSE ELEKTROSTATISCHER FELDER                   *
+/COM,*                                                                       *
+/COM,*                       mit einer 2D-Temperaturfeld                     *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,              
+/COM,         Beispiel: versetzte Elektrodenstruktur mit Streufeld
+/COM,              
+/COM,            
+/COM,
+/COM,
+/WAIT,1
+
+
+!EINGABEDATEN
+PL_B=0.005                                         ! Plattenlaenge
+PL_L=0.005                                         ! Plattenbreite 
+PL_A=0.004                                         ! Plattenabstand 
+VERS=0.002                                         ! Plattenversatz
+PL_D=300e-6                                        ! Plattendicke   
+FE_R=0.01                                          ! Feldraumgroesse
+
+GR_E=100e-6                                        ! Elementgroesse Elektrode
+GR_L=300e-6                                        ! Elementgroesse Feldraum
+
+!BEGINN DER ANSYS-RECHNUNG
+/PREP7
+ET,1,55                                            ! 2D-Temperaturfeld
+ET,2,9,1                                           ! 2D-Randfeldelemente
+
+MP,KXX,1,8.85e-12                                  ! Permitivitaet
+
+RECTNG,-FE_R/2,FE_R/2,-FE_R/2,FE_R/2               ! top-down Methode
+RECTNG,-PL_B/2-VERS/2,PL_B/2-VERS/2,PL_A/2,PL_D+PL_A/2
+RECTNG,-PL_B/2+VERS/2,PL_B/2+VERS/2,-PL_A/2-PL_D,-PL_A/2
+AOVLAP,ALL                                         ! schnelle Modellerstellung
+                                                   ! aber kein Vierecknetz
+ESIZE,GR_L
+
+TYPE,2
+LSEL,S,EXT                            
+LMESH,ALL                                          ! far field Elemente
+LSEL,ALL
+
+ESIZE,GR_E
+TYPE,1
+REAL,2                                             ! Elektrode unten
+ASEL,S,LOC,Y,-PL_A/2-PL_D,-PL_A/2
+ASEL,R,LOC,X,-PL_B/2+VERS/2,PL_B/2+VERS/2
+AMESH,ALL
+
+REAL,3                                             ! Elektrode oben
+ASEL,S,LOC,Y,PL_A/2,PL_D+PL_A/2
+ASEL,R,LOC,X,-PL_B/2-VERS/2,PL_B/2-VERS/2
+AMESH,ALL
+ASEL,ALL
+
+REAL,4                                             ! Feldraum vernetzen
+ESIZE,GR_L
+ESHAPE,0
+AMESH,ALL
+
+FINI
+
+/SOLU
+
+ESEL,S,REAL,,2
+NSLE,S,1
+D,ALL,TEMP,50                                      ! Potential oben anlegen
+
+ESEL,S,REAL,,3
+NSLE,S,1
+D,ALL,TEMP,-50                                     ! Potential unten anlegen
+ALLSEL
+/PBC,ALL,1
+EPLOT
+
+SOLVE
+
+FINI
+
+/POST1
+
+/EDGE,1,1
+/SHOW,,,1
+/CONTOUR,1,30
+PLNSOL,TEMP                                      ! Aequipotentiallinien
+
+! BERECHNUNG DER KAPAZITEAT AUS DEN ELKTRODENLADUNGEN
+
+NSEL,S,D,TEMP,-50                                ! Selektion untere Elektrode                         
+FSUM                                             ! Ladungen summieren
+*GET,LAD,FSUM,,ITEM,HEAT
+KAPA_1=LAD*PL_L/100
+ALLSEL
+
+! BERECHNUNG DER KAPAZITAET AUS DEM UMLAUFINTEGRAL
+ABST=500e-6                                      ! Abstand des Integrationsweges 
+N1=NODE(-PL_B/2+VERS/2-ABST,-PL_A/2-PL_D-ABST,0) ! von der Elektrode
+N2=NODE(PL_B/2+VERS/2+ABST,-PL_A/2-PL_D-ABST,0)
+N3=NODE(PL_B/2+VERS/2+ABST,-PL_A/2+ABST,0)
+N4=NODE(-PL_B/2+VERS/2-ABST,-PL_A/2+ABST,0)
+LPATH,N1,N2,N3,N4,N1                             ! Pfad definieren
+PDEF,E_X,TF,X                                    ! E-Feldst„rkevektor auslesen  
+PDEF,E_Y,TF,Y
+PDEF,E_Z,TF,Z
+PVECT,NORM,NX,NY,NZ                              ! Normalenvektor auslesen
+PDOT,Q,E_X,E_Y,E_Z,NX,NY,NZ                      ! Punktprodukt E*n
+PCALC,INTG,Q1,Q,S                                ! Integration entlang des Pfades
+*GET,LAD1,PATH,,LAST,Q1
+KAPA_2=LAD1*PL_L/100
+
+! KRAFTBERECHNUNG NACH MAXWELL
+PDEF,E_X,TG,X                                    ! E-Feldst„rke auslesen        
+PDEF,E_Y,TG,Y
+PDEF,E_Z,TG,Z
+PCALC,MULT,E_X2,E_X,E_X                          ! Ex*Ex berechnen
+PCALC,MULT,E_Y2,E_Y,E_Y                          ! Ey*Ey berechnen
+PCALC,ADD,E2,E_X2,E_Y2                           ! E2=Ex*Ex+Ey*Ey
+PCALC,ADD,T11,E_X2,E2,,-.5                       ! T11=Ex*Ex+0.5*E2
+PCALC,MULT,T12,E_X,E_Y                           ! T12=Ex*Ey
+PCALC,ADD,T22,E_Y2,E2,,-.5                       ! T22=Ey*Ey+0.5*E2*E2
+PVECT,NORM,NX,NY,NZ                              ! Normalenvektor auslesen
+PDOT,TNX,T11,T12,E_Z,NX,NY,NZ                    ! Tnx=T11*nx+T12*ny
+PDOT,TNY,T12,T22,E_Z,NX,NY,NZ                    ! Tny=T12*nx+T22*ny
+PCALC,INTG,FX,TNX,S                              ! Fx=intg Tnx ds
+*GET,F_X,PATH,,LAST,FX
+PCALC,INTG,FY,TNY,S
+*GET,F_Y,PATH,,LAST,FY
+F_X2D=F_X*8.85E-12*PL_L
+F_Y2D=F_Y*8.85E-12*PL_L
+
+FINI
+
+! 3D-VERGEICHSRECHNUNG AN EINEM SCHMALEN STREIFENMODELL DER DICHE PL_D
+/PREP7
+
+ET,3,5,10                                        ! 3D-Magnetfeldelement   
+ET,4,47,0                                        ! 2D-Randfeldelement
+EMUNIT,MUZRO,8.85e-12                            ! Permitivitaet
+MP,MURX,1,1                                      ! Epsilon relativ
+
+TYPE,3                                           ! 3D-Modell aufziehen
+ESIZE,,1
+ESHAPE,2
+VEXT,ALL,,,,,PL_D
+
+ACLEAR,ALL                                       ! alte Elemente loeschen
+LCLEAR,ALL
+
+ASEL,S,EXT                                       ! far field Elemente generieren
+ASEL,U,LOC,Z,0
+ASEL,U,LOC,Z,PL_D
+TYPE,4             
+AMESH,ALL
+ALLSEL
+
+FINI
+
+/SOLU
+
+VSEL,S,VOLU,,1
+ESLV,S,1
+NSLE,S,1
+CM,OBEN,NODE
+D,ALL,MAG,50                                     ! Potential obere Elektrode
+
+VSEL,S,VOLU,,2
+ESLV,S,1
+NSLE,S,1
+CM,UNTEN,NODE
+D,ALL,MAG,-50                                    ! Potential untere Elektrode
+
+VSEL,S,VOLU,,3
+ESLV,S,1
+CMSEL,S,OBEN
+CMSEL,A,UNTEN
+SF,ALL,MXWF,1                                    ! Maxwell Flag setzen 
+! Dazu duerfen nur die Knoten der Elektroden und die Elemente des Feldraumes 
+! selektiert sein.
+
+ALLSEL
+/PBC,ALL,1
+/PSF,MXWF,1
+
+SOLVE
+
+FINI
+
+/POST1
+
+/VIEW,1,1,1,1
+/EDGE,1,1
+/SHOW,,,0
+/CTYPE,1
+/CONTOUR,1,30
+PLNSOL,MAG                                       ! Aequipotentiallinien definieren
+
+/SHOW,,,1
+/VIEW,1,,,0
+PLVECT,FMAG                                      ! Kraftvektoren darstellen
+
+NSEL,S,LOC,Y,-FE_R/2,0                           ! Kraftvektoren einer Elektroden
+ESLN,S,1                                         ! aufsummieren und skalieren
+ETABLE,F_X1,FMAG,X
+ETABLE,F_Y1,FMAG,Y
+SSUM
+*GET,F_X2,SSUM,,ITEM,F_X1
+*GET,F_Y2,SSUM,,ITEM,F_Y1
+F_X3D=F_X2*PL_L/PL_D
+F_Y3D=F_Y2*PL_L/PL_D
+
+NSEL,S,D,MAG,-50                                 ! Summation der Elektrodenladungen
+FSUM                                             ! keine Knoten des Modellrandes
+*GET,LAD,FSUM,,ITEM,FLUX                         ! selektieren
+KAPA_3=LAD*PL_L/(100*PL_D)
+
+ALLSEL
+FINI
+
+*STAT
+
+/COM, Die Kraftberechnung im 3D-Fall sollte zur genauen Erfassung des Streufeldes 
+/COM, zwei Elementlagen von der Elektrode entfernt erfolgen. Dazu ist ein Quadernetz 
+/COM, wesentlich guenstiger. Problematisch ist jedoch die automatische Projektion der 
+/COM, Kraftvektoren auf die Elektroden bei einer gekoppelten elektromech. Analyse.

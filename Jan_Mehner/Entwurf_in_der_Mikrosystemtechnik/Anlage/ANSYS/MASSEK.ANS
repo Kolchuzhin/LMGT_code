@@ -1,0 +1,130 @@
+!               Berechnung mechanischer Kennwerte von Massek”rpern
+!                          massek.ans - Abschnitt 5.3
+
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                       Starrkoeperkennwerte                            *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*               Bestimmung der mechanischen Kennwerte von               *
+/COM,*                           Starrkoerper                                *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,
+/COM,
+/COM,                 Bestimmung der mechanischen Kennwerte
+/COM,        (Volumen, Masse, Schwerpunkt, Massentraegheitsmomente)
+/COM,                   von beliebigen Massekoerpern
+/COM,
+/WAIT,5
+
+!EINGABEDATEN
+
+DICHTE=2329                                        ! Dichte
+                                                   ! Quaderkennwerte
+a=4000e-6                                          ! Breite in X-Richtung
+b=4000e-6                                          ! Breite in Y-Richtung
+h=520e-6                                           ! Hoehe
+m_type=1                                           ! 0... Quader
+                                                   ! 1... Pyramidenstumpf
+                                                   ! 2... doppelte Pyramide
+!FOLGEGROESSEN
+*AFUN,DEG                                          ! Winkelfunktionen in degree
+a_p=a+2*h/tan(54.73)                               ! Breite grosse Kante in X-
+b_p=b+2*h/tan(54.73)                               ! und Y-Richtung
+
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*      Die Berechnung bezieht sich auf Massangaben nach Tab. 5.13.      *
+/COM,*                                                                       *
+/COM,*************************************************************************
+
+!
+!BEGINN DER ANSYS-RECHNUNG
+!
+
+/PREP7                                             ! Aufruf Preprozessor
+
+MP,DENS,1,DICHTE                                   ! Dichte
+
+*IF,m_type,EQ,0,THEN                               ! Quader
+BLOCK,-a/2,a/2,-b/2,b/2,0,h                        ! Quaderdefinition
+*ENDIF
+*IF,m_type,EQ,1,THEN                               ! Pyramidenstumpf
+K,1,a/2,b/2,h                                      ! Pyramidendefinition
+K,2,a/2,-b/2,h
+K,3,-a/2,-b/2,h
+K,4,-a/2,b/2,h
+K,5,a_p/2,b_p/2                           
+K,6,a_p/2,-b_p/2
+K,7,-a_p/2,-b_p/2
+K,8,-a_p/2,b_p/2
+V,1,2,3,4,5,6,7,8
+*ENDIF
+
+*IF,m_type,EQ,2,THEN                               ! doppelte Pyramide
+K,1,a/2,b/2,h                                    
+K,2,a/2,-b/2,h
+K,3,-a/2,-b/2,h
+K,4,-a/2,b/2,h
+K,5,a_p/2,b_p/2                           
+K,6,a_p/2,-b_p/2
+K,7,-a_p/2,-b_p/2
+K,8,-a_p/2,b_p/2
+V,1,2,3,4,5,6,7,8
+VSYMM,Z,ALL
+*ENDIF
+
+VATT,1                                             ! Volumenattribute setzen
+/VIEW,1,1,1,1                                      ! Betrachtungsrichtung
+VPLOT                                              ! Volumenplot
+VSUM                                               ! Vomumenkennwerte
+FINI                                               ! Verlassen Preprozessor
+
+*GET,VOLU,VOLU,,VOLU                               ! Volumen auslesen
+MASSE=VOLU*DICHTE                                  ! Masse berechnen
+*GET,X_S,VOLU,,CENT,X                              ! Schwerpunkt in X
+*GET,Y_S,VOLU,,CENT,Y                              ! Schwerpunkt in Y
+*GET,Z_S,VOLU,,CENT,Z                              ! Schwerpunkt in Z
+*GET,JXX,VOLU,,IMC,X                               ! Massentraegheitsmoment 
+*GET,JYY,VOLU,,IMC,Y                               ! Massentraegheitsmoment
+*GET,JZZ,VOLU,,IMC,Z                               ! Massentraegheitsmoment
+
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+/COM, ************************************************************************* 
+/COM, *                                                                       * 
+/COM, *                                                                       * 
+*MSG,INFO,VOLU,MASSE,Z_S
+.* Volumen: %G %/* Masse: %G &
+%/* Schwerpunkt in Z-Richtung: %G 
+*MSG,INFO,JXX,JYY,JZZ
+.* Massentraegheitsmoment Jxx: %G %/* Massentraegheitsmoment Jyy: %G &
+%/* Massentraegheitsmoment Jzz: %G 
+/COM, *                                                                       *
+/COM, *                                                                       *
+/COM, ************************************************************************* 
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,
+
+!ENDE DES FILES
+

@@ -1,0 +1,120 @@
+!                 Thermomechanische Analyse eines Mehrschichtsystems
+!                           schicht.ans - Kapitel 7.2
+ 
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*               MEHRSCHICHTSYSTEM BEI TEMPERATURAENDERUNG               *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                 Berechnung der Verformung und Spannung                *
+/COM,*               bei spannungsfrei abgeschiedenen Schichten              *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,              Ausgangsmaterial: Silizium
+/COM,              1. Prozesschritt: thermische Oxidation (900 C)
+/COM,              2. Prozesschritt: Aluminiumbeschichtung (400 C)
+/COM,                  
+/COM,            
+/COM,
+/WAIT,5
+
+!EINGABEDATEN
+
+L_PL=0.0005                                      ! Plattenl„nge
+H_PL=0.00002                                     ! Plattendicke
+H_FI=1e-6                                        ! Schichtdicke
+
+/PREP7
+
+ET,1,42
+
+EX,1,169e9                                       ! Silizium
+EX,2,73e9                                        ! Siliziumoxid
+EX,3,70e9                                        ! Aluminium
+MP,ALPX,1,3.8e-6
+MP,ALPX,2,0.5e-6
+MP,ALPX,3,23e-6
+
+K,1
+K,2,L_PL
+KGEN,2,1,2,1,,H_PL
+KGEN,3,3,4,1,,H_FI
+
+A,1,2,4,3
+A,3,4,6,5
+A,5,6,8,7
+
+ESIZE,,10
+MAT,1
+AMESH,1
+
+ESIZE,,1
+MAT,2
+ESHAPE,2
+AMESH,2
+MAT,3
+AMESH,3
+
+FINI
+
+/SOLU
+
+NROPT,FULL                                       ! Iterationsverfahren
+NLGEOM,ON                                        ! nichtlineare Analyse
+
+NSEL,S,LOC,X,L_PL/2
+D,ALL,UX
+NSEL,R,LOC,Y,0
+D,ALL,ALL
+NALL
+
+ESEL,S,MAT,,3
+EKILL,ALL                                        ! Aluminium auschalten
+
+TREF,900                                         ! spannungsfreie Bezugstemperatur
+
+BFE,ALL,TEMP,,900                                ! Aluminium bei 900 C belassen
+ESEL,INVE
+BFE,ALL,TEMP,,400                                ! alles andere auf 400 C abkuehlen
+ALLSEL
+
+/PBF,BFE,1
+/PBC,ALL,1
+EPLOT                                            ! Netzdarstellung
+
+SOLVE
+
+ESEL,S,MAT,,3
+BFE,ALL,TEMP,,525                                ! Aluminium von 400 auf 25 C abkuehlen
+                                                 ! diese Differenz entspricht 525 C
+ESEL,INVE
+BFE,ALL,TEMP,,25
+ALLSEL                                           ! alles andere auf 25 C abkuehlen
+
+EALIVE,ALL                                       ! Aluminium wiederbeleben
+
+SOLVE
+
+FINI
+
+/POST1
+
+SET,1
+/EDGE,1,1
+/PBC,ALL,0
+
+PLESOL,S,X
+PLDISP,2
+
+SET,2
+PLESOL,S,X
+PLDISDP,2
+FINI

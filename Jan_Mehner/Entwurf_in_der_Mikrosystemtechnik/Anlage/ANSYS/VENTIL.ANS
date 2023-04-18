@@ -1,0 +1,355 @@
+!          Gekoppelte elektromechanische Analyse eines Mikroventils
+!                        ventil.ans - Kapitel 7.4
+
+/COM,
+/COM,
+/COM,
+/COM,
+/COM,*************************************************************************
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*                            MIKROVENTIL                                *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*               Berechnung der noetigen Ansteuerspannung zum            *
+/COM,*                      Oeffnen des Mikroventils                         *
+/COM,*                                                                       *
+/COM,*                                                                       *
+/COM,*************************************************************************
+/COM,
+/COM,           
+/COM,
+/COM,            Die elektrostatische Kraftberechnung basiert auf
+/COM,            eine analytische Beschreibung der Kraftdichte.
+/COM,
+/COM,
+/WAIT,1
+
+!MACROS GENERIEREN
+*create,druckup
+/com,**********Druckberechnung********************
+/nopr
+allsel
+esel,s,type,,1
+nsle,s
+etable,ausl,u,y
+*cfopen,updruck
+*cfwrite,/nopr
+:ml1
+*get,ele,elem,,num,min
+*if,ele,eq,0,:ml2
+*get,diff,elem,ele,etab,ausl
+*get,radi,elem,ele,cent,x
+!Abstand*****************************************
+xm=lg                                            !Polynomdaten x in mm y in æm
+abst_x=radi+xm
+abst_x=abst_x*1000
+abst_y=abst_x**2*x0+abst_x*x1+x2
+abst_y=1/(-abst_y)
+abst_y=abst_y+x3
+abst_y=abst_y/1000000
+abst=abst_y-diff
+abst=-abst
+*if,abst,ge,df,:ml5
+abst=df
+:ml5
+!Druck*******************************************
+pre=(elr*df)/(efr*abst)                          !geschichtetes Dielektrikum 
+pre=(pre+1)*(pre+1)
+pre=pre*abst*abst
+pre=elr/pre
+pre=0.5*uel*uel*eps0*pre
+*cfwrite,sfe,ele,1,pres,0,(pre-dru)              !Druck+Vorspannung
+esel,u,elem,,ele
+*go,:ml1
+:ml2
+*cfwrite,/gopr
+*cfclose,updruck
+/gopr
+*end
+
+*create,druckup1
+/com,**********Druckberechnung fuer Anschlag darstellen*******
+/nopr
+allsel
+esel,s,type,,1
+nsle,s
+*cfopen,updruck1
+*cfwrite,/nopr
+:nl1
+*get,ele,node,,num,min
+*if,ele,eq,0,:nl2
+radi=NX(ele)
+!Abstand*****************************************
+xm=lg
+abst_x=radi+xm
+abst_x=abst_x*1000
+abst_y=abst_x**2*x0+abst_x*x1+x2
+abst_y=1/(-abst_y)
+abst_y=abst_y+x3
+abst_y=abst_y/1000000
+abst=abst_y
+*if,abst,ge,df,:nl5
+!abst=df
+:nl5
+*cfwrite,d,ele,uy,abst                           !Ventil an den Anschlag druecken
+nsel,u,node,,ele
+*go,:nl1
+:nl2
+*cfwrite,/gopr
+*cfclose,updruck1
+/gopr
+*end
+
+
+!*******************HAUPTPROGRAMM*******************
+!EINGABEDATEN
+ra=0.0007                                        !Rahmen
+ab=.000040                                       !Abstand Mitte Ventilkoerper
+di=.000012                                       !Dicke Membran
+lg=.00222742033                                  !Gesamtmembranradius
+hk=.000393                                       !Hoehe Ventilkoerper
+l1=.000300                                       !Radius Ventilkoerper oben
+l2=.000650                                       !Radius Ventilkoerper unten
+gr=.000025                                       !Absenkung Kegelgrube
+kl=.000002                                       !Abstand Elektrode Gaps
+uel=300                                          !Elektrodenspannung
+eps0=8.854e-12                                   !Epsilon null
+efr=3.8                                          !eps rel Film
+elr=1                                            !eps rel Luft
+ef=efr*eps0                                      !Epsilon Film
+el=elr*eps0                                      !Eepsilon Luft
+df=1e-6                                          !Dicke Film
+anz=2                                            !Anzahl der Iterationen   
+x0=0.081613130                                   !Lage der Bodenelektrode
+x1=-0.363573490                                  !Polynomkoeffizienten
+x2=0.415341410                                   !X-Richtung in Millimeter
+x3=1.087039950                                   !Y-Richtung in Mikrometer
+dru=24000/5                                      !Druckdifferenz (Vorspannung)
+g_f=0                                            !1 (mit Grafikausgabe) sonst 0
+n1=25                                            !Elementeanzahl der Membran
+n2=3                                             !Elementeanzahl der Membran (Dicke)
+
+/prep7
+
+et,1,19,0,,1,1                                   !Surface-Element zum Druckanlegen
+et,2,42,,,1                                      !2D-Element axialsymmetrisch fuer Si
+et,3,52,,,,1,,,1                                 !Gapelemente fue Anschlag
+et,4,52,,,,1                                     !Gapelemente fuer Dichtschicht
+
+mp,dens,1,0
+mp,nuxy,1,0
+mp,ex,2,149e9
+mp,dens,2,2329
+mp,nuxy,1,.2
+
+r,1,,,,1
+rmore,1e-7,1e-7,,,,1e-6
+r,2
+r,3,10000000                                     !Steifigkeit Gap
+r,4,10000000
+
+k,1                                              !Geometrieerstellung
+k,2,,.001
+k,3,ab,-di
+k,4,ab
+k,5,ab,hk
+k,6,l2,-di
+k,7,l2
+k,8,l1,hk
+k,9,lg,-di
+k,10,lg
+
+k,14,lg+ra,-di
+k,15,lg+ra
+k,16,lg+ra,hk
+k,17,lg+hk*0.701,hk
+a,3,6,7,4
+a,4,7,8,5
+a,6,9,10,7
+a,9,14,15,10
+a,10,15,16,17
+
+lesize,1,,,5,,1                                  !Vernetzung
+lesize,11,,,5,,1
+lesize,8,,,n1,-3,1
+lesize,3,,,5,,1
+lesize,13,,,5,,1
+lesize,10,,,n1,-3,1
+type,1
+mat,1
+real,1
+lmesh,1,8,7
+esize,,n2
+eshape,2
+type,2
+mat,2
+real,2
+amesh,all
+
+
+!VERNETZUNG ANSCHLAG
+/nopr
+type,3
+real,3
+mat,3
+*get,s,node,,num,max
+l=1
+nsel,s,loc,y,-di
+nsel,u,loc,x,lg,lg+ra
+cm,ano,node
+:l01
+cmsel,s,ano
+*get,nk,node,,num,min
+*if,nk,eq,0,:l02
+*get,x,nx,nk
+*get,y,ny,nk
+nsel,u,node,,nk
+cm,ano,node
+!Pyramidenstumpf
+abst_x=x+lg
+abst_x=abst_x*1000
+abst_y=abst_x**2*x0+abst_x*x1+x2
+abst_y=1/(-abst_y)
+abst_y=abst_y+x3
+abst_y=abst_y/1000000
+a=-abst_y
+!Ende
+*if,a,ge,1e-6,:g04
+a=1e-6
+:g04
+n,s+l,x,y-a
+e,nk,s+l
+d,s+l,ux
+d,s+l,uy
+l=l+1
+*go,:l01
+:l02
+nall
+/gopr
+
+!ANFANGSAUSLENKUNG DICHTSCHICHT
+/nopr
+type,4
+mat,4
+real,4
+*get,s,node,,num,max
+l=1
+nsel,s,loc,x,ab
+nsel,r,loc,y,hk
+cm,ano,node
+:l03
+cmsel,s,ano
+*get,nk,node,,num,min
+*if,nk,eq,0,:l04
+*get,x,nx,nk
+*get,y,ny,nk
+nsel,u,node,,nk
+cm,ano,node
+n,s+l,x,y+.0001
+e,s+l,nk
+d,s+l,ux
+d,s+l,uy,-.000105
+l=l+1
+*go,:l03
+:l04
+nall
+eall
+/gopr
+allsel
+fini
+
+/solu
+nsel,s,d,uy,-.000105                             !Randbedingungen anlegen
+cm,rand,node
+nall
+nsel,s,loc,x,lg,lg+ra
+nsel,r,loc,y,hk
+d,all,ux
+d,all,uy
+nsel,s,loc,x,ab
+d,all,ux
+allsel
+/pbc,all,1
+/pnum,mat,1
+/number,1
+/psf,pres,,1
+eplot
+fini
+
+!ANSCHLAG GRAFISCH DARSTELLEN
+/solu
+*use,druckup1
+allsel
+*use,updruck1
+allsel
+solve
+fini
+/post1
+/color,curve,%i+1%
+/view,1,,,1
+/yrange,-25e-6,10e-6
+/xrange,2.6e-3,0
+anf=node(ab,-di,0)
+end=node(lg,-di,0)
+lpath,anf,end
+/color,curve,whit,1
+pdef,Anschlag,u,y
+/axlab,y,Auslenkung
+/axlab,x,Radius
+*if,g_f,eq,1,then
+ /show,ven_bi1,,1
+ plpath,Anschlag
+ /show,term
+*endif
+plpath,Anschlag
+/noerase
+fini
+/solu
+nsel,s,loc,y,-di
+ddele,all,uy
+allsel
+fini
+
+
+!BEGINN DER ITERATIVEN LOESUNG
+i=0
+:r01
+/solu
+*if,i,eq,0,:r03
+*use,updruck
+:r03
+/psf,pres,,2
+nlgeom,on                                        !nichtlineare Loesung
+nropt,full,,on                     
+sstif,on                    
+autots,on                   
+solve
+fini
+/post1
+*use,druckup
+allsel
+/color,curve,%i+1%
+/view,1,,,1
+/yrange,-25e-6,10e-6
+/xrange,2.6e-3,0
+anf=node(ab,-di,0)
+end=node(lg,-di,0)
+lpath,anf,end
+pdef,durch_%i%,u,y
+/axlab,y,Auslenkung
+/axlab,x,Radius
+*if,g_f,eq,1,then
+ /show,ven_bi1,,1
+ plpath,durch_%i%
+ /show,term
+*endif
+plpath,durch_%i%
+fini
+i=i+1
+*if,i-1,ge,anz,:r02
+*go,:r01
+:r02
+*ASK,WEITER,"EINE WEITERE ITER. (J=1 N=0)?",0
+*IF,WEITER,EQ,1,:r01
+
