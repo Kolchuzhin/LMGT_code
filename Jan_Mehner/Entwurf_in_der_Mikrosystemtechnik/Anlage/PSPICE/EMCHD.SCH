@@ -1,0 +1,415 @@
+*version 6.0 502164486
+lib C:\MSIMEV60\LIB\abm.slb 0
+lib C:\MSIMEV60\LIB\analog.slb 2746273205
+lib C:\MSIMEV60\LIB\breakout.slb 3690318909
+lib C:\MSIMEV60\LIB\eval.slb 0
+lib C:\MSIMEV60\LIB\port.slb 0
+lib C:\MSIMEV60\LIB\source.slb 2970098879
+lib C:\MSIMEV60\LIB\special.slb 25865778
+lib C:\MSIMEV60\LIB\7400.slb 0
+lib C:\MSIMEV60\LIB\mechanik.slb 2050559946
+lib C:\MSIMEV60\LIB\misc.slb 248682172
+u 448
+ABM1? 8
+PM? 3
+I? 2
+R? 4
+V? 7
+? 10
+INTEG? 3
+DIFF? 3
+ABM2? 3
+X? 3
+C? 2
+SUM? 2
+TABLE? 3
+@libraries
+@analysis
+.DC 0 0 0 4 1 1
++ 0 0 LAST
++ 0 4 0
++ 0 5 10e-6
++ 0 6 0.5e-6
+.TRAN 1 0 0 0
++0 10us
++1 20ms
++3 10us
+.OPT 0 0 0 0 0 0 0 0 0 0 0 0 0
+ITL4 1000
+RELTOL 0.01
+.PROBE 0 0 1 1 0 2
+@targets
+@attributes
+@translators
+a 0 u 13 0 0 0 hln 100 PSPICE=PSPICE
+a 0 u 13 0 0 0 hln 100 PADS=PCB
+a 0 u 13 0 0 0 hln 100 PCAD=PCB
+a 0 u 13 0 0 0 hln 100 PROTEL=PCB
+a 0 u 13 0 0 0 hln 100 TANGO=PCB
+a 0 u 13 0 0 0 hln 100 CADSTAR=PCB
+a 0 u 13 0 0 0 hln 100 EDIF=PCB
+a 0 u 13 0 0 0 hln 100 SCICARDS=PCB
+a 0 u 13 0 0 0 hln 100 POLARIS=PCB
+@index
+pageloc 1 0 7880 
+@status
+n 0 97:11:27:22:51:40;946421500 e 
+s 0 97:11:27:22:52:05;946421525 e 
+*page 1 0 970 720 iA
+@ports
+port 4 AGND 20 510 h
+@parts
+part 2 B-Param 60 550 h
+a 0 u 13 0 2 38 hln 100 NAME2=F_DI
+a 0 a 0 0 0 0 hln 100 PKGREF=PM1
+a 1 ap 0 0 10 -2 hcn 100 refdes=PM1
+a 1 x 0 0 0 0 hcn 100 template=.PARAM @NAME1=@VALUE1 #NAME2/@NAME2=@VALUE2/ ?NAME3/@NAME3=@VALUE3/ ?NAME4/@NAME4=@VALUE4/ ?NAME5/@NAME5=@VALUE5/ ?NAME6/@NAME6=@VALUE6/ ?NAME7/@NAME7=@VALUE7/ ?NAME8/@NAME8=@VALUE8/ ?NAME9/@NAME9=@VALUE9/
+a 0 u 13 0 2 28 hln 100 NAME1=F_LA
+a 0 u 13 0 2 46 hln 100 NAME3=F_BR
+a 0 ur 13 0 68 30 hlb 100 VALUE1=414e-6
+a 0 u 13 0 68 40 hlb 100 VALUE2=10e-6
+a 0 u 13 0 70 48 hlb 100 VALUE3=20e-6
+a 0 u 13 0 2 58 hln 100 NAME4=M_LA
+a 0 u 13 0 2 68 hln 100 NAME5=M_BR
+a 0 u 13 0 68 60 hlb 100 VALUE4=1000e-6
+a 0 u 13 0 68 70 hlb 100 VALUE5=1000e-6
+a 0 u 13 0 2 78 hln 100 NAME6=M_DI
+a 0 u 13 0 68 80 hlb 100 VALUE6=500e-6
+a 0 u 13 0 2 88 hln 100 NAME7=D_ELE
+a 0 u 13 0 68 90 hlb 100 VALUE7=12e-6
+a 0 u 13 0 2 98 hln 100 NAME8=U_QU
+a 0 u 13 0 68 98 hln 100 VALUE8=10
+a 0 u 13 0 2 108 hln 100 NAME9=BESCH
+a 0 u 13 0 68 108 hln 100 VALUE9=600
+part 19 ABM1 350 270 H
+a 0 u 13 0 -162 0 hln 100 EXP1=(V(%IN) * (48*169e9*pwr({F_DI},3)*{F_BR}/(12*pwr({F_LA},3))*(1+3/5*pwr((V(%IN)/{F_DI}),2))))
+a 0 sp 0 0 14 48 hln 100 PART=ABM1
+a 0 a 0 0 0 0 hln 100 PKGREF=ABM12
+a 0 ap 0 0 -12 -2 hln 100 REFDES=ABM12
+part 105 ABM1 260 410 h
+a 0 u 13 0 -18 -4 hln 100 EXP1=(V(%IN)/({M_LA}*{M_BR}*{M_DI}*2329))
+a 0 sp 0 0 14 48 hln 100 PART=ABM1
+a 0 a 0 0 0 0 hln 100 PKGREF=ABM15
+a 0 ap 0 0 -12 -2 hln 100 REFDES=ABM15
+part 107 INTEG 370 410 h
+a 0 sp 0 0 0 30 hln 100 PART=INTEG
+a 0 a 0 0 0 0 hln 100 PKGREF=INTEG1
+a 0 ap 0 0 -6 -6 hln 100 REFDES=INTEG1
+part 108 INTEG 440 410 h
+a 0 sp 0 0 0 30 hln 100 PART=INTEG
+a 0 a 0 0 0 0 hln 100 PKGREF=INTEG2
+a 0 ap 0 0 -6 -6 hln 100 REFDES=INTEG2
+part 109 DIFF 220 410 h
+a 0 sp 0 0 16 32 hln 100 PART=DIFF
+a 0 a 0 0 0 0 hln 100 PKGREF=DIFF1
+a 1 ap 0 0 10 2 hln 100 REFDES=DIFF1
+part 110 DIFF 170 410 h
+a 0 sp 0 0 16 32 hln 100 PART=DIFF
+a 0 a 0 0 0 0 hln 100 PKGREF=DIFF2
+a 1 ap 0 0 10 2 hln 100 REFDES=DIFF2
+part 150 ABM2 350 330 H
+a 0 u 13 0 -112 -2 hln 100 EXP1=(V(%IN2) *0.43* 18.3e-6*pwr({M_LA},3)*{M_BR}/pwr({D_ELE}-V(%IN1),3))
+a 0 u 13 0 14 18 hln 100 EXP2=
+a 0 sp 0 0 14 48 hln 100 PART=ABM2
+a 0 a 0 0 0 0 hln 100 PKGREF=ABM21
+a 0 ap 0 0 -12 -2 hln 100 REFDES=ABM21
+part 164 ABM1 20 410 h
+a 0 u 13 0 -12 -12 hln 100 EXP1=(V(%IN)*{M_LA}*{M_BR}*{M_DI}*2329)
+a 0 sp 0 0 14 48 hln 100 PART=ABM1
+a 0 a 0 0 0 0 hln 100 PKGREF=ABM16
+a 0 ap 0 0 -12 -2 hln 100 REFDES=ABM16
+part 220 ABM1 550 410 h
+a 0 u 13 0 -12 -12 hln 100 EXP1=(8.85e-12*{M_LA}*{M_BR}/({D_ELE}-V(%IN)))
+a 0 sp 0 0 14 48 hln 100 PART=ABM1
+a 0 a 0 0 0 0 hln 100 PKGREF=ABM17
+a 0 ap 0 0 -12 -2 hln 100 REFDES=ABM17
+part 231 C 710 490 v
+a 0 u 13 0 15 25 hln 100 VALUE=1
+a 0 sp 0 0 0 10 hlb 100 PART=C
+a 0 a 0 0 0 0 hln 100 PKGREF=C1
+a 0 ap 9 0 15 0 hln 100 REFDES=C1
+part 248 R 770 410 h
+a 0 u 13 0 15 25 hln 100 VALUE=1e6
+a 0 sp 0 0 0 10 hlb 100 PART=R
+a 0 a 0 0 0 0 hln 100 PKGREF=R3
+a 0 ap 9 0 15 0 hln 100 REFDES=R3
+part 255 ABM2 660 230 H
+a 0 u 13 0 -28 -4 hln 100 EXP1=( pwr(V(%IN1),2)*8.85e-12*{M_LA}*{M_BR}/(2*pwr(({D_ELE}-V(%IN2)),2)))
+a 0 u 13 0 14 18 hln 100 EXP2=
+a 0 sp 0 0 14 48 hln 100 PART=ABM2
+a 0 a 0 0 0 0 hln 100 PKGREF=ABM22
+a 0 ap 0 0 -12 -2 hln 100 REFDES=ABM22
+part 256 SUM 120 410 h
+a 0 sp 0 0 16 32 hln 100 PART=SUM
+a 0 a 0 0 0 0 hln 100 PKGREF=SUM1
+a 1 ap 0 0 10 2 hln 100 REFDES=SUM1
+part 435 VSIN 20 450 h
+a 1 u 0 0 0 0 hcn 100 DC=0
+a 1 u 0 0 0 0 hcn 100 AC=0
+a 1 u 0 0 0 0 hcn 100 VOFF=10
+a 1 u 0 0 0 0 hcn 100 VAMPL={BESCH}
+a 1 u 0 0 0 0 hcn 100 FREQ=1k
+a 0 a 0 0 0 0 hln 100 PKGREF=V5
+a 1 ap 9 0 20 10 hcn 100 REFDES=V5
+part 436 VSRC 830 420 h
+a 1 u 0 0 0 0 hcn 100 DC={U_QU}
+a 1 u 0 0 0 0 hcn 100 AC=0
+a 1 u 0 0 0 0 hcn 100 TRAN=0
+a 0 a 0 0 0 0 hln 100 PKGREF=V6
+a 1 ap 9 0 20 10 hcn 100 REFDES=V6
+part 447 YX 670 410 h
+a 0 sp 11 0 30 26 hlb 200 PART=YX
+a 0 a 0 0 0 0 hln 100 PKGREF=X2
+a 1 ap 9 0 0 0 hln 100 REFDES=X2
+part 0 titleblk 970 720 h
+a 1 s 13 0 350 10 hcn 100 PageSize=A
+a 1 s 13 0 180 60 hcn 100 PageTitle=
+a 1 s 13 0 300 95 hrn 100 PageNO=1
+a 1 s 13 0 340 95 hrn 100 PageCount=1
+part 434 nodeMarker 530 410 h
+a 0 a 0 0 4 22 hlb 100 LABEL=8
+@conn
+w 189
+a 0 s 0 0 232 370 hln 100 LABEL=fdmp
+s 230 340 230 400 414
+a 0 s 3 0 232 370 hln 100 LABEL=fdmp
+s 260 340 230 340 328
+w 213
+s 20 490 20 510 257
+s 670 430 670 510 368
+s 710 510 670 510 370
+s 710 490 710 510 372
+s 750 510 710 510 374
+s 750 430 750 510 376
+s 830 510 750 510 378
+s 830 460 830 510 380
+s 670 510 20 510 432
+w 260
+a 0 s 0 0 22 430 hln 100 LABEL=a_ext
+s 20 410 20 450 261
+a 0 s 3 0 22 430 hln 100 LABEL=a_ext
+w 265
+a 0 s 0 0 115 408 hln 100 LABEL=fext
+s 110 410 120 410 264
+a 0 s 3 0 115 408 hln 100 LABEL=fext
+w 267
+a 0 s 0 0 160 408 hln 100 LABEL=fges
+s 170 410 150 410 421
+a 0 s 3 0 160 408 hln 100 LABEL=fges
+w 269
+a 0 s 0 0 132 320 hln 100 LABEL=fele
+s 130 240 130 400 422
+a 0 s 3 0 132 320 hln 100 LABEL=fele
+s 570 240 130 240 393
+w 321
+s 200 410 220 410 420
+w 323
+a 0 s 0 0 182 335 hln 100 LABEL=fspr
+s 180 270 180 400 415
+a 0 s 3 0 182 335 hln 100 LABEL=fspr
+s 260 270 180 270 409
+w 331
+s 260 410 250 410 330
+w 333
+a 0 s 3 0 510 408 hln 100 LABEL=disp
+s 530 410 550 410 440
+a 0 s 3 0 510 408 hln 100 LABEL=disp
+s 530 330 530 270 355
+s 660 250 660 330 384
+s 530 270 350 270 404
+s 350 330 530 330 423
+s 490 410 530 410 382
+s 530 330 530 410 438
+s 660 330 530 330 441
+w 344
+a 0 s 3 0 432 380 hln 100 LABEL=vel
+s 430 350 430 410 417
+a 0 s 3 0 432 380 hln 100 LABEL=vel
+s 440 410 430 410 347
+s 430 410 420 410 349
+s 350 350 430 350 424
+w 352
+a 0 s 0 0 360 408 hln 100 LABEL=acel
+s 370 410 350 410 351
+a 0 s 3 0 360 408 hln 100 LABEL=acel
+w 359
+a 0 s 0 0 655 408 hln 100 LABEL=capa
+s 640 410 670 410 442
+a 0 s 3 0 655 408 hln 100 LABEL=capa
+w 361
+s 710 450 710 460 360
+w 363
+a 0 s 0 0 832 415 hln 100 LABEL=uq
+s 830 420 830 410 362
+a 0 s 3 0 832 415 hln 100 LABEL=uq
+s 830 410 810 410 446
+w 367
+a 0 s 3 0 760 408 hln 100 LABEL=Uc
+s 760 410 750 410 392
+a 0 s 3 0 760 408 hln 100 LABEL=Uc
+s 770 410 760 410 366
+s 660 230 760 230 388
+s 760 230 760 410 443
+@junction
+j 230 400
++ p 109 IN1
++ w 189
+j 20 510
++ s 4
++ w 213
+j 120 410
++ p 256 IN2
++ w 265
+j 150 410
++ p 256 OUT
++ w 267
+j 130 400
++ p 256 IN1
++ w 269
+j 170 410
++ p 110 IN2
++ w 267
+j 220 410
++ p 109 IN2
++ w 321
+j 200 410
++ p 110 OUT
++ w 321
+j 180 400
++ p 110 IN1
++ w 323
+j 260 270
++ p 19 OUT
++ w 323
+j 260 340
++ p 150 OUT
++ w 189
+j 260 410
++ p 105 IN
++ w 331
+j 250 410
++ p 109 OUT
++ w 331
+j 350 270
++ p 19 IN
++ w 333
+j 490 410
++ p 108 out
++ w 333
+j 350 330
++ p 150 IN1
++ w 333
+j 350 350
++ p 150 IN2
++ w 344
+j 440 410
++ p 108 in
++ w 344
+j 420 410
++ p 107 out
++ w 344
+j 430 410
++ w 344
++ w 344
+j 350 410
++ p 105 OUT
++ w 352
+j 370 410
++ p 107 in
++ w 352
+j 530 330
++ w 333
++ w 333
+j 640 410
++ p 220 OUT
++ w 359
+j 710 460
++ p 231 2
++ w 361
+j 810 410
++ p 248 2
++ w 363
+j 770 410
++ p 248 1
++ w 367
+j 710 490
++ p 231 1
++ w 213
+j 550 410
++ p 220 IN
++ w 333
+j 660 250
++ p 255 IN2
++ w 333
+j 660 230
++ p 255 IN1
++ w 367
+j 760 410
++ w 367
++ w 367
+j 570 240
++ p 255 OUT
++ w 269
+j 20 410
++ p 164 IN
++ w 260
+j 110 410
++ p 164 OUT
++ w 265
+j 710 510
++ w 213
++ w 213
+j 750 510
++ w 213
++ w 213
+j 670 510
++ w 213
++ w 213
+j 20 490
++ p 435 -
++ w 213
+j 20 450
++ p 435 +
++ w 260
+j 830 460
++ p 436 -
++ w 213
+j 830 420
++ p 436 +
++ w 363
+j 530 410
++ w 333
++ w 333
+j 530 410
++ p 434 pin1
++ w 333
+j 670 430
++ p 447 2
++ w 213
+j 750 430
++ p 447 5
++ w 213
+j 670 410
++ p 447 1
++ w 359
+j 710 450
++ p 447 3
++ w 361
+j 750 410
++ p 447 4
++ w 367
+@attributes
+a 0 s 0 0 0 0 hln 100 PAGETITLE=
+a 0 s 0 0 0 0 hln 100 PAGENO=1
+a 0 s 0 0 0 0 hln 100 PAGESIZE=A
+a 0 s 0 0 0 0 hln 100 PAGECOUNT=1
+@text
+s 5 280 280 hln 150 FEDER
+s 5 270 350 hln 150 DAEMPFER
+s 5 280 420 hln 150 MASSE
+s 5 50 480 hln 150 BESCHLEUNIGUNG
+s 5 50 420 hln 150 MASSE
+s 5 780 470 hln 150 QUELLSPANNUNG
+s 5 580 420 hln 150 KAPAZI
+s 5 580 250 hln 150 EL_KRAFT
+s 5 760 370 hln 150 INNENWIDERSTAND

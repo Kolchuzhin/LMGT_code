@@ -1,0 +1,684 @@
+*version 6.0 2050559946
+@index
+symloc balken 0 1582
+symloc Masse 1582 731
+symloc Quelle-sta 2313 639
+symloc 2d-mbalken 2952 767
+symloc B-Param 3719 919
+symloc Quelle_dy 4638 868
+symloc 2d-balken 5506 1871
+symloc 2d-balktor 7377 2451
+symloc 2d-beam_BT 9828 2524
+symloc 2d-beam_BZ 12352 2417
+symloc 2d-beam_BT1 14769 2463
+*symbol balken
+d 3-input ABM - current o/p
+@type p
+@attributes
+a 0 ap 0 0 -12 -2 hln 100 REFDES=balkelemnt?
+a 0 sp 13 0 20 22 hln 100 PART=Balkenelement
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hlb 100 TEMPLATE=G1^@REFDES 0  %1 VALUE { @A11*V( %1)+@A12*V(%2)+@A13*V(%3)+@A14*V(%4)} \nG2^@REFDES 0 %2  VALUE { @A12*V( %1)+@A22*V(%2)+@A23*V(%3)+@A24*V(%4)} \nG3^@REFDES 0 %3  VALUE { @A13*V( %1)+@A23*V(%2)+@A33*V(%3)+@A34*V(%4)} \nG4^@REFDES 0  %4  VALUE { @A14*V( %1)+@A24*V(%2)+@A34*V(%3)+@A44*V(%4)} \nR1@REFDES 0 %1 1G \nR2@REFDES 0 %2 1G  \nR3@REFDES 0 %3 1G \nR4@REFDES 0 %4 1G
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 10 hln 100 A11=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 20 hlb 100 A12=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 30 hlb 100 A13=(-12*@Ex*@Ixx/pwr(@l,3))
+a 0 u 0 0 0 40 hlb 100 A14=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 50 hlb 100 A22=4*@Ex*@Ixx/@l
+a 0 u 0 0 0 60 hlb 100 A23=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 70 hlb 100 A24=2*@Ex*@Ixx/@l
+a 0 u 0 0 0 80 hln 100 A33=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 90 hln 100 A34=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 100 hln 100 A44=4*@Ex*@Ixx/@l
+a 0 u 0 0 0 10 hlb 100 Ex=400
+a 0 u 0 0 0 20 hlb 100 Ixx=150
+a 0 u 0 0 0 30 hlb 100 l=20
+@pins
+p 2 82 8 hln 100 3 n 90 10 u
+a 0 u 0 0 89 12 hln 100 pin=3
+a 0 u 0 0 90 10 hln 100 ERC=x
+p 2 82 28 hln 100 4 n 90 30 u
+a 0 u 0 0 89 32 hln 100 pin=4
+a 0 u 0 0 90 30 hln 100 ERC=x
+p 2 2 26 hln 100 2 n 0 30 h
+a 0 u 0 0 1 28 hln 100 pin=2
+a 0 u 0 0 0 30 hln 100 ERC=x
+p 2 2 8 hln 100 1 n 0 10 h
+a 0 u 0 0 3 10 hln 100 pin=1
+a 0 u 0 0 2 12 hln 100 ERC=x
+@graphics 90 40 0 10 10
+r 0 10 0 80 40
+*symbol Masse
+d transl. Masse
+@type p
+@attributes
+a 0 ap 0 0 -12 -2 hln 100 REFDES=Masse?
+a 0 sp 11 0 18 36 hln 100 PART=seism. Masse
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=C1_^@REFDES $$U3_^@REFDES $$U1_^@REFDES 1 \nV1_^@REFDES $$U1_^@REFDES 0 0 \nE1_^@REFDES $$I1_^@REFDES 0 VALUE {I(V1_^@REFDES)} \nC2_^@REFDES $$I1_^@REFDES $$U2_^@REFDES 1 \nV2_^@REFDES $$U2_^@REFDES 0 0 \nG3_^@REFDES %t_m 0 VALUE {(I(V2_^@REFDES)*@m*(-1))} \nE3_^@REFDES $$U3_^@REFDES 0 VALUE {(V(%t_m)*1)} \nR1_^@REFDES %t_m 0 1G
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 13 13 32 10 hln 100 m=1
+@pins
+p 2 -10 16 hln 100 t_m n 0 20 h
+a 0 u 0 0 1 18 hln 100 pin=1
+a 0 u 0 0 0 20 hln 100 ERC=x
+@graphics 90 40 0 20 10
+r 0 10 0 80 40
+*symbol Quelle-sta
+d Simple current source; AC, DC, Tran may be specified
+@type p
+@attributes
+a 1 s 0 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC| ?TRAN|@TRAN|
+a 1 u 0 0 0 0 hcn 100 DC=@Kraft
+a 1 u 0 0 0 0 hcn 100 AC=0
+a 1 u 0 0 0 0 hcn 100 TRAN=
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 13 13 24 26 hlb 100 Kraft=3
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 10 15
+10 25
+;
+v 0 10 25
+5 20
+;
+v 0 10 25
+15 20
+;
+*symbol 2d-mbalken
+d 
+@type p
+@attributes
+a 1 sp 0 0 0 0 hln 100 REFDES=HS?
+a 0 sp 0 0 0 10 hln 100 PART=
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %t_l %r_l %t_r %r_r @model
+@views
+a 0 u 13 0 0 0 hln 100 DEFAULT=C:\USER\MEHNER\SFB\2DMBALK.SCH
+@pins
+p 2 -6 6 hln 100 t_l n 0 10 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 13 0 3 12 hln 100 pin=1
+a 0 u 0 0 0 0 hln 100 float=e
+p 2 -6 32 hln 100 r_l n 0 20 h
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 13 0 3 22 hln 100 pin=2
+p 2 64 4 hrn 100 t_r n 60 10 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 13 0 53 12 hln 100 pin=3
+p 2 66 32 hrn 100 r_r n 60 20 u
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 13 0 53 22 hln 100 pin=4
+@graphics 60 40 0 10 10
+r 0 10 0 50 40
+s 26 12 24 hln 70 massebehaftet
+s 26 14 12 hln 80 2d-Balken
+*symbol B-Param
+d Used to specify pre-defined parameters
+@type p
+@attributes
+a 1 s 0 0 10 -2 hcn 100 refdes=PM?
+a 1 s 0 0 0 0 hcn 100 template=.PARAM @NAME1=@VALUE1 #NAME2/@NAME2=@VALUE2/ ?NAME3/@NAME3=@VALUE3/ ?NAME4/@NAME4=@VALUE4/ ?NAME5/@NAME5=@VALUE5/ ?NAME6/@NAME6=@VALUE6/ ?NAME7/@NAME7=@VALUE7/
+a 0 u 13 0 2 28 hln 100 NAME1=Dichte
+a 0 u 13 0 2 38 hln 100 NAME2=E_Mod
+a 0 u 13 0 2 88 hln 100 NAME3=Q_Fl
+a 0 ur 13 0 48 30 hlb 100 VALUE1=0.0333
+a 0 u 13 0 64 40 hlb 100 VALUE2=400
+a 0 u 13 0 74 90 hlb 100 VALUE3=3
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 13 0 2 58 hln 100 NAME4=L_B
+a 0 u 13 0 2 68 hln 100 NAME5=F_Tr
+a 0 u 13 0 68 60 hlb 100 VALUE4=20
+a 0 u 13 0 64 70 hlb 100 VALUE5=150
+a 0 u 13 0 2 78 hln 100 NAME6=T_Tr
+a 0 u 13 0 68 80 hlb 100 VALUE6=60
+a 0 u 13 0 2 48 hln 100 NAME7=G_Mod
+a 0 u 13 0 64 50 hlb 100 VALUE7=100
+@pins
+@graphics 80 10 40 10 10
+v 0 0 10
+80 10
+;
+s 26 0 8 hln 100 PARAMETERS:
+*symbol Quelle_dy
+d Pulse current source
+@type p
+@attributes
+a 1 s 0 0 20 10 hcn 100 REFDES=I?
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=I^@REFDES %+ %- ?DC|DC @DC| ?AC|AC @AC|\n+PULSE @I1 @I2 ?TD/@TD/~TD/0/ #TR/@TR/ #TF/@TF/ #PW/@PW/ #PER/@PER/
+a 1 u 0 0 0 0 hcn 100 DC=3
+a 1 u 0 0 0 0 hcn 100 AC=0
+a 1 u 0 0 0 0 hcn 100 I1=0
+a 1 u 0 0 0 0 hcn 100 I2=@Kraft
+a 1 u 0 0 0 0 hcn 100 TD=0.1
+a 1 u 0 0 0 0 hcn 100 TR=0.001
+a 1 u 0 0 0 0 hcn 100 TF=0.001
+a 1 u 0 0 0 0 hcn 100 PW=10
+a 1 u 0 0 0 0 hcn 100 PER=20
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 13 13 38 22 hcn 100 Kraft=3
+@pins
+p 2 10 14 hcn 75 + n 10 0 d
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 -5 hln 100 pin=1
+p 2 10 30 hcn 75 - n 10 40 v
+a 0 u 0 0 0 0 hln 100 ERC=x
+a 0 u 0 0 5 5 hln 100 pin=2
+@graphics 20 40 10 0 10
+c 0 10 20 10
+v 0 3 25
+6 25
+;
+v 0 6 25
+8 18
+;
+v 0 8 18
+12 18
+;
+v 0 12 18
+14 25
+;
+v 0 14 25
+17 25
+;
+*symbol 2d-balken
+d 3-input ABM - current o/p
+@type p
+@attributes
+a 0 a 0 0 -12 -2 hln 100 REFDES=blk?
+a 0 sp 13 0 22 38 hln 100 PART=2D-Balken
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hlb 100 TEMPLATE=G1^@REFDES 0  %t_l VALUE { @A11*V( %t_l)+@A12*V(%r_l)+@A13*V(%t_r)+@A14*V(%r_r)} \nG2^@REFDES 0 %r_l VALUE { @A12*V( %t_l)+@A22*V(%r_l)+@A23*V(%t_r)+@A24*V(%r_r)} \nG3^@REFDES 0 %t_r  VALUE { @A13*V( %t_l)+@A23*V(%r_l)+@A33*V(%t_r)+@A34*V(%r_r)} \nG4^@REFDES 0  %r_r  VALUE { @A14*V( %t_l)+@A24*V(%r_l)+@A34*V(%t_r)+@A44*V(%r_r)} \nR1^@REFDES 0 %t_l 1G \nR2^@REFDES 0 %r_l 1G  \nR3^@REFDES 0 %t_r 1G \nR4^@REFDES 0 %r_r 1G
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 10 hln 100 A11=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 20 hlb 100 A12=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 30 hlb 100 A13=(-12*@Ex*@Ixx/pwr(@l,3))
+a 0 u 0 0 0 40 hlb 100 A14=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 50 hlb 100 A22=4*@Ex*@Ixx/@l
+a 0 u 0 0 0 60 hlb 100 A23=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 70 hlb 100 A24=2*@Ex*@Ixx/@l
+a 0 u 0 0 0 80 hln 100 A33=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 90 hln 100 A34=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 100 hln 100 A44=4*@Ex*@Ixx/@l
+a 0 u 13 13 30 0 hlb 100 Ex=400
+a 0 u 13 13 4 50 hlb 100 Ixx=150
+a 0 u 13 13 60 50 hlb 100 l=20
+@pins
+p 2 82 8 hln 100 t_r n 90 10 u
+a 0 u 0 0 89 12 hln 100 pin=3
+a 0 u 0 0 90 10 hln 100 ERC=x
+p 2 82 28 hln 100 r_r n 90 30 u
+a 0 u 0 0 89 32 hln 100 pin=4
+a 0 u 0 0 90 30 hln 100 ERC=x
+p 2 -2 28 hln 100 r_l n 0 30 h
+a 0 u 0 0 1 28 hln 100 pin=2
+a 0 u 0 0 0 30 hln 100 ERC=x
+p 2 -2 8 hln 100 t_l n 0 10 h
+a 0 u 0 0 3 10 hln 100 pin=1
+a 0 u 0 0 2 12 hln 100 ERC=x
+@graphics 90 40 0 10 10
+r 0 10 0 80 40
+r 0 22 20 68 22
+v 0 22 20
+22 6
+;
+v 0 22 6
+24 8
+;
+v 0 22 6
+20 8
+;
+v 0 68 20
+68 6
+;
+v 0 68 6
+70 8
+;
+v 0 68 6
+66 8
+;
+a 0 28 18 20 26 28 24
+a 0 64 24 72 16 64 18
+v 0 28 18
+28 16
+;
+v 0 28 18
+26 18
+;
+v 0 64 18
+66 18
+;
+v 0 64 18
+64 16
+;
+*symbol 2d-balktor
+d 3-input ABM - current o/p
+@type p
+@attributes
+a 0 a 0 0 -12 -2 hln 100 REFDES=blk?
+a 0 sp 13 0 22 38 hln 100 PART=2D-Balken
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 s 0 0 0 0 hlb 100 TEMPLATE=G1^@REFDES 0  %t_l VALUE { @A11*V( %t_l)+@A12*V(%r_l)+@A13*V(%t_r)+@A14*V(%r_r)} \nG2^@REFDES 0 %r_l VALUE { @A12*V( %t_l)+@A22*V(%r_l)+@A23*V(%t_r)+@A24*V(%r_r)} \nG3^@REFDES 0 %t_r  VALUE { @A13*V( %t_l)+@A23*V(%r_l)+@A33*V(%t_r)+@A34*V(%r_r)} \nG4^@REFDES 0  %r_r  VALUE { @A14*V( %t_l)+@A24*V(%r_l)+@A34*V(%t_r)+@A44*V(%r_r)}  \nG5^@REFDES 0 %d_l VALUE {@A55*V(%d_l)-@A55*V(%d_r)} \nG6^@REFDES 0 %d_r VALUE {@A55*V(%d_r)-@A55*V(%d_l)} \nR6^@REFDES 0 %d_r 1G \nR7^@REFDES 0 %r_r 1G \nR9^@REFDES 0 %t_r 1G
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 10 hln 100 A11=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 20 hlb 100 A12=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 30 hlb 100 A13=(-12*@Ex*@Ixx/pwr(@l,3))
+a 0 u 0 0 0 40 hlb 100 A14=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 50 hlb 100 A22=4*@Ex*@Ixx/@l
+a 0 u 0 0 0 60 hlb 100 A23=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 70 hlb 100 A24=2*@Ex*@Ixx/@l
+a 0 u 0 0 0 80 hln 100 A33=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 90 hln 100 A34=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 100 hln 100 A44=4*@Ex*@Ixx/@l
+a 0 u 13 13 24 -2 hlb 100 Ex={E_Mod}
+a 0 u 13 13 -10 52 hlb 100 Ixx={F_Traeg}
+a 0 u 13 13 58 52 hlb 100 l={Laenge}
+a 0 u 0 0 0 10 hln 100 A55=@GM*@IT/@l
+a 0 u 13 13 -10 66 hlb 100 GM={G_Mod}
+a 0 u 13 13 58 66 hlb 100 IT={T_Traeg}
+@pins
+p 2 82 8 hln 100 t_r n 90 10 u
+a 0 u 0 0 89 12 hln 100 pin=3
+a 0 u 0 0 90 10 hln 100 ERC=x
+p 2 82 18 hln 100 r_r n 90 20 u
+a 0 u 0 0 89 22 hln 100 pin=4
+a 0 u 0 0 90 20 hln 100 ERC=x
+p 2 -2 18 hln 100 r_l n 0 20 h
+a 0 u 0 0 1 18 hln 100 pin=2
+a 0 u 0 0 0 20 hln 100 ERC=x
+p 2 -2 8 hln 100 t_l n 0 10 h
+a 0 u 0 0 3 10 hln 100 pin=1
+a 0 u 0 0 2 12 hln 100 ERC=x
+p 2 -4 28 hln 100 d_l n 0 30 h
+a 0 u 0 0 1 28 hln 100 pin=5
+a 0 u 0 0 0 30 hln 100 ERC=x
+p 2 82 28 hln 100 d_r n 90 30 u
+a 0 u 0 0 91 28 hln 100 pin=6
+a 0 u 0 0 90 30 hln 100 ERC=x
+@graphics 90 40 0 10 10
+r 0 10 0 80 40
+r 0 22 20 68 22
+v 0 22 20
+22 6
+;
+v 0 22 6
+24 8
+;
+v 0 22 6
+20 8
+;
+v 0 68 20
+68 6
+;
+v 0 68 6
+70 8
+;
+v 0 68 6
+66 8
+;
+a 0 28 18 20 26 28 24
+a 0 64 24 72 16 64 18
+v 0 28 18
+28 16
+;
+v 0 28 18
+26 18
+;
+v 0 64 18
+66 18
+;
+v 0 64 18
+64 16
+;
+v 0 12 20
+20 20
+;
+v 0 20 20
+18 18
+;
+v 0 20 20
+18 22
+;
+v 0 18 20
+16 22
+;
+v 0 18 20
+16 18
+;
+v 0 70 20
+78 20
+;
+v 0 78 20
+76 18
+;
+v 0 78 20
+76 22
+;
+v 0 76 20
+74 22
+;
+v 0 76 20
+74 18
+;
+*symbol 2d-beam_BT
+d 2D-Balken fuer Biegung und Torsion
+@type p
+@attributes
+a 0 a 0 0 -12 -2 hln 100 REFDES=blk?
+a 0 sp 13 0 22 38 hln 100 PART=2D-Balken
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hlb 100 TEMPLATE=G1^@REFDES 0  %t_l VALUE { @A11*V( %t_l)+@A12*V(%r_l)+@A13*V(%t_r)+@A14*V(%r_r)} \nG2^@REFDES 0 %r_l VALUE { @A12*V( %t_l)+@A22*V(%r_l)+@A23*V(%t_r)+@A24*V(%r_r)} \nG3^@REFDES 0 %t_r  VALUE { @A13*V( %t_l)+@A23*V(%r_l)+@A33*V(%t_r)+@A34*V(%r_r)} \nG4^@REFDES 0  %r_r  VALUE { @A14*V( %t_l)+@A24*V(%r_l)+@A34*V(%t_r)+@A44*V(%r_r)}  \nG5^@REFDES 0 %d_l VALUE {@A55*V(%d_l)-@A55*V(%d_r)} \nG6^@REFDES 0 %d_r VALUE {@A55*V(%d_r)-@A55*V(%d_l)} \nR6^@REFDES 0 %d_r 1G \nR7^@REFDES 0 %r_r 1G \nR9^@REFDES 0 %t_r 1G \nR10^@REFDES 0 %t_l 1G \nR11^@REFDES 0 %r_l 1G \nR12^@REFDES 0 %d_l 1G
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 10 hln 100 A11=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 20 hlb 100 A12=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 30 hlb 100 A13=(-12*@Ex*@Ixx/pwr(@l,3))
+a 0 u 0 0 0 40 hlb 100 A14=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 50 hlb 100 A22=4*@Ex*@Ixx/@l
+a 0 u 0 0 0 60 hlb 100 A23=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 70 hlb 100 A24=2*@Ex*@Ixx/@l
+a 0 u 0 0 0 80 hln 100 A33=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 90 hln 100 A34=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 100 hln 100 A44=4*@Ex*@Ixx/@l
+a 0 u 13 13 24 -2 hlb 100 Ex={E_Mod}
+a 0 u 13 13 -10 52 hlb 100 Ixx={F_Tr}
+a 0 u 13 13 58 52 hlb 100 l={L_B}
+a 0 u 0 0 0 10 hln 100 A55=@GM*@IT/@l
+a 0 u 13 13 -10 66 hlb 100 GM={G_Mod}
+a 0 u 13 13 58 66 hlb 100 IT={T_Tr}
+@pins
+p 2 82 8 hln 100 t_r n 90 10 u
+a 0 u 0 0 89 12 hln 100 pin=3
+a 0 u 0 0 90 10 hln 100 ERC=x
+p 2 82 18 hln 100 r_r n 90 20 u
+a 0 u 0 0 89 22 hln 100 pin=4
+a 0 u 0 0 90 20 hln 100 ERC=x
+p 2 -2 18 hln 100 r_l n 0 20 h
+a 0 u 0 0 1 18 hln 100 pin=2
+a 0 u 0 0 0 20 hln 100 ERC=x
+p 2 -2 8 hln 100 t_l n 0 10 h
+a 0 u 0 0 3 10 hln 100 pin=1
+a 0 u 0 0 2 12 hln 100 ERC=x
+p 2 -4 28 hln 100 d_l n 0 30 h
+a 0 u 0 0 1 28 hln 100 pin=5
+a 0 u 0 0 0 30 hln 100 ERC=x
+p 2 82 28 hln 100 d_r n 90 30 u
+a 0 u 0 0 91 28 hln 100 pin=6
+a 0 u 0 0 90 30 hln 100 ERC=x
+@graphics 90 40 0 10 10
+r 0 10 0 80 40
+r 0 22 20 68 22
+v 0 22 20
+22 6
+;
+v 0 22 6
+24 8
+;
+v 0 22 6
+20 8
+;
+v 0 68 20
+68 6
+;
+v 0 68 6
+70 8
+;
+v 0 68 6
+66 8
+;
+a 0 28 18 20 26 28 24
+a 0 64 24 72 16 64 18
+v 0 28 18
+28 16
+;
+v 0 28 18
+26 18
+;
+v 0 64 18
+66 18
+;
+v 0 64 18
+64 16
+;
+v 0 12 20
+20 20
+;
+v 0 20 20
+18 18
+;
+v 0 20 20
+18 22
+;
+v 0 18 20
+16 22
+;
+v 0 18 20
+16 18
+;
+v 0 70 20
+78 20
+;
+v 0 78 20
+76 18
+;
+v 0 78 20
+76 22
+;
+v 0 76 20
+74 22
+;
+v 0 76 20
+74 18
+;
+*symbol 2d-beam_BZ
+d 2D-Balken fuer Biegung und Zug/Druck
+@type p
+@attributes
+a 0 a 0 0 -12 -2 hln 100 REFDES=blk?
+a 0 sp 13 0 22 38 hln 100 PART=2D-Balken
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hlb 100 TEMPLATE=G1^@REFDES 0  %t_l VALUE { @A11*V( %t_l)+@A12*V(%r_l)+@A13*V(%t_r)+@A14*V(%r_r)} \nG2^@REFDES 0 %r_l VALUE { @A12*V( %t_l)+@A22*V(%r_l)+@A23*V(%t_r)+@A24*V(%r_r)} \nG3^@REFDES 0 %t_r  VALUE { @A13*V( %t_l)+@A23*V(%r_l)+@A33*V(%t_r)+@A34*V(%r_r)} \nG4^@REFDES 0  %r_r  VALUE { @A14*V( %t_l)+@A24*V(%r_l)+@A34*V(%t_r)+@A44*V(%r_r)}  \nG5^@REFDES 0 %d_l VALUE {@A55*V(%d_l)-@A55*V(%d_r)} \nG6^@REFDES 0 %d_r VALUE {@A55*V(%d_r)-@A55*V(%d_l)} \nR6^@REFDES 0 %d_r 1G \nR7^@REFDES 0 %r_r 1G \nR9^@REFDES 0 %t_r 1G \nR10^@REFDES 0 %t_l 1G \nR11^@REFDES 0 %r_l 1G \nR12^@REFDES 0 %d_l 1G
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 10 hln 100 A11=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 20 hlb 100 A12=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 30 hlb 100 A13=(-12*@Ex*@Ixx/pwr(@l,3))
+a 0 u 0 0 0 40 hlb 100 A14=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 50 hlb 100 A22=4*@Ex*@Ixx/@l
+a 0 u 0 0 0 60 hlb 100 A23=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 70 hlb 100 A24=2*@Ex*@Ixx/@l
+a 0 u 0 0 0 80 hln 100 A33=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 90 hln 100 A34=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 100 hln 100 A44=4*@Ex*@Ixx/@l
+a 0 u 13 13 24 -2 hlb 100 Ex={E_Mod}
+a 0 u 13 13 -10 52 hlb 100 Ixx={F_Tr}
+a 0 u 13 13 58 52 hlb 100 l={L_B}
+a 0 u 0 0 0 10 hln 100 A55=@Ex*@Ar/@l
+a 0 u 13 13 -10 64 hlb 100 Ar={Q_Fl}
+@pins
+p 2 82 8 hln 100 t_r n 90 10 u
+a 0 u 0 0 89 12 hln 100 pin=3
+a 0 u 0 0 90 10 hln 100 ERC=x
+p 2 82 18 hln 100 r_r n 90 20 u
+a 0 u 0 0 89 22 hln 100 pin=4
+a 0 u 0 0 90 20 hln 100 ERC=x
+p 2 -2 18 hln 100 r_l n 0 20 h
+a 0 u 0 0 1 18 hln 100 pin=2
+a 0 u 0 0 0 20 hln 100 ERC=x
+p 2 -2 8 hln 100 t_l n 0 10 h
+a 0 u 0 0 3 10 hln 100 pin=1
+a 0 u 0 0 2 12 hln 100 ERC=x
+p 2 -4 28 hln 100 d_l n 0 30 h
+a 0 u 0 0 1 28 hln 100 pin=5
+a 0 u 0 0 0 30 hln 100 ERC=x
+p 2 82 28 hln 100 d_r n 90 30 u
+a 0 u 0 0 91 28 hln 100 pin=6
+a 0 u 0 0 90 30 hln 100 ERC=x
+@graphics 90 40 0 10 10
+r 0 10 0 80 40
+r 0 22 20 68 22
+v 0 22 20
+22 6
+;
+v 0 22 6
+24 8
+;
+v 0 22 6
+20 8
+;
+v 0 68 20
+68 6
+;
+v 0 68 6
+70 8
+;
+v 0 68 6
+66 8
+;
+a 0 28 18 20 26 28 24
+a 0 64 24 72 16 64 18
+v 0 28 18
+28 16
+;
+v 0 28 18
+26 18
+;
+v 0 64 18
+66 18
+;
+v 0 64 18
+64 16
+;
+v 0 12 20
+20 20
+;
+v 0 20 20
+18 18
+;
+v 0 20 20
+18 22
+;
+v 0 70 20
+78 20
+;
+v 0 78 20
+76 18
+;
+v 0 78 20
+76 22
+;
+*symbol 2d-beam_BT1
+d 2D-Balken fuer Biegung und Torsion
+@type p
+@attributes
+a 0 a 0 0 -12 -2 hln 100 REFDES=blk?
+a 0 sp 13 0 22 38 hln 100 PART=2D-Balken
+a 0 sp 0 0 0 0 hln 100 MODEL=
+a 0 sp 0 0 0 0 hlb 100 TEMPLATE=G1^@REFDES 0  %t_l VALUE { @A11*V( %t_l)+@A12*V(%r_l)+@A13*V(%t_r)+@A14*V(%r_r)} \nG2^@REFDES 0 %r_l VALUE { @A12*V( %t_l)+@A22*V(%r_l)+@A23*V(%t_r)+@A24*V(%r_r)} \nG3^@REFDES 0 %t_r  VALUE { @A13*V( %t_l)+@A23*V(%r_l)+@A33*V(%t_r)+@A34*V(%r_r)} \nG4^@REFDES 0  %r_r  VALUE { @A14*V( %t_l)+@A24*V(%r_l)+@A34*V(%t_r)+@A44*V(%r_r)}  \nG5^@REFDES 0 %d_l VALUE {@A55*V(%d_l)-@A55*V(%d_r)} \nG6^@REFDES 0 %d_r VALUE {@A55*V(%d_r)-@A55*V(%d_l)} \nR6^@REFDES 0 %d_r 1G \nR7^@REFDES 0 %r_r 1G \nR9^@REFDES 0 %t_r 1G
+a 0 s 0 0 0 10 hlb 100 SIMULATIONONLY=
+a 0 u 0 0 0 10 hln 100 A11=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 20 hlb 100 A12=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 30 hlb 100 A13=(-12*@Ex*@Ixx/pwr(@l,3))
+a 0 u 0 0 0 40 hlb 100 A14=(-6*@Ex*@Ixx/pwr(@l,2))
+a 0 u 0 0 0 50 hlb 100 A22=4*@Ex*@Ixx/@l
+a 0 u 0 0 0 60 hlb 100 A23=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 70 hlb 100 A24=2*@Ex*@Ixx/@l
+a 0 u 0 0 0 80 hln 100 A33=12*@Ex*@Ixx/pwr(@l,3)
+a 0 u 0 0 0 90 hln 100 A34=6*@Ex*@Ixx/pwr(@l,2)
+a 0 u 0 0 0 100 hln 100 A44=4*@Ex*@Ixx/@l
+a 0 u 13 13 24 -2 hlb 100 Ex={E_Mod}
+a 0 u 13 13 -10 52 hlb 100 Ixx={F_Traeg}
+a 0 u 13 13 58 52 hlb 100 l={Laenge1}
+a 0 u 0 0 0 10 hln 100 A55=@GM*@IT/@l
+a 0 u 13 13 -10 66 hlb 100 GM={G_Mod}
+a 0 u 13 13 58 66 hlb 100 IT={T_Traeg}
+@pins
+p 2 82 8 hln 100 t_r n 90 10 u
+a 0 u 0 0 89 12 hln 100 pin=3
+a 0 u 0 0 90 10 hln 100 ERC=x
+p 2 82 18 hln 100 r_r n 90 20 u
+a 0 u 0 0 89 22 hln 100 pin=4
+a 0 u 0 0 90 20 hln 100 ERC=x
+p 2 -2 18 hln 100 r_l n 0 20 h
+a 0 u 0 0 1 18 hln 100 pin=2
+a 0 u 0 0 0 20 hln 100 ERC=x
+p 2 -2 8 hln 100 t_l n 0 10 h
+a 0 u 0 0 3 10 hln 100 pin=1
+a 0 u 0 0 2 12 hln 100 ERC=x
+p 2 -4 28 hln 100 d_l n 0 30 h
+a 0 u 0 0 1 28 hln 100 pin=5
+a 0 u 0 0 0 30 hln 100 ERC=x
+p 2 82 28 hln 100 d_r n 90 30 u
+a 0 u 0 0 91 28 hln 100 pin=6
+a 0 u 0 0 90 30 hln 100 ERC=x
+@graphics 90 40 0 10 10
+r 0 10 0 80 40
+r 0 22 20 68 22
+v 0 22 20
+22 6
+;
+v 0 22 6
+24 8
+;
+v 0 22 6
+20 8
+;
+v 0 68 20
+68 6
+;
+v 0 68 6
+70 8
+;
+v 0 68 6
+66 8
+;
+a 0 28 18 20 26 28 24
+a 0 64 24 72 16 64 18
+v 0 28 18
+28 16
+;
+v 0 28 18
+26 18
+;
+v 0 64 18
+66 18
+;
+v 0 64 18
+64 16
+;
+v 0 12 20
+20 20
+;
+v 0 20 20
+18 18
+;
+v 0 20 20
+18 22
+;
+v 0 18 20
+16 22
+;
+v 0 18 20
+16 18
+;
+v 0 70 20
+78 20
+;
+v 0 78 20
+76 18
+;
+v 0 78 20
+76 22
+;
+v 0 76 20
+74 22
+;
+v 0 76 20
+74 18
+;
