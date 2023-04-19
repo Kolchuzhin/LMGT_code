@@ -1,6 +1,5 @@
 https://www.tu-chemnitz.de/etit/microsys/
 
-https://de.wikipedia.org/wiki/Jan_Mehner
 
 # LMGT_code / LMGT software tools for MEMS design:
 
