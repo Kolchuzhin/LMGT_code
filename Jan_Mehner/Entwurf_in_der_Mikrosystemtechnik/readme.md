@@ -7,7 +7,7 @@ Dresden University Press, Dresden 2000. ISBN 978-3-931828-47-9
 Die Anlagen sind in elektronischer Form auf einer 3,5"-Diskette (IBM-Format) beigefügt.
 
 * Anlage 1: [MathCad-Dateien](https://github.com/Kolchuzhin/LMGT_code/tree/master/Jan_Mehner/Entwurf_in_der_Mikrosystemtechnik/Anlage/MATHCAD)
-   - adaption.mcd Parameteranpassung der Steifigkeitmatrix an gemessenen Eigenwerten
+   - [adaption.mcd](https://github.com/Kolchuzhin/LMGT_code/blob/master/Jan_Mehner/Entwurf_in_der_Mikrosystemtechnik/Anlage/MATHCAD/ADAPTION.MCD) Parameteranpassung der Steifigkeitmatrix an gemessenen Eigenwerten
    - array.mcd Analyse der Wechselwirkungen von Arraystrukturen
    - tensor.mcd Transformation der elastischen Konstanten für orthotrope Werkstoffe
    - balken.mcd Mechanische Kennwerte von Balkenelementen massek.med Mechanische Kennwerte von Massekörpern
@@ -37,7 +37,7 @@ Die Anlagen sind in elektronischer Form auf einer 3,5"-Diskette (IBM-Format) bei
 * Anlage 3: [PSPICE-Dateien](https://github.com/Kolchuzhin/LMGT_code/tree/master/Jan_Mehner/Entwurf_in_der_Mikrosystemtechnik/Anlage/PSPICE)
    - schleife.sch Modellierung einer schleifenförmigen Balkenfeder in PSPICE
    - schwinge.sch Transiente Bewegungsanalyse eines Feder-Masse-Dämpfersystems 
-   - emechd.sch Transiente Analyse eines gekoppelten elektromechanischen Systems
+   - [emechd.sch](https://github.com/Kolchuzhin/LMGT_code/blob/master/Jan_Mehner/Entwurf_in_der_Mikrosystemtechnik/Anlage/PSPICE/EMCHD.SCH) Transiente Analyse eines gekoppelten elektromechanischen Systems
    - mechanik.slb Bibliothek der Balkenelemente
    
 * Anlage 4: [Sonstige Dateien](https://github.com/Kolchuzhin/LMGT_code/tree/master/Jan_Mehner/Entwurf_in_der_Mikrosystemtechnik/Anlage/SONSTIGE)
