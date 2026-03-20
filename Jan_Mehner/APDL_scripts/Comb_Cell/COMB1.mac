@@ -1,0 +1,262 @@
+/COM,*********************************************************************
+/COM,****                                                             ****
+/COM,****    Finite Element Model of a Comb Cell (type 1)             ****
+/COM,****    Dr. Jan Mehner                                           ****
+/COM,****    28. Frebruary 2005, REv. 1.0                             ****
+/COM,****                                                             ****
+/COM,*********************************************************************
+
+fini
+/clear
+
+! General model parameter ************************************************
+fi_th=20e-6			! Comb finger thickness
+fi_le=40e-6			! Comb finger length
+fi_wi=2e-6			! Comb finger width
+el_ga=2e-6			! Electrode gap
+tr_ra=20e-6			! Possible travel range
+sb_di=2e-6			! Distance to substrate surface
+cp_di=10e-6			! Distance to cap surface
+
+me_sp='own'			! Mesh specifications 'def' or 'own'
+me_op='var'			! Mesh options 'var' 'fix'
+
+! Related model parameter ************************************************
+fi_wi_1=fi_wi			! Width of movable finger
+fi_wi_2=fi_wi			! Width of fixed fingers
+el_ga_1=el_ga			! Electrode gap on left side
+el_ga_2=el_ga			! Electrode gap on right side
+tr_ra_1=tr_ra			! Possible travel range at fixed finger tips
+tr_ra_2=tr_ra			! Possible travel range at movable finger tip
+
+! Comb cell finger shift
+t_run=1
+*if,t_run,eq,1,then
+ u_x=10e-6*0			! Shift into finger direction 
+ u_y=-1e-6*0			! Shift towards fixed fingers
+ u_z=1e-6*0			! Shift in vertical direction
+ r_x=3*0			! Rotation around x-axis (degree units)
+ r_y=.5*0			! Rotation around y-axis
+ r_z=1*0			! Rotation around z-axis
+*endif
+
+/prep7
+immed,0
+et,1,122			! Electrostatic solid element
+mp,perx,1,1			! Relative permittivity
+emunit,epzro,8.854e-12		! Absolute permittivity  
+
+! Keypoints at the movable structure
+k,1,,-fi_wi_2/2-el_ga_1-fi_wi_1/2,-sb_di-fi_th/2
+k,2,,-el_ga_1-fi_wi_1/2,-sb_di-fi_th/2
+k,3,,-fi_wi_1/2,-sb_di-fi_th/2
+k,4,,fi_wi_1/2,-sb_di-fi_th/2
+k,5,,el_ga_2+fi_wi_1/2,-sb_di-fi_th/2
+k,6,,fi_wi_2/2+el_ga_2+fi_wi_1/2,-sb_di-fi_th/2
+
+k,7,,-fi_wi_2/2-el_ga_1-fi_wi_1/2,-fi_th/2
+k,8,,-el_ga_1-fi_wi_1/2,-fi_th/2
+k,9,,-fi_wi_1/2+u_y,-fi_th/2+u_z		! Movable finger lb
+k,10,,fi_wi_1/2+u_y,-fi_th/2+u_z		! Movable finger rb
+k,11,,el_ga_2+fi_wi_1/2,-fi_th/2
+k,12,,fi_wi_2/2+el_ga_2+fi_wi_1/2,-fi_th/2
+
+k,13,,-fi_wi_2/2-el_ga_1-fi_wi_1/2,fi_th/2
+k,14,,-el_ga_1-fi_wi_1/2,fi_th/2
+k,15,,-fi_wi_1/2+u_y,fi_th/2+u_z		! Movable finger lt
+k,16,,fi_wi_1/2+u_y,fi_th/2+u_z			! Movable finger rt
+k,17,,el_ga_2+fi_wi_1/2,fi_th/2
+k,18,,fi_wi_2/2+el_ga_2+fi_wi_1/2,fi_th/2
+
+k,19,,-fi_wi_2/2-el_ga_1-fi_wi_1/2,fi_th/2+cp_di
+k,20,,-el_ga_1-fi_wi_1/2,fi_th/2+cp_di
+k,21,,-fi_wi_1/2,fi_th/2+cp_di
+k,22,,fi_wi_1/2,fi_th/2+cp_di
+k,23,,el_ga_2+fi_wi_1/2,fi_th/2+cp_di
+k,24,,fi_wi_2/2+el_ga_2+fi_wi_1/2,fi_th/2+cp_di
+
+! Keypoints in finger direction	
+kgen,2,1,24,1,tr_ra_1-u_x			! Fixed finger tip
+kgen,2,1,24,1,fi_le				! Movable finger tip				
+kgen,2,1,24,1,fi_le+tr_ra_2-u_x			! Fixed finger end
+
+! Consider tilt motion around x-axis
+ksel,s,kp,,9,10
+ksel,a,kp,,15,16
+ksel,a,kp,,9+1*24,10+1*24
+ksel,a,kp,,15+1*24,16+1*24
+ksel,a,kp,,9+2*24,10+2*24
+ksel,a,kp,,15+2*24,16+2*24
+local,11,1,0,-fi_wi_1/2+u_y,+fi_th/2+u_z,,,90	! -y, +z anchor location
+csys,11
+kgen,2,all,,,,r_x,,,,1
+csys,0
+ksel,all
+! Consider tilt motion around y-axis
+ksel,s,kp,,9+1*24,10+1*24
+ksel,a,kp,,15+1*24,16+1*24
+ksel,a,kp,,9+2*24,10+2*24
+ksel,a,kp,,15+2*24,16+2*24
+local,11,1,0,-fi_wi_1/2+u_y,+fi_th/2+u_z,,90
+csys,11
+kgen,2,all,,,,-r_y,,,,1
+csys,0
+ksel,all
+! Consider tilt motion around z-axis
+ksel,s,kp,,9+1*24,10+1*24
+ksel,a,kp,,15+1*24,16+1*24
+ksel,a,kp,,9+2*24,10+2*24
+ksel,a,kp,,15+2*24,16+2*24
+local,11,1,0,-fi_wi_1/2+u_y,+fi_th/2+u_z,90
+csys,11
+kgen,2,all,,,,r_z,,,,1
+csys,0
+ksel,all
+
+! Correct keypoint location
+kmod,9+3*24,,ky(9+2*24),kz(9+2*24)
+kmod,10+3*24,,ky(10+2*24),kz(10+2*24)
+kmod,15+3*24,,ky(15+2*24),kz(15+2*24)
+kmod,16+3*24,,ky(16+2*24),kz(16+2*24)
+
+*do,i,0,3
+ kmod,3+i*24,,ky(9+i*24)
+ kmod,4+i*24,,ky(10+i*24)
+ kmod,21+i*24,,ky(15+i*24)
+ kmod,22+i*24,,ky(16+i*24)
+*enddo
+
+
+kmod,9+3*24,,,-fi_th/2
+kmod,10+3*24,,,-fi_th/2
+kmod,15+3*24,,,fi_th/2
+kmod,16+3*24,,,fi_th/2
+
+
+*do,i,1,3
+ v,1+(i-1)*24,2+(i-1)*24,8+(i-1)*24,7+(i-1)*24,1+i*24,2+i*24,8+i*24,7+i*24
+ *repeat,5,1,1,1,1,1,1,1,1
+ v,7+(i-1)*24,8+(i-1)*24,14+(i-1)*24,13+(i-1)*24,7+i*24,8+i*24,14+i*24,13+i*24
+ *repeat,5,1,1,1,1,1,1,1,1
+ v,13+(i-1)*24,14+(i-1)*24,20+(i-1)*24,19+(i-1)*24,13+i*24,14+i*24,20+i*24,19+i*24
+ *repeat,5,1,1,1,1,1,1,1,1
+*enddo
+
+vatt,1,1,1
+vsel,s,volu,,8,8+15,15
+vatt,,2
+vsel,s,volu,,6+15,6+30,15
+vatt,,3
+vsel,s,volu,,10+15,10+30,15
+vatt,,4
+vsel,all
+
+/pnum,real,1
+/number,1
+/color,num,cyan,1
+/color,num,cblue,2
+/color,num,red,3
+/color,num,red,4
+
+! Mesh specifications
+*if,me_sp,eq,'own',then
+ *if,me_op,eq,'var',then
+  fak1=1
+ *else
+  fak1=0
+ *endif
+ as_ra=nint((el_ga_1+u_y*fak1)/fi_wi_1) ! Electrode gap 1
+ md_e1=nint(as_ra*1.5)
+ *if,md_e1,lt,3,then
+  md_e1=3
+ *endif
+ as_ra=nint((el_ga_2-u_y*fak1)/fi_wi_1) ! Electrode gap 2
+ md_e2=nint(as_ra*1.5)
+ *if,md_e2,lt,3,then
+  md_e2=3
+ *endif
+ as_ra=nint((sb_di+u_z*fak1)/fi_wi_1)	! Substrate finger vertical
+ md_sv=nint(as_ra*1.5)
+ *if,md_sv,lt,3,then
+  md_sv=2
+ *endif
+ as_ra=nint(fi_th/fi_wi_1)		! Finger vertical
+ md_fv=nint(as_ra*1.2)
+ *if,md_fv,lt,3,then
+  md_fv=3
+ *endif
+ as_ra=nint((cp_di-u_z*fak1)/fi_wi_1)	! Finger cap vertical
+ md_cv=nint(as_ra*1.2)
+ *if,md_cv,lt,3,then
+  md_cv=3
+ *endif
+ as_ra=nint((tr_ra_1-u_x*fak1)/fi_wi_1)	! Gap at movable finger
+ md_t1=nint(as_ra*1.2)
+ *if,md_t1,lt,3,then
+  md_t1=3
+ *endif
+ as_ra=nint((tr_ra_2-u_x*fak1)/fi_wi_1)	! Gap at movable finger
+ md_t2=nint(as_ra*1.2)
+ *if,md_t1,lt,3,then
+  md_t2=3
+ *endif
+ as_ra=nint((fi_le-tr_ra_1+u_x*fak1)/fi_wi_1) ! Overlapping finger
+ md_to=nint(as_ra*1.2)
+ *if,md_to,lt,3,then
+  md_to=3
+ *endif
+ lesize,21,,,3			! Movable finger y-direction
+ lesize,1,,,2			! Fixed finger y-direction
+ lesize,37,,,2
+ lesize,13,,,md_e1		! Electrode gap y-direction
+ lesize,29,,,md_e2		! Electrode gap y-direction
+ lesize,4,,,md_sv		! Substrate fingers z-direction
+ lesize,47,,,md_fv		! Finger z-direction
+ lesize,75,,,md_cv		! Finger cap z-direction
+ lesize,7,,,md_t1		! Gap at movable finger x-direction
+ lesize,103,,,md_to		! Overlapping finger x-direction
+ lesize,165,,,md_t2		! Gap at fixed finger x-direction
+ vmesh,all
+*else
+ vmesh,all
+*endif
+
+esel,s,real,,2
+nsle,s
+esel,s,real,,1
+nsle,r
+cm,cond1,node
+asel,s,area,,27,32,5
+asel,a,area,,40,44,4
+nsla,s,1
+cmsel,a,cond1
+cm,cond1,node
+allsel
+
+esel,s,real,,3,4
+nsle,s
+esel,s,real,,1
+nsle,r
+cm,cond2,node
+allsel
+
+asel,s,area,,149,155,3
+nsla,s,1
+cmsel,a,cond2
+cm,cond2,node
+allsel
+
+nsel,s,loc,z,-sb_di-fi_th/2
+cm,cond3,node
+
+nsel,s,loc,z,fi_th/2+cp_di
+cm,cond4,node
+allsel
+
+vsel,s,real,,2,4
+vclear,all
+vsel,all
+/edge,1,0
+eplot
+
+fini
