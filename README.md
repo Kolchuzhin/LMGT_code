@@ -19,3 +19,7 @@ Diplomarbeit, Betreuer: Dr. Mehner, 2004
 ## 4. HOD based parametric FEM
 [V. Kolchuzhin, “Methods and Tools for Parametric Modeling and Simulation of Microsystems based on Finite Element Methods and Order Reduction Technologies“,
 Dissertation, Technische Unitversität Chemnitz, 2010.](https://nbn-resolving.org/urn:nbn:de:bsz:ch1-201000550)
+
+
+## 5. Reference
+[Sonderforschungsbereich 379 "Mikromechanische Sensor- und Aktorarrays"](https://idw-online.de/de/news73938)
